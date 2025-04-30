@@ -1,18 +1,19 @@
 import React, { useEffect, useState, useCallback, useMemo } from 'react';
-import majorsData from './data/majors.json';
 import { Major, CheckedState } from './types';
 import Roadmap from './components/Roadmap';
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
 import './App.css';
-import './components/Roadmap.css';
 import CircularProgress from './components/CircularProgress';
+import { fetchMajors } from './services/api';
 
 const STORAGE_KEY = 'wlu-major-tracker-checked';
 
 function App() {
   const [majors, setMajors] = useState<Major[]>([]);
   const [selectedMajor, setSelectedMajor] = useState<Major | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
   const [checked, setChecked] = useState<CheckedState>(() => {
     try {
       const saved = localStorage.getItem(STORAGE_KEY);
@@ -24,7 +25,24 @@ function App() {
   });
 
   useEffect(() => {
-    setMajors(majorsData as Major[]);
+    const loadMajors = async () => {
+      try {
+        setLoading(true);
+        setError(null);
+        const data = await fetchMajors();
+        setMajors(data);
+        if (data.length > 0) {
+          setSelectedMajor(data[0]);
+        }
+      } catch (err) {
+        setError('Failed to load majors. Please try again later.');
+        console.error('Error loading majors:', err);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    loadMajors();
   }, []);
 
   useEffect(() => {
@@ -32,7 +50,6 @@ function App() {
       localStorage.setItem(STORAGE_KEY, JSON.stringify(checked));
     } catch (error) {
       console.error('Failed to save progress:', error);
-      // Optionally show a user-friendly error message here
     }
   }, [checked]);
 
@@ -52,16 +69,7 @@ function App() {
             if (req.courses.some(course => checked[`${req.label}::${course}`])) {
               acc.completed += 1;
             }
-          } else if (req.type === 'n_of' && req.n) {
-            acc.total += req.n;
-            const checkedCount = req.courses.filter(
-              course => checked[`${req.label}::${course}`]
-            ).length;
-            acc.completed += Math.min(checkedCount, req.n);
           }
-        } else if (req.type === 'credits') {
-          acc.total += 1;
-          // TODO: Implement credit tracking if needed
         }
         return acc;
       },

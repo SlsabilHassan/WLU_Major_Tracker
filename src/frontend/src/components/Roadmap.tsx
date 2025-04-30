@@ -1,5 +1,6 @@
 import React, { memo } from 'react';
 import { Requirement, CheckedState } from '../types';
+import './Roadmap.css';
 
 interface RoadmapProps {
   requirements: Requirement[];
