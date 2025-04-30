@@ -1,0 +1,168 @@
+.app-container {
+  min-height: 100vh;
+  width: 100vw;
+  font-family: 'Poppins', sans-serif;
+  background: #18122B;
+  position: relative;
+}
+
+.particles {
+  position: absolute;
+  z-index: 0;
+}
+
+.app-content {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  padding: 3rem 0 1.5rem 0;
+  text-align: center;
+}
+
+header h1 {
+  font-family: 'Poppins';
+  font-weight: 800;
+  font-size: 2.8rem;
+  color: #fff;
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+header p {
+  color: #fff;
+  opacity: 0.8;
+  font-family: 'Poppins';
+  font-weight: 400;
+  font-size: 1.2rem;
+}
+
+main {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 700px;
+}
+
+.major-selection {
+  text-align: center;
+}
+
+.major-selection h2 {
+  margin-bottom: 2rem;
+  color: #fff;
+}
+
+.major-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.major-button {
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-radius: 8px;
+  padding: 1rem 2rem;
+  color: #fff;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  width: 100%;
+  max-width: 400px;
+}
+
+.major-button:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.major-details {
+  position: relative;
+}
+
+.back-button {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  opacity: 0.8;
+  transition: opacity 0.2s;
+}
+
+.back-button:hover {
+  opacity: 1;
+}
+
+.progress-indicator {
+  text-align: center;
+  margin: 2rem 0 0 0;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+.major-details h2 {
+  margin-top: 0;
+  text-align: center;
+  color: #fff;
+}
+
+.circular-progress-container {
+  display: flex;
+  justify-content: center;
+  margin: 3rem 0;
+}
+
+.circular-progress {
+  margin: 0 auto;
+  filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.5));
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.circular-progress-fg {
+  filter: drop-shadow(0 0 3px rgba(255, 255, 255, 0.3));
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0% {
+    filter: drop-shadow(0 0 3px rgba(255, 255, 255, 0.3));
+  }
+  50% {
+    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.4));
+  }
+  100% {
+    filter: drop-shadow(0 0 3px rgba(255, 255, 255, 0.3));
+  }
+}
+
+.circular-progress text {
+  filter: none;
+}
+
+/* Focus styles for accessibility */
+.major-button:focus-visible,
+.back-button:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+
+/* High contrast mode support */
+@media (forced-colors: active) {
+  .major-button {
+    border: 1px solid CanvasText;
+  }
+  
+  .back-button {
+    text-decoration: underline;
+  }
+} 

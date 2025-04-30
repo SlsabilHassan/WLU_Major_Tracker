@@ -1,0 +1,172 @@
+.elegant-roadmap {
+  position: relative;
+  padding: 2rem 0;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.roadmap-line {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateX(-50%);
+}
+
+.roadmap-step {
+  position: relative;
+  margin-bottom: 3rem;
+  width: 50%;
+  padding: 0 2rem;
+}
+
+.roadmap-step.left {
+  margin-right: auto;
+  text-align: left;
+}
+
+.roadmap-step.right {
+  margin-left: auto;
+  text-align: left;
+}
+
+.roadmap-circle {
+  position: absolute;
+  top: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #fff;
+  border: 2px solid #000;
+}
+
+.roadmap-step.left .roadmap-circle {
+  right: -10px;
+}
+
+.roadmap-step.right .roadmap-circle {
+  left: -10px;
+}
+
+.roadmap-content {
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 8px;
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: border-color 0.3s ease;
+}
+
+.roadmap-content::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  border-radius: 10px;
+  z-index: -1;
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.2),
+                0 0 10px rgba(255, 255, 255, 0.1);
+  }
+  to {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3),
+                0 0 20px rgba(255, 255, 255, 0.2);
+  }
+}
+
+.roadmap-title {
+  color: #fff;
+  margin: 0 0 1rem 0;
+  font-size: 1.2rem;
+}
+
+.roadmap-courses {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.roadmap-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #fff;
+  cursor: pointer;
+  min-height: 24px;
+  padding: 0.25rem 0;
+}
+
+.roadmap-checkbox input[type="checkbox"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  min-width: 20px;
+  min-height: 20px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  background: transparent;
+  cursor: pointer;
+  position: relative;
+  transition: background-color 0.2s;
+  flex-shrink: 0;
+}
+
+.roadmap-checkbox input[type="checkbox"]:checked {
+  background: #fff;
+}
+
+.roadmap-checkbox input[type="checkbox"]:checked::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 5px;
+  height: 10px;
+  border: solid #000;
+  border-width: 0 2px 2px 0;
+  transform: translate(-50%, -60%) rotate(45deg);
+}
+
+.roadmap-checkbox span {
+  font-family: poppins;
+  line-height: 1.2;
+}
+
+/* Style for credit requirement checkboxes */
+.roadmap-courses > div.roadmap-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 24px;
+}
+
+/* Focus styles for accessibility */
+.roadmap-checkbox input[type="checkbox"]:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+
+/* High contrast mode support */
+@media (forced-colors: active) {
+  .roadmap-line {
+    background: CanvasText;
+  }
+  
+  .roadmap-circle {
+    background: CanvasText;
+  }
+  
+  .roadmap-content {
+    border: 1px solid CanvasText;
+  }
+}
