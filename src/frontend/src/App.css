@@ -22,8 +22,10 @@
 }
 
 header {
+  position: relative;
   padding: 3rem 0 1.5rem 0;
   text-align: center;
+  z-index: 1;
 }
 
 header h1 {
@@ -118,7 +120,8 @@ main {
 
 .circular-progress-container {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   margin: 3rem 0;
 }
 
@@ -165,4 +168,55 @@ main {
   .back-button {
     text-decoration: underline;
   }
+}
+
+.no-majors {
+  color: #fff;
+  text-align: center;
+  font-size: 1.2rem;
+  margin-top: 2rem;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+}
+
+.home-button {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  opacity: 1;
+  text-decoration: none;
+  z-index: 1000;
+}
+
+.home-button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.reset-button {
+  margin-top: 1rem;
+  background: rgba(255, 0, 0, 0.2);
+  border: 1px solid rgba(255, 0, 0, 0.3);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.reset-button:hover {
+  background: rgba(255, 0, 0, 0.3);
+  border-color: rgba(255, 0, 0, 0.4);
 } 

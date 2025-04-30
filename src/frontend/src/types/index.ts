@@ -9,13 +9,26 @@ export interface Requirement {
 }
 
 export interface Major {
-  _id: string;
+  _id?: string;
   major: string;
   requirements: Requirement[];
 }
 
+export interface MajorProgress {
+  checked: CheckedState;
+  creditProgress: CreditProgress;
+}
+
 export interface CheckedState {
   [key: string]: boolean;
+}
+
+export interface CreditProgress {
+  [key: string]: number;
+}
+
+export interface AllProgress {
+  [majorName: string]: MajorProgress;
 }
 
 export interface RoadmapProps {

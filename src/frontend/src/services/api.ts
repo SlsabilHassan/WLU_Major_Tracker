@@ -15,9 +15,13 @@ export const fetchMajors = async (): Promise<Major[]> => {
       _id: major._id,
       major: major.major,
       requirements: major.requirements.map((req: any) => ({
+        type: req.type,
         label: req.label,
         courses: req.courses,
-        type: req.type || 'all' // Default to 'all' if not specified
+        n: req.n,
+        subject: req.subject,
+        credits: req.credits,
+        level: req.level
       }))
     }));
   } catch (error) {

@@ -1,20 +1,23 @@
 import React, { useEffect, useState, useCallback, useMemo } from 'react';
-import { Major, CheckedState } from './types';
+import { Major, AllProgress, MajorProgress } from './types';
 import Roadmap from './components/Roadmap';
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
 import './App.css';
 import CircularProgress from './components/CircularProgress';
 import { fetchMajors } from './services/api';
+import LoadingSpinner from './components/LoadingSpinner';
+import ErrorMessage from './components/ErrorMessage';
+import Celebration from './components/Celebration';
 
-const STORAGE_KEY = 'wlu-major-tracker-checked';
+const STORAGE_KEY = 'wlu-major-tracker-progress';
 
 function App() {
   const [majors, setMajors] = useState<Major[]>([]);
   const [selectedMajor, setSelectedMajor] = useState<Major | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  const [checked, setChecked] = useState<CheckedState>(() => {
+  const [allProgress, setAllProgress] = useState<AllProgress>(() => {
     try {
       const saved = localStorage.getItem(STORAGE_KEY);
       return saved ? JSON.parse(saved) : {};
@@ -24,49 +27,114 @@ function App() {
     }
   });
 
-  useEffect(() => {
-    const loadMajors = async () => {
-      try {
-        setLoading(true);
-        setError(null);
-        const data = await fetchMajors();
-        setMajors(data);
-        if (data.length > 0) {
-          setSelectedMajor(data[0]);
-        }
-      } catch (err) {
-        setError('Failed to load majors. Please try again later.');
-        console.error('Error loading majors:', err);
-      } finally {
-        setLoading(false);
+  const loadMajors = useCallback(async () => {
+    try {
+      setLoading(true);
+      setError(null);
+      const data = await fetchMajors();
+      setMajors(data);
+      if (data.length > 0) {
+        setSelectedMajor(data[0]);
       }
-    };
-
-    loadMajors();
+    } catch (err) {
+      setError('Failed to load majors. Please try again later.');
+      console.error('Error loading majors:', err);
+    } finally {
+      setLoading(false);
+    }
   }, []);
 
   useEffect(() => {
+    loadMajors();
+  }, [loadMajors]);
+
+  useEffect(() => {
     try {
-      localStorage.setItem(STORAGE_KEY, JSON.stringify(checked));
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(allProgress));
     } catch (error) {
       console.error('Failed to save progress:', error);
     }
-  }, [checked]);
+  }, [allProgress]);
+
+  const getCurrentProgress = useCallback((major: Major | null): MajorProgress => {
+    if (!major) return { checked: {}, creditProgress: {} };
+    return allProgress[major.major] || { checked: {}, creditProgress: {} };
+  }, [allProgress]);
+
+  const handleToggle = useCallback((label: string, course: string) => {
+    if (!selectedMajor) return;
+    
+    const currentProgress = getCurrentProgress(selectedMajor);
+    const key = `${label}::${course}`;
+    
+    setAllProgress(prev => ({
+      ...prev,
+      [selectedMajor.major]: {
+        ...currentProgress,
+        checked: {
+          ...currentProgress.checked,
+          [key]: !currentProgress.checked[key]
+        }
+      }
+    }));
+  }, [selectedMajor, getCurrentProgress]);
+
+  const handleCreditsChange = useCallback((label: string, credits: number) => {
+    if (!selectedMajor) return;
+    
+    const currentProgress = getCurrentProgress(selectedMajor);
+    
+    setAllProgress(prev => ({
+      ...prev,
+      [selectedMajor.major]: {
+        ...currentProgress,
+        creditProgress: {
+          ...currentProgress.creditProgress,
+          [label]: credits
+        }
+      }
+    }));
+  }, [selectedMajor, getCurrentProgress]);
+
+  const handleResetProgress = useCallback(() => {
+    if (selectedMajor) {
+      setAllProgress(prev => ({
+        ...prev,
+        [selectedMajor.major]: {
+          checked: {},
+          creditProgress: {}
+        }
+      }));
+    }
+  }, [selectedMajor]);
 
   const getProgress = useCallback(() => {
     if (!selectedMajor) return 0;
     
+    const currentProgress = getCurrentProgress(selectedMajor);
+    const { checked, creditProgress } = currentProgress;
+    
     const { total, completed } = selectedMajor.requirements.reduce(
       (acc, req) => {
-        if (req.courses) {
+        if (req.type === 'credits' && req.credits) {
+          acc.total += 1;
+          const currentCredits = creditProgress[req.label] || 0;
+          if (currentCredits >= req.credits) {
+            acc.completed += 1;
+          }
+        } else if (req.courses) {
           if (req.type === 'all') {
             acc.total += req.courses.length;
             acc.completed += req.courses.filter(
               course => checked[`${req.label}::${course}`]
             ).length;
-          } else if (req.type === 'one_of') {
+          } else if (req.type === 'one_of' || req.type === 'n_of') {
             acc.total += 1;
-            if (req.courses.some(course => checked[`${req.label}::${course}`])) {
+            const selectedCount = req.courses.filter(
+              course => checked[`${req.label}::${course}`]
+            ).length;
+            if ((req.type === 'one_of' && selectedCount >= 1) ||
+                (req.type === 'n_of' && selectedCount >= (req.n || 0))) {
               acc.completed += 1;
             }
           }
@@ -77,21 +145,81 @@ function App() {
     );
 
     return total === 0 ? 0 : Math.round((completed / total) * 100);
-  }, [selectedMajor, checked]);
+  }, [selectedMajor, getCurrentProgress]);
 
   const progress = useMemo(() => getProgress(), [getProgress]);
-
-  const handleToggle = useCallback((label: string, course: string) => {
-    const key = `${label}::${course}`;
-    setChecked(prev => ({
-      ...prev,
-      [key]: !prev[key]
-    }));
-  }, []);
 
   const particlesInit = useCallback(async (main: any) => {
     await loadFull(main);
   }, []);
+
+  const handleHomeClick = useCallback(() => {
+    setSelectedMajor(null);
+  }, []);
+
+  const renderContent = () => {
+    if (loading) {
+      return <LoadingSpinner />;
+    }
+
+    if (error) {
+      return <ErrorMessage message={error} onRetry={loadMajors} />;
+    }
+
+    if (!selectedMajor) {
+      return (
+        <section className="major-selection">
+          <h2>Select a Major</h2>
+          {majors.length === 0 ? (
+            <p className="no-majors">No majors available at the moment.</p>
+          ) : (
+            <div className="major-list">
+              {majors.map((major) => (
+                <button
+                  key={major.major}
+                  className="major-button"
+                  onClick={() => setSelectedMajor(major)}
+                >
+                  {major.major}
+                </button>
+              ))}
+            </div>
+          )}
+        </section>
+      );
+    }
+
+    const currentProgress = getCurrentProgress(selectedMajor);
+
+    return (
+      <section className="major-details">
+        <button
+          className="back-button"
+          onClick={() => setSelectedMajor(null)}
+          aria-label="Back to majors list"
+        >
+          ← Back to Majors
+        </button>
+        <div className="circular-progress-container">
+          <CircularProgress progress={progress} size={200} strokeWidth={10} progressColor='#fff' />
+          <button 
+            className="reset-button"
+            onClick={handleResetProgress}
+          >
+            Reset Progress
+          </button>
+        </div>
+        <h2>{selectedMajor.major} Roadmap</h2>
+        <Roadmap
+          requirements={selectedMajor.requirements}
+          checked={currentProgress.checked}
+          creditProgress={currentProgress.creditProgress}
+          onToggle={handleToggle}
+          onCreditsChange={handleCreditsChange}
+        />
+      </section>
+    );
+  };
 
   return (
     <div className="app-container">
@@ -112,47 +240,21 @@ function App() {
       />
       <div className="app-content">
         <header>
+          <button 
+            className="home-button"
+            onClick={handleHomeClick}
+            aria-label="Go to home"
+          >
+            HOME PAGE
+          </button>
           <h1>W&L Major Tracker</h1>
-          <p>Don't get lost buddy!</p>
+          <p>{selectedMajor ? `For ${selectedMajor.major}` : "Don't get lost buddy!"}</p>
         </header>
         <main>
-          {!selectedMajor ? (
-            <section className="major-selection">
-              <h2>Select a Major</h2>
-              <div className="major-list">
-                {majors.map((major) => (
-                  <button
-                    key={major.major}
-                    className="major-button"
-                    onClick={() => setSelectedMajor(major)}
-                  >
-                    {major.major}
-                  </button>
-                ))}
-              </div>
-            </section>
-          ) : (
-            <section className="major-details">
-              <button
-                className="back-button"
-                onClick={() => setSelectedMajor(null)}
-                aria-label="Back to majors list"
-              >
-                ← Back to Majors
-              </button>
-              <div className="circular-progress-container">
-                <CircularProgress progress={progress} size={200} strokeWidth={10} progressColor='#fff' />
-              </div>
-              <h2>{selectedMajor.major} Roadmap</h2>
-              <Roadmap
-                requirements={selectedMajor.requirements}
-                checked={checked}
-                onToggle={handleToggle}
-              />
-            </section>
-          )}
+          {renderContent()}
         </main>
       </div>
+      <Celebration isComplete={progress === 100} />
     </div>
   );
 }
