@@ -1,4 +1,6 @@
-[
+import { Major } from './types';
+
+export const majorsData: Major[] = [
   {
     "major": "Computer Science (BS)",
     "requirements": [
@@ -44,19 +46,6 @@
           "CSCI 339 - Human-Computer Interaction",
           "CSCI 340 - Computer Graphics"
         ]
-      },
-      {
-        "type": "credits",
-        "label": "Six additional credits in computer science",
-        "subject": "CSCI",
-        "credits": 6
-      },
-      {
-        "type": "credits",
-        "label": "Six additional credits in mathematics at the 200 level or above",
-        "subject": "MATH",
-        "credits": 6,
-        "level": 200
       }
     ]
   },
@@ -89,33 +78,7 @@
           "CSCI 312 - Programming Language Design",
           "CSCI 313 - Theory of Computation"
         ]
-      },
-      {
-        "type": "n_of",
-        "label": "Two courses chosen from",
-        "n": 2,
-        "courses": [
-          "CSCI 315 - Artificial Intelligence",
-          "CSCI 316 - Advanced Topics in Robotics",
-          "CSCI 317 - Database Systems",
-          "CSCI 319 - Video Game Design",
-          "CSCI 320 - Parallel Computing",
-          "CSCI 321 - Computer Networks",
-          "CSCI 325 - Distributed Systems",
-          "CSCI 326 - Cloud Computing",
-          "CSCI 330 - Operating Systems",
-          "CSCI 332 - Compiler Construction",
-          "CSCI 335 - Software Engineering through Web Applications",
-          "CSCI 339 - Human-Computer Interaction",
-          "CSCI 340 - Computer Graphics"
-        ]
-      },
-      {
-        "type": "credits",
-        "label": "Six additional credits in computer science",
-        "subject": "CSCI",
-        "credits": 6
       }
     ]
   }
-] 
+]; 

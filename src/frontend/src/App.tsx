@@ -218,6 +218,7 @@ function App() {
           onToggle={handleToggle}
           onCreditsChange={handleCreditsChange}
         />
+        {progress === 100 && <Celebration isComplete={true} />}
       </section>
     );
   };
@@ -255,7 +256,6 @@ function App() {
           {renderContent()}
         </main>
       </div>
-      <Celebration isComplete={progress === 100} />
     </div>
   );
 }
