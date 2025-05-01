@@ -5,30 +5,17 @@
       "src": "src/frontend/package.json",
       "use": "@vercel/static-build",
       "config": {
-        "distDir": "build",
-        "buildCommand": "cd src/frontend && npm install && npm run build"
-      }
-    },
-    {
-      "src": "src/backend/package.json",
-      "use": "@vercel/node",
-      "config": {
-        "buildCommand": "cd src/backend && npm install && npm run build"
+        "distDir": "build"
       }
     }
   ],
   "routes": [
-    {
-      "src": "/api/(.*)",
-      "dest": "/src/backend/$1"
-    },
     {
       "src": "/(.*)",
       "dest": "/src/frontend/$1"
     }
   ],
   "env": {
-    "MONGODB_URI": "@mongodb_uri",
     "REACT_APP_API_URL": "https://wlu-major-tracker-backend.vercel.app/api"
   }
 } 
