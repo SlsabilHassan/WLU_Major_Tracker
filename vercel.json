@@ -4,18 +4,21 @@
     {
       "src": "src/frontend/package.json",
       "use": "@vercel/static-build",
-      "config": {
-        "distDir": "build"
-      }
+      "config": { "distDir": "build" }
+    },
+    {
+      "src": "api/**/*.ts",
+      "use": "@vercel/node"
     }
   ],
   "routes": [
     {
+      "src": "/api/(.*)",
+      "dest": "api/$1.ts"
+    },
+    {
       "src": "/(.*)",
-      "dest": "/src/frontend/$1"
+      "dest": "src/frontend/$1"
     }
-  ],
-  "env": {
-    "REACT_APP_API_URL": "https://wlu-major-tracker-backend.vercel.app/api"
-  }
-} 
+  ]
+}
