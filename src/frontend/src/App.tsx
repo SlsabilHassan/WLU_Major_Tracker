@@ -3,6 +3,7 @@ import { Major, AllProgress, MajorProgress } from './types';
 import Roadmap from './components/Roadmap';
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
+import type { Engine } from "tsparticles-engine";
 import './App.css';
 import CircularProgress from './components/CircularProgress';
 import { fetchMajors } from './services/api';
@@ -149,8 +150,8 @@ function App() {
 
   const progress = useMemo(() => getProgress(), [getProgress]);
 
-  const particlesInit = useCallback(async (main: any) => {
-    await loadFull(main);
+  const particlesInit = useCallback(async (engine: Engine) => {
+    await loadFull(engine);
   }, []);
 
   const handleHomeClick = useCallback(() => {
@@ -225,6 +226,7 @@ function App() {
     <div className="app-container">
       <Particles
         id="tsparticles"
+        init={particlesInit}
         options={{
           background: { color: "#000000" },
           particles: {
@@ -235,7 +237,6 @@ function App() {
             opacity: { value: 0.7 }
           }
         }}
-        init={particlesInit}
         className="particles"
       />
       <div className="app-content">
