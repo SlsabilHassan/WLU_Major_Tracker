@@ -1,6 +1,9 @@
 import React, { useEffect, useState, useCallback, useMemo } from 'react';
 import { Major, AllProgress, MajorProgress } from './types';
 import Roadmap from './components/Roadmap';
+import Particles from "react-tsparticles";
+import { loadFull } from "tsparticles";
+import type { Engine } from "tsparticles-engine";
 import './App.css';
 import CircularProgress from './components/CircularProgress';
 import { fetchMajors } from './services/api';
@@ -151,6 +154,10 @@ function App() {
     setSelectedMajor(null);
   }, []);
 
+  const particlesInit = useCallback(async (engine: Engine) => {
+    await loadFull(engine);
+  }, []);
+
   const renderContent = () => {
     if (loading) {
       return <LoadingSpinner />;
@@ -217,6 +224,21 @@ function App() {
 
   return (
     <div className="app-container">
+      <Particles
+        id="tsparticles"
+        init={particlesInit}
+        options={{
+          background: { color: "#000000" },
+          particles: {
+            color: { value: "#fff" },
+            number: { value: 80 },
+            size: { value: 2 },
+            move: { enable: true, speed: 0.2 },
+            opacity: { value: 0.7 }
+          }
+        }}
+        className="particles"
+      />
       <div className="app-content">
         <header>
           <button 
