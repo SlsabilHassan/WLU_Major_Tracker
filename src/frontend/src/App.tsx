@@ -150,12 +150,12 @@ function App() {
 
   const progress = useMemo(() => getProgress(), [getProgress]);
 
-  const particlesInit = useCallback(async (engine: Engine) => {
-    await loadFull(engine);
-  }, []);
-
   const handleHomeClick = useCallback(() => {
     setSelectedMajor(null);
+  }, []);
+
+  const particlesInit = useCallback(async (engine: Engine) => {
+    await loadFull(engine);
   }, []);
 
   const renderContent = () => {
