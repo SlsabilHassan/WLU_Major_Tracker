@@ -44,6 +44,8 @@ function App() {
 
   useEffect(() => {
     loadMajors();
+    // Clear any previously selected major when the app loads
+    setSelectedMajor(null);
   }, [loadMajors]);
 
   useEffect(() => {
