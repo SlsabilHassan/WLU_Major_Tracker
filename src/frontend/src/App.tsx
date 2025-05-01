@@ -34,9 +34,6 @@ function App() {
       setError(null);
       const data = await fetchMajors();
       setMajors(data);
-      if (data.length > 0) {
-        setSelectedMajor(data[0]);
-      }
     } catch (err) {
       setError('Failed to load majors. Please try again later.');
       console.error('Error loading majors:', err);
