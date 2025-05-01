@@ -9,6 +9,11 @@ import { logger } from '@/utils/logger';
 // Load environment variables
 dotenv.config();
 
+if (!process.env.MONGODB_URI) {
+  logger.error('MONGODB_URI is not defined');
+  process.exit(1);
+}
+
 const app = express();
 const port = parseInt(process.env.PORT || '8080', 10);
 
@@ -24,9 +29,9 @@ const corsOptions = {
 app.use(cors(corsOptions));
 app.use(express.json());
 
-// Root route
-app.get('/', (req, res) => {
-  res.json({ message: 'Backend server is running!' });
+// Health check route
+app.get('/api/health', (req, res) => {
+  res.json({ status: 'healthy', message: 'Backend server is running!' });
 });
 
 // Routes
