@@ -10,7 +10,7 @@
     "start": "node dist/index.js",
     "dev": "nodemon src/index.ts",
     "build": "tsc",
-    "vercel-build": "npm run build",
+    "vercel-build": "npm install && npm run build",
     "test": "jest",
     "insert-majors": "ts-node src/scripts/insertMajors.ts",
     "lint": "eslint . --ext .ts",
