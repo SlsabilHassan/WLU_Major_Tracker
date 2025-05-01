@@ -4,7 +4,7 @@
   "description": "Backend for WLU Major Tracker",
   "main": "dist/index.js",
   "engines": {
-    "node": "22.x"
+    "node": "18.x"
   },
   "scripts": {
     "start": "node -r tsconfig-paths/register dist/index.js",

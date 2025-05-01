@@ -5,8 +5,14 @@ const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/major-
 
 export const connectDB = async (): Promise<void> => {
   try {
-    logger.info('Attempting to connect to MongoDB at:', MONGODB_URI);
-    await mongoose.connect(MONGODB_URI);
+    const options = {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+      serverSelectionTimeoutMS: 5000,
+      socketTimeoutMS: 45000,
+    };
+
+    await mongoose.connect(MONGODB_URI, options);
     logger.info('Connected to MongoDB successfully');
     
     // Log database events
@@ -23,6 +29,6 @@ export const connectDB = async (): Promise<void> => {
     });
   } catch (error) {
     logger.error('MongoDB connection error:', error);
-    process.exit(1);
+    throw error;
   }
 }; 
