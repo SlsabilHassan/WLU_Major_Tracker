@@ -249,7 +249,7 @@ function App() {
           >
             HOME PAGE
           </button>
-          <img src={`${process.env.PUBLIC_URL}/logo.png`} alt="W&L Major Tracker Logo" className="main-logo" />
+          <img src="/logo.png" alt="W&L Major Tracker Logo" className="main-logo" />
           <p>{selectedMajor ? `For ${selectedMajor.major}` : "Don't get lost buddy!"}</p>
         </header>
         <main>

@@ -117,5 +117,89 @@
         "credits": 6
       }
     ]
+  },
+  {
+    "major": "Biochemistry (BS)",
+    "requirements": [
+      {
+        "type": "all",
+        "label": "Required Courses",
+        "courses": [
+          "BIOL 111 - Fundamentals of Biology",
+          "BIOL 113 - Biology Laboratory",
+          "CHEM 211 - Analytical Chemistry",
+          "CHEM 245 - Organic Chemistry I Laboratory",
+          "CHEM 246 - Organic Chemistry II Laboratory",
+          "CHEM 243 - Spectroscopic Methods",
+          "CHEM 250 - Inorganic and Bioinorganic Chemistry",
+          "CHEM 260 - Physical Chemistry of Biological Systems",
+          "CHEM 341 - Biochemistry I",
+          "CHEM 342 - Biochemistry II",
+          "CHEM 343 - Biochemistry I Laboratory",
+          "CHEM 344 - Biochemistry II Laboratory",
+          "MATH 101 - Calculus I",
+          "MATH 102 - Calculus II",
+          "PHYS 111 - General Physics I"
+        ]
+      },
+      {
+        "type": "one_of",
+        "label": "General Chemistry Option",
+        "courses": [
+          "CHEM 110 - General Chemistry",
+          "CHEM 109 - General Chemistry"
+        ]
+      },
+      {
+        "type": "one_of",
+        "label": "Organic Chemistry I Option",
+        "courses": [
+          "CHEM 241 - Organic Chemistry I",
+          "CHEM 240 - Organic Chemistry I"
+        ]
+      },
+      {
+        "type": "one_of",
+        "label": "Organic Chemistry II Option",
+        "courses": [
+          "CHEM 242 - Organic Chemistry II",
+          "CHEM 244 - Organic Chemistry II"
+        ]
+      },
+      {
+        "type": "n_of",
+        "label": "Two additional courses totaling at least six credits (only one 400-level course may count)",
+        "n": 2,
+        "courses": [
+          "BIOL 201 - Statistics for Biology and Medicine",
+          "BIOL 211S - Cell Biology at St. Andrews or BIOL 230 - Cell Biology",
+          "BIOL 220 - Genetics",
+          "BIOL 223 - Virology",
+          "BIOL 225 - Medicinal Plant Biology",
+          "BIOL 250 - Vertebrate Endocrinology",
+          "BIOL 310 - Microbiology",
+          "BIOL 350 - Immunology",
+          "BIOL 385 - Molecular Mechanics of Life",
+          "BIOL 423 - Directed Individual Research",
+          "CHEM 345 - Advanced Biochemistry",
+          "CHEM 298 - Special Topics in Chemistry",
+          "CHEM 299 - Spring-Term Special Topics in Chemistry",
+          "CHEM 399 - Advanced Topics in Chemistry and Biochemistry",
+          "CHEM 403 - Directed Individual Study",
+          "CHEM 423 - Directed Individual Research",
+          "CHEM 473 - Senior Thesis",
+          "CHEM 493 - Honors Thesis",
+          "NEUR 395 - Special Topics in Cellular and Molecular Neuroscience",
+          "NEUR 423 - Directed Individual Research"
+        ]
+      },
+      {
+        "type": "all",
+        "label": "Major Field Test in Chemistry",
+        "courses": [
+          "Completion of the Major Field Test in Chemistry"
+        ]
+      }
+    ]
   }
 ]
