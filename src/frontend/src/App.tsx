@@ -5,6 +5,7 @@ import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
 import type { Engine } from "tsparticles-engine";
 import './App.css';
+import './styles.css';
 import CircularProgress from './components/CircularProgress';
 import { fetchMajors } from './services/api';
 import LoadingSpinner from './components/LoadingSpinner';
