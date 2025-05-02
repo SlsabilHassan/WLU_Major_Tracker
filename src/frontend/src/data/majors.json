@@ -1,120 +1,56 @@
 [
   {
-    "major": "Computer Science (BS)",
+    "major": "Accounting (BS)",
     "requirements": [
       {
         "type": "all",
         "label": "Required Courses",
         "courses": [
-          "CSCI 111 - Introduction to Computer Science",
-          "CSCI 112 - Data Structures",
-          "CSCI 209 - Software Development",
-          "CSCI 210 - Computer Organization",
-          "CSCI 211 - Algorithm Design and Analysis",
-          "CSCI 312 - Programming Language Design",
-          "CSCI 313 - Theory of Computation",
-          "MATH 102 - Calculus II",
-          "MATH 222 - Linear Algebra"
-        ]
-      },
-      {
-        "type": "one_of",
-        "label": "Take one course",
-        "courses": [
-          "MATH 121 - Discrete Mathematics I",
-          "MATH 225 - Bridges to Advanced Math"
+          "ACCT 100 - Introduction to Accounting",
+          "ACCT 231 - Corporate Financial Reporting",
+          "ACCT 332 - Intermediate Financial Reporting I",
+          "ACCT 333 - Intermediate Financial Reporting II",
+          "ECON 100 - Introduction to Economics",
+          "FIN 221 - Managerial Finance"
         ]
       },
       {
         "type": "n_of",
-        "label": "Two courses chosen from",
-        "n": 2,
+        "label": "One Course chosen from",
+        "n": 1,
         "courses": [
-          "CSCI 315 - Artificial Intelligence",
-          "CSCI 316 - Advanced Topics in Robotics",
-          "CSCI 317 - Database Systems",
-          "CSCI 319 - Video Game Design",
-          "CSCI 320 - Parallel Computing",
-          "CSCI 321 - Computer Networks",
-          "CSCI 325 - Distributed Systems",
-          "CSCI 326 - Cloud Computing",
-          "CSCI 330 - Operating Systems",
-          "CSCI 332 - Compiler Construction",
-          "CSCI 335 - Software Engineering through Web Applications",
-          "CSCI 339 - Human-Computer Interaction",
-          "CSCI 340 - Computer Graphics"
-        ]
-      },
-      {
-        "type": "credits",
-        "label": "Six additional credits in computer science",
-        "subject": "CSCI",
-        "credits": 6
-      },
-      {
-        "type": "credits",
-        "label": "Six additional credits in mathematics at the 200 level or above",
-        "subject": "MATH",
-        "credits": 6,
-        "level": 200
-      }
-    ]
-  },
-  {
-    "major": "Computer Science (BA)",
-    "requirements": [
-      {
-        "type": "all",
-        "label": "Required Courses",
-        "courses": [
-          "CSCI 111 - Introduction to Computer Science",
-          "CSCI 112 - Data Structures",
-          "CSCI 209 - Software Development",
-          "CSCI 210 - Computer Organization",
-          "CSCI 211 - Algorithm Design and Analysis"
-        ]
-      },
-      {
-        "type": "one_of",
-        "label": "Take one course",
-        "courses": [
-          "MATH 121 - Discrete Mathematics I",
-          "MATH 225 - Bridges to Advanced Math"
-        ]
-      },
-      {
-        "type": "one_of",
-        "label": "Take one course",
-        "courses": [
-          "CSCI 312 - Programming Language Design",
-          "CSCI 313 - Theory of Computation"
+          "BIOL 201 - Statistics for Biology and Medicine",
+          "BUS 202 - Fundamentals of Business Analytics",
+          "CBSC 250 - Statistics and Research Design",
+          "ECON 202 - Data Analytics for Economics",
+          "POL 202 - Applied Statistics",
+          "MATH 118 - Introduction to Statistics",
+          "SOAN 218 - Basic Statistics in the Social Sciences"
         ]
       },
       {
         "type": "n_of",
-        "label": "Two courses chosen from",
+        "label": "Two Courses chosen from",
         "n": 2,
         "courses": [
-          "CSCI 315 - Artificial Intelligence",
-          "CSCI 316 - Advanced Topics in Robotics",
-          "CSCI 317 - Database Systems",
-          "CSCI 319 - Video Game Design",
-          "CSCI 320 - Parallel Computing",
-          "CSCI 321 - Computer Networks",
-          "CSCI 325 - Distributed Systems",
-          "CSCI 326 - Cloud Computing",
-          "CSCI 330 - Operating Systems",
-          "CSCI 332 - Compiler Construction",
-          "CSCI 335 - Software Engineering through Web Applications",
-          "CSCI 339 - Human-Computer Interaction",
-          "CSCI 340 - Computer Graphics"
+          "ACCT 310 - Accounting Information Systems",
+          "ACCT 311 - Financial Statement Analysis",
+          "ACCT 330 - Strategic Cost Management and Analysis",
+          "ACCT 358 - Individual Income Taxation & Financial Planning",
+          "ACCT 360 - Auditing"
         ]
       },
       {
         "type": "credits",
-        "label": "Six additional credits in computer science",
-        "subject": "CSCI",
-        "credits": 6
+        "label": "Nine credits from BUS 200- or 300-level courses (except BUS 202)",
+        "subject": "BUS 200+ or 300+",
+        "credits": 9
+      },
+      {
+        "type": "credits",
+        "label": "Nine credits from ACCT 200- or 300-level (not previously counted), FIN 300-level, ECON 215, 271",
+        "subject": "MIXED",
+        "credits": 9
       }
     ]
   },
@@ -199,6 +135,125 @@
         "courses": [
           "Completion of the Major Field Test in Chemistry"
         ]
+      }
+    ]
+  },
+  {
+    "major": "Computer Science (BA)",
+    "requirements": [
+      {
+        "type": "all",
+        "label": "Required Courses",
+        "courses": [
+          "CSCI 111 - Introduction to Computer Science",
+          "CSCI 112 - Data Structures",
+          "CSCI 209 - Software Development",
+          "CSCI 210 - Computer Organization",
+          "CSCI 211 - Algorithm Design and Analysis"
+        ]
+      },
+      {
+        "type": "one_of",
+        "label": "Take one course",
+        "courses": [
+          "MATH 121 - Discrete Mathematics I",
+          "MATH 225 - Bridges to Advanced Math"
+        ]
+      },
+      {
+        "type": "one_of",
+        "label": "Take one course",
+        "courses": [
+          "CSCI 312 - Programming Language Design",
+          "CSCI 313 - Theory of Computation"
+        ]
+      },
+      {
+        "type": "n_of",
+        "label": "Two courses chosen from",
+        "n": 2,
+        "courses": [
+          "CSCI 315 - Artificial Intelligence",
+          "CSCI 316 - Advanced Topics in Robotics",
+          "CSCI 317 - Database Systems",
+          "CSCI 319 - Video Game Design",
+          "CSCI 320 - Parallel Computing",
+          "CSCI 321 - Computer Networks",
+          "CSCI 325 - Distributed Systems",
+          "CSCI 326 - Cloud Computing",
+          "CSCI 330 - Operating Systems",
+          "CSCI 332 - Compiler Construction",
+          "CSCI 335 - Software Engineering through Web Applications",
+          "CSCI 339 - Human-Computer Interaction",
+          "CSCI 340 - Computer Graphics"
+        ]
+      },
+      {
+        "type": "credits",
+        "label": "Six additional credits in computer science",
+        "subject": "CSCI",
+        "credits": 6
+      }
+    ]
+  },
+  {
+    "major": "Computer Science (BS)",
+    "requirements": [
+      {
+        "type": "all",
+        "label": "Required Courses",
+        "courses": [
+          "CSCI 111 - Introduction to Computer Science",
+          "CSCI 112 - Data Structures",
+          "CSCI 209 - Software Development",
+          "CSCI 210 - Computer Organization",
+          "CSCI 211 - Algorithm Design and Analysis",
+          "CSCI 312 - Programming Language Design",
+          "CSCI 313 - Theory of Computation",
+          "MATH 102 - Calculus II",
+          "MATH 222 - Linear Algebra"
+        ]
+      },
+      {
+        "type": "one_of",
+        "label": "Take one course",
+        "courses": [
+          "MATH 121 - Discrete Mathematics I",
+          "MATH 225 - Bridges to Advanced Math"
+        ]
+      },
+      {
+        "type": "n_of",
+        "label": "Two courses chosen from",
+        "n": 2,
+        "courses": [
+          "CSCI 315 - Artificial Intelligence",
+          "CSCI 316 - Advanced Topics in Robotics",
+          "CSCI 317 - Database Systems",
+          "CSCI 319 - Video Game Design",
+          "CSCI 320 - Parallel Computing",
+          "CSCI 321 - Computer Networks",
+          "CSCI 325 - Distributed Systems",
+          "CSCI 326 - Cloud Computing",
+          "CSCI 330 - Operating Systems",
+          "CSCI 332 - Compiler Construction",
+          "CSCI 335 - Software Engineering through Web Applications",
+          "CSCI 339 - Human-Computer Interaction",
+          "CSCI 340 - Computer Graphics"
+        ]
+      },
+      {
+        "type": "credits",
+        "label": "Six additional credits in computer science",
+        "subject": "CSCI",
+        "credits": 6
+      },
+      {
+        "type": "credits",
+        "label": "Six additional credits in mathematics at the 200 level or above",
+        "subject": "MATH",
+        "credits": 6,
+        "level": 200
       }
     ]
   }
