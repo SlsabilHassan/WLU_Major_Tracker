@@ -185,3 +185,30 @@
   cursor: not-allowed;
   border-color: rgba(255, 255, 255, 0.3);
 }
+
+@media (max-width: 600px) {
+  .elegant-roadmap {
+    padding: 1rem 0.25rem;
+  }
+  .roadmap-step {
+    width: 100%;
+    padding: 0 0.5rem;
+    margin-bottom: 2rem;
+  }
+  .roadmap-content {
+    padding: 0.5rem;
+    font-size: 0.95rem;
+    word-break: break-word;
+  }
+  .roadmap-title {
+    font-size: 1rem;
+  }
+  .roadmap-courses {
+    gap: 0.5rem;
+  }
+  .roadmap-checkbox span {
+    font-size: 0.97rem;
+    line-height: 1.3;
+    word-break: break-word;
+  }
+}
