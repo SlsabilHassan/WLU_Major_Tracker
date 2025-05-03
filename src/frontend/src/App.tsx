@@ -19,6 +19,7 @@ function App() {
   const [selectedMajor, setSelectedMajor] = useState<Major | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [searchQuery, setSearchQuery] = useState('');
   const [allProgress, setAllProgress] = useState<AllProgress>(() => {
     try {
       const saved = localStorage.getItem(STORAGE_KEY);
@@ -154,6 +155,10 @@ function App() {
     setSelectedMajor(null);
   }, []);
 
+  const handleClearSearch = useCallback(() => {
+    setSearchQuery('');
+  }, []);
+
   const particlesInit = useCallback(async (engine: Engine) => {
     await loadFull(engine);
   }, []);
@@ -168,14 +173,36 @@ function App() {
     }
 
     if (!selectedMajor) {
+      const filteredMajors = majors.filter(major => 
+        major.major.toLowerCase().includes(searchQuery.toLowerCase())
+      );
+
       return (
         <section className="major-selection">
           <h2>Select a Major</h2>
-          {majors.length === 0 ? (
-            <p className="no-majors">No majors available at the moment.</p>
+          <div className="search-container">
+            <input
+              type="text"
+              placeholder="Search majors..."
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              className="search-input"
+            />
+            {searchQuery && (
+              <button
+                className="clear-search-button"
+                onClick={handleClearSearch}
+                aria-label="Clear search"
+              >
+                ×
+              </button>
+            )}
+          </div>
+          {filteredMajors.length === 0 ? (
+            <p className="no-majors">No majors match your search.</p>
           ) : (
             <div className="major-list">
-              {majors.map((major) => (
+              {filteredMajors.map((major) => (
                 <button
                   key={major.major}
                   className="major-button"

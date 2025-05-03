@@ -55,6 +55,84 @@
     ]
   },
   {
+    "major": "Art History (BA)",
+    "requirements": [
+      {
+        "type": "n_of",
+        "label": "1. Introduction (9 credits required)",
+        "n": 3,
+        "courses": [
+          "ARTH 101 - Survey of Western Art: Ancient to Medieval",
+          "ARTH 102 - Survey of Western Art: Renaissance to the Present",
+          "ARTH 130 - African American Art",
+          "ARTH 131 - Art of the African Diaspora",
+          "ARTH 140 - Asian Art",
+          "ARTH 141 - Buddhist Art of South and Central Asia",
+          "ARTH 170 - Arts of Mesoamerica and the Andes"
+        ],
+        "notes": "Choose at least three courses (9 credits) from the list above"
+      },
+      {
+        "type": "credits",
+        "label": "2. Studio Art Requirement",
+        "subject": "ARTS",
+        "credits": 3,
+        "notes": "One 3- or 4-credit course in ARTS"
+      },
+      {
+        "type": "n_of",
+        "label": "3. ARTH Electives (12 credits required)",
+        "n": 4,
+        "courses": [
+          "ARTH 125",
+          "ARTH 131 (if not used for Introduction)",
+          "ARTH 146",
+          "ARTH 180",
+          "ARTH 195",
+          "ARTH courses at the 200 level",
+          "MRST 110 (with department approval)"
+        ],
+        "notes": "Choose at least four courses (12 credits) from the list above"
+      },
+      {
+        "type": "credits",
+        "label": "4. 300-level ARTH (6 credits required)",
+        "subject": "ARTH",
+        "credits": 6,
+        "level": 300,
+        "notes": "Two 300-level ARTH courses required. May include LACS 396 with department approval."
+      },
+      {
+        "type": "one_of",
+        "label": "5. Thesis or Advanced Coursework",
+        "courses": [
+          "ARTH 473 - Senior Thesis (Fall)",
+          "ARTH 483 - Senior Thesis (Winter)",
+          "ARTH 493 - Honors Thesis (Fall and Winter)",
+          "One additional ARTH course at the 300-level"
+        ],
+        "notes": "Choose one option from the list above"
+      },
+      {
+        "type": "all",
+        "label": "6. Capstone Requirement",
+        "courses": [
+          "ARTH 395 - Senior Seminar: Approaches to Art History"
+        ],
+        "notes": "Required course for all Art History majors"
+      },
+      {
+        "type": "all",
+        "label": "Notes",
+        "courses": [
+          "Total of at least 36 credits required",
+          "All courses must be completed with a grade of C- or better",
+          "Some courses may require department approval (MRST 110, LACS 396)"
+        ]
+      }
+    ]
+  },
+  {
     "major": "Biochemistry (BS)",
     "requirements": [
       {
@@ -64,8 +142,6 @@
           "BIOL 111 - Fundamentals of Biology",
           "BIOL 113 - Biology Laboratory",
           "CHEM 211 - Analytical Chemistry",
-          "CHEM 245 - Organic Chemistry I Laboratory",
-          "CHEM 246 - Organic Chemistry II Laboratory",
           "CHEM 243 - Spectroscopic Methods",
           "CHEM 250 - Inorganic and Bioinorganic Chemistry",
           "CHEM 260 - Physical Chemistry of Biological Systems",
@@ -83,7 +159,7 @@
         "label": "General Chemistry Option",
         "courses": [
           "CHEM 110 - General Chemistry",
-          "CHEM 109 - General Chemistry"
+          "CHEM 109 - General Chemistry WITH CHEM 115 - General Chemistry Laboratory"
         ]
       },
       {
@@ -91,7 +167,7 @@
         "label": "Organic Chemistry I Option",
         "courses": [
           "CHEM 241 - Organic Chemistry I",
-          "CHEM 240 - Organic Chemistry I"
+          "CHEM 240 - Organic Chemistry I WITH CHEM 245 - Organic Chemistry I Laboratory"
         ]
       },
       {
@@ -99,7 +175,7 @@
         "label": "Organic Chemistry II Option",
         "courses": [
           "CHEM 242 - Organic Chemistry II",
-          "CHEM 244 - Organic Chemistry II"
+          "CHEM 244 - Organic Chemistry II WITH CHEM 246 - Organic Chemistry II Laboratory"
         ]
       },
       {
@@ -108,7 +184,8 @@
         "n": 2,
         "courses": [
           "BIOL 201 - Statistics for Biology and Medicine",
-          "BIOL 211S - Cell Biology at St. Andrews or BIOL 230 - Cell Biology",
+          "BIOL 211S - Cell Biology at St. Andrews",
+          "BIOL 230 - Cell Biology",
           "BIOL 220 - Genetics",
           "BIOL 223 - Virology",
           "BIOL 225 - Medicinal Plant Biology",
@@ -135,6 +212,864 @@
         "courses": [
           "Completion of the Major Field Test in Chemistry"
         ]
+      }
+    ]
+  },
+  {
+    "major": "Biology (BA)",
+    "requirements": [
+      {
+        "type": "all",
+        "label": "Required Courses",
+        "courses": [
+          "BIOL 111 - Fundamentals of Biology",
+          "BIOL 113 - Biology Laboratory",
+          "CHEM 110 - General Chemistry"
+        ]
+      },
+      {
+        "type": "one_of",
+        "label": "Evolution Option",
+        "courses": [
+          "BIOL 340 - Evolution",
+          "BIOL 340S - Evolutionary Biology at St. Andrews"
+        ]
+      },
+      {
+        "type": "n_of",
+        "label": "Quantitative Biology: Two courses from the following",
+        "n": 2,
+        "courses": [
+          "BIOL 187 - Introduction to Data Science in Python",
+          "BIOL 201 - Statistics for Biology and Medicine",
+          "BIOL 302 - Modern Computational Biostatistics",
+          "CBSC 250 - Statistics and Research Design (PSYC 250)",
+          "CSCI 121 - Scientific Computing",
+          "POL 202 - Applied Statistics",
+          "MATH 101 - Calculus I",
+          "MATH 102 - Calculus II",
+          "BIOL 297 - Topics in Biology (when appropriate)"
+        ]
+      },
+      {
+        "type": "one_of",
+        "label": "Molecules and Cells: One course from the following",
+        "courses": [
+          "BIOL 211S - Cell Biology at St. Andrews",
+          "BIOL 230 - Cell Biology",
+          "BIOL 212S - Molecular Biology at St. Andrews",
+          "BIOL 215 - Biochemistry of the Cell *",
+          "BIOL 215S - Biochemistry at St. Andrews *",
+          "BIOL 220 - Genetics",
+          "BIOL 223 - Virology",
+          "BIOL 280 - Neural Imaging *",
+          "BIOL 297 - Topics in Biology (when appropriate)"
+        ]
+      },
+      {
+        "type": "one_of",
+        "label": "Ecology and Evolution: One course from the following",
+        "courses": [
+          "BIOL 217 - Aquatic Ecology *",
+          "BIOL 229 - Observing Ireland's Coastal Biomes",
+          "BIOL 240 - Comparative Animal Biology *",
+          "BIOL 240S - Zoology at St. Andrews *",
+          "BIOL 241 - Field Ornithology *",
+          "BIOL 242 - Field Herpetology *",
+          "BIOL 243 - Animal Behavior *",
+          "BIOL 244S - Invertebrate Zoology at St. Andrews",
+          "BIOL 245 - Ecology *",
+          "BIOL 245S - Ecology at St Andrews",
+          "BIOL 247S - Vertebrate Zoology at St. Andrews",
+          "BIOL 297 - Topics in Biology (when appropriate)"
+        ]
+      },
+      {
+        "type": "one_of",
+        "label": "Structure and Function: One course from the following",
+        "courses": [
+          "BIOL 225 - Medicinal Plant Biology *",
+          "BIOL 250 - Vertebrate Endocrinology",
+          "BIOL 255 - Reproductive Physiology",
+          "BIOL 260 - Anatomy and Physiology *",
+          "BIOL 261S - Comparative Physiology at St. Andrews *",
+          "BIOL 267 - Bioengineering and Bioinspired Design (ENGN 267)",
+          "BIOL 275 - Food for Thought",
+          "BIOL 282 - Modeling and Simulations in Public Health",
+          "BIOL 283 - Pregnancy: A KISS in Time?",
+          "BIOL 297 - Topics in Biology (when appropriate)"
+        ]
+      },
+      {
+        "type": "n_of",
+        "label": "Advanced-level: At least two of the following (at least two labs, *), max 4 credits at 400-level",
+        "n": 2,
+        "courses": [
+          "BIOL 302 - Modern Computational Biostatistics",
+          "BIOL 310 - Microbiology *",
+          "BIOL 322 - Conservation Genetics",
+          "BIOL 325 - Ecological Modeling and Conservation Strategies *",
+          "BIOL 330 - Experimental Botany: Global Climate Change *",
+          "BIOL 332 - Plant Functional Ecology *",
+          "BIOL 350 - Immunology",
+          "BIOL 355 - Microanatomy *",
+          "BIOL 360 - Experimental Neurophysiology *",
+          "BIOL 362 - Animal Physiology *",
+          "BIOL 365 - Developmental Biology *",
+          "BIOL 385 - Molecular Mechanics of Life *",
+          "BIOL 395 - Advanced Topics in Biology",
+          "BIOL 397 - Neuroendocrinology",
+          "BIOL 398 - Selected Topics in Ecology and Evolution"
+        ]
+      },
+      {
+        "type": "all",
+        "label": "Major Field Test (MFT) in Biology",
+        "courses": [
+          "Completion of the Major Field Test (MFT) in Biology"
+        ]
+      },
+      {
+        "type": "credits",
+        "label": "Additional credits in biology to total 33, max 6 at 400-level (BIOL 464 not allowed)",
+        "subject": "BIOL",
+        "credits": 33
+      }
+    ]
+  },
+  {
+    "major": "Biology (BS)",
+    "requirements": [
+      {
+        "type": "all",
+        "label": "Required Courses",
+        "courses": [
+          "BIOL 111 - Fundamentals of Biology",
+          "BIOL 113 - Biology Laboratory",
+          "BIOL 220 - Genetics",
+          "CHEM 110 - General Chemistry",
+          "CHEM 241 - Organic Chemistry I",
+          "MATH 101 - Calculus I",
+          "MATH 102 - Calculus II",
+          "PHYS 111 - General Physics I",
+          "PHYS 112 - General Physics II"
+        ]
+      },
+      {
+        "type": "one_of",
+        "label": "Data Science Option: Take one course",
+        "courses": [
+          "BIOL 185 - Data Science: Visualizing and Exploring Big Data",
+          "BIOL 187 - Introduction to Data Science in Python",
+          "CSCI 121 - Scientific Computing"
+        ]
+      },
+      {
+        "type": "one_of",
+        "label": "Biochemistry Option: Take one course (BIOL 215/215S cannot double count)",
+        "courses": [
+          "BIOL 215 - Biochemistry of the Cell",
+          "BIOL 215S - Biochemistry at St. Andrews",
+          "CHEM 242 - Organic Chemistry II"
+        ]
+      },
+      {
+        "type": "one_of",
+        "label": "Molecules and Cells: One course from the following",
+        "courses": [
+          "BIOL 211S - Cell Biology at St. Andrews",
+          "BIOL 230 - Cell Biology",
+          "BIOL 212S - Molecular Biology at St. Andrews",
+          "BIOL 215 - Biochemistry of the Cell",
+          "BIOL 215S - Biochemistry at St. Andrews",
+          "BIOL 223 - Virology",
+          "BIOL 280 - Neural Imaging",
+          "CHEM 341 - Biochemistry I",
+          "CHEM 343 - Biochemistry I Laboratory",
+          "BIOL 297 - Topics in Biology (when appropriate)"
+        ]
+      },
+      {
+        "type": "one_of",
+        "label": "Ecology and Evolution: One course from the following",
+        "courses": [
+          "BIOL 217 - Aquatic Ecology",
+          "BIOL 229 - Observing Ireland's Coastal Biomes",
+          "BIOL 240 - Comparative Animal Biology",
+          "BIOL 240S - Zoology at St. Andrews",
+          "BIOL 241 - Field Ornithology",
+          "BIOL 242 - Field Herpetology",
+          "BIOL 243 - Animal Behavior",
+          "BIOL 244S - Invertebrate Zoology at St. Andrews",
+          "BIOL 245 - Ecology",
+          "BIOL 245S - Ecology at St Andrews",
+          "BIOL 247S - Vertebrate Zoology at St. Andrews",
+          "BIOL 297 - Topics in Biology (when appropriate)"
+        ]
+      },
+      {
+        "type": "one_of",
+        "label": "Structure and Function: One course from the following",
+        "courses": [
+          "BIOL 225 - Medicinal Plant Biology",
+          "BIOL 250 - Vertebrate Endocrinology",
+          "BIOL 255 - Reproductive Physiology",
+          "BIOL 260 - Anatomy and Physiology",
+          "BIOL 261S - Comparative Physiology at St. Andrews",
+          "BIOL 267 - Bioengineering and Bioinspired Design",
+          "BIOL 275 - Food for Thought",
+          "BIOL 280 - Neural Imaging",
+          "BIOL 282 - Modeling and Simulations in Public Health",
+          "BIOL 283 - Pregnancy: A KISS in Time?",
+          "BIOL 297 - Topics in Biology (when appropriate)"
+        ]
+      },
+      {
+        "type": "n_of",
+        "label": "Advanced-level: At least three of the following (at least one lab, *), max 6 credits at 400-level",
+        "n": 3,
+        "courses": [
+          "BIOL 302 - Modern Computational Biostatistics",
+          "BIOL 310 - Microbiology *",
+          "BIOL 322 - Conservation Genetics",
+          "BIOL 325 - Ecological Modeling and Conservation Strategies *",
+          "BIOL 330 - Experimental Botany: Global Climate Change *",
+          "BIOL 332 - Plant Functional Ecology *",
+          "BIOL 340 - Evolution",
+          "BIOL 340S - Evolutionary Biology at St. Andrews",
+          "BIOL 350 - Immunology",
+          "BIOL 355 - Microanatomy *",
+          "BIOL 360 - Experimental Neurophysiology *",
+          "BIOL 362 - Animal Physiology *",
+          "BIOL 365 - Developmental Biology *",
+          "BIOL 385 - Molecular Mechanics of Life *",
+          "BIOL 395 - Advanced Topics in Biology",
+          "BIOL 397 - Neuroendocrinology",
+          "BIOL 398 - Selected Topics in Ecology and Evolution"
+        ]
+      },
+      {
+        "type": "one_of",
+        "label": "Quantitative Biology: One course from the following",
+        "courses": [
+          "BIOL 267 - Bioengineering and Bioinspired Design",
+          "BIOL 282 - Modeling and Simulations in Public Health",
+          "BIOL 283 - Pregnancy: A KISS in Time?",
+          "BIOL 325 - Ecological Modeling and Conservation Strategies",
+          "BIOL 357 - A Walk Through the Ages: Using Artificial Intelligence to Understand the Evolution of Exercise",
+          "BIOL 385 - Molecular Mechanics of Life",
+          "BIOL 297 - Topics in Biology (when appropriate)"
+        ]
+      },
+      {
+        "type": "credits",
+        "label": "Additional credits in biology to total 33, max 6 at 400-level (BIOL 464 not allowed)",
+        "subject": "BIOL",
+        "credits": 33
+      },
+      {
+        "type": "all",
+        "label": "Major Field Test (MFT) in Biology",
+        "courses": [
+          "Completion of the Major Field Test (MFT) in Biology"
+        ]
+      }
+    ]
+  },
+  {
+    "major": "Business Administration (BS)",
+    "requirements": [
+      {
+        "type": "all",
+        "label": "Required Courses",
+        "courses": [
+          "ACCT 100 - Introduction to Accounting",
+          "ECON 100 - Introduction to Economics",
+          "BUS 211 - Marketing Management",
+          "BUS 217 - Management and Organizational Behavior",
+          "FIN 221 - Managerial Finance"
+        ]
+      },
+      {
+        "type": "one_of",
+        "label": "Statistics/Analytics Option (see note for double majors)",
+        "courses": [
+          "BUS 202 - Fundamentals of Business Analytics",
+          "CBSC 250 - Statistics and Research Design",
+          "ECON 202 - Data Analytics for Economics",
+          "POL 202 - Applied Statistics",
+          "MATH 118 - Introduction to Statistics",
+          "SOAN 218 - Basic Statistics in the Social Sciences"
+        ]
+      },
+      {
+        "type": "one_of",
+        "label": "Capstone Option",
+        "courses": [
+          "BUS 398 - Strategic Management",
+          "BUS 399 - Entrepreneurship"
+        ]
+      },
+      {
+        "type": "n_of",
+        "label": "Business Administration electives: at least 12 additional credits from BUS or FIN 300+ (max 2 FIN, excl. BUS 401, 402, 421, 422)",
+        "n": 4,
+        "courses": [
+          "BUS 305 - Seminar in International Business",
+          "BUS 306 - Seminar in Management Information Systems",
+          "BUS 314 - Introduction to Data Science for Business",
+          "BUS 315 - Database Management for Business",
+          "BUS 316 - Business Analytics",
+          "BUS 317 - Data Mining for Business Analytics",
+          "BUS 321 - Multimedia Design and Development",
+          "BUS 332 - Cross-Cultural Leadership",
+          "BUS 333 - Rise of the Robots: Technology and the Future of Work",
+          "BUS 345 - Business Ethics",
+          "BUS 348 - Foundations in Business Law",
+          "BUS 362 - Understanding Emerging Economies",
+          "BUS 369 - Green IS in Iceland: Sustainable Information Systems",
+          "BUS 381 - Social Entrepreneurship",
+          "BUS 390 - Supervised Study Abroad",
+          "BUS 392 - Layered Berlin: German Culture and the Social Market Economy",
+          "BUS 398 - Strategic Management",
+          "BUS 399 - Entrepreneurship",
+          "FIN 300 - Principles of Investments",
+          "FIN 301 - Corporate Finance",
+          "FIN 357 - Multinational Business Finance"
+        ]
+      },
+      {
+        "type": "n_of",
+        "label": "Non-Business electives: 9 credits from approved list (see catalog for full list)",
+        "n": 3,
+        "courses": [
+          "ACCT 200+ - All courses numbered 200 and above",
+          "ECON 200+ - All courses numbered 200 and above",
+          "AFCA 286 - Black Writers and the Allure of Paris",
+          "ARTH 204 - Art Works: Careers for Art Majors and Minors",
+          "ARTH 209 - History of Western Architecture",
+          "ARTH 245 - Ancient Cultures, New Markets: Modern and Contemporary Asian Art",
+          "ARTH 263 - 20th-Century European Art",
+          "ARTH 267 - Art Since 1945",
+          "ARTH 275 - Community Muralism: The Art of Public Engagement",
+          "ARTH 276 - Chicana/o Art and Muralism: From the Street to the (Staniar) Gallery",
+          "ARTH 288 - Chinese Export Porcelain and the China Trade, 1500 to 1900",
+          "ARTH 378 - Border Art: Contemporary U.S. Latinx Art",
+          "ARTH 398 - Seminar in Museum Studies",
+          "ARTH 453 - Internship in Arts Management",
+          "ARTS 204 - Art Works: Careers for Art Majors and Minors",
+          "ARTS 215 - Creating Comics",
+          "ARTS 217 - Painting I",
+          "ARTS 218 - Painting II",
+          "ARTS 220 - Photography II",
+          "ARTS 223 - Paris: History, Image, Myth",
+          "ARTS 224 - Color Photography",
+          "ARTS 226 - Introduction to the Book Arts",
+          "ARTS 227 - Printmaking I",
+          "ARTS 228 - Printmaking II",
+          "ARTS 231 - Introductory Sculpture: Materials and Methods",
+          "ARTS 232 - Intermediate Sculpture: Expanded Material Practice",
+          "ARTS 236 - Land and Passage",
+          "ARTS 237 - Portable Radicals: Soft Sculpture",
+          "ARTS 275 - Community Muralism: The Art of Public Engagement",
+          "ARTS 320 - Large Format Photography",
+          "BIOL 267 - Bioengineering and Bioinspired Design",
+          "BIOL 275 - Food for Thought",
+          "BIOL 357 - A Walk Through the Ages: Using Artificial Intelligence to Understand the Evolution of Exercise",
+          "CBSC 214 - The Psychology of Humor",
+          "CBSC 215 - Seminar in Evolutionary Psychology",
+          "CBSC 223 - Toys and Playful Learning",
+          "CBSC 314 - Attention",
+          "CSCI 209 - Software Development",
+          "CSCI 211 - Algorithm Design and Analysis",
+          "CSCI 230 - Introduction to Machine Learning and Big Data",
+          "CSCI 257 - A Walk Through the Ages: Using Artificial Intelligence to Understand the Evolution of Exercise",
+          "CSCI 315 - Artificial Intelligence",
+          "CSCI 317 - Database Systems",
+          "CSCI 319 - Video Game Design",
+          "CSCI 326 - Cloud Computing",
+          "CSCI 335 - Software Engineering through Web Applications",
+          "DANC 220 - Dance Composition",
+          "DANC 233 - Movement for Actors",
+          "DCI 201 - Digital Collections and Exhibits",
+          "DCI 271 - New Dark Age",
+          "EALL 215 - East Asian Cinema",
+          "ENGL 201 - Introduction to Creative Writing",
+          "ENGL 202 - Creative Writing: Playwriting",
+          "ENGL 203 - Creative Writing: Fiction",
+          "ENGL 206 - Creative Writing: Nonfiction",
+          "ENGL 215 - Creating Comics",
+          "ENGL 233 - Introduction to Film",
+          "ENGL 234 - Children's Literature",
+          "ENGL 254 - I Heart Jane: Austen's Fan Cultures and Afterlives",
+          "ENGL 257 - Business in American Literature and Film",
+          "ENGL 262 - Literature, Race, and Ethnicity",
+          "ENGL 286 - Black Writers and the Allure of Paris",
+          "ENGL 289 - Literary Book Publishing",
+          "ENGL 349 - Middlemarch and Devoted Readers",
+          "ENGL 354 - Contemporary British and American Drama",
+          "ENGL 366 - African-American Literature",
+          "ENGL 370 - Contemporary North American Fiction",
+          "ENGL 382 - Hotel Orient",
+          "ENGL 391 - Topics in Creative Writing",
+          "ENGL 431 - Master Class in Creative Writing",
+          "ENGL 453 - Internship in Literary Editing with Shenandoah",
+          "ENGN 250 - Introduction to Engineering Design",
+          "FILM 233 - Introduction to Film",
+          "FILM 236 - Science Fiction & Fantasy: From Page to Screen and Beyond",
+          "FILM 237S - Field Documentary",
+          "FILM 238 - Documentary Filmmaking",
+          "GERM 302 - German for the Professions",
+          "GERM 392 - Layered Berlin: German Culture and the Social Market Economy",
+          "HIST 232 - Popular Culture in Latin America",
+          "HIST 260 - Introduction to African American History from 1877",
+          "HIST 266 - The American Century: U.S. History from 1945",
+          "HIST 268 - Building a Suburban Nation: Race, Class, and Politics in Postwar America",
+          "JOUR 215 - The Magazine: Past, Present, Future",
+          "JOUR 220 - Social Media: Principles and Practice",
+          "JOUR 221 - Communication in Global Perspectives",
+          "JOUR 227 - Public Relations Writing",
+          "JOUR 230 - Data-Driven Storytelling",
+          "JOUR 266 - Cross-Cultural Documentary Filmmaking",
+          "JOUR 273 - Principles of Public Relations",
+          "JOUR 301 - Law and Communications",
+          "JOUR 325 - Crisis Communications",
+          "JOUR 338 - The Documentary",
+          "JOUR 341 - Multimedia Storytelling Design",
+          "JOUR 345 - Media Ethics",
+          "JOUR 371 - Financial News",
+          "JOUR 372 - Reporting on the Economy",
+          "JOUR 377 - Media Management & Entrepreneurship",
+          "LIT 222 - Real and Imaginary Animals in Japanese Literature, Film, Anime, and Theater",
+          "MATH 309 - Probability",
+          "MATH 310 - Mathematical Statistics",
+          "MATH 332 - Ordinary Differential Equations",
+          "MATH 333 - Partial Differential Equations",
+          "PHIL 234 - American Pragmatism",
+          "PHIL 240 - Contemporary Ethical Theory",
+          "PHIL 242 - Social Inequality and Fair Opportunity",
+          "PHIL 247 - Medicine, Research, and Poverty",
+          "PHIL 346 - Medical Ethics",
+          "PHIL 348 - Legal Ethics",
+          "PHIL 354 - Distributive Justice",
+          "POL 215 - International Development",
+          "POL 227 - East Asian Politics",
+          "POL 229 - Political Parties, Interest Groups, and the Media",
+          "POL 232 - Public Policy",
+          "POL 233 - Environmental Policy and Law",
+          "POL 245 - European Politics and Society",
+          "POL 246 - Post-Communism and New Democracies",
+          "POL 247 - Latin American Politics",
+          "POL 250 - Race and Equality",
+          "POL 255 - Gender and Politics",
+          "POL 381 - Seminar in International Political Economy",
+          "SOAN 205 - Power and Status: An Introduction to Social Influence",
+          "SOAN 208 - Qualitative Methods",
+          "SOAN 212 - Theories of Social Psychology",
+          "SOAN 220 - A World of Data: Baseball and Statistics",
+          "SOAN 222 - Data Science Tools for Social Policy",
+          "SOAN 225 - Peoples of Central Europe Through Literature and Film",
+          "SOAN 228 - Race and Ethnic Relations",
+          "SOAN 240 - Food, Culture, and Society",
+          "SOAN 245 - European Politics and Society",
+          "SOAN 246 - Post-Communism and New Democracies",
+          "SOAN 252 - Language, Culture, and Communication",
+          "SOAN 263 - Poverty and Marginality in the Americas",
+          "SOAN 265 - Exploring Social Networks",
+          "SOAN 267 - Simulating Society",
+          "SOAN 269 - Studying Global Culture with the World Values Survey",
+          "SOAN 276 - Art & Science of Survey Research",
+          "SOAN 280 - Gender and Sexuality",
+          "SPAN 211 - Spanish Civilization and Culture",
+          "SPAN 212 - Spanish-American Civilization and Culture",
+          "SPAN 214 - Contemporary Spain in Context: (Re)searching Spanish Identity and Culture in the 21st Century",
+          "THTR 209 - Production and Stage Management",
+          "THTR 238 - 3D Printing & Digital Fabrication for Theater",
+          "THTR 239 - Total Theater",
+          "THTR 251 - Exploration of Performance Design",
+          "THTR 253 - Digital Production",
+          "THTR 361 - Stage Directing 1"
+        ]
+      },
+      {
+        "type": "n_of",
+        "label": "International Business Area (choose at least one)",
+        "n": 1,
+        "courses": [
+          "ARTS 223 - Paris: History, Image, Myth",
+          "ARTH 245 - Ancient Cultures, New Markets: Modern and Contemporary Asian Art",
+          "ARTH 275 - Community Muralism: The Art of Public Engagement",
+          "ARTH 288 - Chinese Export Porcelain and the China Trade, 1500 to 1900",
+          "ARTH 378 - Border Art: Contemporary U.S. Latinx Art",
+          "BUS 305 - Seminar in International Business",
+          "BUS 332 - Cross-Cultural Leadership",
+          "BUS 362 - Understanding Emerging Economies",
+          "BUS 369 - Green IS in Iceland: Sustainable Information Systems",
+          "BUS 390 - Supervised Study Abroad",
+          "BUS 392 - Layered Berlin: German Culture and the Social Market Economy",
+          "EALL 215 - East Asian Cinema",
+          "ECON 246 - Caste at the Intersection of Economy, Religion, and Law",
+          "ECON 270 - International Trade",
+          "ECON 271 - International Finance",
+          "ECON 273 - Economy of Latin America",
+          "ECON 274 - China's Modern Economy",
+          "ECON 276 - Health Economics in Developing Countries",
+          "ECON 280 - Development Economics",
+          "ECON 281 - Comparative Institutional Economics",
+          "ECON 282S - African Economic Development",
+          "ECON 356 - Economics of the Environment in Developing Countries",
+          "ECON 380 - Economics of Culture and Development",
+          "ENGL 382 - Hotel Orient",
+          "FIN 357 - Multinational Business Finance",
+          "GERM 302 - German for the Professions",
+          "GERM 392 - Layered Berlin: German Culture and the Social Market Economy",
+          "HIST 232 - Popular Culture in Latin America",
+          "JOUR 221 - Communication in Global Perspectives",
+          "JOUR 266 - Cross-Cultural Documentary Filmmaking",
+          "LIT 222 - Real and Imaginary Animals in Japanese Literature, Film, Anime, and Theater",
+          "POL 215 - International Development",
+          "POL 227 - East Asian Politics",
+          "POL 245 - European Politics and Society",
+          "POL 246 - Post-Communism and New Democracies",
+          "POL 247 - Latin American Politics",
+          "POL 381 - Seminar in International Political Economy",
+          "SOAN 225 - Peoples of Central Europe Through Literature and Film",
+          "SOAN 245 - European Politics and Society",
+          "SOAN 246 - Post-Communism and New Democracies",
+          "SOAN 252 - Language, Culture, and Communication",
+          "SOAN 269 - Studying Global Culture with the World Values Survey",
+          "SPAN 211 - Spanish Civilization and Culture",
+          "SPAN 214 - Contemporary Spain in Context: (Re)searching Spanish Identity and Culture in the 21st Century"
+        ]
+      },
+      {
+        "type": "n_of",
+        "label": "Information Systems Area (choose at least one)",
+        "n": 1,
+        "courses": [
+          "ACCT 310 - Accounting Information Systems",
+          "BUS 306 - Seminar in Management Information Systems",
+          "BUS 314 - Introduction to Data Science for Business",
+          "BUS 315 - Database Management for Business",
+          "BUS 316 - Business Analytics",
+          "BUS 317 - Data Mining for Business Analytics",
+          "BUS 321 - Multimedia Design and Development",
+          "BUS 333 - Rise of the Robots: Technology and the Future of Work",
+          "BUS 369 - Green IS in Iceland: Sustainable Information Systems"
+        ]
+      },
+      {
+        "type": "n_of",
+        "label": "Normative Considerations Area (choose at least one)",
+        "n": 1,
+        "courses": [
+          "ACCT 303 - Sustainability Accounting",
+          "ACCT 304 - Anatomy of a Fraud",
+          "BUS 345 - Business Ethics",
+          "BUS 348 - Foundations in Business Law",
+          "BUS 381 - Social Entrepreneurship",
+          "CBSC 269 - Seminar in Cognitive and Behavioral Science",
+          "ECON 231 - The Economics of Race",
+          "ECON 235 - The Economics of Social Issues",
+          "JOUR 301 - Law and Communications",
+          "JOUR 345 - Media Ethics",
+          "PHIL 242 - Social Inequality and Fair Opportunity",
+          "PHIL 354 - Distributive Justice",
+          "POL 233 - Environmental Policy and Law"
+        ]
+      },
+      {
+        "type": "credits",
+        "label": "Total credits for major (at least 42, with at least 24 from BUS/FIN and 18 from non-BUS/FIN)",
+        "subject": "TOTAL",
+        "credits": 42
+      }
+    ]
+  },
+  {
+    "major": "Chemistry (BA)",
+    "requirements": [
+      {
+        "type": "all",
+        "label": "Required Courses",
+        "courses": [
+          "CHEM 211 - Analytical Chemistry",
+          "CHEM 243 - Spectroscopic Methods",
+          "CHEM 250 - Inorganic and Bioinorganic Chemistry",
+          "CHEM 341 - Biochemistry I",
+          "MATH 101 - Calculus I",
+          "MATH 102 - Calculus II",
+          "PHYS 111 - General Physics I",
+          "PHYS 112 - General Physics II"
+        ]
+      },
+      {
+        "type": "one_of",
+        "label": "General Chemistry Option",
+        "courses": [
+          "CHEM 110 - General Chemistry",
+          "CHEM 109 - General Chemistry WITH CHEM 115 - General Chemistry Laboratory"
+        ]
+      },
+      {
+        "type": "one_of",
+        "label": "Organic Chemistry I Option",
+        "courses": [
+          "CHEM 241 - Organic Chemistry I",
+          "CHEM 240 - Organic Chemistry I WITH CHEM 245 - Organic Chemistry I Laboratory"
+        ]
+      },
+      {
+        "type": "one_of",
+        "label": "Organic Chemistry II Option",
+        "courses": [
+          "CHEM 242 - Organic Chemistry II",
+          "CHEM 244 - Organic Chemistry II WITH CHEM 246 - Organic Chemistry II Laboratory"
+        ]
+      },
+      {
+        "type": "one_of",
+        "label": "Physical Chemistry Option",
+        "courses": [
+          "CHEM 260 - Physical Chemistry of Biological Systems",
+          "CHEM 261 - Physical Chemistry: Quantum & Computational Chemistry"
+        ]
+      },
+      {
+        "type": "credits",
+        "label": "Six additional credits from biology, chemistry (200+), geology, or physics (200+)",
+        "subject": "BIO/CHEM/GEOL/PHYS",
+        "credits": 6,
+        "level": 200
+      },
+      {
+        "type": "all",
+        "label": "Major Field Test in Chemistry",
+        "courses": [
+          "Completion of the Major Field Test in Chemistry"
+        ]
+      }
+    ]
+  },
+  {
+    "major": "Chemistry (BS)",
+    "requirements": [
+      {
+        "type": "all",
+        "label": "Required Courses",
+        "courses": [
+          "CHEM 211 - Analytical Chemistry",
+          "CHEM 243 - Spectroscopic Methods",
+          "CHEM 250 - Inorganic and Bioinorganic Chemistry",
+          "CHEM 260 - Physical Chemistry of Biological Systems",
+          "CHEM 261 - Physical Chemistry: Quantum & Computational Chemistry",
+          "CHEM 341 - Biochemistry I",
+          "MATH 101 - Calculus I",
+          "MATH 102 - Calculus II",
+          "MATH 221 - Multivariable Calculus",
+          "PHYS 111 - General Physics I",
+          "PHYS 112 - General Physics II"
+        ]
+      },
+      {
+        "type": "one_of",
+        "label": "General Chemistry Option",
+        "courses": [
+          "CHEM 110 - General Chemistry",
+          "CHEM 109 - General Chemistry WITH CHEM 115 - General Chemistry Laboratory"
+        ]
+      },
+      {
+        "type": "one_of",
+        "label": "Organic Chemistry I Option",
+        "courses": [
+          "CHEM 241 - Organic Chemistry I",
+          "CHEM 240 - Organic Chemistry I WITH CHEM 245 - Organic Chemistry I Laboratory"
+        ]
+      },
+      {
+        "type": "one_of",
+        "label": "Organic Chemistry II Option",
+        "courses": [
+          "CHEM 242 - Organic Chemistry II",
+          "CHEM 244 - Organic Chemistry II WITH CHEM 246 - Organic Chemistry II Laboratory"
+        ]
+      },
+      {
+        "type": "n_of",
+        "label": "Two courses chosen from (only one 400-level course may count)",
+        "n": 2,
+        "courses": [
+          "CHEM 342 - Biochemistry II",
+          "CHEM 347 - Advanced Organic Chemistry",
+          "CHEM 350 - Advanced Inorganic Chemistry",
+          "CHEM 365 - Advanced Physical Chemistry",
+          "CHEM 399 - Advanced Topics in Chemistry and Biochemistry",
+          "CHEM 403 - Directed Individual Study",
+          "CHEM 473 - Senior Thesis",
+          "CHEM 493 - Honors Thesis"
+        ]
+      },
+      {
+        "type": "all",
+        "label": "Major Field Test in Chemistry",
+        "courses": [
+          "Completion of the Major Field Test in Chemistry"
+        ]
+      }
+    ]
+  },
+  {
+    "major": "Cognitive and Behavioral Science (BA)",
+    "requirements": [
+      {
+        "type": "one_of",
+        "label": "Foundations: One of the following",
+        "courses": [
+          "CBSC 110 - Brain and Behavior with Laboratory",
+          "CBSC 111 - Brain and Behavior"
+        ]
+      },
+      {
+        "type": "n_of",
+        "label": "Foundations: Two of the following",
+        "n": 2,
+        "courses": [
+          "CBSC 112 - Cognition",
+          "CBSC 113 - Principles of Development",
+          "CBSC 114 - Introduction to Social Psychology"
+        ]
+      },
+      {
+        "type": "all",
+        "label": "Gateway",
+        "courses": [
+          "CBSC 250 - Statistics and Research Design"
+        ]
+      },
+      {
+        "type": "n_of",
+        "label": "Two specialization courses",
+        "n": 2,
+        "courses": [
+          "CBSC 309 - Data Science: Mind Analytics",
+          "CBSC 312 - Sensation Measurement and Perception",
+          "CBSC 313 - Neural Mechanisms of Motivated Behaviors",
+          "CBSC 314 - Attention",
+          "CBSC 315 - Cognitive Neuroscience",
+          "CBSC 316 - Neuropharmacology",
+          "CBSC 317 - Sleep and Circadian Rhythms in Health and Disease",
+          "CBSC 319 - Cognition and Emotion",
+          "CBSC 321 - Socioemotional Development",
+          "CBSC 322 - Gender-Role Development",
+          "CBSC 323 - Language, Culture, and Emotion",
+          "CBSC 325 - Developmental Psychopathology",
+          "CBSC 329 - Stereotyping, Prejudice, and Discrimination",
+          "CBSC 349 - Topical Seminar in Cognitive and Behavioral Science"
+        ]
+      },
+      {
+        "type": "one_of",
+        "label": "One research capstone course",
+        "courses": [
+          "CBSC 353 - Advanced Methods in Systems Neuroscience Research",
+          "CBSC 354 - Advanced Methods in Attention Research",
+          "CBSC 355 - Advanced Methods in Cognitive Neuroscience Research",
+          "CBSC 357 - Advanced Methods in Human Psychophysiology",
+          "CBSC 359 - Advanced Methods in Cognition and Emotion Research",
+          "CBSC 362 - Advanced Methods in Developmental Psychology Research",
+          "CBSC 363 - Advanced Methods in Language, Culture and Emotion",
+          "CBSC 365 - Advanced Methods in Developmental Psychopathology Research",
+          "CBSC 369 - Advanced Methods in Social Psychology Research",
+          "CBSC 399 - Advanced Research Methods in Cognitive and Behavioral Science"
+        ]
+      },
+      {
+        "type": "credits",
+        "label": "At least 12 additional credits from CBSC courses numbered 301 or below",
+        "subject": "CBSC",
+        "credits": 12,
+        "level": 301
+      }
+    ]
+  },
+  {
+    "major": "Cognitive and Behavioral Science (BS)",
+    "requirements": [
+      {
+        "type": "one_of",
+        "label": "Foundations: One of the following",
+        "courses": [
+          "CBSC 110 - Brain and Behavior with Laboratory",
+          "CBSC 111 - Brain and Behavior"
+        ]
+      },
+      {
+        "type": "n_of",
+        "label": "Foundations: Two of the following",
+        "n": 2,
+        "courses": [
+          "CBSC 112 - Cognition",
+          "CBSC 113 - Principles of Development",
+          "CBSC 114 - Introduction to Social Psychology"
+        ]
+      },
+      {
+        "type": "all",
+        "label": "Gateway",
+        "courses": [
+          "CBSC 250 - Statistics and Research Design"
+        ]
+      },
+      {
+        "type": "n_of",
+        "label": "Two specialization courses",
+        "n": 2,
+        "courses": [
+          "CBSC 309 - Data Science: Mind Analytics",
+          "CBSC 312 - Sensation Measurement and Perception",
+          "CBSC 313 - Neural Mechanisms of Motivated Behaviors",
+          "CBSC 314 - Attention",
+          "CBSC 315 - Cognitive Neuroscience",
+          "CBSC 316 - Neuropharmacology",
+          "CBSC 317 - Sleep and Circadian Rhythms in Health and Disease",
+          "CBSC 319 - Cognition and Emotion",
+          "CBSC 321 - Socioemotional Development",
+          "CBSC 322 - Gender-Role Development",
+          "CBSC 323 - Language, Culture, and Emotion",
+          "CBSC 325 - Developmental Psychopathology",
+          "CBSC 329 - Stereotyping, Prejudice, and Discrimination",
+          "CBSC 349 - Topical Seminar in Cognitive and Behavioral Science"
+        ]
+      },
+      {
+        "type": "one_of",
+        "label": "One research capstone course",
+        "courses": [
+          "CBSC 353 - Advanced Methods in Systems Neuroscience Research",
+          "CBSC 354 - Advanced Methods in Attention Research",
+          "CBSC 355 - Advanced Methods in Cognitive Neuroscience Research",
+          "CBSC 357 - Advanced Methods in Human Psychophysiology",
+          "CBSC 359 - Advanced Methods in Cognition and Emotion Research",
+          "CBSC 362 - Advanced Methods in Developmental Psychology Research",
+          "CBSC 363 - Advanced Methods in Language, Culture and Emotion",
+          "CBSC 365 - Advanced Methods in Developmental Psychopathology Research",
+          "CBSC 369 - Advanced Methods in Social Psychology Research",
+          "CBSC 399 - Advanced Research Methods in Cognitive and Behavioral Science"
+        ]
+      },
+      {
+        "type": "credits",
+        "label": "Six additional credits from CBSC courses numbered 301 or below",
+        "subject": "CBSC",
+        "credits": 6,
+        "level": 301
+      },
+      {
+        "type": "credits",
+        "label": "At least 22 additional credits from BIOL, CHEM, CSCI, MATH, NEUR, PHYS, and CBSC (max 6 in CBSC)",
+        "subject": "BIOL/CHEM/CSCI/MATH/NEUR/PHYS/CBSC",
+        "credits": 22
       }
     ]
   },
@@ -254,6 +1189,2202 @@
         "subject": "MATH",
         "credits": 6,
         "level": 200
+      }
+    ]
+  },
+  {
+    "major": "Earth and Environmental Geoscience (BA)",
+    "requirements": [
+      {
+        "type": "all",
+        "label": "Core",
+        "courses": [
+          "EEG 200 - Building a Planet"
+        ]
+      },
+      {
+        "type": "all",
+        "label": "Capstone",
+        "courses": [
+          "EEG 390 - Geoscience Senior Seminar Workshop: Crafting Portfolios"
+        ]
+      },
+      {
+        "type": "n_of",
+        "label": "At least three 200-level EEG laboratory courses (12 credits)",
+        "n": 3,
+        "courses": [
+          "EEG 201 - Earth Materials Lab",
+          "EEG 202 - Surface Processes Lab",
+          "EEG 203 - Earth History Lab",
+          "EEG 204 - Environmental Geochemistry Lab",
+          "EEG 205 - Geophysics Lab",
+          "EEG 206 - Sedimentology Lab",
+          "EEG 207 - Structural Geology Lab",
+          "EEG 208 - Hydrogeology Lab"
+        ]
+      },
+      {
+        "type": "n_of",
+        "label": "At least two 300-level EEG courses (excluding EEG 390 and 395, 6-8 credits)",
+        "n": 2,
+        "courses": [
+          "EEG 301 - Advanced Geoscience Topics",
+          "EEG 302 - Environmental Geoscience Seminar",
+          "EEG 303 - Field Geology",
+          "EEG 304 - Geoscience Modeling",
+          "EEG 305 - Geoscience Research"
+        ]
+      },
+      {
+        "type": "credits",
+        "label": "Additional EEG credits at 100, 200, or 300 level to reach 28 EEG credits (only one 100-level EEG lab may count)",
+        "subject": "EEG",
+        "credits": 28
+      },
+      {
+        "type": "credits",
+        "label": "Additional credits not already applied (see catalog for full list, includes ENGN, MATH, BIOL, CHEM, CSCI, PHYS, ECON, BUS, CBSC, SOAN)",
+        "subject": "EEG/ENGN/MATH/BIOL/CHEM/CSCI/PHYS/ECON/BUS/CBSC/SOAN",
+        "credits": 36
+      },
+      {
+        "type": "all",
+        "label": "Capstone Portfolio of coursework",
+        "courses": [
+          "Completion of Capstone Portfolio"
+        ]
+      }
+    ]
+  },
+  {
+    "major": "Earth and Environmental Geoscience (BS)",
+    "requirements": [
+      {
+        "type": "all",
+        "label": "Core",
+        "courses": [
+          "EEG 200 - Building a Planet"
+        ]
+      },
+      {
+        "type": "all",
+        "label": "Capstone",
+        "courses": [
+          "EEG 390 - Geoscience Senior Seminar Workshop: Crafting Portfolios"
+        ]
+      },
+      {
+        "type": "all",
+        "label": "Required Science Courses",
+        "courses": [
+          "CHEM 110 - General Chemistry",
+          "PHYS 111 - General Physics I"
+        ]
+      },
+      {
+        "type": "n_of",
+        "label": "At least four 200-level EEG laboratory courses (16 credits)",
+        "n": 4,
+        "courses": [
+          "EEG 201 - Earth Materials Lab",
+          "EEG 202 - Surface Processes Lab",
+          "EEG 203 - Earth History Lab",
+          "EEG 204 - Environmental Geochemistry Lab",
+          "EEG 205 - Geophysics Lab",
+          "EEG 206 - Sedimentology Lab",
+          "EEG 207 - Structural Geology Lab",
+          "EEG 208 - Hydrogeology Lab"
+        ]
+      },
+      {
+        "type": "n_of",
+        "label": "At least three 300-level EEG courses (excluding EEG 390 and 395, 9-12 credits)",
+        "n": 3,
+        "courses": [
+          "EEG 301 - Advanced Geoscience Topics",
+          "EEG 302 - Environmental Geoscience Seminar",
+          "EEG 303 - Field Geology",
+          "EEG 304 - Geoscience Modeling",
+          "EEG 305 - Geoscience Research"
+        ]
+      },
+      {
+        "type": "credits",
+        "label": "Additional EEG credits at 100, 200, or 300 level to reach 36 EEG credits (only one 100-level EEG lab may count)",
+        "subject": "EEG",
+        "credits": 36
+      },
+      {
+        "type": "one_of",
+        "label": "One course from approved statistics/quantitative list",
+        "courses": [
+          "BIOL 201 - Statistics for Biology and Medicine",
+          "POL 202 - Applied Statistics",
+          "BUS 202 - Fundamentals of Business Analytics",
+          "ECON 202 - Data Analytics for Economics",
+          "CSCI 112 - Data Structures",
+          "CBSC 250 - Statistics and Research Design",
+          "SOAN 218 - Basic Statistics in the Social Sciences",
+          "MATH 102 - Calculus II or higher"
+        ]
+      },
+      {
+        "type": "credits",
+        "label": "Additional credits not already applied (see catalog for full list, includes ENGN, MATH, BIOL, CHEM, CSCI, PHYS, ECON, BUS, CBSC, SOAN)",
+        "subject": "EEG/ENGN/MATH/BIOL/CHEM/CSCI/PHYS/ECON/BUS/CBSC/SOAN",
+        "credits": 52
+      },
+      {
+        "type": "all",
+        "label": "Capstone Portfolio of coursework",
+        "courses": [
+          "Completion of Capstone Portfolio"
+        ]
+      }
+    ]
+  },
+  {
+    "major": "East Asian Languages and Literatures (BA)",
+    "requirements": [
+      {
+        "type": "n_of",
+        "label": "Language Core: At least 14 credits in either Chinese or Japanese, including CHIN 302 or JAPN 302 (substitutions require department approval)",
+        "n": 5,
+        "courses": [
+          "CHIN 301 - Third-Year Chinese I",
+          "CHIN 302 - Third-Year Chinese II",
+          "JAPN 301 - Third-Year Japanese I",
+          "JAPN 302 - Third-Year Japanese II",
+          "CHIN 311 - Advanced Chinese I",
+          "CHIN 312 - Advanced Chinese II: Contemporary Fiction",
+          "CHIN 401 - Directed Individual Study",
+          "CHIN 402 - Directed Individual Study",
+          "CHIN 403 - Directed Individual Study",
+          "JAPN 311 - Advanced Japanese I",
+          "JAPN 312 - Advanced Japanese II",
+          "JAPN 401 - Directed Individual Study",
+          "JAPN 402 - Directed Individual Study",
+          "JAPN 403 - Directed Individual Study"
+        ]
+      },
+      {
+        "type": "n_of",
+        "label": "Literature and Culture Core: At least 6 credits",
+        "n": 2,
+        "courses": [
+          "EALL 200 - Japan and the Japanese People",
+          "LIT 218 - Pre-Modern Chinese Literature in Translation",
+          "LIT 220 - Modern Chinese Literature in Translation",
+          "LIT 221 - Japanese Literature in Translation",
+          "LIT 223 - Seminar in Japanese Literature in Translation",
+          "LIT 225 - Poetry and Drama of Japan in Translation",
+          "LIT 235 - Tragedies East and West",
+          "LIT 295 - Special Topics in Literature in Translation (when appropriate)"
+        ]
+      },
+      {
+        "type": "n_of",
+        "label": "Six credits from 300+ level Chinese/Japanese/LIT courses",
+        "n": 2,
+        "courses": [
+          "CHIN 311 - Advanced Chinese I",
+          "CHIN 312 - Advanced Chinese II: Contemporary Fiction",
+          "CHIN 401 - Directed Individual Study",
+          "CHIN 402 - Directed Individual Study",
+          "CHIN 403 - Directed Individual Study",
+          "JAPN 311 - Advanced Japanese I",
+          "JAPN 312 - Advanced Japanese II",
+          "JAPN 401 - Directed Individual Study",
+          "JAPN 402 - Directed Individual Study",
+          "JAPN 403 - Directed Individual Study",
+          "LIT 395 - Literature in Translation Seminar (when appropriate)"
+        ]
+      },
+      {
+        "type": "n_of",
+        "label": "At least 6 credits from the following (max 3 from CHIN/JAPN; department approval required for others)",
+        "n": 2,
+        "courses": [
+          "ARTH 140 - Asian Art",
+          "ARTH 240 - Arts of China",
+          "ARTH 241 - Arts of Japan",
+          "CHIN 100 - Supervised Study Abroad: Beginning Chinese",
+          "CHIN 115 - Supervised Study Abroad: First-Year Chinese",
+          "CHIN 265 - Supervised Study Abroad: Second-Year Chinese",
+          "ECON 272 - Japan's Modern Economy",
+          "ECON 274 - China's Modern Economy",
+          "HIST 103 - China: Origins to 20th-Century Reforms",
+          "HIST 104 - Japan: Origins to Atomic Aftermath",
+          "JAPN 100 - Supervised Study Abroad: Beginning Japanese",
+          "JAPN 115 - Supervised Study Abroad: First-Year Japanese",
+          "JAPN 265 - Supervised Study Abroad: Second-Year Japanese",
+          "PHIL 168 - Chinese Philosophy",
+          "REL 103 - Introduction to Asian Religions",
+          "REL 131 - Buddhism"
+        ]
+      },
+      {
+        "type": "one_of",
+        "label": "Capstone Experience (3-6 credits)",
+        "courses": [
+          "EALL 473 - Senior Thesis",
+          "EALL 493 - Honors Thesis"
+        ]
+      }
+    ]
+  },
+  {
+    "major": "East European and Russian Studies (BA)",
+    "requirements": [
+      {
+        "type": "all",
+        "label": "Required Russian Language Courses",
+        "courses": [
+          "RUSS 301 - Advanced Russian I",
+          "RUSS 302 - Advanced Russian II"
+        ]
+      },
+      {
+        "type": "one_of",
+        "label": "Three credits from thesis",
+        "courses": [
+          "RAS 473 - Senior Thesis",
+          "RAS 493 - Honors Thesis"
+        ]
+      },
+      {
+        "type": "one_of",
+        "label": "One of the following two groups",
+        "courses": [
+          "HIST 220 - Imperial Russia, 1682 to 1917 AND (LIT 215 - 20th-Century Russian Literature in Translation OR LIT 264 - Russian Short Fiction)",
+          "HIST 221 - Soviet Russia, 1917 to 1991 AND (LIT 263 - 19th-Century Russian Literature in Translation OR LIT 264 - Russian Short Fiction)"
+        ]
+      },
+      {
+        "type": "one_of",
+        "label": "One of the following courses",
+        "courses": [
+          "POL 245 - European Politics and Society",
+          "POL 246 - Post-Communism and New Democracies",
+          "SOAN 225 - Peoples of Central Europe Through Literature and Film",
+          "SOAN 245 - European Politics and Society",
+          "SOAN 246 - Post-Communism and New Democracies"
+        ]
+      },
+      {
+        "type": "one_of",
+        "label": "One of the following courses not used above",
+        "courses": [
+          "HIST 220 - Imperial Russia, 1682 to 1917",
+          "HIST 221 - Soviet Russia, 1917 to 1991",
+          "HIST 222 - Decline and Fall of the Soviet Union and the Resurgence of Russia",
+          "HIST 228 - Modern Central Asia",
+          "HIST 280 - Modern Eastern Europe",
+          "HIST 286 - History of Kyrgyzstan from the Silk Road to the Present: Crossroads of Empire, Culture, and Religion",
+          "LIT 215 - 20th-Century Russian Literature in Translation",
+          "LIT 263 - 19th-Century Russian Literature in Translation",
+          "LIT 264 - Russian Short Fiction",
+          "POL 245 - European Politics and Society",
+          "POL 246 - Post-Communism and New Democracies",
+          "SOAN 225 - Peoples of Central Europe Through Literature and Film",
+          "SOAN 245 - European Politics and Society",
+          "SOAN 246 - Post-Communism and New Democracies"
+        ]
+      },
+      {
+        "type": "credits",
+        "label": "12 credits from Russian area studies courses not used above (see catalog for full list, includes ARTH, HIST, LIT, POL, RUSS, RAS, SOAN, and appropriate directed studies)",
+        "subject": "RAS",
+        "credits": 12
+      }
+    ]
+  },
+  {
+    "major": "Economics (BA)",
+    "requirements": [
+      {
+        "type": "all",
+        "label": "Required Core Courses",
+        "courses": [
+          "ECON 100 - Introduction to Economics",
+          "ECON 202 - Data Analytics for Economics",
+          "ECON 203 - Econometrics",
+          "ECON 210 - Microeconomic Theory",
+          "ECON 211 - Macroeconomic Theory"
+        ]
+      },
+      {
+        "type": "n_of",
+        "label": "Two 300-level Economics Courses (one may be 423 or 493)",
+        "n": 2,
+        "courses": [
+          "ECON 300+ - Any 300-level Economics course",
+          "ECON 423 - Directed Individual Research",
+          "ECON 493 - Honors Thesis"
+        ]
+      },
+      {
+        "type": "credits",
+        "label": "Four additional Economics courses numbered above 211 (max 9 credits from supervised study abroad and/or special topics)",
+        "subject": "ECON",
+        "credits": 12,
+        "level": 212
+      },
+      {
+        "type": "all",
+        "label": "Mathematics Requirement",
+        "courses": [
+          "MATH 101 - Calculus I (or equivalent)"
+        ]
+      },
+      {
+        "type": "n_of",
+        "label": "Two additional courses from Politics, Computer Science, or Mathematics (MATH 101 prerequisite)",
+        "n": 2,
+        "courses": [
+          "POL 200+ - Any Politics course",
+          "CSCI 200+ - Any Computer Science course",
+          "MATH 102+ - Any Mathematics course requiring MATH 101 as prerequisite"
+        ]
+      },
+      {
+        "type": "all",
+        "label": "Grade Requirements",
+        "courses": [
+          "Minimum 2.000 GPA in Economics credits",
+          "Minimum 2.000 GPA in total major credits"
+        ]
+      },
+      {
+        "type": "all",
+        "label": "Note: Course Overlap Restrictions",
+        "courses": [
+          "Only one of ECON 202, BUS 202, or POL 202 may count for degree credit"
+        ]
+      }
+    ]
+  },
+  {
+    "major": "Engineering (BS)",
+    "requirements": [
+      {
+        "type": "all",
+        "label": "Required Core Courses",
+        "courses": [
+          "PHYS 111 - General Physics I",
+          "PHYS 112 - General Physics II",
+          "MATH 101 - Calculus I",
+          "MATH 102 - Calculus II",
+          "MATH 221 - Multivariable Calculus",
+          "MATH 332 - Ordinary Differential Equations",
+          "ENGN 178 - Introduction to Engineering",
+          "ENGN 203 - Mechanics I: Statics",
+          "ENGN 204 - Mechanics II: Dynamics",
+          "ENGN 207 - Electrical Circuits (PHYS 207)",
+          "ENGN 225 - Mathematical Methods for Physics and Engineering (PHYS 225)",
+          "ENGN 378 - Capstone Design",
+          "ENGN 379 - Capstone Design"
+        ]
+      },
+      {
+        "type": "one_of",
+        "label": "Required Lecture/Lab Sequence",
+        "courses": [
+          "ENGN 301 - Solid Mechanics WITH ENGN 351 - Solid Mechanics Laboratory",
+          "ENGN 311 - Fluid Mechanics WITH ENGN 361 - Fluid Mechanics Laboratory"
+        ]
+      },
+      {
+        "type": "n_of",
+        "label": "Two courses chosen from",
+        "n": 2,
+        "courses": [
+          "ENGN 208 - Electronics",
+          "ENGN 240 - Thermodynamics",
+          "ENGN 260 - Materials Science and Engineering",
+          "ENGN 267 - Bioengineering and Bioinspired Design",
+          "ENGN 295 - Intermediate Special Topics in Engineering",
+          "ENGN 301 - Solid Mechanics WITH ENGN 351 - Solid Mechanics Laboratory",
+          "ENGN 311 - Fluid Mechanics WITH ENGN 361 - Fluid Mechanics Laboratory",
+          "ENGN 312 - Heat Transfer",
+          "ENGN 330 - Mechanical Vibrations",
+          "ENGN 395 - Special Topics in Engineering"
+        ]
+      },
+      {
+        "type": "one_of",
+        "label": "Science Track: Choose one of the following options",
+        "courses": [
+          "Biology Track: BIOL 111 - Fundamentals of Biology WITH BIOL 113 - Biology Laboratory AND two BIOL courses 200+",
+          "Chemistry Track: CHEM 110 - General Chemistry, CHEM 241 - Organic Chemistry I, CHEM 242 - Organic Chemistry II",
+          "Computer Science Track: CSCI 111 - Introduction to Computer Science, CSCI 112 - Data Structures, and one CSCI course 200+",
+          "Earth and Environmental Geoscience Track: EEG 100/101/102 AND two EEG courses 200+"
+        ]
+      },
+      {
+        "type": "all",
+        "label": "Note: Major Restrictions",
+        "courses": [
+          "This major may not be combined with the major in engineering",
+          "This major may not be combined with a major in the respective department associated with the chosen science track"
+        ]
+      }
+    ]
+  },
+  {
+    "major": "English (BA)",
+    "requirements": [
+      {
+        "type": "n_of",
+        "label": "Two Introductory Courses",
+        "n": 2,
+        "courses": [
+          "One ENGL course numbered 201-295",
+          "One ENGL course numbered 222-299"
+        ]
+      },
+      {
+        "type": "n_of",
+        "label": "Literatures before 1700 (choose at least two)",
+        "n": 2,
+        "courses": [
+          "ENGL 312 - Gender, Love, and Marriage in the Middle Ages",
+          "ENGL 313 - Chaucer's The Canterbury Tales",
+          "ENGL 315 - Arthurian Bodies, Desires, and Affects",
+          "ENGL 316 - The Tudors",
+          "ENGL 319 - Shakespeare and Company",
+          "ENGL 320 - Shakespearean Genres",
+          "ENGL 326 - 17th-Century Poetry",
+          "ENGL 330 - Milton",
+          "ENGL 386 - Supervised Study in Great Britain",
+          "ENGL 392 - Topics in Literature in English before 1700",
+          "ENGL 403 - Directed Individual Study (when topic appropriate)"
+        ]
+      },
+      {
+        "type": "n_of",
+        "label": "Literatures from 1700-1900 (choose at least one)",
+        "n": 1,
+        "courses": [
+          "ENGL 335 - 18th-Century Novels",
+          "ENGL 345 - Studies in the 19th-Century British Novel",
+          "ENGL 349 - Middlemarch and Devoted Readers",
+          "ENGL 356 - Whitman vs Dickinson",
+          "ENGL 367 - 19th-Century American Novel",
+          "ENGL 393 - Topics in Literature in English from 1700-1900",
+          "ENGL 403 - Directed Individual Study (when topic appropriate)"
+        ]
+      },
+      {
+        "type": "n_of",
+        "label": "Literatures after 1900 (choose at least one)",
+        "n": 1,
+        "courses": [
+          "ENGL 353 - Poetry, Skepticism and the Sacred",
+          "ENGL 354 - Contemporary British and American Drama",
+          "ENGL 359 - Literature by Women of Color",
+          "ENGL 361 - Native American Literatures",
+          "ENGL 363 - Modern Poetry's Media",
+          "ENGL 364 - Poetry and Authenticity",
+          "ENGL 366 - African-American Literature",
+          "ENGL 369 - Late 20th-Century North American Fiction",
+          "ENGL 370 - Contemporary North American Fiction",
+          "ENGL 375 - Literary Theory",
+          "ENGL 382 - Hotel Orient",
+          "ENGL 394 - Topics in Literature in English since 1900",
+          "ENGL 403 - Directed Individual Study (when topic appropriate)"
+        ]
+      },
+      {
+        "type": "n_of",
+        "label": "Counter Traditions (choose at least one)",
+        "n": 1,
+        "courses": [
+          "ENGL 315 - Arthurian Bodies, Desires, and Affects",
+          "ENGL 356 - Whitman vs Dickinson",
+          "ENGL 359 - Literature by Women of Color",
+          "ENGL 361 - Native American Literatures",
+          "ENGL 366 - African-American Literature",
+          "ENGL 382 - Hotel Orient",
+          "ENGL 395 - Topics in Literature in English in Counter Traditions",
+          "ENGL 403 - Directed Individual Study (when topic appropriate)"
+        ]
+      },
+      {
+        "type": "credits",
+        "label": "One additional course at the 200 or 300 level",
+        "subject": "ENGL",
+        "credits": 3,
+        "level": 200
+      },
+      {
+        "type": "credits",
+        "label": "Three additional courses at the 300-level or above (one may be from another department with approval)",
+        "subject": "ENGL",
+        "credits": 9,
+        "level": 300
+      },
+      {
+        "type": "one_of",
+        "label": "Capstone Writing Requirement",
+        "courses": [
+          "ENGL 413 - Senior Research and Writing (3 credits)",
+          "ENGL 493 - Honors Thesis (3-3 credits)"
+        ]
+      },
+      {
+        "type": "all",
+        "label": "Notes",
+        "courses": [
+          "Total of 11 three or four credit courses required",
+          "Only one term of ENGL 493 may count toward the major",
+          "English faculty recommends including lyric poetry, narrative, nonfiction prose, and drama in course selection"
+        ]
+      }
+    ]
+  },
+  {
+    "major": "Environmental Studies (BA)",
+    "requirements": [
+      {
+        "type": "all",
+        "label": "Required Core Courses",
+        "courses": [
+          "ENV 110 - Introduction to Environmental Studies",
+          "ENV 201 - Applied Environmental Science",
+          "ENV 202 - Society and Natural Resources",
+          "ENV 203 - Environmental Humanities"
+        ]
+      },
+      {
+        "type": "one_of",
+        "label": "Statistics Requirement",
+        "courses": [
+          "BIOL 201 - Statistics for Biology and Medicine",
+          "POL 202 - Applied Statistics",
+          "ECON 202 - Data Analytics for Economics (required for Environmental Economics & Policy track if planning to take ECON 203)"
+        ]
+      },
+      {
+        "type": "one_of",
+        "label": "Advanced Quantitative Skills",
+        "courses": [
+          "BIOL 282 - Modeling and Simulations in Public Health",
+          "BIOL 322 - Conservation Genetics",
+          "BIOL 325 - Ecological Modeling and Conservation Strategies",
+          "ECON 203 - Econometrics",
+          "EEG 316 - GIS and Remote Sensing",
+          "EEG 340 - Hydrologic Modeling",
+          "SOAN 222 - Data Science Tools for Social Policy"
+        ]
+      },
+      {
+        "type": "one_of",
+        "label": "Elective Tracks (choose one)",
+        "courses": [
+          "Conservation Biology Track",
+          "Climate Change Track",
+          "Environmental Economics and Policy Track",
+          "Environmental Humanities Track",
+          "Sustainable Commerce Track",
+          "Water Resources Track",
+          "Student-Designed Track (requires approval)"
+        ]
+      },
+      {
+        "type": "one_of",
+        "label": "Capstone Requirement",
+        "courses": [
+          "ENV 397 - Senior Seminar in Environmental Studies",
+          "ENV 493 - Honors Thesis in Environmental Studies"
+        ]
+      },
+      {
+        "type": "all",
+        "label": "Experience Requirement",
+        "courses": [
+          "A relevant internship, study abroad, research project, or other experiential learning activity approved in advance by the director of the program"
+        ]
+      },
+      {
+        "type": "all",
+        "label": "Notes",
+        "courses": [
+          "Minimum 41 credits required",
+          "At least three credits at the 300-level or above in addition to capstone",
+          "No more than three elective courses in any track may be used to satisfy requirements in another major",
+          "Student-designed tracks must be approved before the end of junior year",
+          "ENV 396 - Pre-Capstone Research Seminar is strongly encouraged"
+        ]
+      }
+    ]
+  },
+  {
+    "major": "French (BA)",
+    "requirements": [
+      {
+        "type": "all",
+        "label": "Required Courses",
+        "courses": [
+          "FREN 261 - Conversation et composition: Cours avanc\u00e9",
+          "FREN 273 - Invitation au voyage",
+          "FREN 397 - S\u00e9minaire avanc\u00e9"
+        ]
+      },
+      {
+        "type": "n_of",
+        "label": "Civilization",
+        "n": 1,
+        "courses": [
+          "FREN 280 - Civilisation et culture francophones",
+          "FREN 281 - Civilisation et culture fran\u00e7aises: Traditions et changements",
+          "FREN 282 - Civilisation et culture fran\u00e7aises: La France d'aujourd'hui",
+          "FREN 283 - Histoire des id\u00e9es",
+          "FREN 285 - Spring Term Topics in French Civilization"
+        ]
+      },
+      {
+        "type": "credits",
+        "label": "Additional French",
+        "subject": "FREN",
+        "credits": 6,
+        "level": 200,
+        "notes": "Two additional French courses numbered 200 or above"
+      },
+      {
+        "type": "credits",
+        "label": "Advanced French",
+        "subject": "FREN",
+        "credits": 12,
+        "level": 300,
+        "notes": "Four additional French courses numbered 300 or above, except FREN 493"
+      },
+      {
+        "type": "all",
+        "label": "Additional Requirements",
+        "courses": [
+          "Completion of the French Assessment Exam (FAE), a four-skills assessment, in winter term of senior year"
+        ]
+      },
+      {
+        "type": "all",
+        "label": "Notes",
+        "courses": [
+          "At least 30 credits required",
+          "Demonstrated proficiency in listening, speaking, reading, and writing required",
+          "The department strongly recommends a study-abroad experience of at least one term, and preferably a full academic year"
+        ]
+      }
+    ]
+  },
+  {
+    "major": "History (BA)",
+    "requirements": [
+      {
+        "type": "credits",
+        "label": "Introduction",
+        "subject": "HIST",
+        "credits": 6,
+        "notes": "At least six credits from 100-level courses, preferably taken during first or sophomore years"
+      },
+      {
+        "type": "credits",
+        "label": "Depth",
+        "subject": "HIST",
+        "credits": 15,
+        "notes": "At least 15 credits in one area of emphasis (European/Russian, American, or Global history), including three credits from a 300-level seminar"
+      },
+      {
+        "type": "credits",
+        "label": "Breadth",
+        "subject": "HIST",
+        "credits": 9,
+        "notes": "At least nine credits in history courses outside the area of emphasis, including three credits from a 300-level seminar"
+      },
+      {
+        "type": "credits",
+        "label": "Distribution",
+        "subject": "HIST",
+        "credits": 3,
+        "notes": "At least three credits in each of the distribution areas (European/Russian, American, Global)"
+      },
+      {
+        "type": "credits",
+        "label": "Electives",
+        "subject": "HIST",
+        "credits": 3,
+        "notes": "At least three additional credits in history at any level"
+      },
+      {
+        "type": "all",
+        "label": "Notes",
+        "courses": [
+          "Total of 33 credits required",
+          "Areas of emphasis:",
+          "1. European and Russian history",
+          "2. American history (including REL 271/HIST 271)",
+          "3. Global history (including Asian, African, and Latin American history)"
+        ]
+      }
+    ]
+  },
+  {
+    "major": "Journalism (BA)",
+    "requirements": [
+      {
+        "type": "all",
+        "label": "Required Courses",
+        "courses": [
+          "JOUR 101 - Introduction to Mass Communications",
+          "JOUR 201 - Introduction to News Writing",
+          "JOUR 202 - Introduction to Digital Journalism",
+          "JOUR 258 - Beat Reporting",
+          "JOUR 301 - Law and Communications",
+          "JOUR 344 - Ethics of Journalism",
+          "JOUR 356 - Investigative Reporting",
+          "POL 203 - State and Local Government",
+          "At least two credits of internship (JOUR 451-452)"
+        ]
+      },
+      {
+        "type": "n_of",
+        "label": "Diversity of Experience",
+        "n": 1,
+        "courses": [
+          "ECON 231 - Topics in Economics",
+          "ECON 232 - Topics in Economics",
+          "ECON 233 - Topics in Economics",
+          "ENGL 262 - Literature, Race, and Ethnicity",
+          "ENGL 359 - Literature by Women of Color",
+          "ENGL 361 - Native American Literatures",
+          "ENGL 366 - African-American Literature",
+          "HIST 253 - Topics in History",
+          "HIST 260 - Introduction to African American History from 1877",
+          "HIST 268 - Building a Suburban Nation",
+          "JOUR 266 - Cross-Cultural Documentary Filmmaking",
+          "JOUR 268 - Framing of Race and Ethnicity in Mass Media",
+          "PHIL 235 - Topics in Philosophy",
+          "PHIL 238 - Existentialism: Meaning and Existence",
+          "PHIL 242 - Social Inequality and Fair Opportunity",
+          "PHIL 243 - Martin Luther King Jr.: Poverty, Justice, and Love",
+          "PHIL 244 - Feminist Social and Political Philosophy",
+          "PHIL 254 - Philosophy of the Family",
+          "POL 250 - Race and Equality",
+          "POL 255 - Gender and Politics",
+          "POL 292 - Topics in Politics and Film",
+          "POV 101 - Poverty and Human Capability",
+          "SOAN 228 - Race and Ethnic Relations",
+          "SOAN 268 - Migration, Identity, and Conflict",
+          "SOAN 280 - Gender and Sexuality",
+          "CBSC 296 - Spring-Term Topics in Cognitive and Behavioral Science"
+        ]
+      },
+      {
+        "type": "n_of",
+        "label": "Journalism Track: One course from",
+        "n": 1,
+        "courses": [
+          "JOUR 280 - Covering Courts and the Law",
+          "JOUR 371 - Financial News",
+          "JOUR 372 - Reporting on the Economy",
+          "JOUR 395 - Specialty Reporting"
+        ]
+      },
+      {
+        "type": "n_of",
+        "label": "Journalism Track: One course from",
+        "n": 1,
+        "courses": [
+          "JOUR 208 - Topics in Journalism",
+          "JOUR 220 - Social Media: Principles and Practice",
+          "JOUR 230 - Data-Driven Storytelling",
+          "JOUR 341 - Multimedia Storytelling Design"
+        ]
+      },
+      {
+        "type": "one_of",
+        "label": "Journalism Track: One course from",
+        "courses": [
+          "JOUR 351 - Editing and Design for Journalism and Strategic Communication",
+          "JOUR 362 - Producing for Broadcast and Online Media"
+        ]
+      },
+      {
+        "type": "all",
+        "label": "Journalism Track: Additional Requirement",
+        "courses": [
+          "Completion of a minor other than mass communications or four additional courses of at least three credits at the 200 level or above in another discipline"
+        ]
+      },
+      {
+        "type": "all",
+        "label": "Business Journalism Track: Required Courses",
+        "courses": [
+          "ACCT 100 - Introduction to Accounting",
+          "ECON 100 - Introduction to Economics",
+          "JOUR 371 - Financial News",
+          "JOUR 372 - Reporting on the Economy"
+        ]
+      },
+      {
+        "type": "one_of",
+        "label": "Business Journalism Track: One course from",
+        "courses": [
+          "JOUR 351 - Editing and Design for Journalism and Strategic Communication",
+          "JOUR 362 - Producing for Broadcast and Online Media"
+        ]
+      },
+      {
+        "type": "all",
+        "label": "Business Journalism Track: Additional Requirements",
+        "courses": [
+          "One additional course in economics at the 200 level or above",
+          "Three additional courses of at least three credits at the 200 level or above in accounting, business administration, or economics, including one course with an international focus"
+        ]
+      },
+      {
+        "type": "all",
+        "label": "Notes",
+        "courses": [
+          "At least 53 credits required",
+          "At least 34 credits in journalism and mass communications",
+          "At least 72 credits outside the department"
+        ]
+      }
+    ]
+  },
+  {
+    "major": "Mathematics (BA)",
+    "requirements": [
+      {
+        "type": "all",
+        "label": "Required Courses",
+        "courses": [
+          "MATH 221 - Multivariable Calculus",
+          "MATH 222 - Linear Algebra",
+          "MATH 225 - Bridges to Advanced Math",
+          "MATH 311 - Real Analysis",
+          "MATH 321 - Abstract Algebra",
+          "MATH 343 - Geometry"
+        ]
+      },
+      {
+        "type": "n_of",
+        "label": "Topics Course",
+        "n": 1,
+        "courses": [
+          "MATH 391 - Topics in Analysis",
+          "MATH 392 - Topics in Abstract Algebra",
+          "MATH 393 - Topics in Geometry and Topology"
+        ]
+      },
+      {
+        "type": "n_of",
+        "label": "Applied Course",
+        "n": 1,
+        "courses": [
+          "BIOL 282 - Modeling and Simulations in Public Health",
+          "CHEM 260 - Physical Chemistry: Quantum & Computational Chemistry",
+          "CHEM 261 - Physical Chemistry: Quantum & Computational Chemistry",
+          "CSCI 211 - Algorithm Design and Analysis",
+          "CSCI 313 - Theory of Computation",
+          "ECON 302 - Game Theory",
+          "ECON 320 - Mathematical Methods in Economics",
+          "EEG 250 - Structural Geology and Tectonics",
+          "ENGN 203 - Mechanics I: Statics",
+          "MATH 270 - Financial and Actuarial Mathematics",
+          "MATH 310 - Mathematical Statistics",
+          "MATH 332 - Ordinary Differential Equations",
+          "MATH 333 - Partial Differential Equations",
+          "PHYS 112 - General Physics II"
+        ]
+      },
+      {
+        "type": "credits",
+        "label": "Additional Mathematics",
+        "subject": "MATH",
+        "credits": 9,
+        "level": 300,
+        "notes": "Nine additional credits selected from mathematics courses numbered above 300"
+      },
+      {
+        "type": "all",
+        "label": "Notes",
+        "courses": [
+          "At least 33 credits required",
+          "Prerequisites: MATH 101 and 102, or their equivalents"
+        ]
+      }
+    ]
+  },
+  {
+    "major": "Mathematics (BS)",
+    "requirements": [
+      {
+        "type": "all",
+        "label": "Required Courses",
+        "courses": [
+          "MATH 221 - Multivariable Calculus",
+          "MATH 222 - Linear Algebra",
+          "MATH 225 - Bridges to Advanced Math",
+          "MATH 311 - Real Analysis",
+          "MATH 321 - Abstract Algebra",
+          "MATH 343 - Geometry",
+          "PHYS 111 - General Physics I",
+          "PHYS 112 - General Physics II",
+          "CSCI 111 - Introduction to Computer Science",
+          "CSCI 121 - Scientific Computing"
+        ]
+      },
+      {
+        "type": "n_of",
+        "label": "Topics Course",
+        "n": 1,
+        "courses": [
+          "MATH 391 - Topics in Analysis",
+          "MATH 392 - Topics in Abstract Algebra",
+          "MATH 393 - Topics in Geometry and Topology"
+        ]
+      },
+      {
+        "type": "credits",
+        "label": "Additional Mathematics",
+        "subject": "MATH",
+        "credits": 12,
+        "level": 300,
+        "notes": "12 additional credits selected from mathematics courses numbered above 300"
+      },
+      {
+        "type": "credits",
+        "label": "Science Electives",
+        "subject": "MIXED",
+        "credits": 6,
+        "notes": "Six additional credits selected from courses in biology, chemistry, computer science, earth and environmental geoscience, engineering, mathematics (numbered 200 and above), and physics"
+      },
+      {
+        "type": "all",
+        "label": "Notes",
+        "courses": [
+          "At least 51 credits required",
+          "Prerequisites: MATH 101 and 102, or their equivalents"
+        ]
+      }
+    ]
+  },
+  {
+    "major": "Music (BA)",
+    "requirements": [
+      {
+        "type": "all",
+        "label": "Required Courses",
+        "courses": [
+          "MUS 121 - Worlds of Music",
+          "MUS 161 - Music Theory I",
+          "MUS 162 - Music Theory II",
+          "MUS 163 - Aural Skills I",
+          "MUS 164 - Aural Skills II",
+          "MUS 201 - Music History I",
+          "MUS 202 - Music History II",
+          "MUS 261 - Music Theory III",
+          "MUS 262 - Aural Skills III",
+          "MUS 325 - Conducting and Methods I",
+          "MUS 365 - Post Tonal Music",
+          "MUS 473 - Senior Thesis",
+          "MUS 493 - Honors Thesis"
+        ]
+      },
+      {
+        "type": "all",
+        "label": "Performance/Composition Requirements",
+        "courses": [
+          "Three credits chosen from applied music courses at the 300-level or above",
+          "Six credits chosen from MUS 210, 221, 238, 239, 240, 295, 315, 326, 327, 335, 423"
+        ]
+      },
+      {
+        "type": "credits",
+        "label": "General Track",
+        "subject": "MUS",
+        "credits": 9,
+        "notes": "Three courses chosen from MUS 210, 221, 222, 238, 239, 240, 295, 315, 326, 327, 335"
+      },
+      {
+        "type": "credits",
+        "label": "Applied Study",
+        "subject": "MUS",
+        "credits": 4,
+        "notes": "At least four credits of applied study in a primary applied performance area"
+      },
+      {
+        "type": "credits",
+        "label": "Ensemble",
+        "subject": "MUS",
+        "credits": 6,
+        "notes": "Six credits of conducted ensemble courses (109, 110, 113, 114, 115) appropriate to the student's primary applied instrument"
+      },
+      {
+        "type": "all",
+        "label": "Additional Requirements",
+        "courses": [
+          "Demonstrated piano proficiency by the end of the junior year",
+          "Successful completion of MUS 200 (recital attendance) every fall and winter term after declaring the music major"
+        ]
+      },
+      {
+        "type": "all",
+        "label": "Notes",
+        "courses": [
+          "At least 42 credits required",
+          "Students with no prior piano experience must complete both MUS 100 and 101",
+          "Students with prior piano experience will be tested to determine proficiency"
+        ]
+      }
+    ]
+  },
+  {
+    "major": "Music (BS)",
+    "requirements": [
+      {
+        "type": "all",
+        "label": "Required Courses",
+        "courses": [
+          "MUS 121 - Worlds of Music",
+          "MUS 161 - Music Theory I",
+          "MUS 162 - Music Theory II",
+          "MUS 163 - Aural Skills I",
+          "MUS 164 - Aural Skills II",
+          "MUS 170 - Introduction to Sound Technology",
+          "MUS 201 - Music History I",
+          "MUS 202 - Music History II",
+          "MUS 261 - Music Theory III",
+          "MUS 262 - Aural Skills III",
+          "MUS 315 - Arranging and Orchestration",
+          "MUS 325 - Conducting and Methods I",
+          "MUS 365 - Post Tonal Music",
+          "MUS 473 - Senior Thesis",
+          "MUS 493 - Honors Thesis"
+        ]
+      },
+      {
+        "type": "all",
+        "label": "Vocal Music Emphasis - Required Courses",
+        "courses": [
+          "MUS 116 - Bentley Musical Rehearsals",
+          "MUS 210 - Vocal Pedagogy",
+          "MUS 326 - Conducting and Methods II - Choral"
+        ]
+      },
+      {
+        "type": "credits",
+        "label": "Vocal Music Emphasis - Applied Study",
+        "subject": "MUS",
+        "credits": 7,
+        "notes": "Seven credits of applied study in voice"
+      },
+      {
+        "type": "credits",
+        "label": "Vocal Music Emphasis - Ensemble",
+        "subject": "MUS",
+        "credits": 8,
+        "notes": "Eight credits of conducted choral ensemble (MUS 109, 110)"
+      },
+      {
+        "type": "all",
+        "label": "Instrumental Music Emphasis - Required Courses",
+        "courses": [
+          "MUS 327 - Conducting and Methods II - Instrumental",
+          "MUS 350 - Brass Techniques",
+          "MUS 351 - Percussion Techniques",
+          "MUS 352 - String Techniques",
+          "MUS 353 - Woodwind Techniques"
+        ]
+      },
+      {
+        "type": "credits",
+        "label": "Instrumental Music Emphasis - Applied Study",
+        "subject": "MUS",
+        "credits": 7,
+        "notes": "Seven credits of applied study on primary instrument"
+      },
+      {
+        "type": "credits",
+        "label": "Instrumental Music Emphasis - Ensemble",
+        "subject": "MUS",
+        "credits": 8,
+        "notes": "Eight credits of conducted instrumental ensemble (MUS 113, 114, 115)"
+      },
+      {
+        "type": "all",
+        "label": "Additional Requirements",
+        "courses": [
+          "Enrollment in ensemble courses (108-116) is required every fall and winter term after declaring the music major",
+          "Demonstrated piano proficiency by the end of the junior year",
+          "Successful completion of MUS 200 (recital attendance) every fall and winter term after declaring the music major"
+        ]
+      },
+      {
+        "type": "all",
+        "label": "Notes",
+        "courses": [
+          "At least 56 credits required",
+          "Students with no prior piano experience must complete both MUS 100 and 101",
+          "Students with prior piano experience will be tested to determine proficiency"
+        ]
+      }
+    ]
+  },
+  {
+    "major": "Neuroscience (BS)",
+    "requirements": [
+      {
+        "type": "all",
+        "label": "Basic Science Core",
+        "courses": [
+          "BIOL 111 - Fundamentals of Biology",
+          "BIOL 113 - Biology Laboratory",
+          "BIOL 220 - Genetics",
+          "BIOL 230 - Cell Biology",
+          "BIOL 201 - Statistics for Biology and Medicine",
+          "CHEM 110 - General Chemistry"
+        ]
+      },
+      {
+        "type": "all",
+        "label": "Neuroscience Core",
+        "courses": [
+          "CBSC 111 - Brain and Behavior",
+          "NEUR 120 - Introduction to Neuroscience",
+          "NEUR 121 - Introduction to Neuroscience Workshop"
+        ]
+      },
+      {
+        "type": "n_of",
+        "label": "Cellular and Molecular Neuroscience",
+        "n": 1,
+        "courses": [
+          "BIOL 220 - Genetics",
+          "BIOL 230 - Cell Biology",
+          "BIOL 250 - Vertebrate Endocrinology",
+          "BIOL 280 - Neural Imaging",
+          "CBSC 256 - Topics in Neuroscience",
+          "CHEM 341 - Biochemistry I",
+          "NEUR 395 - Special Topics in Cellular and Molecular Neuroscience"
+        ]
+      },
+      {
+        "type": "n_of",
+        "label": "Computational Neuroscience",
+        "n": 1,
+        "courses": [
+          "BIOL 185 - Data Science: Visualizing and Exploring Big Data",
+          "BIOL 187 - Introduction to Data Science in Python",
+          "BIOL 282 - Modeling and Simulations in Public Health",
+          "BIOL 302 - Modern Computational Biostatistics",
+          "CSCI 257 - Topics in Computer Science",
+          "CSCI 230 - Introduction to Machine Learning and Big Data",
+          "CSCI 252 - Neuromorphic Computing",
+          "CSCI 256 - Modeling and Simulation",
+          "CSCI 315 - Artificial Intelligence",
+          "NEUR 396 - Special Topics in Computational Neuroscience"
+        ]
+      },
+      {
+        "type": "n_of",
+        "label": "Systems Neuroscience",
+        "n": 1,
+        "courses": [
+          "BIOL 255 - Reproductive Physiology",
+          "BIOL 275 - Food for Thought",
+          "BIOL 283 - Pregnancy: A KISS in Time?",
+          "BIOL 360 - Experimental Neurophysiology",
+          "BIOL 362 - Animal Physiology",
+          "BIOL 397 - Neuroendocrinology",
+          "CBSC 253 - Topics in Neuroscience",
+          "CBSC 257 - Topics in Neuroscience",
+          "ENGN 267 - Bioengineering and Bioinspired Design",
+          "NEUR 397 - Special Topics in Systems Neuroscience"
+        ]
+      },
+      {
+        "type": "n_of",
+        "label": "Cognitive and Behavioral Neuroscience",
+        "n": 1,
+        "courses": [
+          "BIOL 243 - Animal Behavior",
+          "CBSC 252 - Topics in Neuroscience",
+          "CBSC 254 - Topics in Neuroscience",
+          "CBSC 255 - Topics in Neuroscience",
+          "CBSC 259 - Topics in Neuroscience",
+          "PHIL 282 - Philosophy of Biology",
+          "PHIL 375 - Philosophy of Mind",
+          "NEUR 398 - Special Topics in Cognitive and Behavioral Neuroscience"
+        ]
+      },
+      {
+        "type": "credits",
+        "label": "Research Practicum",
+        "subject": "MIXED",
+        "credits": 4,
+        "notes": "Four credits chosen from CBSC 353-355, 359, NEUR 401-403, 421-423, 442, 453, 493, and when appropriate, CBSC 398-399"
+      },
+      {
+        "type": "all",
+        "label": "Capstone",
+        "courses": [
+          "Submission of the Neuroscience e-portfolio"
+        ]
+      },
+      {
+        "type": "all",
+        "label": "Notes",
+        "courses": [
+          "At least 50 credits required",
+          "At least 42 credits from the listed courses",
+          "A limit of 12 credits in research practicum courses is allowable toward a degree"
+        ]
+      }
+    ]
+  },
+  {
+    "major": "Physics (BS)",
+    "requirements": [
+      {
+        "type": "all",
+        "label": "Required Courses",
+        "courses": [
+          "PHYS 111 - General Physics I",
+          "PHYS 112 - General Physics II",
+          "PHYS 207 - Electrical Circuits",
+          "PHYS 210 - Modern Physics",
+          "PHYS 225 - Mathematical Methods for Physics and Engineering",
+          "PHYS 230 - Classical Mechanics",
+          "PHYS 265 - Modeling and Simulation of Physical Systems",
+          "PHYS 275 - Electricity and Magnetism",
+          "PHYS 340 - Quantum Mechanics",
+          "PHYS 345 - Statistical Physics",
+          "MATH 101 - Calculus I",
+          "MATH 102 - Calculus II",
+          "MATH 221 - Multivariable Calculus"
+        ]
+      },
+      {
+        "type": "n_of",
+        "label": "Advanced Physics",
+        "n": 1,
+        "courses": [
+          "PHYS 285 - Optics",
+          "PHYS 289 - Advanced Physics Lab"
+        ]
+      },
+      {
+        "type": "credits",
+        "label": "Additional Physics",
+        "subject": "PHYS",
+        "credits": 6,
+        "level": 200,
+        "notes": "Two additional PHYS courses at the 200- or 300-level"
+      },
+      {
+        "type": "one_of",
+        "label": "Research/Thesis Option",
+        "courses": [
+          "PHYS 473 - Senior Thesis",
+          "PHYS 493 - Honors Thesis"
+        ]
+      },
+      {
+        "type": "all",
+        "label": "Research Option - Research Credits",
+        "courses": [
+          "Three credits from PHYS 421, 422, or 423"
+        ]
+      },
+      {
+        "type": "all",
+        "label": "Research Option - Research Paper",
+        "courses": [
+          "15-page research paper to be completed before graduation"
+        ]
+      },
+      {
+        "type": "credits",
+        "label": "Additional Science",
+        "subject": "MIXED",
+        "credits": 3,
+        "notes": "Three additional credits chosen from biology, chemistry, computer science, engineering, earth and environmental geoscience, mathematics, or physics courses"
+      },
+      {
+        "type": "all",
+        "label": "Notes",
+        "courses": [
+          "At least 50 credits required",
+          "Prerequisites: MATH 101, 102, and 221"
+        ]
+      }
+    ]
+  },
+  {
+    "major": "Politics (BA)",
+    "requirements": [
+      {
+        "type": "all",
+        "label": "Required Courses",
+        "courses": [
+          "POL 100 - American National Government",
+          "POL 105 - Introduction to Global Politics",
+          "POL 111 - Introduction to Political Philosophy",
+          "ECON 100 - Introduction to Economics"
+        ]
+      },
+      {
+        "type": "n_of",
+        "label": "Statistics",
+        "n": 1,
+        "courses": [
+          "POL 202 - Applied Statistics",
+          "BUS 202 - Fundamentals of Business Analytics",
+          "CBSC 250 - Statistics and Research Design",
+          "ECON 202 - Data Analytics for Economics",
+          "MATH 118 - Introduction to Statistics",
+          "SOAN 218 - Basic Statistics in the Social Sciences"
+        ]
+      },
+      {
+        "type": "one_of",
+        "label": "Area of Emphasis",
+        "courses": [
+          {
+            "type": "all",
+            "label": "General Study",
+            "requirements": [
+              {
+                "type": "credits",
+                "label": "Five courses from at least two subfields",
+                "subject": "POL",
+                "credits": 15,
+                "notes": "Including at least one 300-level seminar course"
+              }
+            ]
+          },
+          {
+            "type": "all",
+            "label": "American Government",
+            "requirements": [
+              {
+                "type": "n_of",
+                "label": "Four courses from",
+                "n": 4,
+                "courses": [
+                  "LJS 101 - Introduction to Law, Justice, and Society",
+                  "LJS 230 - Separation of Powers in the U.S. Constitution",
+                  "LJS 232 - Civil Rights and the U.S. Department of Justice's Civil Rights Division",
+                  "POL 203 - State and Local Government",
+                  "POL 229 - Political Parties, Interest Groups, and the Media",
+                  "POL 230 - Separation of Powers in the U.S. Constitution",
+                  "POL 232 - Public Policy",
+                  "POL 233 - Environmental Policy and Law",
+                  "POL 234 - Congress and the Legislative Process",
+                  "POL 235 - The Presidency",
+                  "POL 236 - The American Supreme Court and Constitutional Law",
+                  "POL 250 - Race and Equality",
+                  "POL 283 - Minority Voting Rights and Fair Redistricting",
+                  "POL 294 - Spring-Term Topics in Public Policy",
+                  "POL 295 - Special Topics in American Politics",
+                  "POL 342 - Seminar: Law and the Judicial Process",
+                  "POL 360 - Seminar: Lincoln's Statesmanship",
+                  "POL 370 - Seminar in American Political Thought",
+                  "POL 397 - Seminar in American Government",
+                  "POL 466 - Washington Term Program"
+                ]
+              },
+              {
+                "type": "credits",
+                "label": "One course from international/global politics or political philosophy",
+                "subject": "POL",
+                "credits": 3,
+                "level": 200
+              }
+            ]
+          },
+          {
+            "type": "all",
+            "label": "International/Global Politics",
+            "requirements": [
+              {
+                "type": "n_of",
+                "label": "Four courses from",
+                "n": 4,
+                "courses": [
+                  "POL 214 - The Conduct of American Foreign Policy",
+                  "POL 215 - International Development",
+                  "POL 227 - East Asian Politics",
+                  "POL 245 - European Politics and Society",
+                  "POL 246 - Post-Communism and New Democracies",
+                  "POL 247 - Latin American Politics",
+                  "POL 255 - Gender and Politics",
+                  "POL 268 - Migration, Identity, and Conflict",
+                  "POL 274 - Terrorism",
+                  "POL 276 - Intelligence in Practice",
+                  "POL 278 - Intelligence and National Security",
+                  "POL 280 - Bitcoin in Practice",
+                  "POL 285 - Contemporary Britain",
+                  "POL 287 - The Maghreb: History, Culture, and Politics",
+                  "POL 288 - Supervised Study Abroad",
+                  "POL 292 - Topics in Politics and Film",
+                  "POL 296 - Special Topics in Global Politics",
+                  "POL 380 - Seminar in Global Politics",
+                  "POL 381 - Seminar in International Political Economy",
+                  "POL 384 - Seminar in Middle Eastern Politics",
+                  "POL 388 - Architecture of Urban Community",
+                  "POL 392 - Seminar in Asian Politics"
+                ]
+              },
+              {
+                "type": "credits",
+                "label": "One course from American government or political philosophy",
+                "subject": "POL",
+                "credits": 3,
+                "level": 200
+              }
+            ]
+          },
+          {
+            "type": "all",
+            "label": "Political Philosophy",
+            "requirements": [
+              {
+                "type": "n_of",
+                "label": "Four courses from",
+                "n": 4,
+                "courses": [
+                  "LJS 101 - Introduction to Law, Justice, and Society",
+                  "POL 265 - Classical Political Philosophy",
+                  "POL 266 - Modern Political Philosophy",
+                  "POL 267 - Contemporary Political Philosophy",
+                  "POL 271 - Black Mirror",
+                  "POL 297 - Special Topics in Political Philosophy",
+                  "POL 360 - Seminar: Lincoln's Statesmanship",
+                  "POL 370 - Seminar in American Political Thought",
+                  "POL 385 - Seminar: Freedom",
+                  "POL 386 - Poli-Wood: Indian Epics, Myth, and Cinema as Political Philosophy",
+                  "POL 396 - Seminar in Political Philosophy"
+                ]
+              },
+              {
+                "type": "credits",
+                "label": "One course from international/global politics or American government",
+                "subject": "POL",
+                "credits": 3,
+                "level": 200
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "credits",
+        "label": "Additional Credits",
+        "subject": "MIXED",
+        "credits": 6,
+        "notes": "Six additional credits which must include courses from two of the following disciplines: cognitive and behavioral science, economics, history, philosophy, religion, or sociology and anthropology"
+      },
+      {
+        "type": "all",
+        "label": "Notes",
+        "courses": [
+          "At least 36 credits required",
+          "All 300-level courses count towards the seminar requirement"
+        ]
+      }
+    ]
+  },
+  {
+    "major": "Religion (BA)",
+    "requirements": [
+      {
+        "type": "n_of",
+        "label": "Introduction",
+        "n": 1,
+        "courses": [
+          "REL 100 - Introduction to Religion",
+          "REL 210 - Approaches to the Study of Religion"
+        ],
+        "notes": "Must be taken before the start of the senior year"
+      },
+      {
+        "type": "n_of",
+        "label": "Asian Religions",
+        "n": 1,
+        "courses": [
+          "REL 103 - Introduction to Asian Religions",
+          "REL 131 - Buddhism",
+          "REL 132 - Hinduism",
+          "REL 231 - Body and Soul in India"
+        ]
+      },
+      {
+        "type": "n_of",
+        "label": "Christianity",
+        "n": 1,
+        "courses": [
+          "REL 102 - New Testament",
+          "REL 152 - Christianity and Modern Culture",
+          "REL 250 - Truth, Belief, Dissent: Defining Insiders and Outsiders in Ancient, Medieval and Modern Religion"
+        ]
+      },
+      {
+        "type": "n_of",
+        "label": "Islam",
+        "n": 1,
+        "courses": [
+          "REL 105 - Introduction to Islam",
+          "REL 108 - The Qur'an",
+          "REL 172 - Muslims in the Movies",
+          "REL 271 - Islam in America: Life, Liberty, and the Pursuit of Happiness",
+          "REL 281 - Modern Islamic Thought",
+          "REL 283 - Islam and Spirituality"
+        ]
+      },
+      {
+        "type": "n_of",
+        "label": "Judaism",
+        "n": 1,
+        "courses": [
+          "REL 101 - Hebrew Bible/Old Testament",
+          "REL 106 - Judaism: Tradition and Modernity"
+        ]
+      },
+      {
+        "type": "n_of",
+        "label": "Secularity",
+        "n": 1,
+        "courses": [
+          "REL 104 - Secularity, Disenchantment, and Religion"
+        ]
+      },
+      {
+        "type": "all",
+        "label": "Cluster",
+        "courses": [
+          "A group of at least three courses proposed by students in consultation with their departmental adviser before the end of the junior year",
+          "Must include at least two courses from the Religion Department",
+          "May include up to three credits from one three- or four-credit course in other related disciplines"
+        ]
+      },
+      {
+        "type": "credits",
+        "label": "Additional Work",
+        "subject": "REL",
+        "credits": 30,
+        "notes": "Additional work in religion or other related disciplines to add up to 10 courses. A limit of one non-Religion course will count toward the major."
+      },
+      {
+        "type": "credits",
+        "label": "200-level or above",
+        "subject": "REL",
+        "credits": 15,
+        "level": 200,
+        "notes": "A minimum of 15 credits must be at the 200 level or above, excluding REL 210, 399, and 493"
+      },
+      {
+        "type": "one_of",
+        "label": "Senior Capstone",
+        "courses": [
+          "REL 399 - Senior Seminar",
+          "REL 493 - Honors Thesis"
+        ]
+      },
+      {
+        "type": "all",
+        "label": "Notes",
+        "courses": [
+          "At least 30 credits required from 10 three- or four-credit courses",
+          "Students seeking to graduate with honors are required to graduate with a minimum of 11 three- or four-credit courses"
+        ]
+      }
+    ]
+  },
+  {
+    "major": "Romance Languages (BA) - French Emphasis",
+    "requirements": [
+      {
+        "type": "all",
+        "label": "Required Courses",
+        "courses": [
+          "FREN 261 - Conversation et composition: Cours avanc\u00e9",
+          "FREN 273 - Invitation au voyage",
+          "FREN 397 - S\u00e9minaire avanc\u00e9"
+        ]
+      },
+      {
+        "type": "n_of",
+        "label": "Civilization",
+        "n": 1,
+        "courses": [
+          "FREN 280 - Civilisation et culture francophones",
+          "FREN 281 - Civilisation et culture fran\u00e7aises: Traditions et changements",
+          "FREN 282 - Civilisation et culture fran\u00e7aises: La France d'aujourd'hui",
+          "FREN 283 - Histoire des id\u00e9es",
+          "FREN 285 - Spring Term Topics in French Civilization"
+        ]
+      },
+      {
+        "type": "credits",
+        "label": "Additional French",
+        "subject": "FREN",
+        "credits": 6,
+        "level": 200,
+        "notes": "One additional French course numbered 200 or above"
+      },
+      {
+        "type": "credits",
+        "label": "Advanced French",
+        "subject": "FREN",
+        "credits": 12,
+        "level": 300,
+        "notes": "Four additional French courses numbered 300 or above, except FREN 493"
+      },
+      {
+        "type": "all",
+        "label": "Additional Requirements",
+        "courses": [
+          "Completion of the French Assessment Exam (FAE), a four-skills assessment, in winter term of senior year"
+        ]
+      },
+      {
+        "type": "all",
+        "label": "Notes",
+        "courses": [
+          "At least 30 credits required",
+          "Demonstrated proficiency in listening, speaking, reading, and writing required",
+          "The department strongly recommends a study-abroad experience of at least one term, and preferably a full academic year"
+        ]
+      }
+    ]
+  },
+  {
+    "major": "Romance Languages (BA) - Spanish Emphasis",
+    "requirements": [
+      {
+        "type": "all",
+        "label": "Required Courses",
+        "courses": [
+          "SPAN 220 - Introducción a la literatura española",
+          "SPAN 240 - Introducción a la literatura hispanoamericana",
+          "SPAN 275 - Introducción al análisis literario"
+        ]
+      },
+      {
+        "type": "credits",
+        "label": "Additional Spanish",
+        "subject": "SPAN",
+        "credits": 3,
+        "level": 200,
+        "notes": "One additional 200-level course in Spanish"
+      },
+      {
+        "type": "n_of",
+        "label": "Spanish American Literature",
+        "n": 1,
+        "courses": [
+          "SPAN 340 - Spanish-American Short Story",
+          "SPAN 341 - 20th-Century Mexican Literature: Beyond Revolution",
+          "SPAN 342 - Spanish-American Narrative: The Boom Generation",
+          "SPAN 344 - Spanish-American Poetry",
+          "SPAN 347 - Poetry and Power",
+          "SPAN 354 - Spanish-American Theater: 20th Century to the Present",
+          "SPAN 398 - Spanish-American Seminar"
+        ]
+      },
+      {
+        "type": "n_of",
+        "label": "Spanish Literature",
+        "n": 1,
+        "courses": [
+          "SPAN 312 - Ornament of the World: Muslims, Jews, and Christians in Early Iberia",
+          "SPAN 320 - Don Quijote",
+          "SPAN 322 - Spanish Golden-Age Drama",
+          "SPAN 323 - Golden Age Spanish Women Writers",
+          "SPAN 333 - El Cid in History and Legend",
+          "SPAN 397 - Literature of Spain Seminar"
+        ]
+      },
+      {
+        "type": "credits",
+        "label": "Additional Advanced Spanish",
+        "subject": "SPAN",
+        "credits": 9,
+        "level": 300,
+        "notes": "Three additional Spanish courses numbered 300 or above, except SPAN 493"
+      },
+      {
+        "type": "n_of",
+        "label": "Linguistics",
+        "n": 1,
+        "courses": [
+          "SPAN 209 - Intro to Hispanic Linguistics",
+          "SPAN 308 - Power and Ideology: (Critical) Discourse Perspectives",
+          "SPAN 309 - History of the Spanish Language",
+          "SPAN 380 - Spanish Grammar Rules: The Making of a Language",
+          "SPAN 392 - Spanish Language Theory and Practice"
+        ]
+      },
+      {
+        "type": "n_of",
+        "label": "Second Language - French Option - Intermediate French",
+        "n": 1,
+        "courses": [
+          "FREN 162 - Intermediate French II",
+          "FREN 164 - Intermediate French II",
+          "FREN 172 - Intermediate French II"
+        ]
+      },
+      {
+        "type": "all",
+        "label": "Second Language - French Option - Required Course",
+        "courses": [
+          "FREN 261 - Conversation et composition: Cours avancé"
+        ]
+      },
+      {
+        "type": "n_of",
+        "label": "Second Language - French Option - Additional French",
+        "n": 1,
+        "courses": [
+          "FREN 273 - Invitation au voyage",
+          "FREN 280 - Civilisation et culture francophones",
+          "FREN 281 - Civilisation et culture françaises: Traditions et changements",
+          "FREN 282 - Civilisation et culture françaises: La France d'aujourd'hui",
+          "FREN 283 - Histoire des idées",
+          "FREN 285 - Spring Term Topics in French Civilization"
+        ]
+      },
+      {
+        "type": "all",
+        "label": "Second Language - Portuguese Option - Required Course",
+        "courses": [
+          "PORT 163 - Intermediate Portuguese II"
+        ]
+      },
+      {
+        "type": "credits",
+        "label": "Second Language - Portuguese Option - Additional Portuguese",
+        "subject": "PORT",
+        "credits": 6,
+        "level": 200,
+        "notes": "Two 200-level Portuguese courses"
+      },
+      {
+        "type": "all",
+        "label": "Second Language - Italian Option - Required Course",
+        "courses": [
+          "ITAL 163 - Intermediate Italian II"
+        ]
+      },
+      {
+        "type": "credits",
+        "label": "Second Language - Italian Option - Additional Italian",
+        "subject": "ITAL",
+        "credits": 6,
+        "level": 200,
+        "notes": "Two 200-level Italian courses"
+      },
+      {
+        "type": "all",
+        "label": "Additional Requirements",
+        "courses": [
+          "Completion of the Spanish Assessment Exam (SAE), a four-skills assessment, in winter term of senior year"
+        ]
+      },
+      {
+        "type": "all",
+        "label": "Notes",
+        "courses": [
+          "At least 33 credits required",
+          "The department strongly recommends a study-abroad experience of at least one semester, and preferably one academic year, in a Spanish-speaking country"
+        ]
+      }
+    ]
+  },
+  {
+    "major": "Sociology and Anthropology (BA)",
+    "requirements": [
+      {
+        "type": "one_of",
+        "label": "Introductory Course",
+        "courses": [
+          "SOAN 101 - Introduction to Anthropology: Investigating Humanity",
+          "SOAN 102 - Introduction to Sociology: Investigating Society"
+        ]
+      },
+      {
+        "type": "one_of",
+        "label": "Theory",
+        "courses": [
+          "SOAN 370 - Theorizing Social Life: Classical Social and Cultural Theory",
+          "SOAN 371 - Theorizing Social Life: Contemporary Approaches"
+        ]
+      },
+      {
+        "type": "n_of",
+        "label": "Methods",
+        "n": 2,
+        "courses": [
+          "SOAN 208 - Qualitative Methods",
+          "SOAN 210 - Field Methods in Archaeology",
+          "SOAN 211 - Laboratory Methods in Archaeology",
+          "SOAN 218 - Basic Statistics in the Social Sciences",
+          "SOAN 219 - Applied Bayesian Regression for the Social Sciences",
+          "SOAN 222 - Data Science Tools for Social Policy",
+          "SOAN 238 - Anthropology of American History",
+          "SOAN 244 - Personal Networks and Social Capital",
+          "SOAN 261 - Campus Sex in the Digital Age",
+          "SOAN 265 - Exploring Social Networks",
+          "SOAN 269 - Studying Global Culture with the World Values Survey",
+          "SOAN 276 - Art & Science of Survey Research",
+          "SOAN 365 - Modeling Social Networks",
+          "POL 202 - Applied Statistics"
+        ]
+      },
+      {
+        "type": "all",
+        "label": "Anthropology Emphasis",
+        "courses": [
+          "Two courses from anthropology electives (6 credits)",
+          "One course from sociology electives (3 credits)"
+        ]
+      },
+      {
+        "type": "all",
+        "label": "Sociology Emphasis",
+        "courses": [
+          "Two courses from sociology electives (6 credits)",
+          "One course from anthropology electives (3 credits)"
+        ]
+      },
+      {
+        "type": "credits",
+        "label": "Additional Electives",
+        "subject": "SOAN",
+        "credits": 9,
+        "level": 200,
+        "notes": "At least nine additional credits chosen from SOAN courses numbered 200 or above"
+      },
+      {
+        "type": "one_of",
+        "label": "Capstone",
+        "courses": [
+          "SOAN 395 - Senior Seminar in Quantitative Analysis",
+          "SOAN 396 - Senior Seminar in Qualitative Analysis",
+          "SOAN 493 - Honors Thesis"
+        ]
+      },
+      {
+        "type": "all",
+        "label": "Notes",
+        "courses": [
+          "At least 36 credits required",
+          "Students who also declare a major in cognitive and behavioral science may request a substitution for a SOAN methods course",
+          "Students who wish to attend graduate school in Anthropology should complete the Anthropology emphasis",
+          "Students who wish to attend graduate school in Sociology should complete the Sociology emphasis"
+        ]
+      }
+    ]
+  },
+  {
+    "major": "Spanish (BA)",
+    "requirements": [
+      {
+        "type": "all",
+        "label": "Required Spanish Courses",
+        "courses": [
+          "SPAN 220 - Introducción a la literatura española",
+          "SPAN 240 - Introducción a la literatura hispanoamericana",
+          "SPAN 275 - Introducción al análisis literario"
+        ]
+      },
+      {
+        "type": "credits",
+        "label": "Two additional 200-level courses in Spanish",
+        "subject": "SPAN",
+        "credits": 6,
+        "level": 200,
+        "notes": "Department head may approve one Romance language course taught in English by Romance Languages faculty"
+      },
+      {
+        "type": "n_of",
+        "label": "Five Spanish courses numbered 300 or above (see sub-requirements)",
+        "n": 5,
+        "courses": [
+          "One course on literature of Spanish America: SPAN 340, 341, 342, 344, 347, 354, 398",
+          "One course on literature of Spain: SPAN 312, 320, 322, 323, 333, 397",
+          "Three additional Spanish courses numbered 300 or above, except SPAN 493"
+        ]
+      },
+      {
+        "type": "one_of",
+        "label": "Linguistics Requirement",
+        "courses": [
+          "SPAN 209 - Intro to Hispanic Linguistics",
+          "SPAN 308 - Power and Ideology: (Critical) Discourse Perspectives",
+          "SPAN 309 - History of the Spanish Language",
+          "SPAN 380 - Spanish Grammar Rules: The Making of a Language",
+          "SPAN 392 - Spanish Language Theory and Practice (when appropriate)"
+        ]
+      },
+      {
+        "type": "all",
+        "label": "Spanish Assessment Exam",
+        "courses": [
+          "Completion of the Spanish Assessment Exam (SAE) in winter term of senior year"
+        ]
+      },
+      {
+        "type": "all",
+        "label": "Notes",
+        "courses": [
+          "At least 30 credits required",
+          "Study abroad strongly recommended"
+        ]
+      }
+    ]
+  },
+  {
+    "major": "Strategic Communication (BA)",
+    "requirements": [
+      {
+        "type": "all",
+        "label": "Required Courses",
+        "courses": [
+          "JOUR 101 - Introduction to Mass Communications",
+          "JOUR 201 - Introduction to News Writing",
+          "JOUR 227 - Public Relations Writing",
+          "JOUR 273 - Principles of Public Relations",
+          "JOUR 301 - Law and Communications",
+          "JOUR 330 - Communication Theory and Research Methods",
+          "JOUR 345 - Media Ethics"
+        ]
+      },
+      {
+        "type": "all",
+        "label": "Statistics",
+        "courses": [
+          "SOAN 218 - Basic Statistics in the Social Sciences"
+        ]
+      },
+      {
+        "type": "n_of",
+        "label": "Diversity of Experience",
+        "n": 1,
+        "courses": [
+          "ENGL 262 - Literature, Race, and Ethnicity",
+          "ENGL 359 - Literature by Women of Color",
+          "ENGL 361 - Native American Literatures",
+          "ENGL 366 - African-American Literature",
+          "HIST 253 - Topics in History",
+          "HIST 260 - Introduction to African American History from 1877",
+          "HIST 268 - Building a Suburban Nation",
+          "JOUR 266 - Cross-Cultural Documentary Filmmaking",
+          "JOUR 268 - Framing of Race and Ethnicity in Mass Media",
+          "PHIL 235 - Topics in Philosophy",
+          "PHIL 238 - Existentialism: Meaning and Existence",
+          "PHIL 242 - Social Inequality and Fair Opportunity",
+          "PHIL 243 - Martin Luther King Jr.: Poverty, Justice, and Love",
+          "PHIL 244 - Feminist Social and Political Philosophy",
+          "PHIL 254 - Philosophy of the Family",
+          "POL 250 - Race and Equality",
+          "POL 255 - Gender and Politics",
+          "POL 292 - Topics in Politics and Film",
+          "POV 101 - Poverty and Human Capability",
+          "SOAN 228 - Race and Ethnic Relations",
+          "SOAN 268 - Migration, Identity, and Conflict",
+          "SOAN 280 - Gender and Sexuality",
+          "CBSC 296 - Spring-Term Topics in Cognitive and Behavioral Science"
+        ]
+      },
+      {
+        "type": "one_of",
+        "label": "Digital Media",
+        "courses": [
+          "JOUR 202 - Introduction to Digital Journalism",
+          "BUS 321 - Multimedia Design and Development"
+        ]
+      },
+      {
+        "type": "n_of",
+        "label": "Media Production",
+        "n": 1,
+        "courses": [
+          "JOUR 220 - Social Media: Principles and Practice",
+          "JOUR 230 - Data-Driven Storytelling",
+          "JOUR 341 - Multimedia Storytelling Design",
+          "JOUR 351 - Editing and Design for Journalism and Strategic Communication",
+          "JOUR 362 - Producing for Broadcast and Online Media",
+          "JOUR 365 - The Broadcast News Magazine",
+          "JOUR 371 - Financial News",
+          "JOUR 372 - Reporting on the Economy"
+        ]
+      },
+      {
+        "type": "n_of",
+        "label": "Strategic Communication",
+        "n": 1,
+        "courses": [
+          "JOUR 325 - Crisis Communications",
+          "JOUR 331 - Health and Environmental Communication",
+          "JOUR 344 - Leading Public Relations Campaigns",
+          "BUS 370 - Integrated Marketing Communications",
+          "BUS 371 - Creative Strategic Planning"
+        ]
+      },
+      {
+        "type": "credits",
+        "label": "Internship",
+        "subject": "JOUR",
+        "credits": 2,
+        "notes": "From JOUR 451, 452, 461, or 462"
+      },
+      {
+        "type": "all",
+        "label": "Additional Requirements",
+        "courses": [
+          "Completion of a minor other than mass communications or four additional courses of at least three credits at the 200 level or above in another discipline",
+          "Completion of a portfolio in the senior year for assessment"
+        ]
+      },
+      {
+        "type": "all",
+        "label": "Notes",
+        "courses": [
+          "At least 50 credits required",
+          "At least 26 credits in journalism and mass communications",
+          "At least 72 credits outside the department"
+        ]
+      }
+    ]
+  },
+  {
+    "major": "Studio Art (BA)",
+    "requirements": [
+      {
+        "type": "one_of",
+        "label": "Drawing",
+        "courses": [
+          "ARTS 111 - Drawing I",
+          "ARTS 115 - Contemporary Practice in Drawing"
+        ]
+      },
+      {
+        "type": "all",
+        "label": "Required Course",
+        "courses": [
+          "ARTS 309 - Studio Seminar: Methods in Contemporary Art Practice"
+        ]
+      },
+      {
+        "type": "n_of",
+        "label": "Three Introductory Studio Courses",
+        "n": 3,
+        "courses": [
+          "ARTS 120 - Photography I",
+          "ARTS 131 - Design I",
+          "ARTS 217 - Painting I",
+          "ARTS 227 - Printmaking I",
+          "ARTS 231 - Introductory Sculpture: Materials and Methods"
+        ]
+      },
+      {
+        "type": "credits",
+        "label": "Four Additional Studio Art Courses",
+        "subject": "ARTS",
+        "credits": 12
+      },
+      {
+        "type": "one_of",
+        "label": "Art History Requirement",
+        "courses": [
+          "ARTH 102 - Survey of Western Art: Renaissance to the Present",
+          "ARTH 243 - Imaging Tibet",
+          "ARTH 245 - Ancient Cultures, New Markets: Modern and Contemporary Asian Art",
+          "ARTH 261 - History of Photography",
+          "ARTH 263 - 20th-Century European Art",
+          "ARTH 264 - Surrealism",
+          "ARTH 266 - American Art to 1945",
+          "ARTH 267 - Art Since 1945",
+          "ARTH 274 - Art and Revolution: Mexican Muralism",
+          "ARTH 275 - Community Muralism: The Art of Public Engagement",
+          "ARTH 276 - Chicana/o Art and Muralism: From the Street to the (Staniar) Gallery",
+          "ARTH 364 - Seminar on Art of the 1960s",
+          "ARTH 365 - Women, Art, and Empowerment",
+          "ARTH 366 - African-American Art Seminar",
+          "ARTH 378 - Mexico/U.S. Border Art: Contemporary U.S. Latinx Art"
+        ]
+      },
+      {
+        "type": "credits",
+        "label": "One Additional Art History Course",
+        "subject": "ARTH",
+        "credits": 3
+      },
+      {
+        "type": "one_of",
+        "label": "Thesis",
+        "courses": [
+          "ARTS 473 - Senior Thesis",
+          "ARTS 493 - Honors Thesis"
+        ]
+      },
+      {
+        "type": "all",
+        "label": "Notes",
+        "courses": [
+          "At least 36 credits required"
+        ]
+      }
+    ]
+  },
+  {
+    "major": "Theater (BA)",
+    "requirements": [
+      {
+        "type": "all",
+        "label": "Required Courses",
+        "courses": [
+          "THEA 101 - Introduction to Theater",
+          "THEA 102 - Introduction to Acting",
+          "THEA 201 - Stagecraft",
+          "THEA 202 - Costume Construction",
+          "THEA 203 - Stage Lighting",
+          "THEA 204 - Stage Management",
+          "THEA 205 - Theater History I",
+          "THEA 206 - Theater History II",
+          "THEA 207 - Play Analysis",
+          "THEA 208 - Directing",
+          "THEA 209 - Playwriting",
+          "THEA 210 - Theater Design",
+          "THEA 211 - Theater Production",
+          "THEA 212 - Theater Performance",
+          "THEA 213 - Theater Management",
+          "THEA 214 - Theater Education",
+          "THEA 215 - Theater Criticism",
+          "THEA 216 - Theater Theory",
+          "THEA 217 - Theater Research",
+          "THEA 218 - Theater Internship",
+          "THEA 219 - Theater Independent Study",
+          "THEA 220 - Theater Seminar",
+          "THEA 221 - Theater Workshop",
+          "THEA 222 - Theater Practicum",
+          "THEA 223 - Theater Capstone"
+        ]
+      },
+      {
+        "type": "all",
+        "label": "Notes",
+        "courses": [
+          "At least 36 credits required",
+          "Participation in at least one production per year required"
+        ]
       }
     ]
   }
