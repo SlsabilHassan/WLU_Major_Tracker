@@ -262,7 +262,7 @@ function App() {
             number: { value: 80 },
             size: { value: 2 },
             move: { enable: true, speed: 0.2 },
-            opacity: { value: 0.7 }
+            opacity: { value: 0.5 }
           }
         }}
         className="particles"
