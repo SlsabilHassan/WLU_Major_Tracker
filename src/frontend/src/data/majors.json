@@ -811,7 +811,7 @@
       {
         "type": "n_of",
         "label": "Required Courses",
-        "n": 13,
+        "n": 14,
         "courses": [
           "CHEM 110 - General Chemistry and Lab",
           "CHEM 109 - General Chemistry & CHEM 115 - General Chemistry Laboratory",
@@ -823,7 +823,7 @@
           "CHEM 243 - Spectroscopic Methods",
           "CHEM 250 - Inorganic and Bioinorganic Chemistry",
           "CHEM 260 - Physical Chemistry of Biological Systems",
-          "CHEM 261 - Physical Chemistry: Quantum & Computational Chemistry",
+          "CHEM 261 - Physical Chemistry: quantum & Computational Chemistry",
           "CHEM 341 - Biochemistry I",
           "MATH 101 - Calculus I",
           "MATH 102 - Calculus II",
@@ -852,6 +852,32 @@
         "label": "Major Field Test in Chemistry",
         "courses": [
           "Completion of the Major Field Test in Chemistry"
+        ]
+      }
+    ]
+  },
+  {
+    "major": "Classics (BA)",
+    "requirements": [
+      {
+        "type": "credits",
+        "label": "1. At least 18 credits in Greek and/or Latin with at least six credits at the 300 level, and no more than six credits at the 100-level.",
+        "subject": "GREK/LATN",
+        "credits": 18,
+        "notes": "At least six credits at the 300 level, and no more than six credits at the 100-level."
+      },
+      {
+        "type": "credits",
+        "label": "2. 15 additional credits chosen from the Greek, Latin or Classics courses, or the following:",
+        "subject": "GREK/LATN/CLAS/PHIL/REL/ENGL",
+        "credits": 15,
+        "notes": "PHIL 110 - Ancient Greek Philosophy; PHIL 222 - Aristotle; REL 102 - New Testament; ENGL 296 - Topics in Law and Literature (LJS 296). Independent study courses must be approved in advance by the department."
+      },
+      {
+        "type": "all",
+        "label": "3. A comprehensive examination administered in the senior year or, with the permission of the department, in the junior year.",
+        "courses": [
+          "Comprehensive examination administered in the senior year or, with permission, in the junior year."
         ]
       }
     ]
@@ -1440,8 +1466,7 @@
         "type": "credits",
         "label": "Four additional Economics courses numbered above 211 (max 9 credits from supervised study abroad and/or special topics)",
         "subject": "ECON",
-        "credits": 4,
-        "level": 212
+        "credits": 4
       },
       {
         "type": "all",
@@ -1651,7 +1676,7 @@
       },
       {
         "type": "n_of",
-        "label": "Statistics Requirement",
+        "label": "Statistics Requirement: One of the following",
         "n": 1,
         "courses": [
           "BIOL 201 - Statistics for Biology and Medicine",
@@ -1661,7 +1686,7 @@
       },
       {
         "type": "n_of",
-        "label": "Advanced Quantitative Skills",
+        "label": "Advanced Quantitative Skills: One of the following",
         "n": 1,
         "courses": [
           "BIOL 282 - Modeling and Simulations in Public Health",
@@ -1702,17 +1727,6 @@
         "courses": [
           "A relevant internship, study abroad, research project, or other experiential learning activity approved in advance by the director of the program"
         ]
-      },
-      {
-        "type": "all",
-        "label": "Notes",
-        "courses": [
-          "Minimum 41 credits required",
-          "At least three credits at the 300-level or above in addition to capstone",
-          "No more than three elective courses in any track may be used to satisfy requirements in another major",
-          "Student-designed tracks must be approved before the end of junior year",
-          "ENV 396 - Pre-Capstone Research Seminar is strongly encouraged"
-        ]
       }
     ]
   },
@@ -1730,7 +1744,7 @@
       },
       {
         "type": "n_of",
-        "label": "Civilization",
+        "label": "Civilization: One of the following",
         "n": 1,
         "courses": [
           "FREN 280 - Civilisation et culture francophones",
@@ -1760,14 +1774,70 @@
         "courses": [
           "Completion of the French Assessment Exam (FAE), a four-skills assessment, in winter term of senior year"
         ]
+      }
+    ]
+  },
+  {
+    "major": "German (BA)",
+    "requirements": [
+      {
+        "type": "n_of",
+        "label": "1. Required course (or equivalent)",
+        "n": 1,
+        "courses": [
+          "GERM 262 - Intermediate German II"
+        ]
       },
       {
         "type": "all",
-        "label": "Notes",
+        "label": "2. Required courses",
         "courses": [
-          "At least 30 credits required",
-          "Demonstrated proficiency in listening, speaking, reading, and writing required",
-          "The department strongly recommends a study-abroad experience of at least one term, and preferably a full academic year"
+          "GERM 311 - Advanced German I: German History from the Medieval to the Modern",
+          "GERM 312 - Advanced German II: National Socialism and Postwar German History, Media, and Society"
+        ]
+      },
+      {
+        "type": "n_of",
+        "label": "3. Take one course from",
+        "n": 1,
+        "courses": [
+          "GERM 347 - Intellectual and Literary Landscape of the Early German Enlightenment",
+          "GERM 349 - Intellectual and Literary Landscape of the Late German Enlightenment"
+        ]
+      },
+      {
+        "type": "n_of",
+        "label": "4. One course each from three of the following four areas (9 credits total)",
+        "n": 3,
+        "courses": [
+          "GERM 318 - German Medieval and Renaissance Literature (Medieval)",
+          "GERM 313 - German Literature, 1800-1850 (19th century)",
+          "GERM 315 - German Literature, 1850-1900 (19th century)",
+          "GERM 314 - German Literature, 1900-1945 (20th and 21st centuries)",
+          "GERM 316 - German Literature, 1945 to Present (20th and 21st centuries)",
+          "GERM 332 - Performing German (Performing German)"
+        ],
+        "notes": "One course each from three of the following four areas: Medieval, 19th century, 20th and 21st centuries, Performing German."
+      },
+      {
+        "type": "credits",
+        "label": "5. Take three credits from GERM 303, 304, or a substitute approved by the department head",
+        "subject": "GERM",
+        "credits": 3,
+        "notes": "GERM 304 - Layered Berlin; GERM 305 - Traces of Empire: Exploring the Cultural Centers of Austria and Hungary"
+      },
+      {
+        "type": "credits",
+        "label": "6. Remaining credits",
+        "subject": "GERM/ENGL/COGNATE/ABROAD",
+        "credits": 6,
+        "notes": "The remaining credits may be taken in English or German, from departmental course offerings, approved cognate courses (see list), or approved study abroad courses in German, with no more than six credits in any one discipline."
+      },
+      {
+        "type": "all",
+        "label": "7. Proficiency exam",
+        "courses": [
+          "Students must pass an oral and written proficiency examination conducted by the department before or during their last long term prior to graduation. An optional one-credit course, GERM 401: Composition Practice, is offered each winter term to help students prepare for the written examination."
         ]
       }
     ]
@@ -1809,12 +1879,66 @@
         "subject": "HIST",
         "credits": 3,
         "notes": "At least three additional credits in history at any level"
-      },
+      }
+    ]
+  },
+  {
+    "major": "Integrated Engineering (BS)",
+    "requirements": [
       {
         "type": "all",
-        "label": "Notes",
+        "label": "1. Required courses",
         "courses": [
-          "Total of 33 credits required"
+          "PHYS 111 - General Physics I",
+          "PHYS 112 - General Physics II",
+          "MATH 101 - Calculus I",
+          "MATH 102 - Calculus II",
+          "MATH 221 - Multivariable Calculus",
+          "MATH 332 - Ordinary Differential Equations",
+          "ENGN 178 - Introduction to Engineering",
+          "ENGN 203 - Mechanics I: Statics",
+          "ENGN 204 - Mechanics II: Dynamics",
+          "ENGN 207 - Electrical Circuits (PHYS 207)",
+          "ENGN 225 - Mathematical Methods for Physics and Engineering (PHYS 225)",
+          "ENGN 378 - Capstone Design",
+          "ENGN 379 - Capstone Design"
+        ]
+      },
+      {
+        "type": "n_of",
+        "label": "2. One lecture/lab sequence chosen from:",
+        "n": 1,
+        "courses": [
+          "ENGN 301 - Solid Mechanics + ENGN 351 - Solid Mechanics Laboratory",
+          "ENGN 311 - Fluid Mechanics + ENGN 361 - Fluid Mechanics Laboratory"
+        ]
+      },
+      {
+        "type": "n_of",
+        "label": "3. Two courses from:",
+        "n": 2,
+        "courses": [
+          "ENGN 208 - Electronics",
+          "ENGN 240 - Thermodynamics",
+          "ENGN 260 - Materials Science and Engineering",
+          "ENGN 267 - Bioengineering and Bioinspired Design",
+          "ENGN 295 - Intermediate Special Topics in Engineering",
+          "ENGN 301 - Solid Mechanics with ENGN 351 - Solid Mechanics Laboratory",
+          "ENGN 311 - Fluid Mechanics with ENGN 361 - Fluid Mechanics Laboratory",
+          "ENGN 312 - Heat Transfer",
+          "ENGN 330 - Mechanical Vibrations",
+          "ENGN 395 - Special Topics in Engineering"
+        ]
+      },
+      {
+        "type": "n_of",
+        "label": "4. Three courses in a single science subject in one of the following tracks:",
+        "n": 3,
+        "courses": [
+          "Biology: BIOL 111 - Fundamentals of Biology with BIOL 113 - Biology Laboratory and two BIOL courses 200 level or above",
+          "Chemistry: CHEM 110 - General Chemistry, CHEM 241 - Organic Chemistry I, CHEM 242 - Organic Chemistry II",
+          "Computer Science: CSCI 111 - Introduction to Computer Science, CSCI 112 - Data Structures, and one CSCI course 200 level or above",
+          "Earth and Environmental Geoscience: EEG 100 - Dynamic Earth: Introductory Geology with Field Emphasis or EEG 101 - Dynamic Earth: Introductory Geology or EEG 102 - Sustainable Earth: Introductory Environmental Geology and two EEG courses 200 level or above"
         ]
       }
     ]
@@ -1839,7 +1963,7 @@
       },
       {
         "type": "n_of",
-        "label": "Diversity of Experience",
+        "label": "Diversity of Experience: One of the following",
         "n": 1,
         "courses": [
           "ECON 231 - Topics in Economics",
@@ -1872,7 +1996,7 @@
       },
       {
         "type": "n_of",
-        "label": "Journalism Track: One course from",
+        "label": "Journalism Track: One course chosen from",
         "n": 1,
         "courses": [
           "JOUR 280 - Covering Courts and the Law",
@@ -1883,7 +2007,7 @@
       },
       {
         "type": "n_of",
-        "label": "Journalism Track: One course from",
+        "label": "Journalism Track: One course chosen from",
         "n": 1,
         "courses": [
           "JOUR 208 - Topics in Journalism",
@@ -1894,7 +2018,7 @@
       },
       {
         "type": "n_of",
-        "label": "Journalism Track: One course from",
+        "label": "Journalism Track: One course chosen from",
         "n": 1,
         "courses": [
           "JOUR 351 - Editing and Design for Journalism and Strategic Communication",
@@ -1933,15 +2057,6 @@
         "courses": [
           "One additional course in economics at the 200 level or above",
           "Three additional courses of at least three credits at the 200 level or above in accounting, business administration, or economics, including one course with an international focus"
-        ]
-      },
-      {
-        "type": "all",
-        "label": "Notes",
-        "courses": [
-          "At least 53 credits required",
-          "At least 34 credits in journalism and mass communications",
-          "At least 72 credits outside the department"
         ]
       }
     ]
@@ -2005,8 +2120,9 @@
     "major": "Mathematics (BS)",
     "requirements": [
       {
-        "type": "all",
+        "type": "n_of",
         "label": "Required Courses",
+        "n": 9,
         "courses": [
           "MATH 221 - Multivariable Calculus",
           "MATH 222 - Linear Algebra",
@@ -2043,14 +2159,6 @@
         "subject": "MIXED",
         "credits": 6,
         "notes": "Six additional credits selected from courses in biology, chemistry, computer science, earth and environmental geoscience, engineering, mathematics (numbered 200 and above), and physics"
-      },
-      {
-        "type": "all",
-        "label": "Notes",
-        "courses": [
-          "At least 51 credits required",
-          "Prerequisites: MATH 101 and 102, or their equivalents"
-        ]
       }
     ]
   },
@@ -2073,7 +2181,7 @@
           "MUS 325 - Conducting and Methods I",
           "MUS 365 - Post Tonal Music",
           "MUS 473 - Senior Thesis",
-          "MUS 493 - Honors Thesis"
+          "MUS 493 - honors Thesis"
         ]
       },
       {
@@ -2105,15 +2213,6 @@
         "courses": [
           "Demonstrated piano proficiency by the end of the junior year",
           "Successful completion of MUS 200 (recital attendance) every fall and winter term after declaring the music major"
-        ]
-      },
-      {
-        "type": "all",
-        "label": "Notes",
-        "courses": [
-          "At least 42 credits required",
-          "Students with no prior piano experience must complete both MUS 100 and 101",
-          "Students with prior piano experience will be tested to determine proficiency"
         ]
       }
     ]
@@ -2206,8 +2305,9 @@
     "major": "Neuroscience (BS)",
     "requirements": [
       {
-        "type": "all",
+        "type": "n_of",
         "label": "Basic Science Core",
+        "n": 5,
         "courses": [
           "BIOL 111 - Fundamentals of Biology",
           "BIOL 113 - Biology Laboratory",
@@ -2228,11 +2328,12 @@
       },
       {
         "type": "n_of",
-        "label": "Cellular and Molecular Neuroscience",
+        "label": "Cellular and Molecular Neuroscience: One of the following",
         "n": 1,
         "courses": [
           "BIOL 220 - Genetics",
           "BIOL 230 - Cell Biology",
+          "BIOL 211S - Cell Biology at St. Andrews",
           "BIOL 250 - Vertebrate Endocrinology",
           "BIOL 280 - Neural Imaging",
           "CBSC 256 - Topics in Neuroscience",
@@ -2242,7 +2343,7 @@
       },
       {
         "type": "n_of",
-        "label": "Computational Neuroscience",
+        "label": "Computational Neuroscience: One of the following",
         "n": 1,
         "courses": [
           "BIOL 185 - Data Science: Visualizing and Exploring Big Data",
@@ -2259,7 +2360,7 @@
       },
       {
         "type": "n_of",
-        "label": "Systems Neuroscience",
+        "label": "Systems Neuroscience: One of the following",
         "n": 1,
         "courses": [
           "BIOL 255 - Reproductive Physiology",
@@ -2275,7 +2376,7 @@
       },
       {
         "type": "n_of",
-        "label": "Cognitive and Behavioral Neuroscience",
+        "label": "Cognitive and Behavioral Neuroscience: One of the following",
         "n": 1,
         "courses": [
           "BIOL 243 - Animal Behavior",
@@ -2284,8 +2385,7 @@
           "CBSC 255 - Topics in Neuroscience",
           "CBSC 259 - Topics in Neuroscience",
           "PHIL 282 - Philosophy of Biology",
-          "PHIL 375 - Philosophy of Mind",
-          "NEUR 398 - Special Topics in Cognitive and Behavioral Neuroscience"
+          "PHIL 375 - Philosophy of Mind"
         ]
       },
       {
@@ -2301,6 +2401,139 @@
         "courses": [
           "Submission of the Neuroscience e-portfolio"
         ]
+      }
+    ]
+  },
+  {
+    "major": "Philosophy (BA)",
+    "requirements": [
+      {
+        "type": "all",
+        "label": "1. Required course",
+        "courses": [
+          "PHIL 170 - Introduction to Logic"
+        ]
+      },
+      {
+        "type": "n_of",
+        "label": "2. Two courses from (ordinarily completed before the end of sophomore year)",
+        "n": 2,
+        "courses": [
+          "PHIL 104 - Introduction to Moral and Political Philosophy",
+          "PHIL 105 - Introduction to Theories of Knowledge and Reality",
+          "PHIL 110 - Ancient Greek Philosophy",
+          "PHIL 120 - Modern European Philosophy: Descartes to Hume"
+        ]
+      },
+      {
+        "type": "credits",
+        "label": "3. At least four courses at the 200 level or above",
+        "subject": "PHIL",
+        "credits": 4
+      },
+      {
+        "type": "credits",
+        "label": "4. At least one course at the 300 level",
+        "subject": "PHIL",
+        "credits": 1
+      },
+      {
+        "type": "n_of",
+        "label": "5. History of philosophy or major figures: Two courses chosen from",
+        "n": 2,
+        "courses": [
+          "PHIL 110 - Ancient Greek Philosophy",
+          "PHIL 120 - Modern European Philosophy: Descartes to Hume",
+          "PHIL 130 - Classical Chinese Philosophy",
+          "PHIL 195 - Seminar in History of Philosophy or Major Figures",
+          "PHIL 214 - Religion and Existentialism",
+          "PHIL 218 - Heidegger and Being in the World",
+          "PHIL 221 - Plato",
+          "PHIL 222 - Aristotle",
+          "PHIL 223 - Buddhist Philosophy",
+          "PHIL 228 - John Stuart Mill",
+          "PHIL 232 - Nietzsche",
+          "PHIL 234 - American Pragmatism",
+          "PHIL 238 - Existentialism: Meaning and Existence",
+          "PHIL 239 - Postmodernism: Power, Difference, and Disruption",
+          "PHIL 295 - Seminar in History of Philosophy or Major Figures",
+          "PHIL 310 - Kant",
+          "PHIL 315 - Hegel",
+          "PHIL 395 - Seminar in History of Philosophy or Major Figures",
+          "CLAS 221 - Plato",
+          "REL 218 - Heidegger and Being in the World"
+        ]
+      },
+      {
+        "type": "n_of",
+        "label": "6. Ethics and value theory: Two courses chosen from",
+        "n": 2,
+        "courses": [
+          "PHIL 104 - Introduction to Moral and Political Philosophy",
+          "PHIL 145 - Contemporary Moral Problems",
+          "PHIL 150 - Ethics and the Environment",
+          "PHIL 196 - Seminar in Ethics and Value Theory",
+          "PHIL 240 - Contemporary Ethical Theory",
+          "PHIL 241 - Poverty, Ethics, and Religion",
+          "PHIL 242 - Social Inequality and Fair Opportunity",
+          "PHIL 243 - Martin Luther King Jr.: Poverty, Justice, and Love",
+          "PHIL 244 - Feminist Social and Political Philosophy",
+          "PHIL 245 - Poverty, Dignity, and Human Rights",
+          "PHIL 246 - Philosophy of Sex",
+          "PHIL 247 - Medicine, Research, and Poverty",
+          "PHIL 248 - Ethics of War",
+          "PHIL 250 - Philosophies of Life",
+          "PHIL 252 - Philosophy of Law",
+          "PHIL 254 - Philosophy of the Family: Beyond Tradition",
+          "PHIL 256 - Free Will and Moral Responsibility",
+          "PHIL 264 - Aesthetics",
+          "PHIL 268 - Manufacturing Wonders and Philosophical Wondering (ENGN 268)",
+          "PHIL 296 - Seminar in Ethics and Value Theory",
+          "PHIL 340 - History of Ethics",
+          "PHIL 342 - Metaethics",
+          "PHIL 344 - Virtue Ethics",
+          "PHIL 346 - Medical Ethics",
+          "PHIL 348 - Legal Ethics",
+          "PHIL 354 - Distributive Justice",
+          "PHIL 357 - Self and Social World",
+          "PHIL 396 - Seminar in Ethics and Value Theory",
+          "POV 241 - Poverty, Ethics, and Religion",
+          "POV 243 - Martin Luther King Jr.: Poverty, Justice, and Love",
+          "WGSS 242 - Social Inequality and Fair Opportunity",
+          "WGSS 244 - Feminist Social and Political Philosophy",
+          "WGSS 246 - Philosophy of Sex"
+        ]
+      },
+      {
+        "type": "n_of",
+        "label": "7. Metaphysics and epistemology: Two courses chosen from",
+        "n": 2,
+        "courses": [
+          "PHIL 105 - Introduction to Theories of Knowledge and Reality",
+          "PHIL 197 - Seminar in Metaphysics and Epistemology",
+          "PHIL 270 - Intermediate Logic",
+          "PHIL 272 - Philosophy and Science Fiction",
+          "PHIL 274 - Metaphysics: Existence and Reality",
+          "PHIL 278 - Epistemology: Knowledge and Doubt",
+          "PHIL 282 - Philosophy of Biology",
+          "PHIL 285 - The Unruly Body: Philosophy, Science, and Culture",
+          "PHIL 297 - Seminar in Metaphysics and Epistemology",
+          "PHIL 372 - Philosophy of Language",
+          "PHIL 375 - Philosophy of Mind",
+          "PHIL 378 - Philosophy of Science",
+          "PHIL 382 - Human Enhancement and Transhumanism",
+          "PHIL 397 - Seminar in Metaphysics and Epistemology"
+        ]
+      },
+      {
+        "type": "n_of",
+        "label": "8. Senior Capstone",
+        "n": 1,
+        "courses": [
+          "PHIL 473 - Senior Thesis (3)",
+          "PHIL 493 - Honors Thesis (3-3)"
+        ],
+        "notes": "At least one course chosen from either a 300-level course taken during the senior year, or PHIL 473, or PHIL 493: Honors Thesis (3-3). Students who are not pursuing Honors in the Major must take at least one 300-level course in their senior year. This 300-level course must be in addition to the course used to satisfy requirement 4. above. Students who are pursuing Honors in the Major must speak with the department head or honors coordinator before the end of the junior year. Students pursuing honors register for PHIL 493 and prepare their theses in both fall and winter term of the senior year. They must present their theses for evaluation before the end of the winter term of the senior year."
       }
     ]
   },
@@ -2355,7 +2588,7 @@
         "type": "credits",
         "label": "Additional Science",
         "credits": 3,
-        "notes": "Three additional credits chosen from biology, chemistry, computer science, engineering, earth and environmental geoscience, mathematics, or physics courses"
+        "notes": "Three additional credits chosen from biology, chemistry, computer science, engineering, earth and environmental geoscience, mathematics, or physics courses. See the full list <a href=\"https://catalog.wlu.edu/preview_program.php?catoid=41&poid=2332&returnto=3958#:~:text=4.%20Three%20additional%20credits%20chosen%20from%20the%20following%3A\" target=\"_blank\" rel=\"noopener noreferrer\">here</a>."
       }
     ]
   },
@@ -2410,7 +2643,7 @@
     "requirements": [
       {
         "type": "n_of",
-        "label": "Introduction",
+        "label": "Introduction: One of the following",
         "n": 1,
         "courses": [
           "REL 100 - Introduction to Religion",
@@ -2420,7 +2653,7 @@
       },
       {
         "type": "n_of",
-        "label": "Asian Religions",
+        "label": "Asian Religions: One of the following",
         "n": 1,
         "courses": [
           "REL 103 - Introduction to Asian Religions",
@@ -2431,7 +2664,7 @@
       },
       {
         "type": "n_of",
-        "label": "Christianity",
+        "label": "Christianity: One of the following",
         "n": 1,
         "courses": [
           "REL 102 - New Testament",
@@ -2441,7 +2674,7 @@
       },
       {
         "type": "n_of",
-        "label": "Islam",
+        "label": "Islam: One of the following",
         "n": 1,
         "courses": [
           "REL 105 - Introduction to Islam",
@@ -2454,7 +2687,7 @@
       },
       {
         "type": "n_of",
-        "label": "Judaism",
+        "label": "Judaism: One of the following",
         "n": 1,
         "courses": [
           "REL 101 - Hebrew Bible/Old Testament",
@@ -2463,7 +2696,7 @@
       },
       {
         "type": "n_of",
-        "label": "Secularity",
+        "label": "Secularity: One of the following",
         "n": 1,
         "courses": [
           "REL 104 - Secularity, Disenchantment, and Religion"
@@ -2589,7 +2822,7 @@
       },
       {
         "type": "n_of",
-        "label": "Spanish American Literature",
+        "label": "Spanish American Literature: One of the following",
         "n": 1,
         "courses": [
           "SPAN 340 - Spanish-American Short Story",
@@ -2603,7 +2836,7 @@
       },
       {
         "type": "n_of",
-        "label": "Spanish Literature",
+        "label": "Spanish Literature: One of the following",
         "n": 1,
         "courses": [
           "SPAN 312 - Ornament of the World: Muslims, Jews, and Christians in Early Iberia",
@@ -2623,7 +2856,7 @@
       },
       {
         "type": "n_of",
-        "label": "Linguistics",
+        "label": "Linguistics: One of the following",
         "n": 1,
         "courses": [
           "SPAN 209 - Intro to Hispanic Linguistics",
@@ -2699,8 +2932,8 @@
         "label": "Emphasis",
         "n": 1,
         "courses": [
-          "Anthropology emphasis: take nine additional credits from the electives listed on the catalog, two in anthropology and one in sociology",
-          "Sociology emphasis: take nine additional credits from the electives listed on the catalog, two in sociology and one in anthropology"
+          "Anthropology emphasis <a href=\"https://catalog.wlu.edu/preview_program.php?catoid=41&poid=2344&returnto=3965#:~:text=one%20in%20anthropology-,Anthropology%20electives%3A,-SOAN%20181%C2%A0%2D%C2%A0FS\" target=\"_blank\" rel=\"noopener noreferrer\">here</a>: take nine additional credits from the electives listed on the catalog, two in anthropology and one in sociology",
+          "Sociology emphasis <a href=\"https://catalog.wlu.edu/preview_program.php?catoid=41&poid=2344&returnto=3965#:~:text=Topics%20in%20Anthropology-,Sociology%20electives%3A,-SOAN%20180%C2%A0%2D%C2%A0FS\" target=\"_blank\" rel=\"noopener noreferrer\">here</a>: take nine additional credits from the electives listed on the catalog, two in sociology and one in anthropology"
         ]
       },
       {
@@ -2708,7 +2941,6 @@
         "label": "Additional Electives",
         "subject": "SOAN",
         "credits": 9,
-        "level": 200,
         "notes": "At least nine additional credits chosen from SOAN courses numbered 200 or above"
       },
       {
@@ -2775,7 +3007,7 @@
         "subject": "SPAN",
         "credits": 3,
         "notes": "Three additional Spanish courses numbered 300 or above, except SPAN 493"
-      },
+      },  
       {
         "type": "n_of",
         "label": "Linguistics Requirement",
