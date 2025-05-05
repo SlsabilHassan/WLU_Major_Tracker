@@ -3,6 +3,9 @@
   padding: 2rem 0;
   max-width: 1400px;
   margin: 0 auto;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .roadmap-line {
@@ -13,6 +16,7 @@
   width: 2px;
   background: rgba(255, 255, 255, 0.2);
   transform: translateX(-50%);
+  min-height: 100%;
 }
 
 .roadmap-step {
@@ -186,6 +190,50 @@
   border-color: rgba(255, 255, 255, 0.3);
 }
 
+.roadmap-checkbox.dashed-disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  border-left: 2px dashed #fff;
+  padding-left: 0.5rem;
+}
+
+.roadmap-checkbox.dashed-disabled span {
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: line-through;
+}
+
+.roadmap-checkbox.dashed-disabled input[type="checkbox"] {
+  cursor: not-allowed;
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.one-of-group {
+  position: relative;
+  padding: 0.5rem 0;
+}
+
+.or-text {
+  position: relative;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.8rem;
+  font-style: italic;
+  margin: 0.5rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.or-text::before,
+.or-text::after {
+  content: '';
+  height: 1px;
+  background: rgba(255, 255, 255, 0.2);
+  flex: 1;
+  max-width: 50px;
+}
+
 @media (max-width: 600px) {
   .elegant-roadmap {
     padding: 1rem 0.25rem;
@@ -211,4 +259,20 @@
     line-height: 1.3;
     word-break: break-word;
   }
+}
+
+.roadmap-notes {
+  color: #ffe;
+  font-size: 0.97rem;
+  opacity: 0.8;
+  margin-bottom: 0.5rem;
+  font-style: italic;
+}
+
+.roadmap-notes.right-note {
+  float: right;
+  text-align: right;
+  max-width: 60%;
+  margin-left: auto;
+  margin-bottom: 0.5rem;
 }

@@ -42,13 +42,13 @@
       },
       {
         "type": "credits",
-        "label": "Nine credits from BUS 200- or 300-level courses (except BUS 202)",
+        "label": "Nine credits from BUS 200- or 300- level courses (except BUS 202)",
         "subject": "BUS 200+ or 300+",
         "credits": 9
       },
       {
         "type": "credits",
-        "label": "Nine credits from ACCT 200- or 300-level (not previously counted), FIN 300-level, ECON 215, 271",
+        "label": "Nine credits from ACCT 200- or 300- level (not previously counted), FIN 300- level, ECON 215, 271",
         "subject": "MIXED",
         "credits": 9
       }
@@ -69,79 +69,68 @@
           "ARTH 140 - Asian Art",
           "ARTH 141 - Buddhist Art of South and Central Asia",
           "ARTH 170 - Arts of Mesoamerica and the Andes"
-        ],
-        "notes": "Choose at least three courses (9 credits) from the list above"
+        ]
+        
       },
       {
         "type": "credits",
-        "label": "2. Studio Art Requirement",
+        "label": "2. Studio Art",
         "subject": "ARTS",
-        "credits": 3,
-        "notes": "One 3- or 4-credit course in ARTS"
+        "notes": "A 3- or 4- credit course in ARTS",
+        "credits": 3
+      },
+      {
+        "type": "credits",
+        "label": "3a. ARTH Electives",
+        "credits": 12,
+        "notes": "At least 12 credits chosen from ARTH 125, 131 (if not used to satisfy introductory requirement), 146, 180, 195, ARTH courses at the 200 level, and, when appropriate and approved in advance, MRST 110"
+      },
+      {
+        "type": "credits",
+        "label": "3b. Advanced ARTH",
+        "subject": "ARTH",
+        "credits": 6,
+        "notes": "At least six credits from 300-level courses and, when appropriate and approved in advance, LACS 396"
       },
       {
         "type": "n_of",
-        "label": "3. ARTH Electives (12 credits required)",
-        "n": 4,
-        "courses": [
-          "ARTH 125",
-          "ARTH 131 (if not used for Introduction)",
-          "ARTH 146",
-          "ARTH 180",
-          "ARTH 195",
-          "ARTH courses at the 200 level",
-          "MRST 110 (with department approval)"
-        ],
-        "notes": "Choose at least four courses (12 credits) from the list above"
-      },
-      {
-        "type": "credits",
-        "label": "4. 300-level ARTH (6 credits required)",
-        "subject": "ARTH",
-        "credits": 6,
-        "level": 300,
-        "notes": "Two 300-level ARTH courses required. May include LACS 396 with department approval."
-      },
-      {
-        "type": "one_of",
-        "label": "5. Thesis or Advanced Coursework",
+        "label": "4. Thesis or Advanced Coursework",
+        "n": 1,
         "courses": [
           "ARTH 473 - Senior Thesis (Fall)",
           "ARTH 483 - Senior Thesis (Winter)",
           "ARTH 493 - Honors Thesis (Fall and Winter)",
           "One additional ARTH course at the 300-level"
-        ],
-        "notes": "Choose one option from the list above"
+        ]
       },
       {
         "type": "all",
-        "label": "6. Capstone Requirement",
+        "label": "5. Capstone",
         "courses": [
           "ARTH 395 - Senior Seminar: Approaches to Art History"
-        ],
-        "notes": "Required course for all Art History majors"
-      },
-      {
-        "type": "all",
-        "label": "Notes",
-        "courses": [
-          "Total of at least 36 credits required",
-          "All courses must be completed with a grade of C- or better",
-          "Some courses may require department approval (MRST 110, LACS 396)"
         ]
       }
     ]
   },
+
+
   {
     "major": "Biochemistry (BS)",
     "requirements": [
       {
-        "type": "all",
+        "type": "n_of",
         "label": "Required Courses",
+        "n": 16,
         "courses": [
           "BIOL 111 - Fundamentals of Biology",
           "BIOL 113 - Biology Laboratory",
+          "CHEM 110 - General Chemistry and Lab",
+          "CHEM 109 - General Chemistry & CHEM 115 - General Chemistry Laboratory",
           "CHEM 211 - Analytical Chemistry",
+          "CHEM 241 - Organic Chemistry I and Lab",
+          "CHEM 240 - Organic Chemistry I & CHEM 245 - Organic Chemistry I Laboratory",
+          "CHEM 242 - Organic Chemistry II and Lab",
+          "CHEM 244 - Organic Chemistry II & CHEM 246 - Organic Chemistry II Laboratory",
           "CHEM 243 - Spectroscopic Methods",
           "CHEM 250 - Inorganic and Bioinorganic Chemistry",
           "CHEM 260 - Physical Chemistry of Biological Systems",
@@ -152,30 +141,6 @@
           "MATH 101 - Calculus I",
           "MATH 102 - Calculus II",
           "PHYS 111 - General Physics I"
-        ]
-      },
-      {
-        "type": "one_of",
-        "label": "General Chemistry Option",
-        "courses": [
-          "CHEM 110 - General Chemistry",
-          "CHEM 109 - General Chemistry WITH CHEM 115 - General Chemistry Laboratory"
-        ]
-      },
-      {
-        "type": "one_of",
-        "label": "Organic Chemistry I Option",
-        "courses": [
-          "CHEM 241 - Organic Chemistry I",
-          "CHEM 240 - Organic Chemistry I WITH CHEM 245 - Organic Chemistry I Laboratory"
-        ]
-      },
-      {
-        "type": "one_of",
-        "label": "Organic Chemistry II Option",
-        "courses": [
-          "CHEM 242 - Organic Chemistry II",
-          "CHEM 244 - Organic Chemistry II WITH CHEM 246 - Organic Chemistry II Laboratory"
         ]
       },
       {
@@ -219,25 +184,20 @@
     "major": "Biology (BA)",
     "requirements": [
       {
-        "type": "all",
-        "label": "Required Courses",
+        "type": "n_of",
+        "label": "1.Required Courses",
+        "n": 4,
         "courses": [
           "BIOL 111 - Fundamentals of Biology",
           "BIOL 113 - Biology Laboratory",
+          "BIOL 340 - Evolution",
+          "BIOL 340S - Evolutionary Biology at St. Andrews",
           "CHEM 110 - General Chemistry"
         ]
       },
       {
-        "type": "one_of",
-        "label": "Evolution Option",
-        "courses": [
-          "BIOL 340 - Evolution",
-          "BIOL 340S - Evolutionary Biology at St. Andrews"
-        ]
-      },
-      {
         "type": "n_of",
-        "label": "Quantitative Biology: Two courses from the following",
+        "label": "2.Quantitative Biology: Two courses from the following",
         "n": 2,
         "courses": [
           "BIOL 187 - Introduction to Data Science in Python",
@@ -252,8 +212,14 @@
         ]
       },
       {
-        "type": "one_of",
-        "label": "Molecules and Cells: One course from the following",
+        "type": "note",
+        "label": "Intermediate-Level Courses",
+        "notes": "Intermediate-Level courses expand and focus students' understanding of particular topics: Students must take one course from each of categories 3, 4 and 5, and must have two laboratory courses (indicated by *) chosen from course meeting categories 3, 4, 5 or 6."
+      },
+      {
+        "type": "n_of",
+        "label": "3.Molecules and Cells: One course from the following",
+        "n": 1,
         "courses": [
           "BIOL 211S - Cell Biology at St. Andrews",
           "BIOL 230 - Cell Biology",
@@ -264,11 +230,13 @@
           "BIOL 223 - Virology",
           "BIOL 280 - Neural Imaging *",
           "BIOL 297 - Topics in Biology (when appropriate)"
-        ]
+        ],
+        "notes": "Courses marked with * are laboratory courses. You must take two labs from categories 3, 4, 5, or 6."
       },
       {
-        "type": "one_of",
-        "label": "Ecology and Evolution: One course from the following",
+        "type": "n_of",
+        "label": "4.Ecology and Evolution: One course from the following",
+        "n": 1,
         "courses": [
           "BIOL 217 - Aquatic Ecology *",
           "BIOL 229 - Observing Ireland's Coastal Biomes",
@@ -282,11 +250,13 @@
           "BIOL 245S - Ecology at St Andrews",
           "BIOL 247S - Vertebrate Zoology at St. Andrews",
           "BIOL 297 - Topics in Biology (when appropriate)"
-        ]
+        ],
+        "notes": "Courses marked with * are laboratory courses. You must take two labs from categories 3, 4, 5, or 6."
       },
       {
-        "type": "one_of",
-        "label": "Structure and Function: One course from the following",
+        "type": "n_of",
+        "label": "5.Structure and Function: One course from the following",
+        "n": 1,
         "courses": [
           "BIOL 225 - Medicinal Plant Biology *",
           "BIOL 250 - Vertebrate Endocrinology",
@@ -298,11 +268,12 @@
           "BIOL 282 - Modeling and Simulations in Public Health",
           "BIOL 283 - Pregnancy: A KISS in Time?",
           "BIOL 297 - Topics in Biology (when appropriate)"
-        ]
+        ],
+        "notes": "Courses marked with * are laboratory courses. You must take two labs from categories 3, 4, 5, or 6."
       },
       {
         "type": "n_of",
-        "label": "Advanced-level: At least two of the following (at least two labs, *), max 4 credits at 400-level",
+        "label": "6.Advanced-level: At least two of the following",
         "n": 2,
         "courses": [
           "BIOL 302 - Modern Computational Biostatistics",
@@ -324,14 +295,14 @@
       },
       {
         "type": "all",
-        "label": "Major Field Test (MFT) in Biology",
+        "label": "7.Major Field Test (MFT) in Biology",
         "courses": [
           "Completion of the Major Field Test (MFT) in Biology"
         ]
       },
       {
         "type": "credits",
-        "label": "Additional credits in biology to total 33, max 6 at 400-level (BIOL 464 not allowed)",
+        "label": "8.Additional credits in biology to total 33, max 6 at 400-level (BIOL 464 not allowed)",
         "subject": "BIOL",
         "credits": 33
       }
@@ -356,8 +327,9 @@
         ]
       },
       {
-        "type": "one_of",
+        "type": "n_of",
         "label": "Data Science Option: Take one course",
+        "n": 1,
         "courses": [
           "BIOL 185 - Data Science: Visualizing and Exploring Big Data",
           "BIOL 187 - Introduction to Data Science in Python",
@@ -365,8 +337,9 @@
         ]
       },
       {
-        "type": "one_of",
+        "type": "n_of",
         "label": "Biochemistry Option: Take one course (BIOL 215/215S cannot double count)",
+        "n": 1,
         "courses": [
           "BIOL 215 - Biochemistry of the Cell",
           "BIOL 215S - Biochemistry at St. Andrews",
@@ -374,8 +347,9 @@
         ]
       },
       {
-        "type": "one_of",
+        "type": "n_of",
         "label": "Molecules and Cells: One course from the following",
+        "n": 1,
         "courses": [
           "BIOL 211S - Cell Biology at St. Andrews",
           "BIOL 230 - Cell Biology",
@@ -390,8 +364,9 @@
         ]
       },
       {
-        "type": "one_of",
+        "type": "n_of",
         "label": "Ecology and Evolution: One course from the following",
+        "n": 1,
         "courses": [
           "BIOL 217 - Aquatic Ecology",
           "BIOL 229 - Observing Ireland's Coastal Biomes",
@@ -408,8 +383,9 @@
         ]
       },
       {
-        "type": "one_of",
+        "type": "n_of",
         "label": "Structure and Function: One course from the following",
+        "n": 1,
         "courses": [
           "BIOL 225 - Medicinal Plant Biology",
           "BIOL 250 - Vertebrate Endocrinology",
@@ -426,7 +402,7 @@
       },
       {
         "type": "n_of",
-        "label": "Advanced-level: At least three of the following (at least one lab, *), max 6 credits at 400-level",
+        "label": "Advanced-level: At least three of the following (at least one lab, *)",
         "n": 3,
         "courses": [
           "BIOL 302 - Modern Computational Biostatistics",
@@ -449,8 +425,9 @@
         ]
       },
       {
-        "type": "one_of",
+        "type": "n_of",
         "label": "Quantitative Biology: One course from the following",
+        "n": 1,
         "courses": [
           "BIOL 267 - Bioengineering and Bioinspired Design",
           "BIOL 282 - Modeling and Simulations in Public Health",
@@ -491,8 +468,9 @@
         ]
       },
       {
-        "type": "one_of",
+        "type": "n_of",
         "label": "Statistics/Analytics Option (see note for double majors)",
+        "n": 1,
         "courses": [
           "BUS 202 - Fundamentals of Business Analytics",
           "CBSC 250 - Statistics and Research Design",
@@ -503,8 +481,9 @@
         ]
       },
       {
-        "type": "one_of",
+        "type": "n_of",
         "label": "Capstone Option",
+        "n": 1,
         "courses": [
           "BUS 398 - Strategic Management",
           "BUS 399 - Entrepreneurship"
@@ -790,12 +769,21 @@
     "major": "Chemistry (BA)",
     "requirements": [
       {
-        "type": "all",
+        "type": "n_of",
         "label": "Required Courses",
+        "n": 12,
         "courses": [
+          "CHEM 110 - General Chemistry and Lab",
+          "CHEM 109 - General Chemistry & CHEM 115 - General Chemistry Laboratory",
           "CHEM 211 - Analytical Chemistry",
+          "CHEM 241 - Organic Chemistry I and Lab",
+          "CHEM 240 - Organic Chemistry I & CHEM 245 - Organic Chemistry I Laboratory",
+          "CHEM 242 - Organic Chemistry II and Lab",
+          "CHEM 244 - Organic Chemistry II & CHEM 246 - Organic Chemistry II Laboratory",
           "CHEM 243 - Spectroscopic Methods",
           "CHEM 250 - Inorganic and Bioinorganic Chemistry",
+          "CHEM 260 - Physical Chemistry of Biological Systems",
+          "CHEM 261 - Physical Chemistry: Quantum & Computational Chemistry",
           "CHEM 341 - Biochemistry I",
           "MATH 101 - Calculus I",
           "MATH 102 - Calculus II",
@@ -804,43 +792,9 @@
         ]
       },
       {
-        "type": "one_of",
-        "label": "General Chemistry Option",
-        "courses": [
-          "CHEM 110 - General Chemistry",
-          "CHEM 109 - General Chemistry WITH CHEM 115 - General Chemistry Laboratory"
-        ]
-      },
-      {
-        "type": "one_of",
-        "label": "Organic Chemistry I Option",
-        "courses": [
-          "CHEM 241 - Organic Chemistry I",
-          "CHEM 240 - Organic Chemistry I WITH CHEM 245 - Organic Chemistry I Laboratory"
-        ]
-      },
-      {
-        "type": "one_of",
-        "label": "Organic Chemistry II Option",
-        "courses": [
-          "CHEM 242 - Organic Chemistry II",
-          "CHEM 244 - Organic Chemistry II WITH CHEM 246 - Organic Chemistry II Laboratory"
-        ]
-      },
-      {
-        "type": "one_of",
-        "label": "Physical Chemistry Option",
-        "courses": [
-          "CHEM 260 - Physical Chemistry of Biological Systems",
-          "CHEM 261 - Physical Chemistry: Quantum & Computational Chemistry"
-        ]
-      },
-      {
         "type": "credits",
         "label": "Six additional credits from biology, chemistry (200+), geology, or physics (200+)",
-        "subject": "BIO/CHEM/GEOL/PHYS",
-        "credits": 6,
-        "level": 200
+        "credits": 6
       },
       {
         "type": "all",
@@ -855,10 +809,17 @@
     "major": "Chemistry (BS)",
     "requirements": [
       {
-        "type": "all",
+        "type": "n_of",
         "label": "Required Courses",
+        "n": 13,
         "courses": [
+          "CHEM 110 - General Chemistry and Lab",
+          "CHEM 109 - General Chemistry & CHEM 115 - General Chemistry Laboratory",
           "CHEM 211 - Analytical Chemistry",
+          "CHEM 241 - Organic Chemistry I and Lab",
+          "CHEM 240 - Organic Chemistry I & CHEM 245 - Organic Chemistry I Laboratory",
+          "CHEM 242 - Organic Chemistry II and Lab",
+          "CHEM 244 - Organic Chemistry II & CHEM 246 - Organic Chemistry II Laboratory",
           "CHEM 243 - Spectroscopic Methods",
           "CHEM 250 - Inorganic and Bioinorganic Chemistry",
           "CHEM 260 - Physical Chemistry of Biological Systems",
@@ -869,30 +830,6 @@
           "MATH 221 - Multivariable Calculus",
           "PHYS 111 - General Physics I",
           "PHYS 112 - General Physics II"
-        ]
-      },
-      {
-        "type": "one_of",
-        "label": "General Chemistry Option",
-        "courses": [
-          "CHEM 110 - General Chemistry",
-          "CHEM 109 - General Chemistry WITH CHEM 115 - General Chemistry Laboratory"
-        ]
-      },
-      {
-        "type": "one_of",
-        "label": "Organic Chemistry I Option",
-        "courses": [
-          "CHEM 241 - Organic Chemistry I",
-          "CHEM 240 - Organic Chemistry I WITH CHEM 245 - Organic Chemistry I Laboratory"
-        ]
-      },
-      {
-        "type": "one_of",
-        "label": "Organic Chemistry II Option",
-        "courses": [
-          "CHEM 242 - Organic Chemistry II",
-          "CHEM 244 - Organic Chemistry II WITH CHEM 246 - Organic Chemistry II Laboratory"
         ]
       },
       {
@@ -923,8 +860,9 @@
     "major": "Cognitive and Behavioral Science (BA)",
     "requirements": [
       {
-        "type": "one_of",
+        "type": "n_of",
         "label": "Foundations: One of the following",
+        "n": 1,
         "courses": [
           "CBSC 110 - Brain and Behavior with Laboratory",
           "CBSC 111 - Brain and Behavior"
@@ -969,8 +907,9 @@
         ]
       },
       {
-        "type": "one_of",
+        "type": "n_of",
         "label": "One research capstone course",
+        "n": 1,
         "courses": [
           "CBSC 353 - Advanced Methods in Systems Neuroscience Research",
           "CBSC 354 - Advanced Methods in Attention Research",
@@ -997,8 +936,9 @@
     "major": "Cognitive and Behavioral Science (BS)",
     "requirements": [
       {
-        "type": "one_of",
+        "type": "n_of",
         "label": "Foundations: One of the following",
+        "n": 1,
         "courses": [
           "CBSC 110 - Brain and Behavior with Laboratory",
           "CBSC 111 - Brain and Behavior"
@@ -1043,8 +983,9 @@
         ]
       },
       {
-        "type": "one_of",
+        "type": "n_of",
         "label": "One research capstone course",
+        "n": 1,
         "courses": [
           "CBSC 353 - Advanced Methods in Systems Neuroscience Research",
           "CBSC 354 - Advanced Methods in Attention Research",
@@ -1088,16 +1029,18 @@
         ]
       },
       {
-        "type": "one_of",
+        "type": "n_of",
         "label": "Take one course",
+        "n": 1,
         "courses": [
           "MATH 121 - Discrete Mathematics I",
           "MATH 225 - Bridges to Advanced Math"
         ]
       },
       {
-        "type": "one_of",
+        "type": "n_of",
         "label": "Take one course",
+        "n": 1,
         "courses": [
           "CSCI 312 - Programming Language Design",
           "CSCI 313 - Theory of Computation"
@@ -1150,8 +1093,9 @@
         ]
       },
       {
-        "type": "one_of",
+        "type": "n_of",
         "label": "Take one course",
+        "n": 1,
         "courses": [
           "MATH 121 - Discrete Mathematics I",
           "MATH 225 - Bridges to Advanced Math"
@@ -1210,36 +1154,18 @@
         ]
       },
       {
-        "type": "n_of",
+        "type": "credits",
         "label": "At least three 200-level EEG laboratory courses (12 credits)",
-        "n": 3,
-        "courses": [
-          "EEG 201 - Earth Materials Lab",
-          "EEG 202 - Surface Processes Lab",
-          "EEG 203 - Earth History Lab",
-          "EEG 204 - Environmental Geochemistry Lab",
-          "EEG 205 - Geophysics Lab",
-          "EEG 206 - Sedimentology Lab",
-          "EEG 207 - Structural Geology Lab",
-          "EEG 208 - Hydrogeology Lab"
-        ]
+        "credits": 3
       },
       {
-        "type": "n_of",
+        "type": "credits",
         "label": "At least two 300-level EEG courses (excluding EEG 390 and 395, 6-8 credits)",
-        "n": 2,
-        "courses": [
-          "EEG 301 - Advanced Geoscience Topics",
-          "EEG 302 - Environmental Geoscience Seminar",
-          "EEG 303 - Field Geology",
-          "EEG 304 - Geoscience Modeling",
-          "EEG 305 - Geoscience Research"
-        ]
+        "credits": 2
       },
       {
         "type": "credits",
         "label": "Additional EEG credits at 100, 200, or 300 level to reach 28 EEG credits (only one 100-level EEG lab may count)",
-        "subject": "EEG",
         "credits": 28
       },
       {
@@ -1283,41 +1209,24 @@
         ]
       },
       {
-        "type": "n_of",
+        "type": "credits",
         "label": "At least four 200-level EEG laboratory courses (16 credits)",
-        "n": 4,
-        "courses": [
-          "EEG 201 - Earth Materials Lab",
-          "EEG 202 - Surface Processes Lab",
-          "EEG 203 - Earth History Lab",
-          "EEG 204 - Environmental Geochemistry Lab",
-          "EEG 205 - Geophysics Lab",
-          "EEG 206 - Sedimentology Lab",
-          "EEG 207 - Structural Geology Lab",
-          "EEG 208 - Hydrogeology Lab"
-        ]
+        "credits": 16
       },
       {
-        "type": "n_of",
+        "type": "credits",
         "label": "At least three 300-level EEG courses (excluding EEG 390 and 395, 9-12 credits)",
-        "n": 3,
-        "courses": [
-          "EEG 301 - Advanced Geoscience Topics",
-          "EEG 302 - Environmental Geoscience Seminar",
-          "EEG 303 - Field Geology",
-          "EEG 304 - Geoscience Modeling",
-          "EEG 305 - Geoscience Research"
-        ]
+        "credits": 3
       },
       {
         "type": "credits",
         "label": "Additional EEG credits at 100, 200, or 300 level to reach 36 EEG credits (only one 100-level EEG lab may count)",
-        "subject": "EEG",
         "credits": 36
       },
       {
-        "type": "one_of",
+        "type": "n_of",
         "label": "One course from approved statistics/quantitative list",
+        "n": 1,
         "courses": [
           "BIOL 201 - Statistics for Biology and Medicine",
           "POL 202 - Applied Statistics",
@@ -1349,37 +1258,36 @@
     "requirements": [
       {
         "type": "n_of",
-        "label": "Language Core: At least 14 credits in either Chinese or Japanese, including CHIN 302 or JAPN 302 (substitutions require department approval)",
-        "n": 5,
+        "label": "Language Core: At least 4 courses (12-14 credits), including CHIN 302 or JAPN 302, chosen from",
+        "n": 4,
         "courses": [
+          "CHIN 261 - Second-Year Chinese I",
+          "CHIN 262 - Second-Year Chinese II",
           "CHIN 301 - Third-Year Chinese I",
           "CHIN 302 - Third-Year Chinese II",
+          "CHIN 311 - Advanced Chinese I",
+          "CHIN 312 - Advanced Chinese II",
+          "JAPN 261 - Second-Year Japanese I",
+          "JAPN 262 - Second-Year Japanese II",
           "JAPN 301 - Third-Year Japanese I",
           "JAPN 302 - Third-Year Japanese II",
-          "CHIN 311 - Advanced Chinese I",
-          "CHIN 312 - Advanced Chinese II: Contemporary Fiction",
-          "CHIN 401 - Directed Individual Study",
-          "CHIN 402 - Directed Individual Study",
-          "CHIN 403 - Directed Individual Study",
           "JAPN 311 - Advanced Japanese I",
-          "JAPN 312 - Advanced Japanese II",
-          "JAPN 401 - Directed Individual Study",
-          "JAPN 402 - Directed Individual Study",
-          "JAPN 403 - Directed Individual Study"
+          "JAPN 312 - Advanced Japanese II"
         ]
       },
       {
         "type": "n_of",
-        "label": "Literature and Culture Core: At least 6 credits",
+        "label": "Literature and Culture Core: Two courses chosen from",
         "n": 2,
         "courses": [
-          "EALL 200 - Japan and the Japanese People",
+          "EALL 175 - Cool Japan: Manga, Business Etiquette, Language, and Culture",
+          "EALL 215 - East Asian Cinema",
           "LIT 218 - Pre-Modern Chinese Literature in Translation",
           "LIT 220 - Modern Chinese Literature in Translation",
           "LIT 221 - Japanese Literature in Translation",
+          "LIT 222 - Real and Imaginary Animals in Japanese Literature, Film, Anime, and Theater",
           "LIT 223 - Seminar in Japanese Literature in Translation",
           "LIT 225 - Poetry and Drama of Japan in Translation",
-          "LIT 235 - Tragedies East and West",
           "LIT 295 - Special Topics in Literature in Translation (when appropriate)"
         ]
       },
@@ -1389,7 +1297,8 @@
         "n": 2,
         "courses": [
           "CHIN 311 - Advanced Chinese I",
-          "CHIN 312 - Advanced Chinese II: Contemporary Fiction",
+          "CHIN 312 - Advanced Chinese II",
+          "CHIN 315 - Introduction to Classical Chinese",
           "CHIN 401 - Directed Individual Study",
           "CHIN 402 - Directed Individual Study",
           "CHIN 403 - Directed Individual Study",
@@ -1397,8 +1306,7 @@
           "JAPN 312 - Advanced Japanese II",
           "JAPN 401 - Directed Individual Study",
           "JAPN 402 - Directed Individual Study",
-          "JAPN 403 - Directed Individual Study",
-          "LIT 395 - Literature in Translation Seminar (when appropriate)"
+          "JAPN 403 - Directed Individual Study"
         ]
       },
       {
@@ -1425,10 +1333,11 @@
         ]
       },
       {
-        "type": "one_of",
+        "type": "n_of",
         "label": "Capstone Experience (3-6 credits)",
+        "n": 1,
         "courses": [
-          "EALL 473 - Senior Thesis",
+          "EALL 399 - Capstone Project",
           "EALL 493 - Honors Thesis"
         ]
       }
@@ -1446,24 +1355,27 @@
         ]
       },
       {
-        "type": "one_of",
-        "label": "Three credits from thesis",
+        "type": "n_of",
+        "label": "One of the following",
+        "n": 1,
         "courses": [
           "RAS 473 - Senior Thesis",
           "RAS 493 - Honors Thesis"
         ]
       },
       {
-        "type": "one_of",
+        "type": "n_of",
         "label": "One of the following two groups",
+        "n": 1,
         "courses": [
           "HIST 220 - Imperial Russia, 1682 to 1917 AND (LIT 215 - 20th-Century Russian Literature in Translation OR LIT 264 - Russian Short Fiction)",
           "HIST 221 - Soviet Russia, 1917 to 1991 AND (LIT 263 - 19th-Century Russian Literature in Translation OR LIT 264 - Russian Short Fiction)"
         ]
       },
       {
-        "type": "one_of",
+        "type": "n_of",
         "label": "One of the following courses",
+        "n": 1,
         "courses": [
           "POL 245 - European Politics and Society",
           "POL 246 - Post-Communism and New Democracies",
@@ -1473,8 +1385,9 @@
         ]
       },
       {
-        "type": "one_of",
+        "type": "n_of",
         "label": "One of the following courses not used above",
+        "n": 1,
         "courses": [
           "HIST 220 - Imperial Russia, 1682 to 1917",
           "HIST 221 - Soviet Russia, 1917 to 1991",
@@ -1495,7 +1408,6 @@
       {
         "type": "credits",
         "label": "12 credits from Russian area studies courses not used above (see catalog for full list, includes ARTH, HIST, LIT, POL, RUSS, RAS, SOAN, and appropriate directed studies)",
-        "subject": "RAS",
         "credits": 12
       }
     ]
@@ -1528,7 +1440,7 @@
         "type": "credits",
         "label": "Four additional Economics courses numbered above 211 (max 9 credits from supervised study abroad and/or special topics)",
         "subject": "ECON",
-        "credits": 12,
+        "credits": 4,
         "level": 212
       },
       {
@@ -1588,8 +1500,9 @@
         ]
       },
       {
-        "type": "one_of",
+        "type": "n_of",
         "label": "Required Lecture/Lab Sequence",
+        "n": 1,
         "courses": [
           "ENGN 301 - Solid Mechanics WITH ENGN 351 - Solid Mechanics Laboratory",
           "ENGN 311 - Fluid Mechanics WITH ENGN 361 - Fluid Mechanics Laboratory"
@@ -1597,8 +1510,8 @@
       },
       {
         "type": "n_of",
-        "label": "Two courses chosen from",
-        "n": 2,
+        "label": "Three courses chosen from",
+        "n": 3,
         "courses": [
           "ENGN 208 - Electronics",
           "ENGN 240 - Thermodynamics",
@@ -1613,21 +1526,13 @@
         ]
       },
       {
-        "type": "one_of",
+        "type": "n_of",
         "label": "Science Track: Choose one of the following options",
+        "n": 1,
         "courses": [
-          "Biology Track: BIOL 111 - Fundamentals of Biology WITH BIOL 113 - Biology Laboratory AND two BIOL courses 200+",
-          "Chemistry Track: CHEM 110 - General Chemistry, CHEM 241 - Organic Chemistry I, CHEM 242 - Organic Chemistry II",
-          "Computer Science Track: CSCI 111 - Introduction to Computer Science, CSCI 112 - Data Structures, and one CSCI course 200+",
-          "Earth and Environmental Geoscience Track: EEG 100/101/102 AND two EEG courses 200+"
-        ]
-      },
-      {
-        "type": "all",
-        "label": "Note: Major Restrictions",
-        "courses": [
-          "This major may not be combined with the major in engineering",
-          "This major may not be combined with a major in the respective department associated with the chosen science track"
+          "CHEM 110 - General Chemistry",
+          "CSCI 121 - Scientific Computing",
+          "200 level or above from a list of approved courses in BIOL, CHEM, CSCI, EEG, ENGN, PHYS"
         ]
       }
     ]
@@ -1636,9 +1541,8 @@
     "major": "English (BA)",
     "requirements": [
       {
-        "type": "n_of",
+        "type": "all",
         "label": "Two Introductory Courses",
-        "n": 2,
         "courses": [
           "One ENGL course numbered 201-295",
           "One ENGL course numbered 222-299"
@@ -1714,32 +1618,20 @@
       {
         "type": "credits",
         "label": "One additional course at the 200 or 300 level",
-        "subject": "ENGL",
-        "credits": 3,
-        "level": 200
+        "credits": 1
       },
       {
         "type": "credits",
         "label": "Three additional courses at the 300-level or above (one may be from another department with approval)",
-        "subject": "ENGL",
-        "credits": 9,
-        "level": 300
+        "credits": 3
       },
       {
-        "type": "one_of",
+        "type": "n_of",
         "label": "Capstone Writing Requirement",
+        "n": 1,
         "courses": [
           "ENGL 413 - Senior Research and Writing (3 credits)",
           "ENGL 493 - Honors Thesis (3-3 credits)"
-        ]
-      },
-      {
-        "type": "all",
-        "label": "Notes",
-        "courses": [
-          "Total of 11 three or four credit courses required",
-          "Only one term of ENGL 493 may count toward the major",
-          "English faculty recommends including lyric poetry, narrative, nonfiction prose, and drama in course selection"
         ]
       }
     ]
@@ -1758,8 +1650,9 @@
         ]
       },
       {
-        "type": "one_of",
+        "type": "n_of",
         "label": "Statistics Requirement",
+        "n": 1,
         "courses": [
           "BIOL 201 - Statistics for Biology and Medicine",
           "POL 202 - Applied Statistics",
@@ -1767,8 +1660,9 @@
         ]
       },
       {
-        "type": "one_of",
+        "type": "n_of",
         "label": "Advanced Quantitative Skills",
+        "n": 1,
         "courses": [
           "BIOL 282 - Modeling and Simulations in Public Health",
           "BIOL 322 - Conservation Genetics",
@@ -1780,8 +1674,9 @@
         ]
       },
       {
-        "type": "one_of",
+        "type": "n_of",
         "label": "Elective Tracks (choose one)",
+        "n": 1,
         "courses": [
           "Conservation Biology Track",
           "Climate Change Track",
@@ -1793,8 +1688,9 @@
         ]
       },
       {
-        "type": "one_of",
+        "type": "n_of",
         "label": "Capstone Requirement",
+        "n": 1,
         "courses": [
           "ENV 397 - Senior Seminar in Environmental Studies",
           "ENV 493 - Honors Thesis in Environmental Studies"
@@ -1848,16 +1744,14 @@
         "type": "credits",
         "label": "Additional French",
         "subject": "FREN",
-        "credits": 6,
-        "level": 200,
+        "credits": 2,
         "notes": "Two additional French courses numbered 200 or above"
       },
       {
         "type": "credits",
         "label": "Advanced French",
         "subject": "FREN",
-        "credits": 12,
-        "level": 300,
+        "credits": 4,
         "notes": "Four additional French courses numbered 300 or above, except FREN 493"
       },
       {
@@ -1920,11 +1814,7 @@
         "type": "all",
         "label": "Notes",
         "courses": [
-          "Total of 33 credits required",
-          "Areas of emphasis:",
-          "1. European and Russian history",
-          "2. American history (including REL 271/HIST 271)",
-          "3. Global history (including Asian, African, and Latin American history)"
+          "Total of 33 credits required"
         ]
       }
     ]
@@ -2003,8 +1893,9 @@
         ]
       },
       {
-        "type": "one_of",
+        "type": "n_of",
         "label": "Journalism Track: One course from",
+        "n": 1,
         "courses": [
           "JOUR 351 - Editing and Design for Journalism and Strategic Communication",
           "JOUR 362 - Producing for Broadcast and Online Media"
@@ -2028,8 +1919,9 @@
         ]
       },
       {
-        "type": "one_of",
+        "type": "n_of",
         "label": "Business Journalism Track: One course from",
+        "n": 1,
         "courses": [
           "JOUR 351 - Editing and Design for Journalism and Strategic Communication",
           "JOUR 362 - Producing for Broadcast and Online Media"
@@ -2071,7 +1963,7 @@
       },
       {
         "type": "n_of",
-        "label": "Topics Course",
+        "label": "Topics Course: one of the following",
         "n": 1,
         "courses": [
           "MATH 391 - Topics in Analysis",
@@ -2081,7 +1973,7 @@
       },
       {
         "type": "n_of",
-        "label": "Applied Course",
+        "label": "Applied Course: one of the following",
         "n": 1,
         "courses": [
           "BIOL 282 - Modeling and Simulations in Public Health",
@@ -2105,16 +1997,7 @@
         "label": "Additional Mathematics",
         "subject": "MATH",
         "credits": 9,
-        "level": 300,
         "notes": "Nine additional credits selected from mathematics courses numbered above 300"
-      },
-      {
-        "type": "all",
-        "label": "Notes",
-        "courses": [
-          "At least 33 credits required",
-          "Prerequisites: MATH 101 and 102, or their equivalents"
-        ]
       }
     ]
   },
@@ -2139,7 +2022,7 @@
       },
       {
         "type": "n_of",
-        "label": "Topics Course",
+        "label": "Topics Course: one of the following",
         "n": 1,
         "courses": [
           "MATH 391 - Topics in Analysis",
@@ -2152,7 +2035,6 @@
         "label": "Additional Mathematics",
         "subject": "MATH",
         "credits": 12,
-        "level": 300,
         "notes": "12 additional credits selected from mathematics courses numbered above 300"
       },
       {
@@ -2195,19 +2077,13 @@
         ]
       },
       {
-        "type": "all",
+        "type": "n_of",
         "label": "Performance/Composition Requirements",
+        "n": 1,
         "courses": [
           "Three credits chosen from applied music courses at the 300-level or above",
-          "Six credits chosen from MUS 210, 221, 238, 239, 240, 295, 315, 326, 327, 335, 423"
+          "Three courses chosen from MUS 210, 221, 238, 239, 240, 295, 315, 326, 327, 335, 423"
         ]
-      },
-      {
-        "type": "credits",
-        "label": "General Track",
-        "subject": "MUS",
-        "credits": 9,
-        "notes": "Three courses chosen from MUS 210, 221, 222, 238, 239, 240, 295, 315, 326, 327, 335"
       },
       {
         "type": "credits",
@@ -2246,8 +2122,9 @@
     "major": "Music (BS)",
     "requirements": [
       {
-        "type": "all",
+        "type": "n_of", 
         "label": "Required Courses",
+        "n": 14,
         "courses": [
           "MUS 121 - Worlds of Music",
           "MUS 161 - Music Theory I",
@@ -2322,15 +2199,6 @@
           "Demonstrated piano proficiency by the end of the junior year",
           "Successful completion of MUS 200 (recital attendance) every fall and winter term after declaring the music major"
         ]
-      },
-      {
-        "type": "all",
-        "label": "Notes",
-        "courses": [
-          "At least 56 credits required",
-          "Students with no prior piano experience must complete both MUS 100 and 101",
-          "Students with prior piano experience will be tested to determine proficiency"
-        ]
       }
     ]
   },
@@ -2344,8 +2212,9 @@
           "BIOL 111 - Fundamentals of Biology",
           "BIOL 113 - Biology Laboratory",
           "BIOL 220 - Genetics",
-          "BIOL 230 - Cell Biology",
+          "BIOL 230 - Cell Biology or BIOL 211S - Cell Biology at St. Andrews",
           "BIOL 201 - Statistics for Biology and Medicine",
+          "CBSC 250 - Statistics and Research Design",
           "CHEM 110 - General Chemistry"
         ]
       },
@@ -2354,8 +2223,7 @@
         "label": "Neuroscience Core",
         "courses": [
           "CBSC 111 - Brain and Behavior",
-          "NEUR 120 - Introduction to Neuroscience",
-          "NEUR 121 - Introduction to Neuroscience Workshop"
+          "NEUR 120 - Introduction to Neuroscience WITH NEUR 121 - Introduction to Neuroscience Workshop"
         ]
       },
       {
@@ -2381,12 +2249,12 @@
           "BIOL 187 - Introduction to Data Science in Python",
           "BIOL 282 - Modeling and Simulations in Public Health",
           "BIOL 302 - Modern Computational Biostatistics",
-          "CSCI 257 - Topics in Computer Science",
+          "CSCI 257 - A Walk Through the Ages: Using Artificial Intelligence to Understand the Evolution of Exercise",
+          "BIOL 357 - A Walk Through the Ages: Using Artificial Intelligence to Understand the Evolution of Exercise",
           "CSCI 230 - Introduction to Machine Learning and Big Data",
           "CSCI 252 - Neuromorphic Computing",
           "CSCI 256 - Modeling and Simulation",
-          "CSCI 315 - Artificial Intelligence",
-          "NEUR 396 - Special Topics in Computational Neuroscience"
+          "CSCI 315 - Artificial Intelligence"
         ]
       },
       {
@@ -2402,8 +2270,7 @@
           "BIOL 397 - Neuroendocrinology",
           "CBSC 253 - Topics in Neuroscience",
           "CBSC 257 - Topics in Neuroscience",
-          "ENGN 267 - Bioengineering and Bioinspired Design",
-          "NEUR 397 - Special Topics in Systems Neuroscience"
+          "ENGN 267 - Bioengineering and Bioinspired Design"
         ]
       },
       {
@@ -2433,15 +2300,6 @@
         "label": "Capstone",
         "courses": [
           "Submission of the Neuroscience e-portfolio"
-        ]
-      },
-      {
-        "type": "all",
-        "label": "Notes",
-        "courses": [
-          "At least 50 credits required",
-          "At least 42 credits from the listed courses",
-          "A limit of 12 credits in research practicum courses is allowable toward a degree"
         ]
       }
     ]
@@ -2481,46 +2339,23 @@
         "type": "credits",
         "label": "Additional Physics",
         "subject": "PHYS",
-        "credits": 6,
-        "level": 200,
+        "credits": 2,
         "notes": "Two additional PHYS courses at the 200- or 300-level"
       },
       {
-        "type": "one_of",
+        "type": "n_of",
         "label": "Research/Thesis Option",
+        "n": 1,
         "courses": [
-          "PHYS 473 - Senior Thesis",
-          "PHYS 493 - Honors Thesis"
-        ]
-      },
-      {
-        "type": "all",
-        "label": "Research Option - Research Credits",
-        "courses": [
-          "Three credits from PHYS 421, 422, or 423"
-        ]
-      },
-      {
-        "type": "all",
-        "label": "Research Option - Research Paper",
-        "courses": [
-          "15-page research paper to be completed before graduation"
+          "One course from PHYS 473, PHYS 493",
+          "Three credits of research from PHYS 473 or 493 or 421 or 422 or 423"
         ]
       },
       {
         "type": "credits",
         "label": "Additional Science",
-        "subject": "MIXED",
         "credits": 3,
         "notes": "Three additional credits chosen from biology, chemistry, computer science, engineering, earth and environmental geoscience, mathematics, or physics courses"
-      },
-      {
-        "type": "all",
-        "label": "Notes",
-        "courses": [
-          "At least 50 credits required",
-          "Prerequisites: MATH 101, 102, and 221"
-        ]
       }
     ]
   },
@@ -2539,7 +2374,7 @@
       },
       {
         "type": "n_of",
-        "label": "Statistics",
+        "label": "Statistics: one of the following",
         "n": 1,
         "courses": [
           "POL 202 - Applied Statistics",
@@ -2551,135 +2386,14 @@
         ]
       },
       {
-        "type": "one_of",
-        "label": "Area of Emphasis",
+        "type": "n_of",
+        "label": "Five additional courses of 3 credits or more in politics, including completion of one of the following four sequences and including at least one 300-level seminar course, which entails an independent research and writing component",
+        "n": 1,
         "courses": [
-          {
-            "type": "all",
-            "label": "General Study",
-            "requirements": [
-              {
-                "type": "credits",
-                "label": "Five courses from at least two subfields",
-                "subject": "POL",
-                "credits": 15,
-                "notes": "Including at least one 300-level seminar course"
-              }
-            ]
-          },
-          {
-            "type": "all",
-            "label": "American Government",
-            "requirements": [
-              {
-                "type": "n_of",
-                "label": "Four courses from",
-                "n": 4,
-                "courses": [
-                  "LJS 101 - Introduction to Law, Justice, and Society",
-                  "LJS 230 - Separation of Powers in the U.S. Constitution",
-                  "LJS 232 - Civil Rights and the U.S. Department of Justice's Civil Rights Division",
-                  "POL 203 - State and Local Government",
-                  "POL 229 - Political Parties, Interest Groups, and the Media",
-                  "POL 230 - Separation of Powers in the U.S. Constitution",
-                  "POL 232 - Public Policy",
-                  "POL 233 - Environmental Policy and Law",
-                  "POL 234 - Congress and the Legislative Process",
-                  "POL 235 - The Presidency",
-                  "POL 236 - The American Supreme Court and Constitutional Law",
-                  "POL 250 - Race and Equality",
-                  "POL 283 - Minority Voting Rights and Fair Redistricting",
-                  "POL 294 - Spring-Term Topics in Public Policy",
-                  "POL 295 - Special Topics in American Politics",
-                  "POL 342 - Seminar: Law and the Judicial Process",
-                  "POL 360 - Seminar: Lincoln's Statesmanship",
-                  "POL 370 - Seminar in American Political Thought",
-                  "POL 397 - Seminar in American Government",
-                  "POL 466 - Washington Term Program"
-                ]
-              },
-              {
-                "type": "credits",
-                "label": "One course from international/global politics or political philosophy",
-                "subject": "POL",
-                "credits": 3,
-                "level": 200
-              }
-            ]
-          },
-          {
-            "type": "all",
-            "label": "International/Global Politics",
-            "requirements": [
-              {
-                "type": "n_of",
-                "label": "Four courses from",
-                "n": 4,
-                "courses": [
-                  "POL 214 - The Conduct of American Foreign Policy",
-                  "POL 215 - International Development",
-                  "POL 227 - East Asian Politics",
-                  "POL 245 - European Politics and Society",
-                  "POL 246 - Post-Communism and New Democracies",
-                  "POL 247 - Latin American Politics",
-                  "POL 255 - Gender and Politics",
-                  "POL 268 - Migration, Identity, and Conflict",
-                  "POL 274 - Terrorism",
-                  "POL 276 - Intelligence in Practice",
-                  "POL 278 - Intelligence and National Security",
-                  "POL 280 - Bitcoin in Practice",
-                  "POL 285 - Contemporary Britain",
-                  "POL 287 - The Maghreb: History, Culture, and Politics",
-                  "POL 288 - Supervised Study Abroad",
-                  "POL 292 - Topics in Politics and Film",
-                  "POL 296 - Special Topics in Global Politics",
-                  "POL 380 - Seminar in Global Politics",
-                  "POL 381 - Seminar in International Political Economy",
-                  "POL 384 - Seminar in Middle Eastern Politics",
-                  "POL 388 - Architecture of Urban Community",
-                  "POL 392 - Seminar in Asian Politics"
-                ]
-              },
-              {
-                "type": "credits",
-                "label": "One course from American government or political philosophy",
-                "subject": "POL",
-                "credits": 3,
-                "level": 200
-              }
-            ]
-          },
-          {
-            "type": "all",
-            "label": "Political Philosophy",
-            "requirements": [
-              {
-                "type": "n_of",
-                "label": "Four courses from",
-                "n": 4,
-                "courses": [
-                  "LJS 101 - Introduction to Law, Justice, and Society",
-                  "POL 265 - Classical Political Philosophy",
-                  "POL 266 - Modern Political Philosophy",
-                  "POL 267 - Contemporary Political Philosophy",
-                  "POL 271 - Black Mirror",
-                  "POL 297 - Special Topics in Political Philosophy",
-                  "POL 360 - Seminar: Lincoln's Statesmanship",
-                  "POL 370 - Seminar in American Political Thought",
-                  "POL 385 - Seminar: Freedom",
-                  "POL 386 - Poli-Wood: Indian Epics, Myth, and Cinema as Political Philosophy",
-                  "POL 396 - Seminar in Political Philosophy"
-                ]
-              },
-              {
-                "type": "credits",
-                "label": "One course from international/global politics or American government",
-                "subject": "POL",
-                "credits": 3,
-                "level": 200
-              }
-            ]
-          }
+          "General Study Emphasis",
+          "American Government Emphasis",
+          "International/Global Politics Emphasis",
+          "Political Philosophy Emphasis"
         ]
       },
       {
@@ -2688,14 +2402,6 @@
         "subject": "MIXED",
         "credits": 6,
         "notes": "Six additional credits which must include courses from two of the following disciplines: cognitive and behavioral science, economics, history, philosophy, religion, or sociology and anthropology"
-      },
-      {
-        "type": "all",
-        "label": "Notes",
-        "courses": [
-          "At least 36 credits required",
-          "All 300-level courses count towards the seminar requirement"
-        ]
       }
     ]
   },
@@ -2776,7 +2482,7 @@
         "type": "credits",
         "label": "Additional Work",
         "subject": "REL",
-        "credits": 30,
+        "credits": 10,
         "notes": "Additional work in religion or other related disciplines to add up to 10 courses. A limit of one non-Religion course will count toward the major."
       },
       {
@@ -2788,8 +2494,9 @@
         "notes": "A minimum of 15 credits must be at the 200 level or above, excluding REL 210, 399, and 493"
       },
       {
-        "type": "one_of",
+        "type": "n_of",
         "label": "Senior Capstone",
+        "n": 1,
         "courses": [
           "REL 399 - Senior Seminar",
           "REL 493 - Honors Thesis"
@@ -2799,7 +2506,6 @@
         "type": "all",
         "label": "Notes",
         "courses": [
-          "At least 30 credits required from 10 three- or four-credit courses",
           "Students seeking to graduate with honors are required to graduate with a minimum of 11 three- or four-credit courses"
         ]
       }
@@ -2819,7 +2525,7 @@
       },
       {
         "type": "n_of",
-        "label": "Civilization",
+        "label": "Civilization: one of the following",
         "n": 1,
         "courses": [
           "FREN 280 - Civilisation et culture francophones",
@@ -2833,32 +2539,31 @@
         "type": "credits",
         "label": "Additional French",
         "subject": "FREN",
-        "credits": 6,
-        "level": 200,
+        "credits": 1,
         "notes": "One additional French course numbered 200 or above"
       },
       {
         "type": "credits",
         "label": "Advanced French",
         "subject": "FREN",
-        "credits": 12,
-        "level": 300,
+        "credits": 4,
         "notes": "Four additional French courses numbered 300 or above, except FREN 493"
+      },
+      {
+        "type": "n_of",
+        "label": "Completion of one of the following sequences",
+        "n": 1,
+        "courses": [
+          "The intermediate level or its equivalent in Spanish (SPAN 162, 164 or 172) and one of the following three pairings: SPAN 220 and 240, SPAN 211 and 240, SPAN 212 and 220b.",
+          "PORT 163 and two 200-level Portuguese courses",
+          "ITAL 163 and two 200-level Italian courses"
+        ]
       },
       {
         "type": "all",
         "label": "Additional Requirements",
         "courses": [
           "Completion of the French Assessment Exam (FAE), a four-skills assessment, in winter term of senior year"
-        ]
-      },
-      {
-        "type": "all",
-        "label": "Notes",
-        "courses": [
-          "At least 30 credits required",
-          "Demonstrated proficiency in listening, speaking, reading, and writing required",
-          "The department strongly recommends a study-abroad experience of at least one term, and preferably a full academic year"
         ]
       }
     ]
@@ -2879,8 +2584,7 @@
         "type": "credits",
         "label": "Additional Spanish",
         "subject": "SPAN",
-        "credits": 3,
-        "level": 200,
+        "credits": 1,
         "notes": "One additional 200-level course in Spanish"
       },
       {
@@ -2914,8 +2618,7 @@
         "type": "credits",
         "label": "Additional Advanced Spanish",
         "subject": "SPAN",
-        "credits": 9,
-        "level": 300,
+        "credits": 3,
         "notes": "Three additional Spanish courses numbered 300 or above, except SPAN 493"
       },
       {
@@ -2932,77 +2635,19 @@
       },
       {
         "type": "n_of",
-        "label": "Second Language - French Option - Intermediate French",
+        "label": "Completion of one of the following sequences",
         "n": 1,
         "courses": [
-          "FREN 162 - Intermediate French II",
-          "FREN 164 - Intermediate French II",
-          "FREN 172 - Intermediate French II"
+          "Completion of the intermediate level or its equivalent in French (FREN 162, 164, or 172), FREN 261, and one course chosen from FREN 273, 280, 281, 282, 283 or 285.",
+          "PORT 163 and two 200-level Portuguese courses",
+          "ITAL 163 and two 200-level Italian courses"
         ]
-      },
-      {
-        "type": "all",
-        "label": "Second Language - French Option - Required Course",
-        "courses": [
-          "FREN 261 - Conversation et composition: Cours avancé"
-        ]
-      },
-      {
-        "type": "n_of",
-        "label": "Second Language - French Option - Additional French",
-        "n": 1,
-        "courses": [
-          "FREN 273 - Invitation au voyage",
-          "FREN 280 - Civilisation et culture francophones",
-          "FREN 281 - Civilisation et culture françaises: Traditions et changements",
-          "FREN 282 - Civilisation et culture françaises: La France d'aujourd'hui",
-          "FREN 283 - Histoire des idées",
-          "FREN 285 - Spring Term Topics in French Civilization"
-        ]
-      },
-      {
-        "type": "all",
-        "label": "Second Language - Portuguese Option - Required Course",
-        "courses": [
-          "PORT 163 - Intermediate Portuguese II"
-        ]
-      },
-      {
-        "type": "credits",
-        "label": "Second Language - Portuguese Option - Additional Portuguese",
-        "subject": "PORT",
-        "credits": 6,
-        "level": 200,
-        "notes": "Two 200-level Portuguese courses"
-      },
-      {
-        "type": "all",
-        "label": "Second Language - Italian Option - Required Course",
-        "courses": [
-          "ITAL 163 - Intermediate Italian II"
-        ]
-      },
-      {
-        "type": "credits",
-        "label": "Second Language - Italian Option - Additional Italian",
-        "subject": "ITAL",
-        "credits": 6,
-        "level": 200,
-        "notes": "Two 200-level Italian courses"
       },
       {
         "type": "all",
         "label": "Additional Requirements",
         "courses": [
           "Completion of the Spanish Assessment Exam (SAE), a four-skills assessment, in winter term of senior year"
-        ]
-      },
-      {
-        "type": "all",
-        "label": "Notes",
-        "courses": [
-          "At least 33 credits required",
-          "The department strongly recommends a study-abroad experience of at least one semester, and preferably one academic year, in a Spanish-speaking country"
         ]
       }
     ]
@@ -3011,16 +2656,18 @@
     "major": "Sociology and Anthropology (BA)",
     "requirements": [
       {
-        "type": "one_of",
-        "label": "Introductory Course",
+        "type": "n_of",
+        "label": "Introductory Course: One of the following",
+        "n": 1,
         "courses": [
           "SOAN 101 - Introduction to Anthropology: Investigating Humanity",
           "SOAN 102 - Introduction to Sociology: Investigating Society"
         ]
       },
       {
-        "type": "one_of",
-        "label": "Theory",
+        "type": "n_of",
+        "label": "Theory: One of the following",
+        "n": 1,
         "courses": [
           "SOAN 370 - Theorizing Social Life: Classical Social and Cultural Theory",
           "SOAN 371 - Theorizing Social Life: Contemporary Approaches"
@@ -3028,7 +2675,7 @@
       },
       {
         "type": "n_of",
-        "label": "Methods",
+        "label": "Methods: Two of the following",
         "n": 2,
         "courses": [
           "SOAN 208 - Qualitative Methods",
@@ -3048,19 +2695,12 @@
         ]
       },
       {
-        "type": "all",
-        "label": "Anthropology Emphasis",
+        "type": "n_of",
+        "label": "Emphasis",
+        "n": 1,
         "courses": [
-          "Two courses from anthropology electives (6 credits)",
-          "One course from sociology electives (3 credits)"
-        ]
-      },
-      {
-        "type": "all",
-        "label": "Sociology Emphasis",
-        "courses": [
-          "Two courses from sociology electives (6 credits)",
-          "One course from anthropology electives (3 credits)"
+          "Anthropology emphasis: take nine additional credits from the electives listed on the catalog, two in anthropology and one in sociology",
+          "Sociology emphasis: take nine additional credits from the electives listed on the catalog, two in sociology and one in anthropology"
         ]
       },
       {
@@ -3072,22 +2712,13 @@
         "notes": "At least nine additional credits chosen from SOAN courses numbered 200 or above"
       },
       {
-        "type": "one_of",
+        "type": "n_of",
         "label": "Capstone",
+        "n": 1,
         "courses": [
           "SOAN 395 - Senior Seminar in Quantitative Analysis",
           "SOAN 396 - Senior Seminar in Qualitative Analysis",
-          "SOAN 493 - Honors Thesis"
-        ]
-      },
-      {
-        "type": "all",
-        "label": "Notes",
-        "courses": [
-          "At least 36 credits required",
-          "Students who also declare a major in cognitive and behavioral science may request a substitution for a SOAN methods course",
-          "Students who wish to attend graduate school in Anthropology should complete the Anthropology emphasis",
-          "Students who wish to attend graduate school in Sociology should complete the Sociology emphasis"
+          "SOAN 493 - Honors Thesis (with permission)"
         ]
       }
     ]
@@ -3108,14 +2739,13 @@
         "type": "credits",
         "label": "Two additional 200-level courses in Spanish",
         "subject": "SPAN",
-        "credits": 6,
-        "level": 200,
+        "credits": 2,
         "notes": "Department head may approve one Romance language course taught in English by Romance Languages faculty"
       },
       {
         "type": "n_of",
         "label": "Five Spanish courses numbered 300 or above (see sub-requirements)",
-        "n": 5,
+        "n": 3,
         "courses": [
           "One course on literature of Spanish America: SPAN 340, 341, 342, 344, 347, 354, 398",
           "One course on literature of Spain: SPAN 312, 320, 322, 323, 333, 397",
@@ -3123,8 +2753,9 @@
         ]
       },
       {
-        "type": "one_of",
+        "type": "n_of",
         "label": "Linguistics Requirement",
+        "n": 1,
         "courses": [
           "SPAN 209 - Intro to Hispanic Linguistics",
           "SPAN 308 - Power and Ideology: (Critical) Discourse Perspectives",
@@ -3138,14 +2769,6 @@
         "label": "Spanish Assessment Exam",
         "courses": [
           "Completion of the Spanish Assessment Exam (SAE) in winter term of senior year"
-        ]
-      },
-      {
-        "type": "all",
-        "label": "Notes",
-        "courses": [
-          "At least 30 credits required",
-          "Study abroad strongly recommended"
         ]
       }
     ]
@@ -3175,7 +2798,7 @@
       },
       {
         "type": "n_of",
-        "label": "Diversity of Experience",
+        "label": "Diversity of Experience: One of the following",
         "n": 1,
         "courses": [
           "ENGL 262 - Literature, Race, and Ethnicity",
@@ -3204,8 +2827,9 @@
         ]
       },
       {
-        "type": "one_of",
-        "label": "Digital Media",
+        "type": "n_of",
+        "label": "Digital Media: One of the following",
+        "n": 1,
         "courses": [
           "JOUR 202 - Introduction to Digital Journalism",
           "BUS 321 - Multimedia Design and Development"
@@ -3213,7 +2837,7 @@
       },
       {
         "type": "n_of",
-        "label": "Media Production",
+        "label": "Media Production: One of the following",
         "n": 1,
         "courses": [
           "JOUR 220 - Social Media: Principles and Practice",
@@ -3228,7 +2852,7 @@
       },
       {
         "type": "n_of",
-        "label": "Strategic Communication",
+        "label": "Strategic Communication: One of the following",
         "n": 1,
         "courses": [
           "JOUR 325 - Crisis Communications",
@@ -3243,7 +2867,7 @@
         "label": "Internship",
         "subject": "JOUR",
         "credits": 2,
-        "notes": "From JOUR 451, 452, 461, or 462"
+        "notes": "Two credits of internship from JOUR 451, 452, 461, or 462"
       },
       {
         "type": "all",
@@ -3252,15 +2876,6 @@
           "Completion of a minor other than mass communications or four additional courses of at least three credits at the 200 level or above in another discipline",
           "Completion of a portfolio in the senior year for assessment"
         ]
-      },
-      {
-        "type": "all",
-        "label": "Notes",
-        "courses": [
-          "At least 50 credits required",
-          "At least 26 credits in journalism and mass communications",
-          "At least 72 credits outside the department"
-        ]
       }
     ]
   },
@@ -3268,8 +2883,9 @@
     "major": "Studio Art (BA)",
     "requirements": [
       {
-        "type": "one_of",
-        "label": "Drawing",
+        "type": "n_of",
+        "label": "Drawing: One of the following",
+        "n": 1,
         "courses": [
           "ARTS 111 - Drawing I",
           "ARTS 115 - Contemporary Practice in Drawing"
@@ -3298,11 +2914,12 @@
         "type": "credits",
         "label": "Four Additional Studio Art Courses",
         "subject": "ARTS",
-        "credits": 12
+        "credits": 4
       },
       {
-        "type": "one_of",
-        "label": "Art History Requirement",
+        "type": "n_of",
+        "label": "Art History Requirement: One of the Following",
+        "n": 1,
         "courses": [
           "ARTH 102 - Survey of Western Art: Renaissance to the Present",
           "ARTH 243 - Imaging Tibet",
@@ -3325,21 +2942,15 @@
         "type": "credits",
         "label": "One Additional Art History Course",
         "subject": "ARTH",
-        "credits": 3
+        "credits": 1
       },
       {
-        "type": "one_of",
-        "label": "Thesis",
+        "type": "n_of",
+        "label": "Thesis: One of the following",
+        "n": 1,
         "courses": [
           "ARTS 473 - Senior Thesis",
           "ARTS 493 - Honors Thesis"
-        ]
-      },
-      {
-        "type": "all",
-        "label": "Notes",
-        "courses": [
-          "At least 36 credits required"
         ]
       }
     ]
@@ -3349,41 +2960,141 @@
     "requirements": [
       {
         "type": "all",
-        "label": "Required Courses",
+        "label": "Performance: Required courses",
         "courses": [
-          "THEA 101 - Introduction to Theater",
-          "THEA 102 - Introduction to Acting",
-          "THEA 201 - Stagecraft",
-          "THEA 202 - Costume Construction",
-          "THEA 203 - Stage Lighting",
-          "THEA 204 - Stage Management",
-          "THEA 205 - Theater History I",
-          "THEA 206 - Theater History II",
-          "THEA 207 - Play Analysis",
-          "THEA 208 - Directing",
-          "THEA 209 - Playwriting",
-          "THEA 210 - Theater Design",
-          "THEA 211 - Theater Production",
-          "THEA 212 - Theater Performance",
-          "THEA 213 - Theater Management",
-          "THEA 214 - Theater Education",
-          "THEA 215 - Theater Criticism",
-          "THEA 216 - Theater Theory",
-          "THEA 217 - Theater Research",
-          "THEA 218 - Theater Internship",
-          "THEA 219 - Theater Independent Study",
-          "THEA 220 - Theater Seminar",
-          "THEA 221 - Theater Workshop",
-          "THEA 222 - Theater Practicum",
-          "THEA 223 - Theater Capstone"
+          "THTR 109 - University Theater",
+          "THTR 121 - Script Analysis for Stage and Screen (FILM 121)",
+          "THTR 141 - Intro to Acting: Foundations of Collaboration"
         ]
       },
       {
-        "type": "all",
-        "label": "Notes",
+        "type": "n_of",
+        "label": "Technology: One course chosen from",
+        "n": 1,
         "courses": [
-          "At least 36 credits required",
-          "Participation in at least one production per year required"
+          "THTR 131 - Introduction to Entertainment Technology",
+          "THTR 236 - Special Effects for the Theater",
+          "THTR 238 - 3D Printing & Digital Fabrication for Theater"
+        ]
+      },
+      {
+        "type": "n_of",
+        "label": "Literature: Two courses chosen from",
+        "n": 2,
+        "courses": [
+          "THTR 212 - Reimagining the Classics",
+          "THTR 213 - Theatrical Outsiders",
+          "THTR 297 - Special Topics in Theater History",
+          "DANC 240 - Revolutionary Dancers"
+        ]
+      },
+      {
+        "type": "n_of",
+        "label": "Design: One course chosen from",
+        "n": 1,
+        "courses": [
+          "THTR 251 - Exploration of Performance Design",
+          "THTR 253 - Digital Production",
+          "THTR 336 - Lighting Design"
+        ]
+      },
+      {
+        "type": "n_of",
+        "label": "Synthesis: One course chosen from",
+        "n": 1,
+        "courses": [
+          "THTR 209 - Production and Stage Management",
+          "THTR 361 - Stage Directing 1",
+          "DANC 220 - Dance Composition",
+          "THTR 222 - Writing for the Screen and Stage"
+        ]
+      },
+      {
+        "type": "credits",
+        "label": "At least 12 credits chosen from among the following including at least nine credits chosen from theater, dance, or film courses",
+        "credits": 12,
+        "notes": "At least nine credits must be from theater, dance, or film courses.",
+        "courses": [
+          "DANC 120 - Fundamentals of Contemporary Modern Dance Practice",
+          "DANC 190 - Special Topics in Dance",
+          "DANC 202 - Dance Europe",
+          "DANC 215 - World Dance Technique",
+          "DANC 220 - Dance Composition",
+          "DANC 225 - Contemporary Modern Dance Practice",
+          "DANC 230 - Musical-Theater Dance Technique",
+          "DANC 233 - Movement for Actors",
+          "DANC 235 - Head to Toe",
+          "DANC 240 - Revolutionary Dancers",
+          "DANC 250 - Aerial Dance Techniques",
+          "DANC 292 - Ballet Technique",
+          "DANC 330 - Experiential Anatomy",
+          "DANC 340 - Contemporary Dance Observation and Analysis",
+          "DANC 390 - Special Topics",
+          "THTR 100 - Introduction to Theater",
+          "THTR 125 - Speak/Persuade/Influence",
+          "THTR 131 - Introduction to Entertainment Technology",
+          "THTR 132 - Laboratory for Introduction to Entertainment Technology",
+          "THTR 202 - London Theatre",
+          "THTR 203 - Preparation for Study Abroad: Swedish Theater",
+          "THTR 204 - Study Abroad in Swedish Theater",
+          "THTR 209 - Production and Stage Management",
+          "THTR 212 - Reimagining the Classics",
+          "THTR 213 - Theatrical Outsiders",
+          "THTR 221 - Writer in Residence Seminar",
+          "FILM 221 - Writer in Residence Seminar",
+          "THTR 222 - Writing for the Screen and Stage",
+          "THTR 236 - Special Effects for the Theater",
+          "THTR 238 - 3D Printing & Digital Fabrication for Theater",
+          "THTR 239 - Total Theater",
+          "THTR 241 - One-Act Performance",
+          "THTR 242 - Musical Theater",
+          "THTR 251 - Exploration of Performance Design",
+          "THTR 253 - Digital Production",
+          "THTR 290 - Topics in Performing Arts",
+          "THTR 336 - Lighting Design",
+          "THTR 337 - Scene Painting and Scenic Art",
+          "THTR 338 - Costume Design",
+          "THTR 342 - Creating Meaning",
+          "THTR 401 - Directed Individual Study",
+          "THTR 402 - Directed Individual Study",
+          "THTR 403 - Directed Individual Study",
+          "THTR 421 - Directed Individual Research",
+          "THTR 422 - Directed Individual Research",
+          "THTR 423 - Directed Individual Research",
+          "THTR 453 - Internship",
+          "THTR 493 - Honors Thesis",
+          "FILM 109 - Film Performance Laboratory",
+          "FILM 195 - Topics in Film Studies",
+          "FILM 196 - Topics in Film and Literature",
+          "FILM 222 - Writing for the Screen and Stage",
+          "FILM 233 - Introduction to Film",
+          "FILM 236 - Science Fiction & Fantasy: From Page to Screen and Beyond",
+          "FILM 255 - Seven-Minute Shakespeare",
+          "CLAS 215 - Ancient Drama and Its Influence",
+          "ENGL 202 - Creative Writing: Playwriting",
+          "ENGL 231 - Drama",
+          "ENGL 242 - Individual Shakespeare Play",
+          "ENGL 252 - Shakespeare",
+          "ENGL 319 - Shakespeare and Company",
+          "ENGL 354 - Contemporary British and American Drama",
+          "GERM 332 - Performing German",
+          "GR 301 - Tragedy",
+          "GR 303 - Old and Middle Comedy",
+          "LIT 225 - Poetry and Drama of Japan in Translation",
+          "MRST 286 - Preparation for Shakespeare in Performance",
+          "MUS 210 - Vocal Pedagogy",
+          "FREN 397 - Séminaire avancé (when topic is appropriate)",
+          "ITAL 295 - Topics in Italian Culture (when topic is appropriate)",
+          "SPAN 398 - Spanish-American Seminar (when topic is appropriate)"
+        ]
+      },
+      {
+        "type": "n_of",
+        "label": "Capstone Experience",
+        "n": 1,
+        "courses": [
+          "THTR 471 - University Theater IV: Capstone",
+          "THTR 493 - Honors Thesis (+THTR 493) for total of 6 credits"
         ]
       }
     ]

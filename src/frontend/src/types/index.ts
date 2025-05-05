@@ -1,11 +1,12 @@
 export interface Requirement {
   label: string;
   courses?: string[];
-  type: 'all' | 'one_of' | 'n_of' | 'credits';
+  type: 'all' | 'one_of' | 'n_of' | 'credits' | 'note';
   n?: number;
   subject?: string;
   credits?: number;
   level?: number;
+  notes?: string;
 }
 
 export interface Major {

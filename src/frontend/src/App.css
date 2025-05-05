@@ -3,8 +3,12 @@
   display: flex;
   flex-direction: column;
   position: relative;
-  background-color: #000;
+  /* Neon black background */
+  background: radial-gradient(circle at 60% 40%, rgba(0,255,255,0.15) 0%, rgba(0,0,0,1) 70%),
+              radial-gradient(circle at 30% 80%, rgba(255,0,255,0.10) 0%, rgba(0,0,0,1) 80%),
+              #000;
   color: #fff;
+  box-shadow: 0 0 80px 10px rgba(0,255,255,0.08), 0 0 120px 30px rgba(255,0,255,0.06) inset;
 }
 
 .particles {
