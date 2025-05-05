@@ -1,5 +1,8 @@
 {
   "devDependencies": {
     "@vercel/node": "^5.1.15"
+  },
+  "dependencies": {
+    "react-router-dom": "^6.30.0"
   }
 }

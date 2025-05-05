@@ -11,12 +11,99 @@ import { fetchMajors } from './services/api';
 import LoadingSpinner from './components/LoadingSpinner';
 import ErrorMessage from './components/ErrorMessage';
 import Celebration from './components/Celebration';
+import { BrowserRouter as Router, Routes, Route, Link, useNavigate, useParams } from 'react-router-dom';
 
 const STORAGE_KEY = 'wlu-major-tracker-progress';
 
+function MajorPage({ majors, allProgress, setAllProgress, getCurrentProgress, handleToggle, handleCreditsChange, handleResetProgress, getProgress }: any) {
+  const { majorName } = useParams();
+  const navigate = useNavigate();
+  const major = majors.find((m: Major) => m.major === decodeURIComponent(majorName || ''));
+  const progress = useMemo(() => getProgress(major), [getProgress, major]);
+  const currentProgress = getCurrentProgress(major);
+
+  if (!major) {
+    return <ErrorMessage message="Major not found." onRetry={() => navigate('/')} />;
+  }
+
+  return (
+    <section className="major-details">
+      <button
+        className="back-button"
+        onClick={() => navigate('/')}
+        aria-label="Back to majors list"
+      >
+        ← Back to Majors
+      </button>
+      <div className="circular-progress-container">
+        <CircularProgress progress={progress} size={200} strokeWidth={10} progressColor='#fff' />
+        <button 
+          className="reset-button"
+          onClick={() => handleResetProgress(major)}
+        >
+          Reset Progress
+        </button>
+      </div>
+      <h2>{major.major} Roadmap</h2>
+      <Roadmap
+        requirements={major.requirements}
+        checked={currentProgress.checked}
+        creditProgress={currentProgress.creditProgress}
+        onToggle={(label, course) => handleToggle(major, label, course)}
+        onCreditsChange={(label, credits) => handleCreditsChange(major, label, credits)}
+      />
+      {progress === 100 && <Celebration isComplete={true} />}
+    </section>
+  );
+}
+
+function HomePage({ majors, searchQuery, setSearchQuery, handleClearSearch }: any) {
+  const filteredMajors = majors.filter((major: Major) => 
+    major.major.toLowerCase().includes(searchQuery.toLowerCase())
+  );
+  return (
+    <section className="major-selection">
+      <h2>Select a Major</h2>
+      <div className="search-container">
+        <input
+          type="text"
+          placeholder="Search majors..."
+          value={searchQuery}
+          onChange={(e) => setSearchQuery(e.target.value)}
+          className="search-input"
+        />
+        {searchQuery && (
+          <button
+            className="clear-search-button"
+            onClick={handleClearSearch}
+            aria-label="Clear search"
+          >
+            ×
+          </button>
+        )}
+      </div>
+      {filteredMajors.length === 0 ? (
+        <p className="no-majors">No majors match your search.</p>
+      ) : (
+        <div className="major-list">
+          {filteredMajors.map((major: Major) => (
+            <Link
+              key={major.major}
+              to={`/major/${encodeURIComponent(major.major)}`}
+              className="major-button"
+              style={{ textDecoration: 'none' }}
+            >
+              {major.major}
+            </Link>
+          ))}
+        </div>
+      )}
+    </section>
+  );
+}
+
 function App() {
   const [majors, setMajors] = useState<Major[]>([]);
-  const [selectedMajor, setSelectedMajor] = useState<Major | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
@@ -46,8 +133,6 @@ function App() {
 
   useEffect(() => {
     loadMajors();
-    // Clear any previously selected major when the app loads
-    setSelectedMajor(null);
   }, [loadMajors]);
 
   useEffect(() => {
@@ -63,15 +148,12 @@ function App() {
     return allProgress[major.major] || { checked: {}, creditProgress: {} };
   }, [allProgress]);
 
-  const handleToggle = useCallback((label: string, course: string) => {
-    if (!selectedMajor) return;
-    
-    const currentProgress = getCurrentProgress(selectedMajor);
+  const handleToggle = useCallback((major: Major, label: string, course: string) => {
+    const currentProgress = getCurrentProgress(major);
     const key = `${label}::${course}`;
-    
     setAllProgress(prev => ({
       ...prev,
-      [selectedMajor.major]: {
+      [major.major]: {
         ...currentProgress,
         checked: {
           ...currentProgress.checked,
@@ -79,16 +161,13 @@ function App() {
         }
       }
     }));
-  }, [selectedMajor, getCurrentProgress]);
+  }, [getCurrentProgress]);
 
-  const handleCreditsChange = useCallback((label: string, credits: number) => {
-    if (!selectedMajor) return;
-    
-    const currentProgress = getCurrentProgress(selectedMajor);
-    
+  const handleCreditsChange = useCallback((major: Major, label: string, credits: number) => {
+    const currentProgress = getCurrentProgress(major);
     setAllProgress(prev => ({
       ...prev,
-      [selectedMajor.major]: {
+      [major.major]: {
         ...currentProgress,
         creditProgress: {
           ...currentProgress.creditProgress,
@@ -96,27 +175,23 @@ function App() {
         }
       }
     }));
-  }, [selectedMajor, getCurrentProgress]);
+  }, [getCurrentProgress]);
 
-  const handleResetProgress = useCallback(() => {
-    if (selectedMajor) {
-      setAllProgress(prev => ({
-        ...prev,
-        [selectedMajor.major]: {
-          checked: {},
-          creditProgress: {}
-        }
-      }));
-    }
-  }, [selectedMajor]);
+  const handleResetProgress = useCallback((major: Major) => {
+    setAllProgress(prev => ({
+      ...prev,
+      [major.major]: {
+        checked: {},
+        creditProgress: {}
+      }
+    }));
+  }, []);
 
-  const getProgress = useCallback(() => {
-    if (!selectedMajor) return 0;
-    
-    const currentProgress = getCurrentProgress(selectedMajor);
+  const getProgress = useCallback((major: Major | null) => {
+    if (!major) return 0;
+    const currentProgress = getCurrentProgress(major);
     const { checked, creditProgress } = currentProgress;
-    
-    const { total, completed } = selectedMajor.requirements.reduce(
+    const { total, completed } = major.requirements.reduce(
       (acc, req) => {
         if (req.type === 'credits' && req.credits) {
           acc.total += 1;
@@ -145,14 +220,11 @@ function App() {
       },
       { total: 0, completed: 0 }
     );
-
     return total === 0 ? 0 : Math.round((completed / total) * 100);
-  }, [selectedMajor, getCurrentProgress]);
-
-  const progress = useMemo(() => getProgress(), [getProgress]);
+  }, [getCurrentProgress]);
 
   const handleHomeClick = useCallback(() => {
-    setSelectedMajor(null);
+    window.location.href = '/';
   }, []);
 
   const handleClearSearch = useCallback(() => {
@@ -163,127 +235,63 @@ function App() {
     await loadFull(engine);
   }, []);
 
-  const renderContent = () => {
-    if (loading) {
-      return <LoadingSpinner />;
-    }
-
-    if (error) {
-      return <ErrorMessage message={error} onRetry={loadMajors} />;
-    }
-
-    if (!selectedMajor) {
-      const filteredMajors = majors.filter(major => 
-        major.major.toLowerCase().includes(searchQuery.toLowerCase())
-      );
-
-      return (
-        <section className="major-selection">
-          <h2>Select a Major</h2>
-          <div className="search-container">
-            <input
-              type="text"
-              placeholder="Search majors..."
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              className="search-input"
-            />
-            {searchQuery && (
-              <button
-                className="clear-search-button"
-                onClick={handleClearSearch}
-                aria-label="Clear search"
-              >
-                ×
-              </button>
-            )}
-          </div>
-          {filteredMajors.length === 0 ? (
-            <p className="no-majors">No majors match your search.</p>
-          ) : (
-            <div className="major-list">
-              {filteredMajors.map((major) => (
-                <button
-                  key={major.major}
-                  className="major-button"
-                  onClick={() => setSelectedMajor(major)}
-                >
-                  {major.major}
-                </button>
-              ))}
-            </div>
-          )}
-        </section>
-      );
-    }
-
-    const currentProgress = getCurrentProgress(selectedMajor);
-
-    return (
-      <section className="major-details">
-        <button
-          className="back-button"
-          onClick={() => setSelectedMajor(null)}
-          aria-label="Back to majors list"
-        >
-          ← Back to Majors
-        </button>
-        <div className="circular-progress-container">
-          <CircularProgress progress={progress} size={200} strokeWidth={10} progressColor='#fff' />
-          <button 
-            className="reset-button"
-            onClick={handleResetProgress}
-          >
-            Reset Progress
-          </button>
-        </div>
-        <h2>{selectedMajor.major} Roadmap</h2>
-        <Roadmap
-          requirements={selectedMajor.requirements}
-          checked={currentProgress.checked}
-          creditProgress={currentProgress.creditProgress}
-          onToggle={handleToggle}
-          onCreditsChange={handleCreditsChange}
-        />
-        {progress === 100 && <Celebration isComplete={true} />}
-      </section>
-    );
-  };
-
   return (
-    <div className="app-container">
-      <Particles
-        id="tsparticles"
-        init={particlesInit}
-        options={{
-          background: { color: "#000000" },
-          particles: {
-            color: { value: "#fff" },
-            number: { value: 80 },
-            size: { value: 2 },
-            move: { enable: true, speed: 0.2 },
-            opacity: { value: 0.5 }
-          }
-        }}
-        className="particles"
-      />
-      <div className="app-content">
-        <header>
-          <button 
-            className="home-button"
-            onClick={handleHomeClick}
-            aria-label="Go to home"
-          >
-            HOME PAGE
-          </button>
-          <img src="/logo.png" alt="W&L Major Tracker Logo" className="main-logo" />
-          <p>{selectedMajor ? `For ${selectedMajor.major}` : "Don't get lost buddy!"}</p>
-        </header>
-        <main>
-          {renderContent()}
-        </main>
+    <Router>
+      <div className="app-container">
+        <Particles
+          id="tsparticles"
+          init={particlesInit}
+          options={{
+            background: { color: "#000000" },
+            particles: {
+              color: { value: "#fff" },
+              number: { value: 80 },
+              size: { value: 2 },
+              move: { enable: true, speed: 0.2 },
+              opacity: { value: 0.5 }
+            }
+          }}
+          className="particles"
+        />
+        <div className="app-content">
+          <header>
+            <button 
+              className="home-button"
+              onClick={handleHomeClick}
+              aria-label="Go to home"
+            >
+              HOME PAGE
+            </button>
+            <img src="/logo.png" alt="W&L Major Tracker Logo" className="main-logo" />
+            <p>{"Don't get lost buddy!"}</p>
+          </header>
+          <main>
+            <Routes>
+              <Route path="/" element={
+                <HomePage
+                  majors={majors}
+                  searchQuery={searchQuery}
+                  setSearchQuery={setSearchQuery}
+                  handleClearSearch={handleClearSearch}
+                />
+              } />
+              <Route path="/major/:majorName" element={
+                <MajorPage
+                  majors={majors}
+                  allProgress={allProgress}
+                  setAllProgress={setAllProgress}
+                  getCurrentProgress={getCurrentProgress}
+                  handleToggle={handleToggle}
+                  handleCreditsChange={handleCreditsChange}
+                  handleResetProgress={handleResetProgress}
+                  getProgress={getProgress}
+                />
+              } />
+            </Routes>
+          </main>
+        </div>
       </div>
-    </div>
+    </Router>
   );
 }
 
