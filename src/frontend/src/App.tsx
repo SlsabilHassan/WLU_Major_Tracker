@@ -29,11 +29,11 @@ function ConfirmDialog({ open, message, onConfirm, onCancel }: { open: boolean, 
   );
 }
 
-function MajorPage({ majors, allProgress, setAllProgress, getCurrentProgress, handleToggle, handleCreditsChange, handleResetProgress, getProgress }: any) {
+function MajorPage({ majors, allProgress, setAllProgress, getCurrentProgress, handleToggle, handleCreditsChange, handleResetProgress, getProgress, ignoredEmphases, handleToggleEmphasis }: any) {
   const { majorName } = useParams();
   const navigate = useNavigate();
   const major = majors.find((m: Major) => m.major === decodeURIComponent(majorName || ''));
-  const progress = useMemo(() => getProgress(major), [getProgress, major]);
+  const progress = useMemo(() => getProgress(major, ignoredEmphases?.[major?.major || '']), [getProgress, major, ignoredEmphases]);
   const currentProgress = getCurrentProgress(major);
   const [showConfirm, setShowConfirm] = useState(false);
 
@@ -72,6 +72,8 @@ function MajorPage({ majors, allProgress, setAllProgress, getCurrentProgress, ha
         creditProgress={currentProgress.creditProgress}
         onToggle={(label, course) => handleToggle(major, label, course)}
         onCreditsChange={(label, credits) => handleCreditsChange(major, label, credits)}
+        ignoredEmphases={ignoredEmphases?.[major.major]}
+        handleToggleEmphasis={(emphasis: 'vocal' | 'instrumental' | 'businessJournalism' | 'journalism') => handleToggleEmphasis(major.major, emphasis)}
       />
       {progress === 100 && <Celebration isComplete={true} />}
     </section>
@@ -151,6 +153,7 @@ function App() {
       return {};
     }
   });
+  const [ignoredEmphases, setIgnoredEmphases] = useState<{ [major: string]: { vocal?: boolean; instrumental?: boolean; businessJournalism?: boolean; journalism?: boolean } }>({});
 
   const loadMajors = useCallback(async () => {
     try {
@@ -222,13 +225,61 @@ function App() {
     }));
   }, []);
 
-  const getProgress = useCallback((major: Major | null) => {
+  const handleToggleEmphasis = useCallback((majorName: string, emphasis: 'vocal' | 'instrumental' | 'businessJournalism' | 'journalism') => {
+    setIgnoredEmphases(prev => {
+      const currentState = prev[majorName] || {};
+      const newState = { ...currentState };
+
+      // Handle Journalism tracks
+      if (emphasis === 'journalism') {
+        newState.journalism = !currentState.journalism;
+        newState.businessJournalism = currentState.journalism; // If journalism is being ignored, consider business journalism
+      } else if (emphasis === 'businessJournalism') {
+        newState.businessJournalism = !currentState.businessJournalism;
+        newState.journalism = currentState.businessJournalism; // If business journalism is being ignored, consider journalism
+      } else {
+        // Handle Music emphases as before
+        newState[emphasis] = !currentState[emphasis];
+      }
+
+      return {
+        ...prev,
+        [majorName]: newState
+      };
+    });
+  }, []);
+
+  const getProgress = useCallback((major: Major | null, ignored?: { vocal?: boolean; instrumental?: boolean; businessJournalism?: boolean; journalism?: boolean }) => {
     if (!major) return 0;
     const currentProgress = getCurrentProgress(major);
     const { checked, creditProgress } = currentProgress;
     let total = 0;
     let completed = 0;
     major.requirements.forEach(req => {
+      if (major.major === 'Music (BS)') {
+        if (ignored?.vocal && req.label.startsWith('Vocal Music Emphasis')) {
+          total += req.type === 'credits' && req.credits ? req.credits : req.courses ? req.courses.length : 1;
+          completed += req.type === 'credits' && req.credits ? req.credits : req.courses ? req.courses.length : 1;
+          return;
+        }
+        if (ignored?.instrumental && req.label.startsWith('Instrumental Music Emphasis')) {
+          total += req.type === 'credits' && req.credits ? req.credits : req.courses ? req.courses.length : 1;
+          completed += req.type === 'credits' && req.credits ? req.credits : req.courses ? req.courses.length : 1;
+          return;
+        }
+      }
+      if (major.major === 'Journalism (BA)') {
+        if (ignored?.businessJournalism && req.label.startsWith('Business Journalism Track')) {
+          total += req.type === 'credits' && req.credits ? req.credits : req.courses ? req.courses.length : 1;
+          completed += req.type === 'credits' && req.credits ? req.credits : req.courses ? req.courses.length : 1;
+          return;
+        }
+        if (ignored?.journalism && req.label.startsWith('Journalism Track')) {
+          total += req.type === 'credits' && req.credits ? req.credits : req.courses ? req.courses.length : 1;
+          completed += req.type === 'credits' && req.credits ? req.credits : req.courses ? req.courses.length : 1;
+          return;
+        }
+      }
       if (req.type === 'credits' && req.credits) {
         total += req.credits;
         const currentCredits = creditProgress[req.label] || 0;
@@ -331,6 +382,8 @@ function App() {
                   handleCreditsChange={handleCreditsChange}
                   handleResetProgress={handleResetProgress}
                   getProgress={getProgress}
+                  ignoredEmphases={ignoredEmphases}
+                  handleToggleEmphasis={handleToggleEmphasis}
                 />
               } />
             </Routes>

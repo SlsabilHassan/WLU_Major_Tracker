@@ -9,6 +9,8 @@ interface RoadmapProps {
   creditProgress: CreditProgress;
   onToggle: (label: string, course: string) => void;
   onCreditsChange: (label: string, credits: number) => void;
+  ignoredEmphases?: { vocal?: boolean; instrumental?: boolean; businessJournalism?: boolean; journalism?: boolean };
+  handleToggleEmphasis?: (emphasis: 'vocal' | 'instrumental' | 'businessJournalism' | 'journalism') => void;
 }
 
 const RequirementStep: React.FC<{
@@ -19,7 +21,9 @@ const RequirementStep: React.FC<{
   onCreditsChange: (label: string, credits: number) => void;
   isEven: boolean;
   className?: string;
-}> = memo(({ requirement, checked, creditProgress, onToggle, onCreditsChange, isEven, className }) => {
+  ignoredEmphases?: { vocal?: boolean; instrumental?: boolean; businessJournalism?: boolean; journalism?: boolean };
+  handleToggleEmphasis?: (emphasis: 'vocal' | 'instrumental' | 'businessJournalism' | 'journalism') => void;
+}> = memo(({ requirement, checked, creditProgress, onToggle, onCreditsChange, isEven, className, ignoredEmphases, handleToggleEmphasis }) => {
   console.log('Rendering requirement:', requirement.label);
   console.log('Is credits type:', requirement.type === 'credits');
   console.log('Has credits:', requirement.credits);
@@ -32,11 +36,21 @@ const RequirementStep: React.FC<{
   const isComplete = (requirement.type === 'n_of' && selectedCount >= (requirement.n || 0)) ||
                     (requirement.type === 'one_of' && selectedCount >= 1);
 
+  // Determine if this requirement is ignored
+  const isVocal = requirement.label.startsWith('Vocal Music Emphasis');
+  const isInstrumental = requirement.label.startsWith('Instrumental Music Emphasis');
+  const isBusinessJournalism = requirement.label.startsWith('Business Journalism Track');
+  const isJournalism = requirement.label.startsWith('Journalism Track');
+  const isIgnored = (isVocal && ignoredEmphases?.vocal) || 
+                   (isInstrumental && ignoredEmphases?.instrumental) ||
+                   (isBusinessJournalism && ignoredEmphases?.businessJournalism) ||
+                   (isJournalism && ignoredEmphases?.journalism);
+
   const renderCourses = () => {
     if (requirement.type === 'note') {
       return (
         <div className="roadmap-courses">
-          <div className="roadmap-notes">{requirement.notes}</div>
+          <div className="roadmap-notes" dangerouslySetInnerHTML={{ __html: requirement.notes || '' }} />
         </div>
       );
     }
@@ -45,13 +59,14 @@ const RequirementStep: React.FC<{
       return (
         <div className="roadmap-courses">
           {requirement.notes && (
-            <div className="roadmap-notes">{requirement.notes}</div>
+            <div className="roadmap-notes" dangerouslySetInnerHTML={{ __html: requirement.notes }} />
           )}
           <CreditScale
             label={`${requirement.level ? `level ${requirement.level}` : ''}`}
             maxCredits={requirement.credits}
             currentCredits={creditProgress[requirement.label] || 0}
-            onCreditsChange={(credits) => onCreditsChange(requirement.label, credits)}
+            onCreditsChange={isIgnored ? () => {} : (credits) => onCreditsChange(requirement.label, credits)}
+            key={isIgnored ? 'disabled' : 'enabled'}
           />
         </div>
       );
@@ -112,15 +127,15 @@ const RequirementStep: React.FC<{
 
       return (
         <React.Fragment key={course}>
-          <label className={`roadmap-checkbox ${dashedClass}`}>
+          <label className={`roadmap-checkbox ${dashedClass}`} style={isIgnored ? { opacity: 0.5, pointerEvents: 'none' } : {}}>
             <input
               type="checkbox"
               checked={!!checked[`${requirement.label}::${course}`]}
               onChange={() => onToggle(requirement.label, course)}
               aria-label={`${course} - ${requirement.label}`}
-              disabled={isDisabled}
+              disabled={isDisabled || isIgnored}
             />
-            <span>{course}</span>
+            <span dangerouslySetInnerHTML={{ __html: course }} />
           </label>
           {isFirstInPair && <div className="or-text">or</div>}
         </React.Fragment>
@@ -138,14 +153,39 @@ const RequirementStep: React.FC<{
     <div className={`roadmap-step ${isEven ? 'right' : 'left'} ${className || ''}`.trim()}>
       <div className="roadmap-circle" />
       <div className="roadmap-content">
-        <h3 className="roadmap-title" dangerouslySetInnerHTML={{ __html: requirement.label }} />
+        <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
+          <h3 className="roadmap-title" dangerouslySetInnerHTML={{ __html: requirement.label }} />
+          {((isVocal || isInstrumental || isBusinessJournalism || isJournalism) && handleToggleEmphasis) && (
+            <button
+              style={{ 
+                background: isIgnored ? 'rgba(255, 255, 255, 0.1)' : 'rgba(255, 0, 0, 0.2)', 
+                color: '#fff', 
+                border: isIgnored ? '1px solid rgba(255, 255, 255, 0.2)' : '1px solid rgba(255, 0, 0, 0.3)', 
+                borderRadius: '0.5rem', 
+                padding: '0.3rem 0.6rem', 
+                cursor: 'pointer', 
+                fontWeight: 600, 
+                fontSize: '0.8rem' 
+              }}
+              onClick={() => handleToggleEmphasis(
+                isVocal ? 'vocal' : 
+                isInstrumental ? 'instrumental' : 
+                isBusinessJournalism ? 'businessJournalism' :
+                'journalism'
+              )}
+              type="button"
+            >
+              {isIgnored ? 'CONSIDER' : 'NOT CONSIDERING'}
+            </button>
+          )}
+        </div>
         {renderCourses()}
       </div>
     </div>
   );
 });
 
-const Roadmap: React.FC<RoadmapProps> = memo(({ requirements, checked, creditProgress, onToggle, onCreditsChange }) => {
+const Roadmap: React.FC<RoadmapProps> = memo(({ requirements, checked, creditProgress, onToggle, onCreditsChange, ignoredEmphases, handleToggleEmphasis }) => {
   // Detect if this is Computer Science (BA)
   const isCSBA = requirements.length === 5 && requirements.some(r => r.label === 'Required Courses' && r.courses?.includes('CSCI 111 - Introduction to Computer Science'));
 
@@ -162,6 +202,8 @@ const Roadmap: React.FC<RoadmapProps> = memo(({ requirements, checked, creditPro
           onCreditsChange={onCreditsChange}
           isEven={idx % 2 === 0}
           className={isCSBA ? 'csba-step' : ''}
+          ignoredEmphases={ignoredEmphases}
+          handleToggleEmphasis={handleToggleEmphasis}
         />
       ))}
     </div>
