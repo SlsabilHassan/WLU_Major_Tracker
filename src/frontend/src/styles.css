@@ -154,7 +154,7 @@ header p {
 @media (max-width: 600px) {
   .main-logo {
     max-width: 230px;
-    margin: -30px auto 0 auto;
+    margin: 0px auto -30px auto;
   }
   .major-selection h2 {
     font-size: 1.1rem;
