@@ -52,6 +52,7 @@ const Celebration: React.FC<CelebrationProps> = ({ isComplete }) => {
         </button>
         <h2>Congratulations! 🎉</h2>
         <p>You've completed all requirements!</p>
+        <p style={{ fontWeight: 600, color: '#ffd700', marginTop: '0.5rem' }}>You're almost done! Check the catalog for additional credit or graduation requirements.</p>
       </div>
     </div>
   );
