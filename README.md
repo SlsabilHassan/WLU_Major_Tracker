@@ -7,42 +7,40 @@ A comprehensive tool for tracking major requirements at Washington & Lee Univers
 - Interactive roadmap visualization of major requirements
 - Progress tracking for completed courses
 - Detailed breakdown of major requirements
-- Support for multiple majors
+- Support for all W&L majors
 - Persistent storage of progress using localStorage
-- Modern, responsive UI with Material-UI components
-- Particle effects background for enhanced visual appeal
+- Modern, responsive UI with elegant animations
+- Beautiful particle effects background
+- Real-time progress updates
+- Course requirement validation
+- Support for multiple requirement types (all, n_of, credits, etc.)
 
 ## Project Structure
 
-The project is organized into two main components:
+The project is organized as a modern React application:
 
-- `src/frontend`: React-based web application with TypeScript
-  - Interactive roadmap visualization
-  - Progress tracking interface
-  - Modern UI components
-  - Local storage integration
-
-- `src/backend`: Node.js/Express API service
-  - RESTful API for major data
-  - MongoDB integration
-  - TypeScript support
-  - Error handling middleware
+- `src/frontend/src/`:
+  - `components/`: React components for the UI
+    - `Roadmap.tsx`: Main roadmap visualization component
+    - `CircularProgress.tsx`: Progress indicator component
+    - `LoadingSpinner.tsx`: Loading state component
+    - `ErrorMessage.tsx`: Error handling component
+    - `Celebration.tsx`: Success animation component
+  - `data/`: JSON data files
+    - `majors.json`: Complete major requirements data
+  - `types/`: TypeScript type definitions
+  - `services/`: API and data services
+  - `App.tsx`: Main application component
+  - `App.css`: Global styles
 
 ## Tech Stack
 
 ### Frontend
-- React 19
+- React 18
 - TypeScript
-- Material-UI
-- React TSParticles
 - CSS Modules
-
-### Backend
-- Node.js
-- Express
-- TypeScript
-- MongoDB
-- Mongoose
+- React TSParticles
+- Local Storage API
 
 ## Getting Started
 
@@ -50,7 +48,6 @@ The project is organized into two main components:
 
 - Node.js (v16 or higher)
 - npm (v7 or higher)
-- MongoDB (local or Atlas)
 
 ### Installation
 
@@ -62,50 +59,42 @@ cd WLU_Major_Tracker
 
 2. Install dependencies:
 ```bash
-# Install root dependencies
-npm install
-
-# Install backend dependencies
-cd src/backend
-npm install
-
-# Install frontend dependencies
-cd ../frontend
 npm install
 ```
 
-3. Set up environment variables:
-Create a `.env` file in the backend directory with:
-```
-PORT=8080
-MONGODB_URI=mongodb://localhost:27017/major-tracker
-```
-
-### Running the Application
-
-1. Start the backend server:
+3. Start the development server:
 ```bash
-cd src/backend
-npm run dev
-```
-
-2. Start the frontend development server:
-```bash
-cd src/frontend
 npm start
 ```
 
-3. Access the application:
+4. Access the application:
 - Frontend: http://localhost:3000
-- Backend API: http://localhost:8080
 
-## API Endpoints
+## Features in Detail
 
-- `GET /api/majors` - Get all majors
-- `GET /api/majors/:major` - Get specific major details
-- `POST /api/majors` - Create a new major
-- `PUT /api/majors/:major` - Update a major
-- `DELETE /api/majors/:major` - Delete a major
+### Major Requirements
+- Comprehensive coverage of all W&L majors
+- Support for various requirement types:
+  - Required courses (all)
+  - Choice-based requirements (n_of)
+  - Credit-based requirements
+  - Subject-specific requirements
+  - Level-specific requirements
+
+### Progress Tracking
+- Real-time progress updates
+- Visual progress indicators
+- Course completion tracking
+- Requirement validation
+- Persistent storage of progress
+
+### User Interface
+- Elegant roadmap visualization
+- Responsive design
+- Beautiful animations
+- Interactive course selection
+- Clear requirement breakdowns
+- Progress celebration effects
 
 ## Contributing
 
@@ -118,3 +107,8 @@ npm start
 ## License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Acknowledgments
+
+- Washington & Lee University for providing the major requirements data
+- The React and TypeScript communities for their excellent documentation and tools
