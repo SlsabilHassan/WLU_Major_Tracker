@@ -18,7 +18,8 @@ const RequirementStep: React.FC<{
   onToggle: (label: string, course: string) => void;
   onCreditsChange: (label: string, credits: number) => void;
   isEven: boolean;
-}> = memo(({ requirement, checked, creditProgress, onToggle, onCreditsChange, isEven }) => {
+  className?: string;
+}> = memo(({ requirement, checked, creditProgress, onToggle, onCreditsChange, isEven, className }) => {
   console.log('Rendering requirement:', requirement.label);
   console.log('Is credits type:', requirement.type === 'credits');
   console.log('Has credits:', requirement.credits);
@@ -134,10 +135,10 @@ const RequirementStep: React.FC<{
   };
   
   return (
-    <div className={`roadmap-step ${isEven ? 'right' : 'left'}`}>
+    <div className={`roadmap-step ${isEven ? 'right' : 'left'} ${className || ''}`.trim()}>
       <div className="roadmap-circle" />
       <div className="roadmap-content">
-        <h3 className="roadmap-title">{requirement.label}</h3>
+        <h3 className="roadmap-title" dangerouslySetInnerHTML={{ __html: requirement.label }} />
         {renderCourses()}
       </div>
     </div>
@@ -145,9 +146,9 @@ const RequirementStep: React.FC<{
 });
 
 const Roadmap: React.FC<RoadmapProps> = memo(({ requirements, checked, creditProgress, onToggle, onCreditsChange }) => {
-  // Custom rendering for Biochemistry (BS)
+  // Detect if this is Computer Science (BA)
+  const isCSBA = requirements.length === 5 && requirements.some(r => r.label === 'Required Courses' && r.courses?.includes('CSCI 111 - Introduction to Computer Science'));
 
-  // Default rendering for all other majors
   return (
     <div className="elegant-roadmap" role="list">
       <div className="roadmap-line" />
@@ -160,6 +161,7 @@ const Roadmap: React.FC<RoadmapProps> = memo(({ requirements, checked, creditPro
           onToggle={onToggle}
           onCreditsChange={onCreditsChange}
           isEven={idx % 2 === 0}
+          className={isCSBA ? 'csba-step' : ''}
         />
       ))}
     </div>

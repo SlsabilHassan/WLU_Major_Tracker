@@ -3,9 +3,11 @@
   padding: 2rem 0;
   max-width: 1400px;
   margin: 0 auto;
-  min-height: 80vh;
+  min-height: 60vh;
+  flex: 1;
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
 }
 
 .roadmap-line {

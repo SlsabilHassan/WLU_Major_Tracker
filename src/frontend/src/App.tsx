@@ -15,12 +15,27 @@ import { BrowserRouter as Router, Routes, Route, Link, useNavigate, useParams } 
 
 const STORAGE_KEY = 'wlu-major-tracker-progress';
 
+// Add a simple confirmation dialog component
+function ConfirmDialog({ open, message, onConfirm, onCancel }: { open: boolean, message: string, onConfirm: () => void, onCancel: () => void }) {
+  if (!open) return null;
+  return (
+    <div style={{ position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh', background: 'rgba(0,0,0,0.5)', zIndex: 9999, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+      <div style={{ background: '#222', color: '#fff', padding: '2rem', borderRadius: '10px', minWidth: '300px', textAlign: 'center', boxShadow: '0 4px 24px rgba(0,0,0,0.4)' }}>
+        <p style={{ marginBottom: '1.5rem', fontSize: '1.1rem' }}>{message}</p>
+        <button onClick={onConfirm} style={{ marginRight: '1rem', background: '#e74c3c', color: '#fff', border: 'none', borderRadius: '5px', padding: '0.5rem 1.2rem', fontWeight: 600, cursor: 'pointer' }}>Yes</button>
+        <button onClick={onCancel} style={{ background: '#444', color: '#fff', border: 'none', borderRadius: '5px', padding: '0.5rem 1.2rem', fontWeight: 600, cursor: 'pointer' }}>No</button>
+      </div>
+    </div>
+  );
+}
+
 function MajorPage({ majors, allProgress, setAllProgress, getCurrentProgress, handleToggle, handleCreditsChange, handleResetProgress, getProgress }: any) {
   const { majorName } = useParams();
   const navigate = useNavigate();
   const major = majors.find((m: Major) => m.major === decodeURIComponent(majorName || ''));
   const progress = useMemo(() => getProgress(major), [getProgress, major]);
   const currentProgress = getCurrentProgress(major);
+  const [showConfirm, setShowConfirm] = useState(false);
 
   if (!major) {
     return <ErrorMessage message="Major not found." onRetry={() => navigate('/')} />;
@@ -39,10 +54,16 @@ function MajorPage({ majors, allProgress, setAllProgress, getCurrentProgress, ha
         <CircularProgress progress={progress} size={200} strokeWidth={10} progressColor='#fff' />
         <button 
           className="reset-button"
-          onClick={() => handleResetProgress(major)}
+          onClick={() => setShowConfirm(true)}
         >
           Reset Progress
         </button>
+        <ConfirmDialog
+          open={showConfirm}
+          message="Are you sure you want to reset progress?"
+          onConfirm={() => { setShowConfirm(false); handleResetProgress(major); }}
+          onCancel={() => setShowConfirm(false)}
+        />
       </div>
       <h2>{major.major} Roadmap</h2>
       <Roadmap
@@ -57,13 +78,27 @@ function MajorPage({ majors, allProgress, setAllProgress, getCurrentProgress, ha
   );
 }
 
-function HomePage({ majors, searchQuery, setSearchQuery, handleClearSearch }: any) {
+function HomePage({ majors, searchQuery, setSearchQuery, handleClearSearch, handleResetAllProgress }: any) {
+  const [showConfirm, setShowConfirm] = useState(false);
   const filteredMajors = majors.filter((major: Major) => 
     major.major.toLowerCase().includes(searchQuery.toLowerCase())
   );
   return (
     <section className="major-selection">
       <h2>Select a Major</h2>
+      <button
+        className="reset-all-progress-button"
+        onClick={() => setShowConfirm(true)}
+        style={{ marginBottom: '1.5rem', background: 'rgba(255,0,0,0.15)', color: '#fff', border: '1px solid rgba(255,0,0,0.3)', borderRadius: '0.5rem', padding: '0.5rem 1.5rem', cursor: 'pointer', fontWeight: 600 }}
+      >
+        Reset All Progress
+      </button>
+      <ConfirmDialog
+        open={showConfirm}
+        message="Are you sure you want to reset all progress?"
+        onConfirm={() => { setShowConfirm(false); handleResetAllProgress(); }}
+        onCancel={() => setShowConfirm(false)}
+      />
       <div className="search-container">
         <input
           type="text"
@@ -191,35 +226,36 @@ function App() {
     if (!major) return 0;
     const currentProgress = getCurrentProgress(major);
     const { checked, creditProgress } = currentProgress;
-    const { total, completed } = major.requirements.reduce(
-      (acc, req) => {
-        if (req.type === 'credits' && req.credits) {
-          acc.total += 1;
-          const currentCredits = creditProgress[req.label] || 0;
-          if (currentCredits >= req.credits) {
-            acc.completed += 1;
+    let total = 0;
+    let completed = 0;
+    major.requirements.forEach(req => {
+      if (req.type === 'credits' && req.credits) {
+        total += req.credits;
+        const currentCredits = creditProgress[req.label] || 0;
+        completed += Math.min(currentCredits, req.credits);
+      } else if (req.courses) {
+        if (req.type === 'all') {
+          total += req.courses.length;
+          completed += req.courses.filter(
+            course => checked[`${req.label}::${course}`]
+          ).length;
+        } else if (req.type === 'one_of') {
+          total += 1;
+          const selectedCount = req.courses.filter(
+            course => checked[`${req.label}::${course}`]
+          ).length;
+          if (selectedCount >= 1) {
+            completed += 1;
           }
-        } else if (req.courses) {
-          if (req.type === 'all') {
-            acc.total += req.courses.length;
-            acc.completed += req.courses.filter(
-              course => checked[`${req.label}::${course}`]
-            ).length;
-          } else if (req.type === 'one_of' || req.type === 'n_of') {
-            acc.total += 1;
-            const selectedCount = req.courses.filter(
-              course => checked[`${req.label}::${course}`]
-            ).length;
-            if ((req.type === 'one_of' && selectedCount >= 1) ||
-                (req.type === 'n_of' && selectedCount >= (req.n || 0))) {
-              acc.completed += 1;
-            }
-          }
+        } else if (req.type === 'n_of' && req.n) {
+          total += req.n;
+          const selectedCount = req.courses.filter(
+            course => checked[`${req.label}::${course}`]
+          ).length;
+          completed += Math.min(selectedCount, req.n);
         }
-        return acc;
-      },
-      { total: 0, completed: 0 }
-    );
+      }
+    });
     return total === 0 ? 0 : Math.round((completed / total) * 100);
   }, [getCurrentProgress]);
 
@@ -229,6 +265,15 @@ function App() {
 
   const handleClearSearch = useCallback(() => {
     setSearchQuery('');
+  }, []);
+
+  const handleResetAllProgress = useCallback(() => {
+    setAllProgress({});
+    try {
+      localStorage.removeItem(STORAGE_KEY);
+    } catch (error) {
+      console.error('Failed to clear all progress:', error);
+    }
   }, []);
 
   const particlesInit = useCallback(async (engine: Engine) => {
@@ -273,6 +318,7 @@ function App() {
                   searchQuery={searchQuery}
                   setSearchQuery={setSearchQuery}
                   handleClearSearch={handleClearSearch}
+                  handleResetAllProgress={handleResetAllProgress}
                 />
               } />
               <Route path="/major/:majorName" element={
