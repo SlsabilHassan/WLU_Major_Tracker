@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useCallback, useMemo } from 'react';
 import { Major, AllProgress, MajorProgress } from './types';
+import { majorTracks, countAlternativePairs } from './data/tracks';
 import Roadmap from './components/Roadmap';
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
@@ -12,6 +13,7 @@ import LoadingSpinner from './components/LoadingSpinner';
 import ErrorMessage from './components/ErrorMessage';
 import Celebration from './components/Celebration';
 import { BrowserRouter as Router, Routes, Route, Link, useNavigate, useParams } from 'react-router-dom';
+import { Analytics } from "@vercel/analytics/react";
 
 const STORAGE_KEY = 'wlu-major-tracker-progress';
 
@@ -72,8 +74,9 @@ function MajorPage({ majors, allProgress, setAllProgress, getCurrentProgress, ha
         creditProgress={currentProgress.creditProgress}
         onToggle={(label, course) => handleToggle(major, label, course)}
         onCreditsChange={(label, credits) => handleCreditsChange(major, label, credits)}
+        majorName={major.major}
         ignoredEmphases={ignoredEmphases?.[major.major]}
-        handleToggleEmphasis={(emphasis: 'vocal' | 'instrumental' | 'businessJournalism' | 'journalism') => handleToggleEmphasis(major.major, emphasis)}
+        handleToggleEmphasis={(track: string) => handleToggleEmphasis(major.major, track)}
       />
       {progress === 100 && <Celebration isComplete={true} />}
     </section>
@@ -153,7 +156,7 @@ function App() {
       return {};
     }
   });
-  const [ignoredEmphases, setIgnoredEmphases] = useState<{ [major: string]: { vocal?: boolean; instrumental?: boolean; businessJournalism?: boolean; journalism?: boolean } }>({});
+  const [ignoredEmphases, setIgnoredEmphases] = useState<{ [major: string]: { [track: string]: boolean } }>({});
 
   const loadMajors = useCallback(async () => {
     try {
@@ -225,60 +228,38 @@ function App() {
     }));
   }, []);
 
-  const handleToggleEmphasis = useCallback((majorName: string, emphasis: 'vocal' | 'instrumental' | 'businessJournalism' | 'journalism') => {
+  const handleToggleEmphasis = useCallback((majorName: string, track: string) => {
     setIgnoredEmphases(prev => {
-      const currentState = prev[majorName] || {};
-      const newState = { ...currentState };
-
-      // Handle Journalism tracks
-      if (emphasis === 'journalism') {
-        newState.journalism = !currentState.journalism;
-        newState.businessJournalism = currentState.journalism; // If journalism is being ignored, consider business journalism
-      } else if (emphasis === 'businessJournalism') {
-        newState.businessJournalism = !currentState.businessJournalism;
-        newState.journalism = currentState.businessJournalism; // If business journalism is being ignored, consider journalism
-      } else {
-        // Handle Music emphases as before
-        newState[emphasis] = !currentState[emphasis];
+      const current = prev[majorName] || {};
+      const tracks = majorTracks[majorName] || [];
+      const next = { ...current, [track]: !current[track] };
+      // With exactly two tracks they are a pair: ignoring one means doing the other.
+      if (tracks.length === 2) {
+        const other = tracks.find(t => t !== track);
+        if (other) next[other] = !next[track] ? next[other] : false;
       }
-
-      return {
-        ...prev,
-        [majorName]: newState
-      };
+      return { ...prev, [majorName]: next };
     });
   }, []);
 
-  const getProgress = useCallback((major: Major | null, ignored?: { vocal?: boolean; instrumental?: boolean; businessJournalism?: boolean; journalism?: boolean }) => {
+  const getProgress = useCallback((major: Major | null, ignored?: { [track: string]: boolean }) => {
     if (!major) return 0;
     const currentProgress = getCurrentProgress(major);
     const { checked, creditProgress } = currentProgress;
     let total = 0;
     let completed = 0;
+    const tracks = majorTracks[major.major] || [];
     major.requirements.forEach(req => {
-      if (major.major === 'Music (BS)') {
-        if (ignored?.vocal && req.label.startsWith('Vocal Music Emphasis')) {
-          total += req.type === 'credits' && req.credits ? req.credits : req.courses ? req.courses.length : 1;
-          completed += req.type === 'credits' && req.credits ? req.credits : req.courses ? req.courses.length : 1;
-          return;
-        }
-        if (ignored?.instrumental && req.label.startsWith('Instrumental Music Emphasis')) {
-          total += req.type === 'credits' && req.credits ? req.credits : req.courses ? req.courses.length : 1;
-          completed += req.type === 'credits' && req.credits ? req.credits : req.courses ? req.courses.length : 1;
-          return;
-        }
-      }
-      if (major.major === 'Journalism (BA)') {
-        if (ignored?.businessJournalism && req.label.startsWith('Business Journalism Track')) {
-          total += req.type === 'credits' && req.credits ? req.credits : req.courses ? req.courses.length : 1;
-          completed += req.type === 'credits' && req.credits ? req.credits : req.courses ? req.courses.length : 1;
-          return;
-        }
-        if (ignored?.journalism && req.label.startsWith('Journalism Track')) {
-          total += req.type === 'credits' && req.credits ? req.credits : req.courses ? req.courses.length : 1;
-          completed += req.type === 'credits' && req.credits ? req.credits : req.courses ? req.courses.length : 1;
-          return;
-        }
+      const track = tracks
+        .filter(t => req.label.startsWith(t))
+        .sort((a, b) => b.length - a.length)[0];
+      if (track && ignored?.[track]) {
+        // Not pursuing this track: count it as already satisfied rather than
+        // holding the whole major below 100%.
+        const weight = req.type === 'credits' && req.credits ? req.credits : req.courses ? req.courses.length : 1;
+        total += weight;
+        completed += weight;
+        return;
       }
       if (req.type === 'credits' && req.credits) {
         total += req.credits;
@@ -286,10 +267,12 @@ function App() {
         completed += Math.min(currentCredits, req.credits);
       } else if (req.courses) {
         if (req.type === 'all') {
-          total += req.courses.length;
-          completed += req.courses.filter(
-            course => checked[`${req.label}::${course}`]
-          ).length;
+          // courses joined by "or" are alternatives: the pair counts once
+          total += req.courses.length - countAlternativePairs(req.courses);
+          completed += Math.min(
+            req.courses.filter(course => checked[`${req.label}::${course}`]).length,
+            req.courses.length - countAlternativePairs(req.courses)
+          );
         } else if (req.type === 'one_of') {
           total += 1;
           const selectedCount = req.courses.filter(
@@ -390,6 +373,7 @@ function App() {
           </main>
         </div>
       </div>
+      <Analytics />
     </Router>
   );
 }

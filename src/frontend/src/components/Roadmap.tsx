@@ -2,6 +2,7 @@ import React, { memo } from 'react';
 import { Requirement, CheckedState, CreditProgress } from '../types';
 import './Roadmap.css';
 import CreditScale from './CreditScale';
+import { alternativePairs, trackFor } from '../data/tracks';
 
 interface RoadmapProps {
   requirements: Requirement[];
@@ -9,8 +10,9 @@ interface RoadmapProps {
   creditProgress: CreditProgress;
   onToggle: (label: string, course: string) => void;
   onCreditsChange: (label: string, credits: number) => void;
-  ignoredEmphases?: { vocal?: boolean; instrumental?: boolean; businessJournalism?: boolean; journalism?: boolean };
-  handleToggleEmphasis?: (emphasis: 'vocal' | 'instrumental' | 'businessJournalism' | 'journalism') => void;
+  majorName?: string;
+  ignoredEmphases?: { [track: string]: boolean };
+  handleToggleEmphasis?: (track: string) => void;
 }
 
 const RequirementStep: React.FC<{
@@ -21,12 +23,11 @@ const RequirementStep: React.FC<{
   onCreditsChange: (label: string, credits: number) => void;
   isEven: boolean;
   className?: string;
-  ignoredEmphases?: { vocal?: boolean; instrumental?: boolean; businessJournalism?: boolean; journalism?: boolean };
-  handleToggleEmphasis?: (emphasis: 'vocal' | 'instrumental' | 'businessJournalism' | 'journalism') => void;
-}> = memo(({ requirement, checked, creditProgress, onToggle, onCreditsChange, isEven, className, ignoredEmphases, handleToggleEmphasis }) => {
-  console.log('Rendering requirement:', requirement.label);
-  console.log('Is credits type:', requirement.type === 'credits');
-  console.log('Has credits:', requirement.credits);
+  majorName?: string;
+  showTrackToggle?: boolean;
+  ignoredEmphases?: { [track: string]: boolean };
+  handleToggleEmphasis?: (track: string) => void;
+}> = memo(({ requirement, checked, creditProgress, onToggle, onCreditsChange, isEven, className, majorName, showTrackToggle, ignoredEmphases, handleToggleEmphasis }) => {
   
   // Calculate how many courses are checked for n_of and one_of type requirements
   const selectedCount = (requirement.type === 'n_of' || requirement.type === 'one_of') && requirement.courses
@@ -36,15 +37,9 @@ const RequirementStep: React.FC<{
   const isComplete = (requirement.type === 'n_of' && selectedCount >= (requirement.n || 0)) ||
                     (requirement.type === 'one_of' && selectedCount >= 1);
 
-  // Determine if this requirement is ignored
-  const isVocal = requirement.label.startsWith('Vocal Music Emphasis');
-  const isInstrumental = requirement.label.startsWith('Instrumental Music Emphasis');
-  const isBusinessJournalism = requirement.label.startsWith('Business Journalism Track');
-  const isJournalism = requirement.label.startsWith('Journalism Track');
-  const isIgnored = (isVocal && ignoredEmphases?.vocal) || 
-                   (isInstrumental && ignoredEmphases?.instrumental) ||
-                   (isBusinessJournalism && ignoredEmphases?.businessJournalism) ||
-                   (isJournalism && ignoredEmphases?.journalism);
+  // Requirements that belong to a mutually exclusive track can be switched off
+  const track = trackFor(majorName, requirement.label);
+  const isIgnored = !!(track && ignoredEmphases?.[track]);
 
   const renderCourses = () => {
     if (requirement.type === 'note') {
@@ -73,32 +68,6 @@ const RequirementStep: React.FC<{
     }
 
     if (!requirement.courses?.length) return null;
-
-    // Define which courses are alternatives
-    let alternativePairs = [
-      ['ARTH 130 - African American Art', 'ARTH 131 - Art of the African Diaspora'],
-      ['ARTH 140 - Asian Art', 'ARTH 141 - Buddhist Art of South and Central Asia'],
-      ['CHEM 110 - General Chemistry and Lab', 'CHEM 109 - General Chemistry & CHEM 115 - General Chemistry Laboratory'],
-      ['CHEM 241 - Organic Chemistry I and Lab', 'CHEM 240 - Organic Chemistry I & CHEM 245 - Organic Chemistry I Laboratory'],
-      ['CHEM 242 - Organic Chemistry II and Lab', 'CHEM 244 - Organic Chemistry II & CHEM 246 - Organic Chemistry II Laboratory'],
-      ['BIOL 211S - Cell Biology at St. Andrews', 'BIOL 230 - Cell Biology'],
-      ['NEUR 395 - Special Topics in Cellular and Molecular Neuroscience', 'NEUR 423 - Directed Individual Research'],
-      ['BIOL 340 - Evolution', 'BIOL 340S - Evolutionary Biology at St. Andrews'],
-      ['BIOL 211S - Cell Biology at St. Andrews', 'BIOL 230 - Cell Biology'],
-      ['BIOL 215 - Biochemistry of the Cell *', 'BIOL 215S - Biochemistry at St. Andrews *'],
-      ['BIOL 240 - Comparative Animal Biology *', 'BIOL 240S - Zoology at St. Andrews *'],
-      ['BIOL 245 - Ecology *', 'BIOL 245S - Ecology at St Andrews'],
-      ['BIOL 260 - Anatomy and Physiology *', 'BIOL 261S - Comparative Physiology at St. Andrews *'],
-      ['BIOL 215 - Biochemistry of the Cell', 'BIOL 215S - Biochemistry at St. Andrews'],
-      ['BIOL 240 - Comparative Animal Biology', 'BIOL 240S - Zoology at St. Andrews'],
-      ['BIOL 245 - Ecology', 'BIOL 245S - Ecology at St Andrews'],
-      ['BIOL 260 - Anatomy and Physiology', 'BIOL 261S - Comparative Physiology at St. Andrews'],
-      ['CHEM 260 - Physical Chemistry of Biological Systems', 'CHEM 261 - Physical Chemistry: Quantum & Computational Chemistry'],
-      ['CSCI 111 - Introduction to Computer Science', 'CSCI 121 - Scientific Computing'],
-      ['MUS 473 - Senior Thesis', 'MUS 493 - Honors Thesis'],
-      ['BIOL 220 - Genetics', 'BIOL 230 - Cell Biology or BIOL 211S - Cell Biology at St. Andrews'],
-      ['BIOL 201 - Statistics for Biology and Medicine', 'CBSC 250 - Statistics and Research Design']
-    ];
 
     const courses = requirement.courses || [];
     const altPairs: [string, string][] = [];
@@ -155,7 +124,7 @@ const RequirementStep: React.FC<{
       <div className="roadmap-content">
         <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
           <h3 className="roadmap-title" dangerouslySetInnerHTML={{ __html: requirement.label }} />
-          {((isVocal || isInstrumental || isBusinessJournalism || isJournalism) && handleToggleEmphasis) && (
+          {(track && showTrackToggle && handleToggleEmphasis) && (
             <button
               style={{ 
                 background: isIgnored ? 'rgba(255, 255, 255, 0.1)' : 'rgba(255, 0, 0, 0.2)', 
@@ -167,12 +136,7 @@ const RequirementStep: React.FC<{
                 fontWeight: 600, 
                 fontSize: '0.8rem' 
               }}
-              onClick={() => handleToggleEmphasis(
-                isVocal ? 'vocal' : 
-                isInstrumental ? 'instrumental' : 
-                isBusinessJournalism ? 'businessJournalism' :
-                'journalism'
-              )}
+              onClick={() => handleToggleEmphasis(track)}
               type="button"
             >
               {isIgnored ? 'CONSIDER' : 'NOT CONSIDERING'}
@@ -185,9 +149,17 @@ const RequirementStep: React.FC<{
   );
 });
 
-const Roadmap: React.FC<RoadmapProps> = memo(({ requirements, checked, creditProgress, onToggle, onCreditsChange, ignoredEmphases, handleToggleEmphasis }) => {
+const Roadmap: React.FC<RoadmapProps> = memo(({ requirements, checked, creditProgress, onToggle, onCreditsChange, majorName, ignoredEmphases, handleToggleEmphasis }) => {
   // Detect if this is Computer Science (BA)
-  const isCSBA = requirements.length === 5 && requirements.some(r => r.label === 'Required Courses' && r.courses?.includes('CSCI 111 - Introduction to Computer Science'));
+  const isCSBA = majorName === 'Computer Science (BA)';
+  // one toggle per track, rendered on that track's first requirement
+  const seenTracks = new Set<string>();
+  const trackToggleAt = requirements.map(req => {
+    const t = trackFor(majorName, req.label);
+    if (!t || seenTracks.has(t)) return false;
+    seenTracks.add(t);
+    return true;
+  });
 
   return (
     <div className="elegant-roadmap" role="list">
@@ -202,6 +174,8 @@ const Roadmap: React.FC<RoadmapProps> = memo(({ requirements, checked, creditPro
           onCreditsChange={onCreditsChange}
           isEven={idx % 2 === 0}
           className={isCSBA ? 'csba-step' : ''}
+          majorName={majorName}
+          showTrackToggle={trackToggleAt[idx]}
           ignoredEmphases={ignoredEmphases}
           handleToggleEmphasis={handleToggleEmphasis}
         />

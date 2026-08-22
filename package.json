@@ -3,6 +3,7 @@
     "@vercel/node": "^5.1.15"
   },
   "dependencies": {
+    "@vercel/analytics": "^1.5.0",
     "react-router-dom": "^6.30.0"
   }
 }

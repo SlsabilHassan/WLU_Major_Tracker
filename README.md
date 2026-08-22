@@ -73,6 +73,9 @@ npm start
 ## Features in Detail
 
 ### Major Requirements
+- Sourced from the **2026-2027 W&L Undergraduate Catalog** (all 44 B.A./B.S. majors)
+- Course numbers use the current four-digit scheme, with the pre-2026 number shown in
+  parentheses (e.g. `ECON 2010 (formerly 210) - Microeconomic Theory`)
 - Comprehensive coverage of all W&L majors
 - Support for various requirement types:
   - Required courses (all)
@@ -107,8 +110,3 @@ npm start
 ## License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
-
-## Acknowledgments
-
-- Washington & Lee University for providing the major requirements data
-- The React and TypeScript communities for their excellent documentation and tools
