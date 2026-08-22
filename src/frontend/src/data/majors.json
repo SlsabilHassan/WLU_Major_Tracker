@@ -435,7 +435,7 @@
         ]
       },
       {
-        "type": "all",
+        "type": "n_of",
         "label": "Advanced Level Courses",
         "courses": [
           "BIOL 3001 (formerly 302) - Modern Computational Biostatistics",
@@ -456,7 +456,9 @@
           "BIOL 3690 - Ecophysiology *",
           "BIOL 3905 (formerly 395) - Advanced Topics in Biology",
           "BIOL 3996 (formerly 398) - Selected Topics in Ecology and Evolution"
-        ]
+        ],
+        "n": 3,
+        "notes": "Take at least three courses from this list, at least one of which must be a laboratory course (marked *)."
       },
       {
         "type": "n_of",
@@ -958,24 +960,18 @@
     "major": "Classics (BA)",
     "requirements": [
       {
-        "type": "all",
+        "type": "credits",
         "label": "Greek and Latin",
-        "courses": [
-          "Choose at least 18 credits in Greek and/or Latin. No more than 6 credits can be at the 1000-level and at least 6 credits must be at the 3000-level."
-        ]
+        "credits": 18,
+        "unit": "credits",
+        "notes": "Choose at least 18 credits in Greek and/or Latin. No more than 6 credits can be at the 1000-level and at least 6 credits must be at the 3000-level."
       },
       {
-        "type": "all",
+        "type": "credits",
         "label": "Electives",
-        "courses": [
-          "Any Greek course not fulfilling the previous requirement",
-          "Any Latin course not fulfilling the previous requirement",
-          "Any Classics course",
-          "PHIL 1140 (formerly 110) - Ancient Greek Philosophy",
-          "PHIL 2260 (formerly 222) - Aristotle",
-          "REL 1002 (formerly 102) - New Testament",
-          "ENGL 2906 (formerly 296) - Topics in Countertraditions (LJS 2906)"
-        ]
+        "credits": 15,
+        "unit": "credits",
+        "notes": "Choose 15 additional credits from:<ul><li>Any Greek course not fulfilling the previous requirement</li><li>Any Latin course not fulfilling the previous requirement</li><li>Any Classics course</li><li>PHIL 1140 (formerly 110) - Ancient Greek Philosophy</li><li>PHIL 2260 (formerly 222) - Aristotle</li><li>REL 1002 (formerly 102) - New Testament</li><li>ENGL 2906 (formerly 296) - Topics in Countertraditions (LJS 2906)</li></ul>"
       },
       {
         "type": "note",
@@ -1319,75 +1315,76 @@
     "major": "Creative Writing (BA)",
     "requirements": [
       {
-        "type": "all",
+        "type": "credits",
         "label": "Workshop Courses",
-        "courses": [
-          "At least one course must be at the 2000-level, numbered ENGL 2001-2199.",
-          "At least two courses must be at the 3000-level, numbered ENGL 3001-3099.",
-          "One course may be at either the 2000 or 3000-level."
-        ]
+        "credits": 4,
+        "unit": "courses",
+        "notes": "Choose at least four Creative Writing workshop courses.<ul><li>At least one course must be at the 2000-level, numbered ENGL 2001-2199.</li><li>At least two courses must be at the 3000-level, numbered ENGL 3001-3099.</li><li>One course may be at either the 2000 or 3000-level.</li></ul>"
       },
       {
-        "type": "all",
-        "label": "Literature Courses",
-        "courses": [
-          "One may be at either the 1000- or 2000-level.",
-          "One must be at the 2000-level, numbered 2200 to 2999.",
-          "At least two must be at the 3000-level, numbered 3100 to 3999.",
-          "At least one must also be designated literature before 1800 (included in the below list)",
-          "At least one must also be designated Countertraditions (included in the below list)"
-        ]
+        "type": "group",
+        "label": "Literature Courses — required designations",
+        "groups": [
+          {
+            "label": "Literature Before 1800",
+            "n": 1,
+            "courses": [
+              "ENGL 2308 (formerly 236) - The Bible as English Literature",
+              "ENGL 2309 (formerly 237) - The Bible as Literature: Exile and Return",
+              "ENGL 2325 (formerly 240) - Arthurian Legend",
+              "ENGL 2362 (formerly 242) - Individual Shakespeare Play",
+              "ENGL 2320 (formerly 250) - Medieval and Early Modern British Literature",
+              "ENGL 2352 (formerly 252) - Shakespeare",
+              "ENGL 3321 (formerly 312) - Gender, Love, and Marriage in the Middle Ages",
+              "ENGL 3331 (formerly 313) - Chaucer’s The Canterbury Tales",
+              "ENGL 3328 (formerly 315) - Arthurian Bodies, Desires, and Affects",
+              "ENGL 3351 (formerly 316) - The Tudors",
+              "ENGL 3372 (formerly 319) - Shakespeare and Company",
+              "ENGL 3362 (formerly 320) - Shakespearean Genres",
+              "ENGL 3364 (formerly 326) - 17th-Century Poetry",
+              "ENGL 3374 (formerly 330) - Milton",
+              "ENGL 3383 (formerly 335) - 18th-Century Novels",
+              "ENGL 3358 (formerly 386) - Supervised Study in Great Britain",
+              "ENGL 4003 (formerly 403) - Directed Individual Study"
+            ]
+          },
+          {
+            "label": "Countertraditions",
+            "n": 1,
+            "courses": [
+              "ENGL 2605 (formerly 244) - Health, Care, and Compassion on Stage and Screen",
+              "ENGL 2320 (formerly 250) - Medieval and Early Modern British Literature",
+              "ENGL 2352 (formerly 252) - Shakespeare",
+              "ENGL 2863 (formerly 262) - Literature, Race, and Ethnicity",
+              "ENGL 2881 (formerly 263) - Nature as Self: Environmental Literature in the Anthropocene",
+              "ENGL 2877 (formerly 264) - The Body Electric: Queer Theory, Film, and Text",
+              "ENGL 2867 (formerly 265) - Constructing Black Lives in Film and Literature",
+              "ENGL 2860 (formerly 266) - Introduction to African American Literature",
+              "ENGL 3321 (formerly 312) - Gender, Love, and Marriage in the Middle Ages",
+              "ENGL 3328 (formerly 315) - Arthurian Bodies, Desires, and Affects",
+              "ENGL 3434 (formerly 356) - Whitman vs Dickinson",
+              "ENGL 3878 (formerly 361) - Native American Literatures",
+              "ENGL 3603 (formerly 363) - Modern Poetry’s Media",
+              "ENGL 3865 (formerly 366) - African-American Literature",
+              "ENGL 3604 (formerly 364) - Poetry and Authenticity",
+              "ENGL 3891 (formerly 382) - Hotel Orient",
+              "ENGL 3935 (formerly 395) - Topics in Literature in English in Counter Traditions",
+              "ENGL 2907 (formerly 295) - Spring-Term Seminar in Literary Studies",
+              "ENGL 2906 (formerly 296) - Topics in Countertraditions",
+              "ENGL 3915 (formerly 392) - Topics in Literature in English before 1800",
+              "ENGL 3925 (formerly 394) - Topics in Literature in English since 1800",
+              "ENGL 4003 (formerly 403) - Directed Individual Study"
+            ]
+          }
+        ],
+        "notes": "Choose at least four literature courses. At least one must be designated Literature Before 1800 and at least one Countertraditions; these count toward the four.<ul><li>One may be at either the 1000- or 2000-level.</li><li>One must be at the 2000-level, numbered 2200 to 2999.</li><li>At least two must be at the 3000-level, numbered 3100 to 3999.</li><li>At least one must also be designated literature before 1800 (included in the below list)</li><li>At least one must also be designated Countertraditions (included in the below list)</li></ul>"
       },
       {
-        "type": "all",
-        "label": "Literature Courses — Literature Before 1800",
-        "courses": [
-          "ENGL 2308 (formerly 236) - The Bible as English Literature",
-          "ENGL 2309 (formerly 237) - The Bible as Literature: Exile and Return",
-          "ENGL 2325 (formerly 240) - Arthurian Legend",
-          "ENGL 2362 (formerly 242) - Individual Shakespeare Play",
-          "ENGL 2320 (formerly 250) - Medieval and Early Modern British Literature",
-          "ENGL 2352 (formerly 252) - Shakespeare",
-          "ENGL 3321 (formerly 312) - Gender, Love, and Marriage in the Middle Ages",
-          "ENGL 3331 (formerly 313) - Chaucer’s The Canterbury Tales",
-          "ENGL 3328 (formerly 315) - Arthurian Bodies, Desires, and Affects",
-          "ENGL 3351 (formerly 316) - The Tudors",
-          "ENGL 3372 (formerly 319) - Shakespeare and Company",
-          "ENGL 3362 (formerly 320) - Shakespearean Genres",
-          "ENGL 3364 (formerly 326) - 17th-Century Poetry",
-          "ENGL 3374 (formerly 330) - Milton",
-          "ENGL 3383 (formerly 335) - 18th-Century Novels",
-          "ENGL 3358 (formerly 386) - Supervised Study in Great Britain",
-          "ENGL 4003 (formerly 403) - Directed Individual Study"
-        ]
-      },
-      {
-        "type": "all",
-        "label": "Literature Courses — Countertraditions",
-        "courses": [
-          "ENGL 2605 (formerly 244) - Health, Care, and Compassion on Stage and Screen",
-          "ENGL 2320 (formerly 250) - Medieval and Early Modern British Literature",
-          "ENGL 2352 (formerly 252) - Shakespeare",
-          "ENGL 2863 (formerly 262) - Literature, Race, and Ethnicity",
-          "ENGL 2881 (formerly 263) - Nature as Self: Environmental Literature in the Anthropocene",
-          "ENGL 2877 (formerly 264) - The Body Electric: Queer Theory, Film, and Text",
-          "ENGL 2867 (formerly 265) - Constructing Black Lives in Film and Literature",
-          "ENGL 2860 (formerly 266) - Introduction to African American Literature",
-          "ENGL 3321 (formerly 312) - Gender, Love, and Marriage in the Middle Ages",
-          "ENGL 3328 (formerly 315) - Arthurian Bodies, Desires, and Affects",
-          "ENGL 3434 (formerly 356) - Whitman vs Dickinson",
-          "ENGL 3878 (formerly 361) - Native American Literatures",
-          "ENGL 3603 (formerly 363) - Modern Poetry’s Media",
-          "ENGL 3865 (formerly 366) - African-American Literature",
-          "ENGL 3604 (formerly 364) - Poetry and Authenticity",
-          "ENGL 3891 (formerly 382) - Hotel Orient",
-          "ENGL 3935 (formerly 395) - Topics in Literature in English in Counter Traditions",
-          "ENGL 2907 (formerly 295) - Spring-Term Seminar in Literary Studies",
-          "ENGL 2906 (formerly 296) - Topics in Countertraditions",
-          "ENGL 3915 (formerly 392) - Topics in Literature in English before 1800",
-          "ENGL 3925 (formerly 394) - Topics in Literature in English since 1800",
-          "ENGL 4003 (formerly 403) - Directed Individual Study"
-        ]
+        "type": "credits",
+        "label": "Literature Courses — remaining two",
+        "credits": 2,
+        "unit": "courses",
+        "notes": "The other two of the four literature courses, per the guidelines above."
       },
       {
         "type": "n_of",
@@ -1426,39 +1423,28 @@
         ]
       },
       {
-        "type": "all",
+        "type": "credits",
         "label": "2000-Level Laboratory Courses",
-        "courses": [
-          "Choose at least three courses (twelve credits) in 2000-level EEG laboratory courses."
-        ]
+        "notes": "Choose at least three courses (twelve credits) in 2000-level EEG laboratory courses.",
+        "credits": 3,
+        "unit": "courses"
       },
       {
-        "type": "all",
+        "type": "credits",
         "label": "3000-Level Courses",
-        "courses": [
-          "Choose at least two EEG courses (6-8 credits) in 3000-level (excluding EEG 3900 and EEG 3905)."
-        ]
+        "notes": "Choose at least two EEG courses (6-8 credits) in 3000-level (excluding EEG 3900 and EEG 3905).",
+        "credits": 2,
+        "unit": "courses"
       },
       {
-        "type": "all",
+        "type": "note",
         "label": "Earth and Environmental Geoscience Electives",
-        "courses": [
-          "Choose additional EEG courses at the 1000, 2000, or 3000-level to reach the 28 credit EEG requirement. Only one 1000-level EEG laboratory course may count toward the major."
-        ]
+        "notes": "Choose additional EEG courses at the 1000, 2000, or 3000-level to reach the 28 credit EEG requirement. Only one 1000-level EEG laboratory course may count toward the major."
       },
       {
-        "type": "all",
+        "type": "note",
         "label": "Electives",
-        "courses": [
-          "EEG (any level, excluding summer research credits);",
-          "ENGN 1710 or higher;",
-          "MATH 1220 or higher;",
-          "BIOL 1005 or higher;",
-          "CHEM 1204 or higher;",
-          "CSCI 1100 or higher;",
-          "PHYS 1101 or higher;",
-          "ECON 2003;"
-        ]
+        "notes": "<ul><li>EEG (any level, excluding summer research credits);</li><li>ENGN 1710 or higher;</li><li>MATH 1220 or higher;</li><li>BIOL 1005 or higher;</li><li>CHEM 1204 or higher;</li><li>CSCI 1100 or higher;</li><li>PHYS 1101 or higher;</li><li>ECON 2003;</li></ul>"
       },
       {
         "type": "all",
@@ -1502,25 +1488,23 @@
         ]
       },
       {
-        "type": "all",
+        "type": "credits",
         "label": "2000-Level Laboratory Courses",
-        "courses": [
-          "Choose at least four courses (sixteen credits) in 2000-level EEG laboratory courses."
-        ]
+        "notes": "Choose at least four courses (sixteen credits) in 2000-level EEG laboratory courses.",
+        "credits": 4,
+        "unit": "courses"
       },
       {
-        "type": "all",
+        "type": "credits",
         "label": "3000-Level Courses",
-        "courses": [
-          "Choose at least three EEG courses (9-12 credits) in 3000-level (excluding EEG 3900 and EEG 3905)."
-        ]
+        "notes": "Choose at least three EEG courses (9-12 credits) in 3000-level (excluding EEG 3900 and EEG 3905).",
+        "credits": 3,
+        "unit": "courses"
       },
       {
-        "type": "all",
+        "type": "note",
         "label": "Earth and Environmental Geoscience Electives",
-        "courses": [
-          "Choose additional EEG courses at the 1000, 2000, or 3000-level to reach the 36 credit EEG requirement. Only one 1000-level EEG laboratory course may count toward the major."
-        ]
+        "notes": "Choose additional EEG courses at the 1000, 2000, or 3000-level to reach the 36 credit EEG requirement. Only one 1000-level EEG laboratory course may count toward the major."
       },
       {
         "type": "n_of",
@@ -1538,23 +1522,9 @@
         ]
       },
       {
-        "type": "all",
+        "type": "note",
         "label": "Electives",
-        "courses": [
-          "EEG (any level, excluding summer research credits);",
-          "ENGN 1710 (formerly 178) - Introduction to Engineering or higher",
-          "MATH 1220 (formerly 102) - Calculus II or higher",
-          "BIOL 1005 (formerly 105) - Introduction to Behavioral Ecology or higher",
-          "CHEM 1204 (formerly 109/110/115) - General Chemistry or higher",
-          "CSCI 1100 (formerly 111) - Introduction to Computer Science or higher",
-          "PHYS 1101 (formerly 111) - General Physics I or higher",
-          "ECON 2003 (formerly 203) - Econometrics",
-          "BUS 2002 (formerly 202) - Fundamentals of Business Analytics",
-          "CBSC 2500 (formerly 250) - Statistics and Research Design",
-          "ECON 2002 (formerly 202) - Data Analytics for Economics",
-          "POL 2002 (formerly 202) - Applied Statistics",
-          "SOAN 2002 (formerly 218) - Basic Statistics in the Social Sciences"
-        ]
+        "notes": "<ul><li>EEG (any level, excluding summer research credits);</li><li>ENGN 1710 (formerly 178) - Introduction to Engineering or higher</li><li>MATH 1220 (formerly 102) - Calculus II or higher</li><li>BIOL 1005 (formerly 105) - Introduction to Behavioral Ecology or higher</li><li>CHEM 1204 (formerly 109/110/115) - General Chemistry or higher</li><li>CSCI 1100 (formerly 111) - Introduction to Computer Science or higher</li><li>PHYS 1101 (formerly 111) - General Physics I or higher</li><li>ECON 2003 (formerly 203) - Econometrics</li><li>BUS 2002 (formerly 202) - Fundamentals of Business Analytics</li><li>CBSC 2500 (formerly 250) - Statistics and Research Design</li><li>ECON 2002 (formerly 202) - Data Analytics for Economics</li><li>POL 2002 (formerly 202) - Applied Statistics</li><li>SOAN 2002 (formerly 218) - Basic Statistics in the Social Sciences</li></ul>"
       },
       {
         "type": "all",
@@ -1613,55 +1583,55 @@
         ]
       },
       {
-        "type": "credits",
+        "type": "group",
         "label": "Chinese — China or East Asia Electives",
-        "credits": 2,
-        "notes": "Complete two additional courses on China or East Asia from the following lists as described below.",
-        "unit": "courses"
-      },
-      {
-        "type": "all",
-        "label": "Chinese — China or East Asia Electives — At least one course must be chosen",
-        "courses": [
-          "EALL 1905 (formerly 195) - Special Topics in East Asian Languages and Literature",
-          "EALL 2205 - Celestial Empire, Imagined Futures: Science Fiction and the Making of Modern China",
-          "EALL 2210 - Chinese Literature of Reclusion",
-          "EALL 2215 (formerly 215) - East Asian Cinema",
-          "EALL 2225 - Medieval Chinese Ghost Stories",
-          "EALL 2230 - From Harmony to Crisis: Nature and Environment in Chinese Literature and Film",
-          "EALL 4903 (formerly 493) - Honors Thesis",
-          "CHIN 1005 (formerly 105) - Supervised Study Abroad: Beginning Chinese",
-          "CHIN 1105 (formerly 115) - Supervised Study Abroad: First-Year Chinese",
-          "CHIN 2105 (formerly 265) - Supervised Study Abroad: Second-Year Chinese",
-          "CHIN 3105 (formerly 365) - Supervised Study Abroad: 3rd- or 4th-Year Chinese",
-          "(4 credits total from the Supervised Study Abroad group of courses)",
-          "CHIN 3305 (formerly 305) - Introduction to Business and Legal Chinese",
-          "CHIN 3315 (formerly 315) - Introduction to Classical Chinese",
-          "CHIN 4001 (formerly 401) - Directed Individual Study",
-          "CHIN 4002 (formerly 402) - Directed Individual Study",
-          "CHIN 4003 (formerly 403) - Directed Individual Study",
-          "LIT 2201 (formerly 221) - Japanese Literature in Translation",
-          "LIT 2202 (formerly 222) - Real and Imaginary Animals in Japanese Literature, Film, Anime, and Theater",
-          "LIT 2203 (formerly 223) - Seminar in Japanese Literature in Translation",
-          "LIT 2205 (formerly 225) - Poetry and Drama of Japan in Translation",
-          "LIT 2905 (formerly 295) - Special Topics in Literature in Translation"
-        ]
-      },
-      {
-        "type": "all",
-        "label": "Chinese — China or East Asia Electives — Maximum of one course may be taken for credit toward the major",
-        "courses": [
-          "ARTH 1400 (formerly 140) - Asian Art",
-          "ARTH 2400 (formerly 240) - Arts of China",
-          "ARTH 2401 (formerly 241) - The Arts of Japan",
-          "ECON 2725 (formerly 274) - China’s Modern Economy",
-          "HIST 1801 (formerly 104) - Japan: Origins to Atomic Aftermath",
-          "HIST 1803 (formerly 103) - China: Origins to 20th-Century Reforms",
-          "PHIL 1180 (formerly 130) - Classical Chinese Philosophy",
-          "PHIL 2280 (formerly 223) - Buddhist Philosophy",
-          "POL 2207 (formerly 227) - East Asian Politics",
-          "REL 1003 (formerly 103) - Introduction to Asian Religions",
-          "REL 1031 (formerly 131) - Buddhism"
+        "notes": "Complete two additional courses on China or East Asia: at least one from the first list, and at most one from the second.",
+        "groups": [
+          {
+            "label": "At most one from this list",
+            "n": 1,
+            "courses": [
+              "EALL 1905 (formerly 195) - Special Topics in East Asian Languages and Literature",
+              "EALL 2205 - Celestial Empire, Imagined Futures: Science Fiction and the Making of Modern China",
+              "EALL 2210 - Chinese Literature of Reclusion",
+              "EALL 2215 (formerly 215) - East Asian Cinema",
+              "EALL 2225 - Medieval Chinese Ghost Stories",
+              "EALL 2230 - From Harmony to Crisis: Nature and Environment in Chinese Literature and Film",
+              "EALL 4903 (formerly 493) - Honors Thesis",
+              "CHIN 1005 (formerly 105) - Supervised Study Abroad: Beginning Chinese",
+              "CHIN 1105 (formerly 115) - Supervised Study Abroad: First-Year Chinese",
+              "CHIN 2105 (formerly 265) - Supervised Study Abroad: Second-Year Chinese",
+              "CHIN 3105 (formerly 365) - Supervised Study Abroad: 3rd- or 4th-Year Chinese",
+              "(4 credits total from the Supervised Study Abroad group of courses)",
+              "CHIN 3305 (formerly 305) - Introduction to Business and Legal Chinese",
+              "CHIN 3315 (formerly 315) - Introduction to Classical Chinese",
+              "CHIN 4001 (formerly 401) - Directed Individual Study",
+              "CHIN 4002 (formerly 402) - Directed Individual Study",
+              "CHIN 4003 (formerly 403) - Directed Individual Study",
+              "LIT 2201 (formerly 221) - Japanese Literature in Translation",
+              "LIT 2202 (formerly 222) - Real and Imaginary Animals in Japanese Literature, Film, Anime, and Theater",
+              "LIT 2203 (formerly 223) - Seminar in Japanese Literature in Translation",
+              "LIT 2205 (formerly 225) - Poetry and Drama of Japan in Translation",
+              "LIT 2905 (formerly 295) - Special Topics in Literature in Translation"
+            ]
+          },
+          {
+            "label": "At most one from this list",
+            "n": 1,
+            "courses": [
+              "ARTH 1400 (formerly 140) - Asian Art",
+              "ARTH 2400 (formerly 240) - Arts of China",
+              "ARTH 2401 (formerly 241) - The Arts of Japan",
+              "ECON 2725 (formerly 274) - China’s Modern Economy",
+              "HIST 1801 (formerly 104) - Japan: Origins to Atomic Aftermath",
+              "HIST 1803 (formerly 103) - China: Origins to 20th-Century Reforms",
+              "PHIL 1180 (formerly 130) - Classical Chinese Philosophy",
+              "PHIL 2280 (formerly 223) - Buddhist Philosophy",
+              "POL 2207 (formerly 227) - East Asian Politics",
+              "REL 1003 (formerly 103) - Introduction to Asian Religions",
+              "REL 1031 (formerly 131) - Buddhism"
+            ]
+          }
         ]
       },
       {
@@ -1704,55 +1674,55 @@
         ]
       },
       {
-        "type": "credits",
+        "type": "group",
         "label": "Japanese — Japan or East Asia Electives",
-        "credits": 2,
-        "notes": "Complete two additional courses on Japan or East Asia from the following lists as described below",
-        "unit": "courses"
-      },
-      {
-        "type": "all",
-        "label": "Japanese — Japan or East Asia Electives — At least one course must be chosen",
-        "courses": [
-          "EALL 1175 (formerly 175) - Cool Japan: Manga, Business Etiquette, Language, and Culture",
-          "EALL 2205 - Celestial Empire, Imagined Futures: Science Fiction and the Making of Modern China",
-          "EALL 2210 - Chinese Literature of Reclusion",
-          "EALL 2215 (formerly 215) - East Asian Cinema",
-          "EALL 2225 - Medieval Chinese Ghost Stories",
-          "EALL 2230 - From Harmony to Crisis: Nature and Environment in Chinese Literature and Film",
-          "EALL 4903 (formerly 493) - Honors Thesis",
-          "JAPN 1005 (formerly 100) - Supervised Study Abroad: Beginning Japanese",
-          "JAPN 1105 (formerly 115) - Supervised Study Abroad: First-Year Japanese",
-          "JAPN 2105 (formerly 265) - Supervised Study Abroad: Second-Year Japanese",
-          "JAPN 3105 (formerly 365) - Supervised Study Abroad: Third-Year Japanese",
-          "(4 credits total from the Supervised Study Abroad group of courses)",
-          "JAPN 4001 (formerly 401) - Directed Individual Study",
-          "JAPN 4002 (formerly 402) - Directed Individual Study",
-          "JAPN 4003 (formerly 403) - Directed Individual Study",
-          "LIT 2108 (formerly 218) - Pre-Modern Chinese Literature in Translation",
-          "LIT 2200 (formerly 220) - Modern Chinese Literature in Translation",
-          "LIT 2201 (formerly 221) - Japanese Literature in Translation",
-          "LIT 2202 (formerly 222) - Real and Imaginary Animals in Japanese Literature, Film, Anime, and Theater",
-          "LIT 2203 (formerly 223) - Seminar in Japanese Literature in Translation",
-          "LIT 2205 (formerly 225) - Poetry and Drama of Japan in Translation",
-          "LIT 2905 (formerly 295) - Special Topics in Literature in Translation"
-        ]
-      },
-      {
-        "type": "all",
-        "label": "Japanese — Japan or East Asia Electives — Maximum of one course may be taken for credit toward the major",
-        "courses": [
-          "ARTH 1400 (formerly 140) - Asian Art",
-          "ARTH 2400 (formerly 240) - Arts of China",
-          "ARTH 2401 (formerly 241) - The Arts of Japan",
-          "ECON 2725 (formerly 274) - China’s Modern Economy",
-          "HIST 1801 (formerly 104) - Japan: Origins to Atomic Aftermath",
-          "HIST 1803 (formerly 103) - China: Origins to 20th-Century Reforms",
-          "PHIL 1180 (formerly 130) - Classical Chinese Philosophy",
-          "PHIL 2280 (formerly 223) - Buddhist Philosophy",
-          "POL 2207 (formerly 227) - East Asian Politics",
-          "REL 1003 (formerly 103) - Introduction to Asian Religions",
-          "REL 1031 (formerly 131) - Buddhism"
+        "notes": "Complete two additional courses on Japan or East Asia: at least one from the first list, and at most one from the second.",
+        "groups": [
+          {
+            "label": "At most one from this list",
+            "n": 1,
+            "courses": [
+              "EALL 1175 (formerly 175) - Cool Japan: Manga, Business Etiquette, Language, and Culture",
+              "EALL 2205 - Celestial Empire, Imagined Futures: Science Fiction and the Making of Modern China",
+              "EALL 2210 - Chinese Literature of Reclusion",
+              "EALL 2215 (formerly 215) - East Asian Cinema",
+              "EALL 2225 - Medieval Chinese Ghost Stories",
+              "EALL 2230 - From Harmony to Crisis: Nature and Environment in Chinese Literature and Film",
+              "EALL 4903 (formerly 493) - Honors Thesis",
+              "JAPN 1005 (formerly 100) - Supervised Study Abroad: Beginning Japanese",
+              "JAPN 1105 (formerly 115) - Supervised Study Abroad: First-Year Japanese",
+              "JAPN 2105 (formerly 265) - Supervised Study Abroad: Second-Year Japanese",
+              "JAPN 3105 (formerly 365) - Supervised Study Abroad: Third-Year Japanese",
+              "(4 credits total from the Supervised Study Abroad group of courses)",
+              "JAPN 4001 (formerly 401) - Directed Individual Study",
+              "JAPN 4002 (formerly 402) - Directed Individual Study",
+              "JAPN 4003 (formerly 403) - Directed Individual Study",
+              "LIT 2108 (formerly 218) - Pre-Modern Chinese Literature in Translation",
+              "LIT 2200 (formerly 220) - Modern Chinese Literature in Translation",
+              "LIT 2201 (formerly 221) - Japanese Literature in Translation",
+              "LIT 2202 (formerly 222) - Real and Imaginary Animals in Japanese Literature, Film, Anime, and Theater",
+              "LIT 2203 (formerly 223) - Seminar in Japanese Literature in Translation",
+              "LIT 2205 (formerly 225) - Poetry and Drama of Japan in Translation",
+              "LIT 2905 (formerly 295) - Special Topics in Literature in Translation"
+            ]
+          },
+          {
+            "label": "At most one from this list",
+            "n": 1,
+            "courses": [
+              "ARTH 1400 (formerly 140) - Asian Art",
+              "ARTH 2400 (formerly 240) - Arts of China",
+              "ARTH 2401 (formerly 241) - The Arts of Japan",
+              "ECON 2725 (formerly 274) - China’s Modern Economy",
+              "HIST 1801 (formerly 104) - Japan: Origins to Atomic Aftermath",
+              "HIST 1803 (formerly 103) - China: Origins to 20th-Century Reforms",
+              "PHIL 1180 (formerly 130) - Classical Chinese Philosophy",
+              "PHIL 2280 (formerly 223) - Buddhist Philosophy",
+              "POL 2207 (formerly 227) - East Asian Politics",
+              "REL 1003 (formerly 103) - Introduction to Asian Religions",
+              "REL 1031 (formerly 131) - Buddhism"
+            ]
+          }
         ]
       },
       {
@@ -3601,93 +3571,86 @@
         ]
       },
       {
-        "type": "all",
-        "label": "Electives",
-        "courses": [
-          "Completion of at least five additional courses selected from the following categories. Students must take a minimum of one course from each sub-discipline."
-        ]
+        "type": "group",
+        "label": "Electives — one from each sub-discipline",
+        "groups": [
+          {
+            "label": "Cellular and Molecular Neuroscience",
+            "n": 1,
+            "courses": [
+              "BIOL 2220 (formerly 220) - Genetics",
+              "BIOL 2110 (formerly 211) - Cell Biology",
+              "BIOL 2110S (formerly 211S) - Cell Biology at St. Andrews",
+              "BIOL 3670 (formerly 250) - Vertebrate Endocrinology",
+              "BIOL 2680 (formerly 280) - Neural Imaging",
+              "BIOL 3650 (formerly 365) - Developmental Biology",
+              "CBSC 3160 (formerly 316) - Neuropharmacology",
+              "CHEM 3413 (formerly 341) - Biochemistry I",
+              "NEUR 3905 (formerly 395) - Special Topics in Cellular and Molecular Neuroscience"
+            ]
+          },
+          {
+            "label": "Computational Neuroscience",
+            "n": 1,
+            "courses": [
+              "BIOL 1185 (formerly 185) - Data Science: Visualizing and Exploring Big Data",
+              "BIOL 1187 (formerly 187) - Introduction to Data Science in Python",
+              "BIOL 2780 (formerly 282) - Modeling and Simulations in Public Health",
+              "BIOL 3001 (formerly 302) - Modern Computational Biostatistics",
+              "BIOL 3657 (formerly 357) - A Walk Through the Ages: Using Artificial Intelligence to Understand the Evolution of Exercise",
+              "CSCI 2600 (formerly 230) - Introduction to Machine Learning and Big Data",
+              "CSCI 2610 (formerly 252) - Neuromorphic Computing",
+              "CSCI 2550 (formerly 256) - Modeling and Simulation",
+              "CBSC 3090 (formerly 309) - Data Science: Mind Analytics",
+              "CSCI 3600 (formerly 315) - Artificial Intelligence"
+            ]
+          },
+          {
+            "label": "Systems Neuroscience",
+            "n": 1,
+            "courses": [
+              "BIOL 2655 (formerly 255) - Reproductive Physiology",
+              "BIOL 2750 (formerly 275) - Food for Thought",
+              "BIOL 2785 (formerly 283) - Pregnancy: A KISS in Time?",
+              "BIOL 3660 (formerly 360) - Experimental Neurophysiology",
+              "BIOL 3620 (formerly 362) - Animal Physiology",
+              "BIOL 3665 (formerly 397) - Neuroendocrinology",
+              "CBSC 3110 - Hormones and Social Behavior",
+              "CBSC 3130 (formerly 313) - Neural Mechanisms of Motivated Behaviors",
+              "CBSC 3170 (formerly 317) - Sleep and Circadian Rhythms in Health and Disease",
+              "ENGN 2570 (formerly 267) - Bioengineering and Bioinspired Design (BIOL 2755)"
+            ]
+          },
+          {
+            "label": "Cognitive and Behavioral Neuroscience",
+            "n": 1,
+            "courses": [
+              "BIOL 2430 (formerly 243) - Animal Behavior",
+              "CBSC 3110 - Hormones and Social Behavior",
+              "CBSC 3120 (formerly 312) - Sensation Measurement and Perception",
+              "CBSC 3140 (formerly 314) - Attention",
+              "CBSC 3150 (formerly 315) - Cognitive Neuroscience",
+              "CBSC 3190 (formerly 319) - Cognition and Emotion",
+              "PHIL 2820 (formerly 282) - Philosophy of Biology",
+              "PHIL 3780 (formerly 375) - Philosophy of Mind"
+            ]
+          }
+        ],
+        "notes": "Complete at least five additional courses from these categories, including a minimum of one from each sub-discipline."
       },
       {
-        "type": "all",
-        "label": "Electives — Cellular and Molecular Neuroscience",
-        "courses": [
-          "BIOL 2220 (formerly 220) - Genetics",
-          "BIOL 2110 (formerly 211) - Cell Biology",
-          "BIOL 2110S (formerly 211S) - Cell Biology at St. Andrews",
-          "BIOL 3670 (formerly 250) - Vertebrate Endocrinology",
-          "BIOL 2680 (formerly 280) - Neural Imaging",
-          "BIOL 3650 (formerly 365) - Developmental Biology",
-          "CBSC 3160 (formerly 316) - Neuropharmacology",
-          "CHEM 3413 (formerly 341) - Biochemistry I",
-          "NEUR 3905 (formerly 395) - Special Topics in Cellular and Molecular Neuroscience"
-        ]
+        "type": "credits",
+        "label": "Electives — fifth course",
+        "credits": 1,
+        "unit": "courses",
+        "notes": "The fifth elective may come from any of the four sub-disciplines above."
       },
       {
-        "type": "all",
-        "label": "Electives — Computational Neuroscience",
-        "courses": [
-          "BIOL 1185 (formerly 185) - Data Science: Visualizing and Exploring Big Data",
-          "BIOL 1187 (formerly 187) - Introduction to Data Science in Python",
-          "BIOL 2780 (formerly 282) - Modeling and Simulations in Public Health",
-          "BIOL 3001 (formerly 302) - Modern Computational Biostatistics",
-          "BIOL 3657 (formerly 357) - A Walk Through the Ages: Using Artificial Intelligence to Understand the Evolution of Exercise",
-          "CSCI 2600 (formerly 230) - Introduction to Machine Learning and Big Data",
-          "CSCI 2610 (formerly 252) - Neuromorphic Computing",
-          "CSCI 2550 (formerly 256) - Modeling and Simulation",
-          "CBSC 3090 (formerly 309) - Data Science: Mind Analytics",
-          "CSCI 3600 (formerly 315) - Artificial Intelligence"
-        ]
-      },
-      {
-        "type": "all",
-        "label": "Electives — Systems Neuroscience",
-        "courses": [
-          "BIOL 2655 (formerly 255) - Reproductive Physiology",
-          "BIOL 2750 (formerly 275) - Food for Thought",
-          "BIOL 2785 (formerly 283) - Pregnancy: A KISS in Time?",
-          "BIOL 3660 (formerly 360) - Experimental Neurophysiology",
-          "BIOL 3620 (formerly 362) - Animal Physiology",
-          "BIOL 3665 (formerly 397) - Neuroendocrinology",
-          "CBSC 3110 - Hormones and Social Behavior",
-          "CBSC 3130 (formerly 313) - Neural Mechanisms of Motivated Behaviors",
-          "CBSC 3170 (formerly 317) - Sleep and Circadian Rhythms in Health and Disease",
-          "ENGN 2570 (formerly 267) - Bioengineering and Bioinspired Design (BIOL 2755)"
-        ]
-      },
-      {
-        "type": "all",
-        "label": "Electives — Cognitive and Behavioral Neuroscience",
-        "courses": [
-          "BIOL 2430 (formerly 243) - Animal Behavior",
-          "CBSC 3110 - Hormones and Social Behavior",
-          "CBSC 3120 (formerly 312) - Sensation Measurement and Perception",
-          "CBSC 3140 (formerly 314) - Attention",
-          "CBSC 3150 (formerly 315) - Cognitive Neuroscience",
-          "CBSC 3190 (formerly 319) - Cognition and Emotion",
-          "PHIL 2820 (formerly 282) - Philosophy of Biology",
-          "PHIL 3780 (formerly 375) - Philosophy of Mind"
-        ]
-      },
-      {
-        "type": "all",
+        "type": "credits",
         "label": "Research Practicum",
-        "courses": [
-          "CBSC 3510 (formerly 351) - Research Capstone in Behavioral Neuroscience",
-          "CBSC 3530 (formerly 353) - Research Capstone in Systems Neuroscience Research",
-          "CBSC 3540 (formerly 354) - Research Capstone in Attention",
-          "CBSC 3550 (formerly 355) - Research Capstone in Cognitive Neuroscience",
-          "CBSC 3570 (formerly 357) - Research Capstone in Human Psychophysiology",
-          "CBSC 3590 (formerly 359) - Research Capstone in Cognition and Emotion",
-          "NEUR 4001 (formerly 401) - Directed Individual Study",
-          "NEUR 4003 (formerly 403) - Directed Individual Study",
-          "NEUR 4201 (formerly 421) - Directed Independent Research",
-          "NEUR 4202 (formerly 422) - Directed Individual Research",
-          "NEUR 4203 (formerly 423) - Directed Individual Research",
-          "NEUR 4402 (formerly 442) - Honors Thesis Proposal",
-          "NEUR 4503 (formerly 453) - Neuroscience Internship",
-          "NEUR 4903 (formerly 493) - Honors Thesis",
-          "CBSC 3990 (formerly 398/399) - Research Capstone in Cognitive and Behavioral Science"
-        ]
+        "credits": 4,
+        "unit": "credits",
+        "notes": "Four credits chosen from the research practicum courses. A limit of 12 credits in research practicum courses is allowable toward a degree."
       },
       {
         "type": "all",
@@ -3940,106 +3903,92 @@
         ]
       },
       {
-        "type": "all",
+        "type": "group",
         "label": "Politics Electives",
-        "courses": [
-          "Choose five additional courses of 3 credits or more in politics, including completion of one of the following four sequences and including at least one 3000-level seminar course, which entails an independent research and writing component. All 3000-level courses count towards the seminar requirement."
-        ]
+        "groupsRequired": 1,
+        "groups": [
+          {
+            "label": "American Government",
+            "n": 5,
+            "courses": [
+              "LJS 1001 (formerly 101) - Introduction to Law, Justice, and Society",
+              "POL 2003 (formerly 203) - State and Local Government",
+              "POL 2110 - The Politics of Flags",
+              "POL 2209 (formerly 229) - Political Parties, Interest Groups, and the Media",
+              "POL 2300 (formerly 230) - Separation of Powers in the U.S. Constitution",
+              "POL 2302 (formerly 232) - Public Policy",
+              "POL 2303 (formerly 233) - Environmental Policy and Law",
+              "POL 2304 (formerly 234) - Congress and the Legislative Process",
+              "POL 2305 - The President and the Presidency",
+              "POL 2306 (formerly 236) - The American Supreme Court and Constitutional Law",
+              "POL 2307 - Electoral Rules and Reform",
+              "POL 2500 (formerly 250) - Race and Equality",
+              "POL 2904 (formerly 294) - Spring-Term Topics in Public Policy",
+              "POL 2905 (formerly 295) - Special Topics in American Politics",
+              "POL 3270 - Electoral College Politics",
+              "POL 3402 (formerly 342) - Seminar: Law and the Judicial Process",
+              "POL 3600 (formerly 360) - Seminar: Lincoln’s Statesmanship",
+              "POL 3700 (formerly 370) - Seminar in American Political Thought",
+              "POL 3907 (formerly 397) - Seminar in American Government",
+              "POL 4606 (formerly 466) - Washington Term Program"
+            ]
+          },
+          {
+            "label": "International/Global Politics",
+            "n": 5,
+            "courses": [
+              "POL 2104 (formerly 214) - The Conduct of American Foreign Policy",
+              "POL 2105 (formerly 215) - International Development",
+              "POL 2207 (formerly 227) - East Asian Politics",
+              "POL 2405 (formerly 245) - European Politics and Society (SOAN 2405)",
+              "POL 2406 (formerly 246) - Post-Communism and New Democracies (SOAN 2406)",
+              "POL 2407 (formerly 247) - Latin American Politics",
+              "POL 2505 (formerly 255) - Gender and Politics",
+              "POL 2608 (formerly 268) - Migration, Identity, and Conflict (SOAN 2347)",
+              "POL 2704 (formerly 274) - Terrorism",
+              "POL 2706 (formerly 276) - Intelligence in Practice",
+              "POL 2708 (formerly 278) - Intelligence and National Security",
+              "POL 2800 (formerly 280) - Bitcoin in Practice",
+              "POL 2801 - Democracy in the Streets: Protest and Politics in Argentina",
+              "POL 2804 (formerly 284) - Middle Eastern Politics",
+              "POL 2805 (formerly 285) - Contemporary Britain",
+              "POL 2807 (formerly 287) - The Maghreb: History, Culture, and Politics",
+              "POL 2808 (formerly 288) - Supervised Study Abroad",
+              "POL 2902 (formerly 292) - Topics in Politics and Film",
+              "POL 2906 (formerly 296) - Special Topics in Global Politics",
+              "POL 3201 (formerly 321) - Bitcoin in Global Politics",
+              "POL 3800 (formerly 380) - Seminar in Global Politics",
+              "POL 3801 (formerly 381) - Seminar in International Political Economy",
+              "POL 3808 (formerly 388) - Architecture of Urban Community",
+              "POL 3902 (formerly 392) - Seminar in Asian Politics"
+            ]
+          },
+          {
+            "label": "Political Philosophy",
+            "n": 5,
+            "courses": [
+              "LJS 1001 (formerly 101) - Introduction to Law, Justice, and Society",
+              "POL 2605 (formerly 265) - Classical Political Philosophy",
+              "POL 2606 (formerly 266) - Modern Political Philosophy",
+              "POL 2607 (formerly 267) - Contemporary Political Philosophy",
+              "POL 2701 (formerly 271) - Black Mirror",
+              "POL 2907 (formerly 297) - Special Topics in Political Philosophy",
+              "POL 3600 (formerly 360) - Seminar: Lincoln’s Statesmanship",
+              "POL 3700 (formerly 370) - Seminar in American Political Thought",
+              "POL 3805 (formerly 385) - Seminar: Freedom",
+              "POL 3806 (formerly 386) - Poli-Wood: Indian Epics, Myth, and Cinema as Political Philosophy",
+              "POL 3906 (formerly 396) - Seminar in Political Philosophy"
+            ]
+          }
+        ],
+        "notes": "Choose five additional politics courses of 3 credits or more, completing one of the sequences below and including at least one 3000-level seminar. A fourth option, General Study, is five courses drawn from at least two of the three subfields."
       },
       {
         "type": "credits",
-        "label": "Politics Electives — General Study",
-        "credits": 5,
-        "notes": "Complete five courses chosen from at least two of the three subfields below, including at least one 3000-level seminar course.",
-        "unit": "courses"
-      },
-      {
-        "type": "n_of",
-        "label": "Politics Electives — American Government — Choose four courses. Students must ALSO take at least one course chosen from the remaining 2000 and 3000-level courses in international/global politics or political philosophy. (5 courses total)",
-        "n": 4,
-        "courses": [
-          "LJS 1001 (formerly 101) - Introduction to Law, Justice, and Society",
-          "POL 2003 (formerly 203) - State and Local Government",
-          "POL 2110 - The Politics of Flags",
-          "POL 2209 (formerly 229) - Political Parties, Interest Groups, and the Media",
-          "POL 2300 (formerly 230) - Separation of Powers in the U.S. Constitution",
-          "POL 2302 (formerly 232) - Public Policy",
-          "POL 2303 (formerly 233) - Environmental Policy and Law",
-          "POL 2304 (formerly 234) - Congress and the Legislative Process",
-          "POL 2305 - The President and the Presidency",
-          "POL 2306 (formerly 236) - The American Supreme Court and Constitutional Law",
-          "POL 2307 - Electoral Rules and Reform",
-          "POL 2500 (formerly 250) - Race and Equality",
-          "POL 2904 (formerly 294) - Spring-Term Topics in Public Policy",
-          "POL 2905 (formerly 295) - Special Topics in American Politics",
-          "POL 3270 - Electoral College Politics",
-          "POL 3402 (formerly 342) - Seminar: Law and the Judicial Process",
-          "POL 3600 (formerly 360) - Seminar: Lincoln’s Statesmanship",
-          "POL 3700 (formerly 370) - Seminar in American Political Thought",
-          "POL 3907 (formerly 397) - Seminar in American Government",
-          "POL 4606 (formerly 466) - Washington Term Program"
-        ]
-      },
-      {
-        "type": "n_of",
-        "label": "Politics Electives — International/Global Politics — Choose four courses. Students must ALSO choose one course from the remaining 2000 and 3000-level courses in American government or political philosophy. (5 courses total)",
-        "n": 4,
-        "courses": [
-          "POL 2104 (formerly 214) - The Conduct of American Foreign Policy",
-          "POL 2105 (formerly 215) - International Development",
-          "POL 2207 (formerly 227) - East Asian Politics",
-          "POL 2405 (formerly 245) - European Politics and Society (SOAN 2405)",
-          "POL 2406 (formerly 246) - Post-Communism and New Democracies (SOAN 2406)",
-          "POL 2407 (formerly 247) - Latin American Politics",
-          "POL 2505 (formerly 255) - Gender and Politics",
-          "POL 2608 (formerly 268) - Migration, Identity, and Conflict (SOAN 2347)",
-          "POL 2704 (formerly 274) - Terrorism",
-          "POL 2706 (formerly 276) - Intelligence in Practice",
-          "POL 2708 (formerly 278) - Intelligence and National Security",
-          "POL 2800 (formerly 280) - Bitcoin in Practice",
-          "POL 2801 - Democracy in the Streets: Protest and Politics in Argentina",
-          "POL 2804 (formerly 284) - Middle Eastern Politics",
-          "POL 2805 (formerly 285) - Contemporary Britain",
-          "POL 2807 (formerly 287) - The Maghreb: History, Culture, and Politics",
-          "POL 2808 (formerly 288) - Supervised Study Abroad",
-          "POL 2902 (formerly 292) - Topics in Politics and Film",
-          "POL 2906 (formerly 296) - Special Topics in Global Politics",
-          "POL 3201 (formerly 321) - Bitcoin in Global Politics",
-          "POL 3800 (formerly 380) - Seminar in Global Politics",
-          "POL 3801 (formerly 381) - Seminar in International Political Economy",
-          "POL 3808 (formerly 388) - Architecture of Urban Community",
-          "POL 3902 (formerly 392) - Seminar in Asian Politics"
-        ]
-      },
-      {
-        "type": "n_of",
-        "label": "Politics Electives — Political Philosophy — Choose four courses. Students must ALSO choose at least one course from the remaining 2000 and 3000-level courses in international/global politics or American government. (5 courses total)",
-        "n": 4,
-        "courses": [
-          "LJS 1001 (formerly 101) - Introduction to Law, Justice, and Society",
-          "POL 2605 (formerly 265) - Classical Political Philosophy",
-          "POL 2606 (formerly 266) - Modern Political Philosophy",
-          "POL 2607 (formerly 267) - Contemporary Political Philosophy",
-          "POL 2701 (formerly 271) - Black Mirror",
-          "POL 2907 (formerly 297) - Special Topics in Political Philosophy",
-          "POL 3600 (formerly 360) - Seminar: Lincoln’s Statesmanship",
-          "POL 3700 (formerly 370) - Seminar in American Political Thought",
-          "POL 3805 (formerly 385) - Seminar: Freedom",
-          "POL 3806 (formerly 386) - Poli-Wood: Indian Epics, Myth, and Cinema as Political Philosophy",
-          "POL 3906 (formerly 396) - Seminar in Political Philosophy"
-        ]
-      },
-      {
-        "type": "all",
         "label": "Additional Electives",
-        "courses": [
-          "cognitive and behavioral science",
-          "economics",
-          "history",
-          "philosophy",
-          "religion",
-          "sociology and anthropology"
-        ]
+        "credits": 6,
+        "unit": "credits",
+        "notes": "Choose six additional credits, including courses from two of these disciplines:<ul><li>cognitive and behavioral science</li><li>economics</li><li>history</li><li>philosophy</li><li>religion</li><li>sociology and anthropology</li></ul>"
       },
       {
         "type": "all",
