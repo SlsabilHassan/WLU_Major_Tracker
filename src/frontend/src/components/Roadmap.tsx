@@ -3,6 +3,7 @@ import { Requirement, CheckedState, CreditProgress } from '../types';
 import './Roadmap.css';
 import CreditScale from './CreditScale';
 import { alternativePairs, trackFor } from '../data/tracks';
+import { groupLabel, unitOf } from '../data/progress';
 
 interface RoadmapProps {
   requirements: Requirement[];
@@ -57,12 +58,63 @@ const RequirementStep: React.FC<{
             <div className="roadmap-notes" dangerouslySetInnerHTML={{ __html: requirement.notes }} />
           )}
           <CreditScale
-            label={`${requirement.level ? `level ${requirement.level}` : ''}`}
+            label={`${requirement.level ? `level ${requirement.level} ` : ''}${unitOf(requirement)}`}
             maxCredits={requirement.credits}
             currentCredits={creditProgress[requirement.label] || 0}
             onCreditsChange={isIgnored ? () => {} : (credits) => onCreditsChange(requirement.label, credits)}
             key={isIgnored ? 'disabled' : 'enabled'}
           />
+        </div>
+      );
+    }
+
+    if (requirement.type === 'group' && requirement.groups?.length) {
+      const groups = requirement.groups;
+      const required = requirement.groupsRequired ?? groups.length;
+      return (
+        <div className="roadmap-courses">
+          {requirement.notes && (
+            <div className="roadmap-notes" dangerouslySetInnerHTML={{ __html: requirement.notes }} />
+          )}
+          {required < groups.length && (
+            <div className="roadmap-notes">
+              Satisfy any {required} of the {groups.length} areas below.
+            </div>
+          )}
+          {groups.map(g => {
+            const gl = groupLabel(requirement.label, g.label);
+            const need = g.n ?? 1;
+            const hit = g.courses.filter(c => checked[`${gl}::${c}`]).length;
+            const full = hit >= need;
+            return (
+              <div className="roadmap-group" key={g.label}>
+                <div className="roadmap-group-title">
+                  <span dangerouslySetInnerHTML={{ __html: g.label }} />
+                  <span className="roadmap-group-count">{hit}/{need}</span>
+                </div>
+                {g.courses.map(c => {
+                  const on = !!checked[`${gl}::${c}`];
+                  const off = full && !on;
+                  return (
+                    <label
+                      key={c}
+                      className={`roadmap-checkbox ${off ? 'dashed-disabled' : ''}`.trim()}
+                      style={isIgnored ? { opacity: 0.5, pointerEvents: 'none' } : {}}
+                    >
+                      <input
+                        type="checkbox"
+                        checked={on}
+                        onChange={() => onToggle(gl, c)}
+                        aria-label={`${c} - ${g.label}`}
+                        disabled={isIgnored || off}
+                      />
+                      <span dangerouslySetInnerHTML={{ __html: c }} />
+                    </label>
+                  );
+                })}
+              </div>
+            );
+          })}
         </div>
       );
     }

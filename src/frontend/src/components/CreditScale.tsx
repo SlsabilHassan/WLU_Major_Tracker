@@ -14,8 +14,6 @@ const CreditScale: React.FC<CreditScaleProps> = ({
   currentCredits,
   onCreditsChange,
 }) => {
-  console.log('Rendering CreditScale:', { label, maxCredits, currentCredits });
-  
   return (
     <div className="credit-scale-container">
       <div className="credit-scale-label">{label}</div>

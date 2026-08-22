@@ -56,7 +56,8 @@
         "type": "credits",
         "label": "Business Courses",
         "credits": 6,
-        "notes": "Choose six credits of 2000-3000 level BUS courses, except for BUS 2002."
+        "notes": "Choose six credits of 2000-3000 level BUS courses, except for BUS 2002.",
+        "unit": "credits"
       },
       {
         "type": "all",
@@ -105,7 +106,8 @@
         "type": "credits",
         "label": "Studio art",
         "credits": 1,
-        "notes": "Complete one 3-4 credit course in studio art (ARTS)."
+        "notes": "Complete one 3-4 credit course in studio art (ARTS).",
+        "unit": "courses"
       },
       {
         "type": "all",
@@ -532,15 +534,9 @@
         ]
       },
       {
-        "type": "all",
+        "type": "note",
         "label": "Statistics — Note(s)",
-        "courses": [
-          "Students planning to major in business administration should take BUS 2002.",
-          "For students majoring in both business administration and cognitive and behavioral science, CBSC 2500 should be taken. CBSC 2500 may be substituted for BUS 2002 in the business administration major.",
-          "For students majoring in both business administration and sociology & anthropology, SOAN 2002 may be substituted for BUS 2002 if needed.",
-          "Students considering the economics major are encouraged to enroll in ECON 2002. Students are not encouraged to double major in both business and economics. However, if ECON 2002 has already been taken, it may be substituted for BUS 2002.",
-          "Students majoring in both business administration and politics are encouraged to register for BUS 2002 to get the coding component. However, if POL 2002 has already been taken, it may be substituted for BUS 2002."
-        ]
+        "notes": "<ul><li>Students planning to major in business administration should take BUS 2002.</li><li>For students majoring in both business administration and cognitive and behavioral science, CBSC 2500 should be taken. CBSC 2500 may be substituted for BUS 2002 in the business administration major.</li><li>For students majoring in both business administration and sociology & anthropology, SOAN 2002 may be substituted for BUS 2002 if needed.</li><li>Students considering the economics major are encouraged to enroll in ECON 2002. Students are not encouraged to double major in both business and economics. However, if ECON 2002 has already been taken, it may be substituted for BUS 2002.</li><li>Students majoring in both business administration and politics are encouraged to register for BUS 2002 to get the coding component. However, if POL 2002 has already been taken, it may be substituted for BUS 2002.</li></ul>"
       },
       {
         "type": "all",
@@ -587,17 +583,14 @@
         ]
       },
       {
-        "type": "all",
+        "type": "note",
         "label": "Business Administration Electives — Note(s)",
-        "courses": [
-          "No more than two finance (FIN) classes may count towards the Business Administration major."
-        ]
+        "notes": "No more than two finance (FIN) classes may count towards the Business Administration major."
       },
       {
-        "type": "credits",
+        "type": "note",
         "label": "Non-business Electives",
-        "credits": 1,
-        "notes": "Choose one class from each of the following three groups, for a total of at least nine credits: Note(s): Some non-business classes taken towards the business major may only be available to students who have met the requirements of other majors or minors."
+        "notes": "Choose one class from each of the three groups below, for a total of at least nine credits."
       },
       {
         "type": "n_of",
@@ -808,17 +801,9 @@
         ]
       },
       {
-        "type": "all",
+        "type": "note",
         "label": "Note(s)",
-        "courses": [
-          "Core Requirements: BUS 2100, BUS 2200, BUS 2300, and BUS 2400, and must be completed at W&L and may not be transferred from another institution.",
-          "Credit Limits: A maximum of nine (9) credits may be applied to the business administration major from coursework completed outside of W&L. This includes: Study abroad programs Summer courses Transfer credit from other institutions",
-          "Study abroad programs",
-          "Summer courses",
-          "Transfer credit from other institutions",
-          "These nine credits may include: Up to six credits in BUS-prefixed courses (i.e., business electives) And/or up to nine credits in approved non-BUS courses that count toward the non-business elective requirement",
-          "Up to six credits in BUS-prefixed courses (i.e., business electives)"
-        ]
+        "notes": "<ul><li>Core Requirements: BUS 2100, BUS 2200, BUS 2300, and BUS 2400, and must be completed at W&L and may not be transferred from another institution.</li><li>Credit Limits: A maximum of nine (9) credits may be applied to the business administration major from coursework completed outside of W&L. This includes: Study abroad programs Summer courses Transfer credit from other institutions</li><li>Study abroad programs</li><li>Summer courses</li><li>Transfer credit from other institutions</li><li>These nine credits may include: Up to six credits in BUS-prefixed courses (i.e., business electives) And/or up to nine credits in approved non-BUS courses that count toward the non-business elective requirement</li><li>Up to six credits in BUS-prefixed courses (i.e., business electives)</li></ul>"
       },
       {
         "type": "all",
@@ -873,7 +858,8 @@
         "type": "credits",
         "label": "Science Electives",
         "credits": 6,
-        "notes": "Choose six additional credits from biology, chemistry, geology, or physics at the 2000-level or above."
+        "notes": "Choose six additional credits from biology, chemistry, geology, or physics at the 2000-level or above.",
+        "unit": "credits"
       },
       {
         "type": "all",
@@ -948,11 +934,9 @@
         ]
       },
       {
-        "type": "all",
+        "type": "note",
         "label": "Upper Level Chemistry — Note(s)",
-        "courses": [
-          "Only one 4000-level course may count towards the major."
-        ]
+        "notes": "Only one 4000-level course may count towards the major."
       },
       {
         "type": "all",
@@ -994,11 +978,9 @@
         ]
       },
       {
-        "type": "all",
+        "type": "note",
         "label": "Electives — Note(s)",
-        "courses": [
-          "Independent study courses must be approved in advance by the department."
-        ]
+        "notes": "Independent study courses must be approved in advance by the department."
       },
       {
         "type": "all",
@@ -1178,7 +1160,8 @@
         "type": "credits",
         "label": "CBSC Electives",
         "credits": 6,
-        "notes": "Complete six additional credits chosen from CBSC courses numbered 3010 or below."
+        "notes": "Complete six additional credits chosen from CBSC courses numbered 3010 or below.",
+        "unit": "credits"
       },
       {
         "type": "all",
@@ -1251,7 +1234,8 @@
         "type": "credits",
         "label": "Computer Science Electives",
         "credits": 2,
-        "notes": "Choose two additional computer science courses totaling at least six credits. At most one 4000-level course may count toward the major if approved by the computer science department head."
+        "notes": "Choose two additional computer science courses totaling at least six credits. At most one 4000-level course may count toward the major if approved by the computer science department head.",
+        "unit": "courses"
       },
       {
         "type": "all",
@@ -1312,13 +1296,15 @@
         "type": "credits",
         "label": "Computer Science Electives",
         "credits": 2,
-        "notes": "Choose two additional computer science courses totaling at least six credits. At most one 4000-level course may count toward the major if approved by the computer science department head."
+        "notes": "Choose two additional computer science courses totaling at least six credits. At most one 4000-level course may count toward the major if approved by the computer science department head.",
+        "unit": "courses"
       },
       {
         "type": "credits",
         "label": "Mathematics Electives",
         "credits": 6,
-        "notes": "Choose six additional credits in mathematics courses at the 2000-level or above."
+        "notes": "Choose six additional credits in mathematics courses at the 2000-level or above.",
+        "unit": "credits"
       },
       {
         "type": "all",
@@ -1630,7 +1616,8 @@
         "type": "credits",
         "label": "Chinese — China or East Asia Electives",
         "credits": 2,
-        "notes": "Complete two additional courses on China or East Asia from the following lists as described below."
+        "notes": "Complete two additional courses on China or East Asia from the following lists as described below.",
+        "unit": "courses"
       },
       {
         "type": "all",
@@ -1720,7 +1707,8 @@
         "type": "credits",
         "label": "Japanese — Japan or East Asia Electives",
         "credits": 2,
-        "notes": "Complete two additional courses on Japan or East Asia from the following lists as described below"
+        "notes": "Complete two additional courses on Japan or East Asia from the following lists as described below",
+        "unit": "courses"
       },
       {
         "type": "all",
@@ -1814,10 +1802,9 @@
         ]
       },
       {
-        "type": "credits",
+        "type": "note",
         "label": "History, Literature, Politics, and Sociology",
-        "credits": 1,
-        "notes": "Complete one course from each group below:"
+        "notes": "Complete one course from each group below."
       },
       {
         "type": "n_of",
@@ -1909,7 +1896,8 @@
         "type": "credits",
         "label": "Four additional Economics courses numbered above ECON 2011 (max 9 credits from supervised study abroad and/or special topics)",
         "subject": "ECON",
-        "credits": 4
+        "credits": 4,
+        "unit": "courses"
       },
       {
         "type": "all",
@@ -2097,49 +2085,50 @@
         ]
       },
       {
-        "type": "credits",
+        "type": "group",
         "label": "Countertraditions",
-        "credits": 2,
-        "notes": "Choose two courses from the following lists. One must be from the Race and Racial Formations list (which cannot overlap with other requirement areas). The second course may be from either list and may overlap with any period requirement above."
-      },
-      {
-        "type": "all",
-        "label": "Countertraditions — Race and Racial Formations",
-        "courses": [
-          "ENGL 3328 (formerly 315) - Arthurian Bodies, Desires, and Affects",
-          "ENGL 3434 (formerly 356) - Whitman vs Dickinson",
-          "ENGL 3878 (formerly 361) - Native American Literatures",
-          "ENGL 3865 (formerly 366) - African-American Literature",
-          "ENGL 3891 (formerly 382) - Hotel Orient",
-          "ENGL 3935 (formerly 395) - Topics in Literature in English in Counter Traditions",
-          "ENGL 4003 (formerly 403) - Directed Individual Study"
-        ]
-      },
-      {
-        "type": "all",
-        "label": "Countertraditions — Additional Countertraditions Courses",
-        "courses": [
-          "ENGL 2605 (formerly 244) - Health, Care, and Compassion on Stage and Screen",
-          "ENGL 2320 (formerly 250) - Medieval and Early Modern British Literature",
-          "ENGL 2352 (formerly 252) - Shakespeare",
-          "ENGL 2831 (formerly 260) - Literary Approaches to Poverty",
-          "ENGL 2863 (formerly 262) - Literature, Race, and Ethnicity",
-          "ENGL 2881 (formerly 263) - Nature as Self: Environmental Literature in the Anthropocene",
-          "ENGL 2877 (formerly 264) - The Body Electric: Queer Theory, Film, and Text",
-          "ENGL 2867 (formerly 265) - Constructing Black Lives in Film and Literature",
-          "ENGL 2860 (formerly 266) - Introduction to African American Literature",
-          "ENGL 3321 (formerly 312) - Gender, Love, and Marriage in the Middle Ages",
-          "ENGL 3328 (formerly 315) - Arthurian Bodies, Desires, and Affects",
-          "ENGL 3434 (formerly 356) - Whitman vs Dickinson",
-          "ENGL 3603 (formerly 363) - Modern Poetry’s Media",
-          "ENGL 3604 (formerly 364) - Poetry and Authenticity",
-          "ENGL 3891 (formerly 382) - Hotel Orient",
-          "ENGL 3935 (formerly 395) - Topics in Literature in English in Counter Traditions",
-          "ENGL 2907 (formerly 295) - Spring-Term Seminar in Literary Studies",
-          "ENGL 2906 (formerly 296) - Topics in Countertraditions",
-          "ENGL 3915 (formerly 392) - Topics in Literature in English before 1800",
-          "ENGL 3925 (formerly 394) - Topics in Literature in English since 1800",
-          "ENGL 4003 (formerly 403) - Directed Individual Study"
+        "notes": "Choose two courses from the following lists. One must be from the Race and Racial Formations list (which cannot overlap with other requirement areas). The second course may be from either list and may overlap with any period requirement above.",
+        "groups": [
+          {
+            "label": "Race and Racial Formations",
+            "n": 1,
+            "courses": [
+              "ENGL 3328 (formerly 315) - Arthurian Bodies, Desires, and Affects",
+              "ENGL 3434 (formerly 356) - Whitman vs Dickinson",
+              "ENGL 3878 (formerly 361) - Native American Literatures",
+              "ENGL 3865 (formerly 366) - African-American Literature",
+              "ENGL 3891 (formerly 382) - Hotel Orient",
+              "ENGL 3935 (formerly 395) - Topics in Literature in English in Counter Traditions",
+              "ENGL 4003 (formerly 403) - Directed Individual Study"
+            ]
+          },
+          {
+            "label": "Additional Countertraditions Courses",
+            "n": 1,
+            "courses": [
+              "ENGL 2605 (formerly 244) - Health, Care, and Compassion on Stage and Screen",
+              "ENGL 2320 (formerly 250) - Medieval and Early Modern British Literature",
+              "ENGL 2352 (formerly 252) - Shakespeare",
+              "ENGL 2831 (formerly 260) - Literary Approaches to Poverty",
+              "ENGL 2863 (formerly 262) - Literature, Race, and Ethnicity",
+              "ENGL 2881 (formerly 263) - Nature as Self: Environmental Literature in the Anthropocene",
+              "ENGL 2877 (formerly 264) - The Body Electric: Queer Theory, Film, and Text",
+              "ENGL 2867 (formerly 265) - Constructing Black Lives in Film and Literature",
+              "ENGL 2860 (formerly 266) - Introduction to African American Literature",
+              "ENGL 3321 (formerly 312) - Gender, Love, and Marriage in the Middle Ages",
+              "ENGL 3328 (formerly 315) - Arthurian Bodies, Desires, and Affects",
+              "ENGL 3434 (formerly 356) - Whitman vs Dickinson",
+              "ENGL 3603 (formerly 363) - Modern Poetry’s Media",
+              "ENGL 3604 (formerly 364) - Poetry and Authenticity",
+              "ENGL 3891 (formerly 382) - Hotel Orient",
+              "ENGL 3935 (formerly 395) - Topics in Literature in English in Counter Traditions",
+              "ENGL 2907 (formerly 295) - Spring-Term Seminar in Literary Studies",
+              "ENGL 2906 (formerly 296) - Topics in Countertraditions",
+              "ENGL 3915 (formerly 392) - Topics in Literature in English before 1800",
+              "ENGL 3925 (formerly 394) - Topics in Literature in English since 1800",
+              "ENGL 4003 (formerly 403) - Directed Individual Study"
+            ]
+          }
         ]
       },
       {
@@ -2583,13 +2572,15 @@
         "type": "credits",
         "label": "French Electives 2000-Level or Above",
         "credits": 2,
-        "notes": "Choose two additional French courses numbered 2000 or above. The department head may approve any one Romance languages literature, film, or culture course taught in English by Romance Languages faculty toward this requirement."
+        "notes": "Choose two additional French courses numbered 2000 or above. The department head may approve any one Romance languages literature, film, or culture course taught in English by Romance Languages faculty toward this requirement.",
+        "unit": "courses"
       },
       {
         "type": "credits",
         "label": "French Electives 3000-Level or Above",
         "credits": 4,
-        "notes": "Choose four additional French courses numbered 3000 or above, except FREN 4903."
+        "notes": "Choose four additional French courses numbered 3000 or above, except FREN 4903.",
+        "unit": "courses"
       },
       {
         "type": "all",
@@ -2642,40 +2633,42 @@
         ]
       },
       {
-        "type": "credits",
+        "type": "group",
         "label": "German Literary and Cultural History",
-        "credits": 1,
-        "notes": "Choose one course each from three of the following four areas for a total of three courses (nine credits):"
-      },
-      {
-        "type": "all",
-        "label": "German Literary and Cultural History — Medieval",
-        "courses": [
-          "GERM 3312 (formerly 318) - German Medieval and Renaissance Literature"
-        ]
-      },
-      {
-        "type": "all",
-        "label": "German Literary and Cultural History — 19th century",
-        "courses": [
-          "GERM 3313 (formerly 313) - German Literature, 1800-1850",
-          "GERM 3314 (formerly 315) - German Literature, 1850-1900"
-        ]
-      },
-      {
-        "type": "all",
-        "label": "German Literary and Cultural History — 20th and 21st centuries",
-        "courses": [
-          "GERM 3315 (formerly 314) - German Literature, 1900-1945",
-          "GERM 3316 (formerly 316) - German Literature, 1945 to Present"
-        ]
-      },
-      {
-        "type": "all",
-        "label": "German Literary and Cultural History — Performing German",
-        "courses": [
-          "GERM 3332 (formerly 332) - Performing German"
-        ]
+        "notes": "Choose one course each from three of the following four areas for a total of three courses (nine credits):",
+        "groups": [
+          {
+            "label": "Medieval",
+            "n": 1,
+            "courses": [
+              "GERM 3312 (formerly 318) - German Medieval and Renaissance Literature"
+            ]
+          },
+          {
+            "label": "19th century",
+            "n": 1,
+            "courses": [
+              "GERM 3313 (formerly 313) - German Literature, 1800-1850",
+              "GERM 3314 (formerly 315) - German Literature, 1850-1900"
+            ]
+          },
+          {
+            "label": "20th and 21st centuries",
+            "n": 1,
+            "courses": [
+              "GERM 3315 (formerly 314) - German Literature, 1900-1945",
+              "GERM 3316 (formerly 316) - German Literature, 1945 to Present"
+            ]
+          },
+          {
+            "label": "Performing German",
+            "n": 1,
+            "courses": [
+              "GERM 3332 (formerly 332) - Performing German"
+            ]
+          }
+        ],
+        "groupsRequired": 3
       },
       {
         "type": "n_of",
@@ -2810,45 +2803,47 @@
         ]
       },
       {
-        "type": "credits",
+        "type": "group",
         "label": "Science Electives",
-        "credits": 3,
-        "notes": "Choose three courses in a single science subject in one of the following tracks:"
-      },
-      {
-        "type": "all",
-        "label": "Science Electives — Biology",
-        "courses": [
-          "BIOL 1111 (formerly 111) - Fundamentals of Biology <em>with</em> BIOL 1112 (formerly 113) - Biology Laboratory",
-          "two BIOL courses 2000 level or above"
-        ]
-      },
-      {
-        "type": "all",
-        "label": "Science Electives — Chemistry",
-        "courses": [
-          "CHEM 1204 (formerly 109/110/115) - General Chemistry",
-          "CHEM 2314 (formerly 240/241/245) - Organic Chemistry I",
-          "CHEM 2324 (formerly 242/244/246) - Organic Chemistry II"
-        ]
-      },
-      {
-        "type": "all",
-        "label": "Science Electives — Computer Science",
-        "courses": [
-          "CSCI 1100 (formerly 111) - Introduction to Computer Science",
-          "CSCI 1200 (formerly 112) - Data Structures",
-          "one CSCI course 2000 level or above"
-        ]
-      },
-      {
-        "type": "all",
-        "label": "Science Electives — Earth and Environmental Geoscience",
-        "courses": [
-          "EEG 1000 (formerly 100) - Dynamic Earth: Introductory Geology with Field Emphasis",
-          "EEG 1001 (formerly 101) - Dynamic Earth: Introductory Geology",
-          "EEG 1002 (formerly 102) - Sustainable Earth: Introductory Environmental Geology"
-        ]
+        "notes": "Choose three courses in a single science subject from one of the tracks below.",
+        "groups": [
+          {
+            "label": "Biology",
+            "n": 3,
+            "courses": [
+              "BIOL 1111 (formerly 111) - Fundamentals of Biology <em>with</em> BIOL 1112 (formerly 113) - Biology Laboratory",
+              "two BIOL courses 2000 level or above"
+            ]
+          },
+          {
+            "label": "Chemistry",
+            "n": 3,
+            "courses": [
+              "CHEM 1204 (formerly 109/110/115) - General Chemistry",
+              "CHEM 2314 (formerly 240/241/245) - Organic Chemistry I",
+              "CHEM 2324 (formerly 242/244/246) - Organic Chemistry II"
+            ]
+          },
+          {
+            "label": "Computer Science",
+            "n": 3,
+            "courses": [
+              "CSCI 1100 (formerly 111) - Introduction to Computer Science",
+              "CSCI 1200 (formerly 112) - Data Structures",
+              "one CSCI course 2000 level or above"
+            ]
+          },
+          {
+            "label": "Earth and Environmental Geoscience",
+            "n": 3,
+            "courses": [
+              "EEG 1000 (formerly 100) - Dynamic Earth: Introductory Geology with Field Emphasis",
+              "EEG 1001 (formerly 101) - Dynamic Earth: Introductory Geology",
+              "EEG 1002 (formerly 102) - Sustainable Earth: Introductory Environmental Geology"
+            ]
+          }
+        ],
+        "groupsRequired": 1
       },
       {
         "type": "all",
@@ -2963,7 +2958,8 @@
         "type": "credits",
         "label": "Business Journalism Track — Economics",
         "credits": 1,
-        "notes": "Choose one course in economics at the 2000 level or above."
+        "notes": "Choose one course in economics at the 2000 level or above.",
+        "unit": "courses"
       },
       {
         "type": "n_of",
@@ -3039,7 +3035,8 @@
         "type": "credits",
         "label": "Upper Level Mathematics",
         "credits": 9,
-        "notes": "Choose nine additional credits selected from mathematics courses numbered above 3000."
+        "notes": "Choose nine additional credits selected from mathematics courses numbered above 3000.",
+        "unit": "credits"
       },
       {
         "type": "all",
@@ -3096,13 +3093,15 @@
         "type": "credits",
         "label": "Upper Level Mathematics",
         "credits": 12,
-        "notes": "Choose twelve additional credits selected from mathematics courses numbered 3000 or above."
+        "notes": "Choose twelve additional credits selected from mathematics courses numbered 3000 or above.",
+        "unit": "credits"
       },
       {
         "type": "credits",
         "label": "Electives",
         "credits": 6,
-        "notes": "Choose six additional credits in biology, chemistry, computer science, earth and environmental geoscience, engineering, mathematics (numbered 2000 and above), and physics, except courses excluded from degree programs in those subjects."
+        "notes": "Choose six additional credits in biology, chemistry, computer science, earth and environmental geoscience, engineering, mathematics (numbered 2000 and above), and physics, except courses excluded from degree programs in those subjects.",
+        "unit": "credits"
       },
       {
         "type": "all",
@@ -3171,12 +3170,13 @@
       },
       {
         "type": "credits",
-        "label": "Distribution - Four Areas",
-        "credits": 4,
-        "notes": "Choose four courses in one area, two courses in each of two other areas, and one course in the fourth area."
+        "label": "Distribution - Four Areas — remaining courses",
+        "credits": 5,
+        "notes": "Nine courses total: four in one area, two in each of two other areas, and one in the fourth. Tick at least one course in each of the four areas below, then record the remaining five here.",
+        "unit": "courses"
       },
       {
-        "type": "all",
+        "type": "n_of",
         "label": "Distribution - Four Areas — History and History of Science",
         "courses": [
           "CLAS 2204 (formerly 224) - The World of Late Antiquity",
@@ -3201,10 +3201,11 @@
           "PHYS 4003 (formerly 403) - Directed Individual Study",
           "ROML 2905 - Topics in Romance Languages",
           "ROML 2906 - Spring-Term Topics in Romance Languages"
-        ]
+        ],
+        "n": 1
       },
       {
-        "type": "all",
+        "type": "n_of",
         "label": "Distribution - Four Areas — Literature",
         "courses": [
           "CLAS 1800 (formerly 180) - FS: First-Year Seminar",
@@ -3255,10 +3256,11 @@
           "ROML 2906 - Spring-Term Topics in Romance Languages",
           "SPAN 3097 (formerly 397) - Literature of Spain Seminar",
           "SPAN 4003 (formerly 403) - Directed Individual Study"
-        ]
+        ],
+        "n": 1
       },
       {
-        "type": "all",
+        "type": "n_of",
         "label": "Distribution - Four Areas — History of Ideas",
         "courses": [
           "ARTH 3805 (formerly 385) - Leonardo da Vinci: Art, Science and Innovation in Renaissance Europe",
@@ -3299,10 +3301,11 @@
           "REL 4003 - Directed Individual Study",
           "ROML 2905 - Topics in Romance Languages",
           "ROML 2906 - Spring-Term Topics in Romance Languages"
-        ]
+        ],
+        "n": 1
       },
       {
-        "type": "all",
+        "type": "n_of",
         "label": "Distribution - Four Areas — Fine Arts",
         "courses": [
           "ARTH 1001 (formerly 101) - Survey of Western Art: Ancient to Medieval",
@@ -3328,7 +3331,8 @@
           "ROML 2906 - Spring-Term Topics in Romance Languages",
           "THTR 1401 (formerly 121) - Script Analysis for Stage and Screen",
           "THTR 1102 (formerly 180) - FS: First-Year Seminar"
-        ]
+        ],
+        "n": 1
       },
       {
         "type": "n_of",
@@ -3870,7 +3874,8 @@
         "type": "credits",
         "label": "Upper-Level Physics",
         "credits": 2,
-        "notes": "Choose two additional physics courses at the 2000 or 3000-level."
+        "notes": "Choose two additional physics courses at the 2000 or 3000-level.",
+        "unit": "courses"
       },
       {
         "type": "n_of",
@@ -3945,7 +3950,8 @@
         "type": "credits",
         "label": "Politics Electives — General Study",
         "credits": 5,
-        "notes": "Complete five courses chosen from at least two of the three subfields below, including at least one 3000-level seminar course."
+        "notes": "Complete five courses chosen from at least two of the three subfields below, including at least one 3000-level seminar course.",
+        "unit": "courses"
       },
       {
         "type": "n_of",
@@ -4057,57 +4063,59 @@
         ]
       },
       {
-        "type": "credits",
+        "type": "group",
         "label": "Religious Traditions",
-        "credits": 2,
-        "notes": "Choose two courses from the following lists. At least one course must be chosen from each of two of the following religious traditions:"
-      },
-      {
-        "type": "all",
-        "label": "Religious Traditions — Asian Religions",
-        "courses": [
-          "REL 1003 (formerly 103) - Introduction to Asian Religions",
-          "REL 1031 (formerly 131) - Buddhism",
-          "REL 1032 (formerly 132) - Hinduism",
-          "REL 2031 (formerly 231) - Body and Soul in India"
-        ]
-      },
-      {
-        "type": "all",
-        "label": "Religious Traditions — Christianity",
-        "courses": [
-          "REL 1002 (formerly 102) - New Testament",
-          "REL 1052 (formerly 152) - Christianity and Modern Culture",
-          "REL 2050 (formerly 250) - Truth, Belief, Dissent: Defining Insiders and Outsiders in Ancient, Medieval and Modern Religion"
-        ]
-      },
-      {
-        "type": "all",
-        "label": "Religious Traditions — Islam",
-        "courses": [
-          "REL 1005 (formerly 105) - Introduction to Islam",
-          "REL 1008 (formerly 108) - The Qur’an",
-          "REL 1710 (formerly 172) - Muslims in the Movies",
-          "REL 2701 (formerly 271) - Islam in America: Life, Liberty, and the Pursuit of Happiness",
-          "REL 2081 (formerly 281) - Modern Islamic Thought",
-          "REL 2083 (formerly 283) - Islam and Spirituality"
-        ]
-      },
-      {
-        "type": "all",
-        "label": "Religious Traditions — Judaism",
-        "courses": [
-          "REL 1001 (formerly 101) - Hebrew Bible",
-          "REL 1006 (formerly 106) - Judaism: Tradition and Modernity",
-          "REL 2074 (formerly 274) - Women, Gender and Sexuality in the Jewish Tradition (WGSS 2074)"
-        ]
-      },
-      {
-        "type": "all",
-        "label": "Religious Traditions — Secularity",
-        "courses": [
-          "REL 1004 (formerly 104) - Secularity, Disenchantment, and Religion"
-        ]
+        "notes": "Choose two courses from the following lists. At least one course must be chosen from each of two of the following religious traditions:",
+        "groups": [
+          {
+            "label": "Asian Religions",
+            "n": 1,
+            "courses": [
+              "REL 1003 (formerly 103) - Introduction to Asian Religions",
+              "REL 1031 (formerly 131) - Buddhism",
+              "REL 1032 (formerly 132) - Hinduism",
+              "REL 2031 (formerly 231) - Body and Soul in India"
+            ]
+          },
+          {
+            "label": "Christianity",
+            "n": 1,
+            "courses": [
+              "REL 1002 (formerly 102) - New Testament",
+              "REL 1052 (formerly 152) - Christianity and Modern Culture",
+              "REL 2050 (formerly 250) - Truth, Belief, Dissent: Defining Insiders and Outsiders in Ancient, Medieval and Modern Religion"
+            ]
+          },
+          {
+            "label": "Islam",
+            "n": 1,
+            "courses": [
+              "REL 1005 (formerly 105) - Introduction to Islam",
+              "REL 1008 (formerly 108) - The Qur’an",
+              "REL 1710 (formerly 172) - Muslims in the Movies",
+              "REL 2701 (formerly 271) - Islam in America: Life, Liberty, and the Pursuit of Happiness",
+              "REL 2081 (formerly 281) - Modern Islamic Thought",
+              "REL 2083 (formerly 283) - Islam and Spirituality"
+            ]
+          },
+          {
+            "label": "Judaism",
+            "n": 1,
+            "courses": [
+              "REL 1001 (formerly 101) - Hebrew Bible",
+              "REL 1006 (formerly 106) - Judaism: Tradition and Modernity",
+              "REL 2074 (formerly 274) - Women, Gender and Sexuality in the Jewish Tradition (WGSS 2074)"
+            ]
+          },
+          {
+            "label": "Secularity",
+            "n": 1,
+            "courses": [
+              "REL 1004 (formerly 104) - Secularity, Disenchantment, and Religion"
+            ]
+          }
+        ],
+        "groupsRequired": 2
       },
       {
         "type": "all",
@@ -4120,13 +4128,15 @@
         "type": "credits",
         "label": "Electives",
         "credits": 10,
-        "notes": "Choose ten courses of additional work in religion or other related disciplines. A limit of one non-Religion course will count toward the major including the electives above."
+        "notes": "Choose ten courses of additional work in religion or other related disciplines. A limit of one non-Religion course will count toward the major including the electives above.",
+        "unit": "courses"
       },
       {
         "type": "credits",
         "label": "2000-Level Religion Courses",
         "credits": 15,
-        "notes": "Choose fifteen credits of religion courses at the 2000-level or higher, excluding REL 2010, REL 3099, and REL 4903."
+        "notes": "Choose fifteen credits of religion courses at the 2000-level or higher, excluding REL 2010, REL 3099, and REL 4903.",
+        "unit": "credits"
       },
       {
         "type": "n_of",
@@ -4174,13 +4184,15 @@
         "type": "credits",
         "label": "French Electives 2000-Level or Above",
         "credits": 1,
-        "notes": "Choose one French course numbered 2000 or above. The department head may approve any one Romance language literature, film, or culture course taught by Romance Languages faculty toward this requirement."
+        "notes": "Choose one French course numbered 2000 or above. The department head may approve any one Romance language literature, film, or culture course taught by Romance Languages faculty toward this requirement.",
+        "unit": "courses"
       },
       {
         "type": "credits",
         "label": "French Electives 3000-Level or Above",
         "credits": 4,
-        "notes": "Choose four additional French courses numbered 3000 or above, except FREN 4903."
+        "notes": "Choose four additional French courses numbered 3000 or above, except FREN 4903.",
+        "unit": "courses"
       },
       {
         "type": "all",
@@ -4251,13 +4263,15 @@
         "type": "credits",
         "label": "Spanish Elective 2000-Level or Above",
         "credits": 1,
-        "notes": "Choose one additional Spanish course at the 2000 level or above. The department head may approve any one Romance language literature, film, or culture course taught in English by Romance Languages faculty toward this requirement."
+        "notes": "Choose one additional Spanish course at the 2000 level or above. The department head may approve any one Romance language literature, film, or culture course taught in English by Romance Languages faculty toward this requirement.",
+        "unit": "courses"
       },
       {
         "type": "credits",
         "label": "Spanish Electives 3000-Level or Above",
         "credits": 5,
-        "notes": "Choose five additional Spanish courses at the 3000 level or above as described in the following three categories:"
+        "notes": "Choose five additional Spanish courses at the 3000 level or above as described in the following three categories:",
+        "unit": "courses"
       },
       {
         "type": "n_of",
@@ -4290,7 +4304,8 @@
         "type": "credits",
         "label": "Spanish Electives 3000-Level or Above — Additional 3000-level Spanish Electives",
         "credits": 3,
-        "notes": "Choose three additional Spanish courses numbered 3000 or above, except SPAN 4903."
+        "notes": "Choose three additional Spanish courses numbered 3000 or above, except SPAN 4903.",
+        "unit": "courses"
       },
       {
         "type": "n_of",
@@ -4305,11 +4320,9 @@
         ]
       },
       {
-        "type": "all",
+        "type": "note",
         "label": "Linguistics — Note(s)",
-        "courses": [
-          "SPAN 2009 may contribute to the completion of a 2000-level Spanish elective listed above, and any 3000-level linguistics course may contribute to the completion of a 3000-level Spanish elective listed above."
-        ]
+        "notes": "SPAN 2009 may contribute to the completion of a 2000-level Spanish elective listed above, and any 3000-level linguistics course may contribute to the completion of a 3000-level Spanish elective listed above."
       },
       {
         "type": "all",
@@ -4406,94 +4419,96 @@
         ]
       },
       {
-        "type": "all",
+        "type": "group",
         "label": "Emphasis",
-        "courses": [
-          "Completion of one of the two following areas of emphasis: Anthropology emphasis: take nine additional credits from the electives listed below, two in anthropology and one in sociology Sociology emphasis: take nine additional credits from the electives listed below, two in sociology and one in anthropology"
-        ]
-      },
-      {
-        "type": "all",
-        "label": "Emphasis — Anthropology electives",
-        "courses": [
-          "SOAN 1801 (formerly 181) - FS: First-Year Seminar in Anthropology",
-          "SOAN 2510 (formerly 206) - Archaeology",
-          "SOAN 2520 (formerly 207) - Biological Anthropology",
-          "SOAN 2003 (formerly 208) - Qualitative Methods",
-          "SOAN 2000 (formerly 210) - Field Methods in Archaeology",
-          "SOAN 2001 (formerly 211) - Laboratory Methods in Archaeology",
-          "SOAN 2540 (formerly 215) - Anthropology of Disability",
-          "SOAN 2206 (formerly 226) - Applied Anthropology",
-          "SOAN 2541 (formerly 229) - Race: Anthropological Perspectives",
-          "SOAN 2511 (formerly 230) - Discovering W&L’s Origins Using Historical Archaeology (HIST 2300)",
-          "SOAN 2542 (formerly 235) - Anthropology of Death",
-          "SOAN 2308 (formerly 238) - Anthropology of American History (HIST 2308)",
-          "SOAN 2309 (formerly 239) - Collective Memory: Society, Culture, Identity and Power (HIST 2309)",
-          "SOAN 2545 (formerly 240) - Food, Culture, and Society",
-          "SOAN 2574 (formerly 243) - Imaging Tibet (ARTH 2403)",
-          "SOAN 2547 (formerly 247) - Food Diplomacy in Israel",
-          "SOAN 2530 (formerly 252) - Language, Culture, and Communication",
-          "SOAN 2531 (formerly 253) - Narrating Our Stories: Culture, Society, and Identity (POV 2531)",
-          "SOAN 2570 (formerly 260) - Cults",
-          "SOAN 2571 (formerly 261) - Campus Sex in the Digital Age",
-          "SOAN 2303 (formerly 273) - Creating Field Documentary on Human Rights in Ghana (FILM 2303)",
-          "SOAN 2310 (formerly 274) - Sport is My Religion",
-          "SOAN 2505 - Living with AI",
-          "SOAN 2572 (formerly 277) - Seminar in Medical Anthropology",
-          "SOAN 2350 (formerly 280) - Gender and Sexuality",
-          "SOAN 2573 (formerly 288) - Childhood",
-          "SOAN 2906 (formerly 291) - Special Topics in Anthropology",
-          "SOAN 3906 (formerly 391) - Special Topics in Anthropology"
-        ]
-      },
-      {
-        "type": "all",
-        "label": "Emphasis — Sociology electives",
-        "courses": [
-          "SOAN 1101 (formerly 111) - R For Social Scientists",
-          "SOAN 1800 (formerly 180) - FS: First-Year Seminar in Sociology",
-          "SOAN 2002 (formerly 218) - Basic Statistics in the Social Sciences",
-          "SOAN 2003 (formerly 208) - Qualitative Methods",
-          "SOAN 2004 (formerly 276) - Art & Science of Survey Research",
-          "SOAN 2005 (formerly 267) - Simulating Society",
-          "SOAN 2011 (formerly 265) - Exploring Social Networks",
-          "SOAN 2012 (formerly 219) - Applied Bayesian Regression for the Social Sciences",
-          "SOAN 2013 (formerly 269) - Studying Global Culture with the World Values Survey",
-          "SOAN 2202 (formerly 202) - Contemporary Social Problems",
-          "SOAN 2305 (formerly 205) - Power and Status: An Introduction to Social Influence",
-          "SOAN 2306 (formerly 212) - Theories of Social Psychology",
-          "SOAN 2311 (formerly 217) - Economic Sociology",
-          "SOAN 2312 (formerly 221) - Sociology of Religion",
-          "SOAN 2341 (formerly 228) - Race and Ethnic Relations",
-          "SOAN 2342 (formerly 250) - Revolutions and Revolutionaries",
-          "SOAN 2343 (formerly 251) - Social Movements",
-          "SOAN 2344 (formerly 259) - Global Urban Sociology",
-          "SOAN 2345 (formerly 263) - Poverty and Marginality in the Americas (LACS 2345)",
-          "SOAN 2346 (formerly 266) - Neighborhoods and Inequality",
-          "SOAN 2347 (formerly 268) - Migration, Identity, and Conflict (POL 2608)",
-          "SOAN 2348 (formerly 278) - Health and Inequality: An Introduction to Medical Sociology",
-          "SOAN 2349 (formerly 279) - Conceptions of Race and Health: Black & White=Gray",
-          "SOAN 2351 (formerly 242) - Sociology of the Black Elite (AFCA 2351)",
-          "SOAN 2352 (formerly 213) - Sociology and Criminology of War",
-          "SOAN 2353 (formerly 254) - The Russo-Ukrainian War",
-          "SOAN 2354 - Fines and Fees (LJS 2354)",
-          "SOAN 2355 (formerly 220) - A World of Data: Baseball and Statistics",
-          "SOAN 2360 (formerly 233) - Sociology of Culture",
-          "SOAN 2361 (formerly 248) - Producing Culture from the Margins",
-          "SOAN 2362 (formerly 231) - (de)Constructing Disability in the U.S.",
-          "SOAN 2405 (formerly 245) - European Politics and Society (POL 2405)",
-          "SOAN 2406 (formerly 246) - Post-Communism and New Democracies (POL 2406)",
-          "SOAN 2700 (formerly 270) - Deviance",
-          "SOAN 2905 (formerly 290) - Special Topics in Sociology",
-          "SOAN 3905 (formerly 390) - Special Topics in Sociology",
-          "SOAN 3929 (formerly 368) - Tech for Good: Trust, Technology and Development in Ghana (BUS 3929)"
-        ]
+        "groupsRequired": 1,
+        "groups": [
+          {
+            "label": "Anthropology electives",
+            "n": 3,
+            "courses": [
+              "SOAN 1801 (formerly 181) - FS: First-Year Seminar in Anthropology",
+              "SOAN 2510 (formerly 206) - Archaeology",
+              "SOAN 2520 (formerly 207) - Biological Anthropology",
+              "SOAN 2003 (formerly 208) - Qualitative Methods",
+              "SOAN 2000 (formerly 210) - Field Methods in Archaeology",
+              "SOAN 2001 (formerly 211) - Laboratory Methods in Archaeology",
+              "SOAN 2540 (formerly 215) - Anthropology of Disability",
+              "SOAN 2206 (formerly 226) - Applied Anthropology",
+              "SOAN 2541 (formerly 229) - Race: Anthropological Perspectives",
+              "SOAN 2511 (formerly 230) - Discovering W&L’s Origins Using Historical Archaeology (HIST 2300)",
+              "SOAN 2542 (formerly 235) - Anthropology of Death",
+              "SOAN 2308 (formerly 238) - Anthropology of American History (HIST 2308)",
+              "SOAN 2309 (formerly 239) - Collective Memory: Society, Culture, Identity and Power (HIST 2309)",
+              "SOAN 2545 (formerly 240) - Food, Culture, and Society",
+              "SOAN 2574 (formerly 243) - Imaging Tibet (ARTH 2403)",
+              "SOAN 2547 (formerly 247) - Food Diplomacy in Israel",
+              "SOAN 2530 (formerly 252) - Language, Culture, and Communication",
+              "SOAN 2531 (formerly 253) - Narrating Our Stories: Culture, Society, and Identity (POV 2531)",
+              "SOAN 2570 (formerly 260) - Cults",
+              "SOAN 2571 (formerly 261) - Campus Sex in the Digital Age",
+              "SOAN 2303 (formerly 273) - Creating Field Documentary on Human Rights in Ghana (FILM 2303)",
+              "SOAN 2310 (formerly 274) - Sport is My Religion",
+              "SOAN 2505 - Living with AI",
+              "SOAN 2572 (formerly 277) - Seminar in Medical Anthropology",
+              "SOAN 2350 (formerly 280) - Gender and Sexuality",
+              "SOAN 2573 (formerly 288) - Childhood",
+              "SOAN 2906 (formerly 291) - Special Topics in Anthropology",
+              "SOAN 3906 (formerly 391) - Special Topics in Anthropology"
+            ]
+          },
+          {
+            "label": "Sociology electives",
+            "n": 3,
+            "courses": [
+              "SOAN 1101 (formerly 111) - R For Social Scientists",
+              "SOAN 1800 (formerly 180) - FS: First-Year Seminar in Sociology",
+              "SOAN 2002 (formerly 218) - Basic Statistics in the Social Sciences",
+              "SOAN 2003 (formerly 208) - Qualitative Methods",
+              "SOAN 2004 (formerly 276) - Art & Science of Survey Research",
+              "SOAN 2005 (formerly 267) - Simulating Society",
+              "SOAN 2011 (formerly 265) - Exploring Social Networks",
+              "SOAN 2012 (formerly 219) - Applied Bayesian Regression for the Social Sciences",
+              "SOAN 2013 (formerly 269) - Studying Global Culture with the World Values Survey",
+              "SOAN 2202 (formerly 202) - Contemporary Social Problems",
+              "SOAN 2305 (formerly 205) - Power and Status: An Introduction to Social Influence",
+              "SOAN 2306 (formerly 212) - Theories of Social Psychology",
+              "SOAN 2311 (formerly 217) - Economic Sociology",
+              "SOAN 2312 (formerly 221) - Sociology of Religion",
+              "SOAN 2341 (formerly 228) - Race and Ethnic Relations",
+              "SOAN 2342 (formerly 250) - Revolutions and Revolutionaries",
+              "SOAN 2343 (formerly 251) - Social Movements",
+              "SOAN 2344 (formerly 259) - Global Urban Sociology",
+              "SOAN 2345 (formerly 263) - Poverty and Marginality in the Americas (LACS 2345)",
+              "SOAN 2346 (formerly 266) - Neighborhoods and Inequality",
+              "SOAN 2347 (formerly 268) - Migration, Identity, and Conflict (POL 2608)",
+              "SOAN 2348 (formerly 278) - Health and Inequality: An Introduction to Medical Sociology",
+              "SOAN 2349 (formerly 279) - Conceptions of Race and Health: Black & White=Gray",
+              "SOAN 2351 (formerly 242) - Sociology of the Black Elite (AFCA 2351)",
+              "SOAN 2352 (formerly 213) - Sociology and Criminology of War",
+              "SOAN 2353 (formerly 254) - The Russo-Ukrainian War",
+              "SOAN 2354 - Fines and Fees (LJS 2354)",
+              "SOAN 2355 (formerly 220) - A World of Data: Baseball and Statistics",
+              "SOAN 2360 (formerly 233) - Sociology of Culture",
+              "SOAN 2361 (formerly 248) - Producing Culture from the Margins",
+              "SOAN 2362 (formerly 231) - (de)Constructing Disability in the U.S.",
+              "SOAN 2405 (formerly 245) - European Politics and Society (POL 2405)",
+              "SOAN 2406 (formerly 246) - Post-Communism and New Democracies (POL 2406)",
+              "SOAN 2700 (formerly 270) - Deviance",
+              "SOAN 2905 (formerly 290) - Special Topics in Sociology",
+              "SOAN 3905 (formerly 390) - Special Topics in Sociology",
+              "SOAN 3929 (formerly 368) - Tech for Good: Trust, Technology and Development in Ghana (BUS 3929)"
+            ]
+          }
+        ],
+        "notes": "Complete one of the two areas of emphasis, taking nine additional credits from its list: anthropology emphasis is two anthropology and one sociology course; sociology emphasis is the reverse."
       },
       {
         "type": "credits",
         "label": "Additional Sociology and Anthropology Electives",
         "credits": 9,
-        "notes": "Choose nine additional credits from sociology and anthropology courses numbered 2000 and above. When approved by the department head, up to three courses numbered at the 2000 level or above in cognitive and behavioral science/psychology, economics, history, philosophy, politics, religion, or other disciplines may be substituted into this requirement."
+        "notes": "Choose nine additional credits from sociology and anthropology courses numbered 2000 and above. When approved by the department head, up to three courses numbered at the 2000 level or above in cognitive and behavioral science/psychology, economics, history, philosophy, politics, religion, or other disciplines may be substituted into this requirement.",
+        "unit": "credits"
       },
       {
         "type": "n_of",
@@ -4536,13 +4551,15 @@
         "type": "credits",
         "label": "Spanish Electives 2000-Level or Above",
         "credits": 2,
-        "notes": "Choose two additional Spanish courses at the 2000 level or above. The department head may approve any one Romance language literature, film, or culture course taught in English by Romance Languages faculty toward this requirement."
+        "notes": "Choose two additional Spanish courses at the 2000 level or above. The department head may approve any one Romance language literature, film, or culture course taught in English by Romance Languages faculty toward this requirement.",
+        "unit": "courses"
       },
       {
         "type": "credits",
         "label": "Spanish Electives 3000-Level or Above",
         "credits": 5,
-        "notes": "Choose five additional Spanish courses at the 3000 level or above as described in the following three categories:"
+        "notes": "Choose five additional Spanish courses at the 3000 level or above as described in the following three categories:",
+        "unit": "courses"
       },
       {
         "type": "n_of",
@@ -4575,7 +4592,8 @@
         "type": "credits",
         "label": "Spanish Electives 3000-Level or Above — Additional 3000-level Spanish Electives",
         "credits": 3,
-        "notes": "Choose three additional Spanish courses numbered 3000 or above, except SPAN 4903."
+        "notes": "Choose three additional Spanish courses numbered 3000 or above, except SPAN 4903.",
+        "unit": "courses"
       },
       {
         "type": "n_of",
@@ -4590,11 +4608,9 @@
         ]
       },
       {
-        "type": "all",
+        "type": "note",
         "label": "Linguistics — Note(s)",
-        "courses": [
-          "SPAN 2009 may contribute to the completion of a 2000-level Spanish elective listed above, and any 3000-level linguistics course may contribute to the completion of a 3000-level Spanish elective listed above."
-        ]
+        "notes": "SPAN 2009 may contribute to the completion of a 2000-level Spanish elective listed above, and any 3000-level linguistics course may contribute to the completion of a 3000-level Spanish elective listed above."
       },
       {
         "type": "all",
@@ -4814,7 +4830,8 @@
         "type": "credits",
         "label": "Art History Elective",
         "credits": 1,
-        "notes": "Choose one additional course in art history (ARTH)."
+        "notes": "Choose one additional course in art history (ARTH).",
+        "unit": "courses"
       },
       {
         "type": "n_of",
@@ -4889,7 +4906,7 @@
         ]
       },
       {
-        "type": "all",
+        "type": "n_of",
         "label": "Electives",
         "courses": [
           "DANC 1202 (formerly 120) - Fundamentals of Contemporary Modern Dance Practice",
@@ -4967,7 +4984,10 @@
           "FREN 3097 (formerly 397) - Séminaire avancé",
           "ITAL 2905 (formerly 295) - Topics in Italian Culture",
           "SPAN 3098 (formerly 398) - Spanish-American Seminar"
-        ]
+        ],
+        "n": 4,
+        "unit": "courses",
+        "notes": "Choose at least twelve credits from this list, including at least nine credits from theater, dance, or film courses. Four courses shown as the typical count."
       },
       {
         "type": "n_of",

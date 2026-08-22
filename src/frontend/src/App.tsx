@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useCallback, useMemo } from 'react';
 import { Major, AllProgress, MajorProgress } from './types';
-import { majorTracks, countAlternativePairs } from './data/tracks';
+import { majorTracks } from './data/tracks';
+import { requirementTotal, requirementCompleted } from './data/progress';
 import Roadmap from './components/Roadmap';
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
@@ -244,51 +245,24 @@ function App() {
 
   const getProgress = useCallback((major: Major | null, ignored?: { [track: string]: boolean }) => {
     if (!major) return 0;
-    const currentProgress = getCurrentProgress(major);
-    const { checked, creditProgress } = currentProgress;
+    const { checked, creditProgress } = getCurrentProgress(major);
+    const tracks = majorTracks[major.major] || [];
     let total = 0;
     let completed = 0;
-    const tracks = majorTracks[major.major] || [];
     major.requirements.forEach(req => {
+      const weight = requirementTotal(req);
       const track = tracks
         .filter(t => req.label.startsWith(t))
         .sort((a, b) => b.length - a.length)[0];
       if (track && ignored?.[track]) {
         // Not pursuing this track: count it as already satisfied rather than
         // holding the whole major below 100%.
-        const weight = req.type === 'credits' && req.credits ? req.credits : req.courses ? req.courses.length : 1;
         total += weight;
         completed += weight;
         return;
       }
-      if (req.type === 'credits' && req.credits) {
-        total += req.credits;
-        const currentCredits = creditProgress[req.label] || 0;
-        completed += Math.min(currentCredits, req.credits);
-      } else if (req.courses) {
-        if (req.type === 'all') {
-          // courses joined by "or" are alternatives: the pair counts once
-          total += req.courses.length - countAlternativePairs(req.courses);
-          completed += Math.min(
-            req.courses.filter(course => checked[`${req.label}::${course}`]).length,
-            req.courses.length - countAlternativePairs(req.courses)
-          );
-        } else if (req.type === 'one_of') {
-          total += 1;
-          const selectedCount = req.courses.filter(
-            course => checked[`${req.label}::${course}`]
-          ).length;
-          if (selectedCount >= 1) {
-            completed += 1;
-          }
-        } else if (req.type === 'n_of' && req.n) {
-          total += req.n;
-          const selectedCount = req.courses.filter(
-            course => checked[`${req.label}::${course}`]
-          ).length;
-          completed += Math.min(selectedCount, req.n);
-        }
-      }
+      total += weight;
+      completed += requirementCompleted(req, checked, creditProgress);
     });
     return total === 0 ? 0 : Math.round((completed / total) * 100);
   }, [getCurrentProgress]);
